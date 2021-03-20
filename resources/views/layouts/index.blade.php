@@ -68,13 +68,23 @@
             @include('header.navbar')
 
             <!-- Sidebar chat start -->
-            @include('header.sidebarChat')
+            {{-- @include('header.sidebarChat') --}}
 
             <!-- Sidebar inner chat start-->
-            @include('header.sidebarChatInner')
+            {{-- @include('header.sidebarChatInner') --}}
 
-            <!-- Sidebar start-->
-            @include('header.sidebar')
+            <div class="pcoded-main-container">
+                <div class="pcoded-wrapper">
+                    <!-- Sidebar start-->
+                    @include('header.sidebar')
+
+                    @yield('content')
+                    
+                </div>
+            </div>
+
+            <!-- Sidebar inner chat start-->
+            @include('header.footer')
 
 
         </div>

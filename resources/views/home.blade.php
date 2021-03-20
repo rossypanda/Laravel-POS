@@ -7,8 +7,9 @@
                 <div class="page-wrapper">
 
                     <div class="page-body">
-                        <div class="container">
-                            <h1>WELCOME TO CONSYS BETCHESS</h1>
+                        <br><br><br><br><br>
+                        <div class="container-fluid">
+                            <h3>WELCOME TO CONSYS BETCHESS</h3>
                         </div>
                     </div>
                 </div>
