@@ -13,6 +13,7 @@
     <link href="{{ asset('files\assets\images\favicon.ico') }}" rel="stylesheet"> 
     <link href="{{ asset('files\bower_components\bootstrap\css\bootstrap.min.css') }}" rel="stylesheet"> 
     <link href="{{ asset('files\assets\icon\feather\css\feather.css') }}" rel="stylesheet"> 
+    <link href="{{ asset('files\assets\icon\icofont\css\icofont.css') }}" rel="stylesheet"> 
     <link href="{{ asset('files\assets\css\style.css') }}" rel="stylesheet"> 
     <link href="{{ asset('files\assets\css\jquery.mCustomScrollbar.css') }}" rel="stylesheet"> 
     
@@ -77,9 +78,10 @@
                 <div class="pcoded-wrapper">
                     <!-- Sidebar start-->
                     @include('partials.sidebar')
-
-                    @yield('content')
-                    
+                    <div class="pcoded-content">
+                        @yield('breadcrumb')
+                        @yield('content')
+                    </div>
                 </div>
             </div>
 
@@ -106,7 +108,7 @@
     <script src="{{ asset('files\assets\js\vartical-layout.min.js') }}" defer></script>
     <script src="{{ asset('files\assets\pages\dashboard\custom-dashboard.js') }}" defer></script>
     <script src="{{ asset('files\assets\js\script.min.js') }}" defer></script>
-
+    <script src="{{asset('js/app.js')}}" ></script>
 
 <script>
   window.dataLayer = window.dataLayer || [];
