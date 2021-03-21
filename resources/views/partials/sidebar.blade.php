@@ -9,12 +9,12 @@
                 </a>
                 <ul class="pcoded-submenu">
                     <li class="active">
-                        <a href="index-1.htm">
+                        <a href="/supplier">
                             <span class="pcoded-mtext">Supplier</span>
                         </a>
                     </li>
                     <li class="">
-                        <a href="dashboard-crm.htm">
+                        <a href="/poNumber">
                             <span class="pcoded-mtext">PO Number</span>
                         </a>
                     </li>
@@ -28,7 +28,7 @@
                 </a>
                 <ul class="pcoded-submenu">
                     <li class=" ">
-                        <a href="menu-bottom.htm">
+                        <a href="/purchaseOrder">
                             <span class="pcoded-mtext">Purchase Order</span>
                         </a>
                     </li>
@@ -42,7 +42,7 @@
                 </a>
                 <ul class="pcoded-submenu">
                     <li class=" ">
-                        <a href="widget-statistic.htm">
+                        <a href="/poReport">
                             <span class="pcoded-mtext">Purchase Order Report</span>
                         </a>
                     </li>

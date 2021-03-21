@@ -65,7 +65,7 @@
         <div class="pcoded-container navbar-wrapper">
 
             <!-- navbar chat start -->
-            @include('header.navbar')
+            @include('partials.navbar')
 
             <!-- Sidebar chat start -->
             {{-- @include('header.sidebarChat') --}}
@@ -76,7 +76,7 @@
             <div class="pcoded-main-container">
                 <div class="pcoded-wrapper">
                     <!-- Sidebar start-->
-                    @include('header.sidebar')
+                    @include('partials.sidebar')
 
                     @yield('content')
                     
@@ -84,7 +84,7 @@
             </div>
 
             <!-- Sidebar inner chat start-->
-            @include('header.footer')
+            @include('partials.footer')
 
 
         </div>
