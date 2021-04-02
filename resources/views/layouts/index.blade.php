@@ -16,7 +16,6 @@
     <link href="{{ asset('files\assets\icon\icofont\css\icofont.css') }}" rel="stylesheet"> 
     <link href="{{ asset('files\assets\css\style.css') }}" rel="stylesheet"> 
     <link href="{{ asset('files\assets\css\jquery.mCustomScrollbar.css') }}" rel="stylesheet"> 
-    
 
 </head>
 
