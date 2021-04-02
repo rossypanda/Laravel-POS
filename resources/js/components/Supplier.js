@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Button,Container,Row,Table,Modal,ModalTitle,ModalDialog,ModalBody,ModalDialogProps,ModalFooter} from 'react-bootstrap';
+import {Button,Container,Row,Table,Modal,ModalTitle,ModalDialog,ModalBody,ModalDialogProps,ModalFooter,Card,InputGroup,FormControl,InputGroupProps,Col} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlusSquare,faTrashAlt,faEye} from '@fortawesome/free-solid-svg-icons';
+import { faPlusSquare,faTrashAlt,faEye,faCheck,faUserTag,faPlusCircle} from '@fortawesome/free-solid-svg-icons';
 
 function MyVerticallyCenteredModal(props) {
     return (
@@ -12,7 +12,7 @@ function MyVerticallyCenteredModal(props) {
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
-        <Modal.Header closeButton>
+        <Modal.Header closeButton className="modal-color">
           <Modal.Title id="contained-modal-title-vcenter">
             Modal heading
           </Modal.Title>
@@ -25,14 +25,19 @@ function MyVerticallyCenteredModal(props) {
             consectetur ac, vestibulum at eros.
           </p>
         </Modal.Body>
-        <Modal.Footer>
-          <Button onClick={props.onHide}>Close</Button>
+        <Modal.Footer className="modal-color">
+         
+          <Button variant="success" size="sm" onClick={props.onHide}>
+            <FontAwesomeIcon icon={faCheck} className="icon-space" />Save Changes
+          </Button>
         </Modal.Footer>
       </Modal>
     );
 }
 
 function Supplier() {
+    const [modalShow, setModalShow] = React.useState(false);
+
     const buttonStyle ={
         display:"flex",
         justifyContent:"flex-end",
@@ -41,10 +46,10 @@ function Supplier() {
     return (
         
         <div>
-            <Container fluid>
+            <Container fluid >
                 <div style={buttonStyle}>
-                    <Button variant="success" size="sm" style={{marginRight:"0.5rem"}}>
-                        <FontAwesomeIcon icon={faPlusSquare}/>
+                    <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} onClick={() => setModalShow(true)}>
+                        <FontAwesomeIcon icon={faPlusSquare} className="icon-space" />
                         Add Supplier   
                     </Button>
                 </div>
@@ -66,9 +71,9 @@ function Supplier() {
                         <td>jabee@manamit.com</td>
                         <td> 
                             <Button variant="outline-info" size="sm">
-                            <FontAwesomeIcon icon={faEye}/>View</Button>
+                            <FontAwesomeIcon icon={faEye} className="icon-space" />View</Button>
                             <Button variant="outline-danger" size="sm">
-                                <FontAwesomeIcon icon={faTrashAlt}/>Delete
+                                <FontAwesomeIcon icon={faTrashAlt}  className="icon-space" />Delete
                             </Button>
                         </td>
                         </tr>
@@ -79,9 +84,9 @@ function Supplier() {
                         <td>jcdo@jolibee.com</td>
                         <td> 
                             <Button variant="outline-info" size="sm">
-                            <FontAwesomeIcon icon={faEye}/>View</Button>
+                            <FontAwesomeIcon icon={faEye}  className="icon-space"/>View</Button>
                             <Button variant="outline-danger" size="sm">
-                                <FontAwesomeIcon icon={faTrashAlt}/>Delete
+                                <FontAwesomeIcon icon={faTrashAlt} className="icon-space"/>Delete
                             </Button>
                         </td>
                         </tr>
@@ -92,15 +97,106 @@ function Supplier() {
                         <td>Grab@gmail.com</td>
                         <td> 
                             <Button variant="outline-info" size="sm">
-                            <FontAwesomeIcon icon={faEye}/>View</Button>
+                            <FontAwesomeIcon icon={faEye} className="icon-space"/>View</Button>
                             <Button variant="outline-danger" size="sm">
-                                <FontAwesomeIcon icon={faTrashAlt}/>Delete
+                                <FontAwesomeIcon icon={faTrashAlt} className="icon-space"/>Delete
                             </Button>
                         </td>
                         </tr>
                     </tbody>
                 </Table>
             </Container>
+
+            <Container fluid hidden>
+                <Card className="border-wrapper">
+                    <Card.Body>
+                        <h4 className="mb-4"><FontAwesomeIcon icon={faUserTag} className="icon-space"/>Add Supplier</h4>
+                        <Row>
+                            <Col> 
+                                <InputGroup  className="mb-3">
+                                    <InputGroup.Prepend className="background-wrapper">
+                                        <InputGroup.Text id="inputGroup-sizing-sm" >Supplier</InputGroup.Text>
+                                    </InputGroup.Prepend>
+                                    <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" className="border-wrapper" />
+                                </InputGroup>
+                            </Col>
+                            <Col> 
+                                <InputGroup  className="mb-3">
+                                    <InputGroup.Prepend className="background-wrapper">
+                                        <InputGroup.Text id="inputGroup-sizing-sm" >Address</InputGroup.Text>
+                                    </InputGroup.Prepend>
+                                    <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" className="border-wrapper" />
+                                </InputGroup>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col> 
+                                <InputGroup  className="mb-3">
+                                    <InputGroup.Prepend className="background-wrapper">
+                                        <InputGroup.Text id="inputGroup-sizing-sm" >Zip Code</InputGroup.Text>
+                                    </InputGroup.Prepend>
+                                    <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" className="border-wrapper" />
+                                </InputGroup>
+                            </Col>
+                            <Col> 
+                                <InputGroup  className="mb-3">
+                                    <InputGroup.Prepend className="background-wrapper">
+                                        <InputGroup.Text id="inputGroup-sizing-sm" >Contact #</InputGroup.Text>
+                                    </InputGroup.Prepend>
+                                    <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" className="border-wrapper" />
+                                </InputGroup>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col> 
+                                <InputGroup  className="mb-3">
+                                    <InputGroup.Prepend className="background-wrapper">
+                                        <InputGroup.Text id="inputGroup-sizing-sm" >Email</InputGroup.Text>
+                                    </InputGroup.Prepend>
+                                    <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" className="border-wrapper" />
+                                </InputGroup>
+                            </Col>
+                            <Col> 
+                                <InputGroup  className="mb-3">
+                                    <InputGroup.Prepend className="background-wrapper">
+                                        <InputGroup.Text id="inputGroup-sizing-sm" >Fax #</InputGroup.Text>
+                                    </InputGroup.Prepend>
+                                    <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" className="border-wrapper" />
+                                </InputGroup>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col> 
+                                <InputGroup  className="mb-3">
+                                    <InputGroup.Prepend className="background-wrapper">
+                                        <InputGroup.Text id="inputGroup-sizing-sm" >Terms</InputGroup.Text>
+                                    </InputGroup.Prepend>
+                                    <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" className="border-wrapper" />
+                                </InputGroup>
+                            </Col>
+                            <Col> 
+                                <InputGroup  className="mb-3">
+                                    <InputGroup.Prepend className="background-wrapper">
+                                        <InputGroup.Text id="inputGroup-sizing-sm" >Description</InputGroup.Text>
+                                    </InputGroup.Prepend>
+                                    <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" className="border-wrapper" />
+                                </InputGroup>
+                            </Col>
+                        </Row>
+                        <div style={buttonStyle}>
+                            <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} >
+                            <FontAwesomeIcon icon={faPlusCircle} className="icon-space" />
+                             Add    
+                            </Button>
+                        </div>
+                    </Card.Body>
+                </Card>
+            </Container>
+
+            <MyVerticallyCenteredModal
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+            />
         </div>
        
     );
