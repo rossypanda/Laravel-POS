@@ -12238,6 +12238,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 function MyVerticallyCenteredModal(props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, _objectSpread(_objectSpread({}, props), {}, {
     size: "lg",
@@ -12277,14 +12278,36 @@ function Supplier() {
       modalShow = _React$useState2[0],
       setModalShow = _React$useState2[1];
 
+  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_1__.useState(true),
+      _React$useState4 = _slicedToArray(_React$useState3, 2),
+      hideAddSupplier = _React$useState4[0],
+      setHideAddSupplier = _React$useState4[1];
+
+  var _React$useState5 = react__WEBPACK_IMPORTED_MODULE_1__.useState(false),
+      _React$useState6 = _slicedToArray(_React$useState5, 2),
+      hideSupplierTable = _React$useState6[0],
+      setHideAddSupplierTable = _React$useState6[1];
+
   var buttonStyle = {
     display: "flex",
     justifyContent: "flex-end",
     marginBottom: "1rem"
   };
+
+  var hideTableShowAddSupplier = function hideTableShowAddSupplier(isCurrentlyHidden) {
+    if (isCurrentlyHidden) {
+      setHideAddSupplier(false);
+      setHideAddSupplierTable(true);
+    } else {
+      setHideAddSupplier(true);
+      setHideAddSupplierTable(false);
+    }
+  };
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
       fluid: true,
+      hidden: hideSupplierTable,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
         style: buttonStyle,
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
@@ -12294,7 +12317,7 @@ function Supplier() {
             marginRight: "0.5rem"
           },
           onClick: function onClick() {
-            return setModalShow(true);
+            return hideTableShowAddSupplier(true);
           },
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
             icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faPlusSquare,
@@ -12404,7 +12427,7 @@ function Supplier() {
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
       fluid: true,
-      hidden: true,
+      hidden: hideAddSupplier,
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
         className: "border-wrapper",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Body, {
@@ -12542,9 +12565,9 @@ function Supplier() {
                 })]
               })
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
             style: buttonStyle,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
               variant: "success",
               size: "sm",
               style: {
@@ -12554,7 +12577,20 @@ function Supplier() {
                 icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faPlusCircle,
                 className: "icon-space"
               }), "Add"]
-            })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+              variant: "danger",
+              size: "sm",
+              style: {
+                marginRight: "0.5rem"
+              },
+              onClick: function onClick() {
+                return hideTableShowAddSupplier(false);
+              },
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
+                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faBan,
+                className: "icon-space"
+              }), "Cancel"]
+            })]
           })]
         })
       })

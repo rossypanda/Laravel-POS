@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Button,Container,Row,Table,Modal,ModalTitle,ModalDialog,ModalBody,ModalDialogProps,ModalFooter,Card,InputGroup,FormControl,InputGroupProps,Col} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlusSquare,faTrashAlt,faEye,faCheck,faUserTag,faPlusCircle} from '@fortawesome/free-solid-svg-icons';
+import { faPlusSquare,faTrashAlt,faEye,faCheck,faUserTag,faPlusCircle,faBan} from '@fortawesome/free-solid-svg-icons';
+import { faLastfmSquare } from '@fortawesome/free-brands-svg-icons';
 
 function MyVerticallyCenteredModal(props) {
     return (
@@ -35,20 +36,38 @@ function MyVerticallyCenteredModal(props) {
     );
 }
 
+
 function Supplier() {
     const [modalShow, setModalShow] = React.useState(false);
+    const [hideAddSupplier, setHideAddSupplier] = React.useState(true);
+    const [hideSupplierTable, setHideAddSupplierTable] = React.useState(false);
+   
 
     const buttonStyle ={
         display:"flex",
         justifyContent:"flex-end",
         marginBottom:"1rem"
     };
+
+
+   const hideTableShowAddSupplier = (isCurrentlyHidden) => {
+        if(isCurrentlyHidden){
+            setHideAddSupplier(false);
+            setHideAddSupplierTable(true);
+        }
+        else{
+            setHideAddSupplier(true);
+            setHideAddSupplierTable(false);
+        }
+        
+    }
+    
     return (
         
         <div>
-            <Container fluid >
+            <Container fluid hidden={hideSupplierTable}>
                 <div style={buttonStyle}>
-                    <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} onClick={() => setModalShow(true)}>
+                    <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} onClick={() =>hideTableShowAddSupplier(true)}>
                         <FontAwesomeIcon icon={faPlusSquare} className="icon-space" />
                         Add Supplier   
                     </Button>
@@ -107,7 +126,7 @@ function Supplier() {
                 </Table>
             </Container>
 
-            <Container fluid hidden>
+            <Container fluid hidden={hideAddSupplier}>
                 <Card className="border-wrapper">
                     <Card.Body>
                         <h4 className="mb-4"><FontAwesomeIcon icon={faUserTag} className="icon-space"/>Add Supplier</h4>
@@ -187,6 +206,10 @@ function Supplier() {
                             <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} >
                             <FontAwesomeIcon icon={faPlusCircle} className="icon-space" />
                              Add    
+                            </Button>
+                            <Button variant="danger" size="sm" style={{marginRight:"0.5rem"}} onClick={() =>hideTableShowAddSupplier(false)} >
+                            <FontAwesomeIcon icon={faBan} className="icon-space"/>
+                                Cancel
                             </Button>
                         </div>
                     </Card.Body>
