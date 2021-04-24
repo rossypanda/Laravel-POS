@@ -89,8 +89,8 @@ function Supplier() {
                         <td>69</td>
                         <td>jabee@manamit.com</td>
                         <td> 
-                            <Button variant="outline-info" size="sm">
-                            <FontAwesomeIcon icon={faEye} className="icon-space" />View</Button>
+                            <Button variant="outline-info" size="sm" onClick={() => setModalShow(true)}>
+                            <FontAwesomeIcon icon={faEye} className="icon-space"/>View</Button>
                             <Button variant="outline-danger" size="sm">
                                 <FontAwesomeIcon icon={faTrashAlt}  className="icon-space" />Delete
                             </Button>
@@ -102,8 +102,8 @@ function Supplier() {
                         <td>163</td>
                         <td>jcdo@jolibee.com</td>
                         <td> 
-                            <Button variant="outline-info" size="sm">
-                            <FontAwesomeIcon icon={faEye}  className="icon-space"/>View</Button>
+                            <Button variant="outline-info" size="sm" onClick={() => setModalShow(true)}>
+                            <FontAwesomeIcon icon={faEye} className="icon-space"/>View</Button>
                             <Button variant="outline-danger" size="sm">
                                 <FontAwesomeIcon icon={faTrashAlt} className="icon-space"/>Delete
                             </Button>
@@ -115,7 +115,7 @@ function Supplier() {
                         <td>123</td>
                         <td>Grab@gmail.com</td>
                         <td> 
-                            <Button variant="outline-info" size="sm">
+                            <Button variant="outline-info" size="sm" onClick={() => setModalShow(true)}>
                             <FontAwesomeIcon icon={faEye} className="icon-space"/>View</Button>
                             <Button variant="outline-danger" size="sm">
                                 <FontAwesomeIcon icon={faTrashAlt} className="icon-space"/>Delete
