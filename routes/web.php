@@ -30,7 +30,7 @@ Route::get('/', function () {
 // });
 
 Route::get('/home', [HomeController::class, 'index']);
-Route::get('/supplier', [SupplierController::class, 'index']);
-Route::get('/poNumber', [PoNumberController::class, 'index']);
-Route::get('/purchaseOrder', [PurchaseOrderController::class, 'index']);
-Route::get('/poReport', [PoReportController::class, 'index']);
+Route::resource('poNumber', PoNumberController::class);
+Route::resource('purchaseOrder', PurchaseOrderController::class);
+Route::resource('poReport', PoReportController::class);
+Route::resource('supplier', SupplierController::class);

@@ -1,9 +1,6 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-//Font Awesome
- @import '~@Sfortawesome/fontawesome-free/css/all.css';
-
 // Variables
 @import 'variables';
 
@@ -11,3 +8,6 @@
 @import '~bootstrap/scss/bootstrap';
 
 
+.icon-space{
+    margin-right: 0.3em;
+}

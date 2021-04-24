@@ -450,7 +450,7 @@ p {
 }
 
 .breadcrumb-title a {
-    font-size: 14px;
+    font-size: 17px;
     color: #4a6076
 }
 
@@ -25221,6 +25221,48 @@ body.dark #styleSelector {
 .pcoded[layout-type="dark"] #styleSelector .form-control,
 body.dark #styleSelector .form-control {
     color: #404E67
+}
+.icon-space {
+    margin-right: 0.3em;
+}
+
+.btn-info-color{
+    color:#97d5fe !important;
+}
+
+.btn-success-color{
+    color:#C9FDCC !important;
+}
+
+.btn-warning-color{
+    color:#ff9a66 !important;
+}
+
+.btn-danger-color{
+    color:#FF6961 !important;
+}
+
+.btn-secondary-color{
+    color:#959595 !important;
+}
+
+.modal-color{
+    background: #7DB9FF;
+    color: white;
+}
+
+.border-wrapper{
+    border-style: solid;
+    /* border-radius: 0.5rem; */
+    border-width: thin;
+    background-color: #F3F3F3;
+    border-color: #7DB9FF;
+}
+
+.background-wrapper{
+    color:white;
+    background-color: #7DB9FF;
+  
 }
 
 /*# sourceMappingURL=style.css.map */
