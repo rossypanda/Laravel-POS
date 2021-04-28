@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Supplier;
 
 class SupplierController extends Controller
 {
@@ -35,7 +36,7 @@ class SupplierController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $supplier = Supplier::create(['name' => 'London to Paris']);
     }
 
     /**
@@ -69,7 +70,11 @@ class SupplierController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $supplier = Supplier::find(1);
+
+        $supplier->supploer = 'Test';
+
+        $supplier->save();
     }
 
     /**
@@ -80,6 +85,8 @@ class SupplierController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $supplier = Flight::find(1);
+
+        $supplier->delete();
     }
 }

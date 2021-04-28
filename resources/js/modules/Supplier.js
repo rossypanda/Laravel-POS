@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Button,Container,Row,Table,Modal,ModalTitle,ModalDialog,ModalBody,ModalDialogProps,ModalFooter,Card,InputGroup,FormControl,InputGroupProps,Col} from 'react-bootstrap';
+import {Button,Container,Row,Table,Modal,ModalTitle,ModalDialog,ModalBody,ModalDialogProps,ModalFooter,Card,InputGroup,FormControl,InputGroupProps,Col,Form} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusSquare,faTrashAlt,faEye,faCheck,faUserTag,faPlusCircle,faBan} from '@fortawesome/free-solid-svg-icons';
 import { faLastfmSquare } from '@fortawesome/free-brands-svg-icons';
@@ -130,78 +130,51 @@ function Supplier() {
                 <Card className="border-wrapper">
                     <Card.Body>
                         <h4 className="mb-4"><FontAwesomeIcon icon={faUserTag} className="icon-space"/>Add Supplier</h4>
-                        <Row>
-                            <Col> 
-                                <InputGroup  className="mb-3">
-                                    <InputGroup.Prepend className="background-wrapper">
-                                        <InputGroup.Text id="inputGroup-sizing-sm" >Supplier</InputGroup.Text>
-                                    </InputGroup.Prepend>
-                                    <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" className="border-wrapper" />
-                                </InputGroup>
-                            </Col>
-                            <Col> 
-                                <InputGroup  className="mb-3">
-                                    <InputGroup.Prepend className="background-wrapper">
-                                        <InputGroup.Text id="inputGroup-sizing-sm" >Address</InputGroup.Text>
-                                    </InputGroup.Prepend>
-                                    <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" className="border-wrapper" />
-                                </InputGroup>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col> 
-                                <InputGroup  className="mb-3">
-                                    <InputGroup.Prepend className="background-wrapper">
-                                        <InputGroup.Text id="inputGroup-sizing-sm" >Zip Code</InputGroup.Text>
-                                    </InputGroup.Prepend>
-                                    <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" className="border-wrapper" />
-                                </InputGroup>
-                            </Col>
-                            <Col> 
-                                <InputGroup  className="mb-3">
-                                    <InputGroup.Prepend className="background-wrapper">
-                                        <InputGroup.Text id="inputGroup-sizing-sm" >Contact #</InputGroup.Text>
-                                    </InputGroup.Prepend>
-                                    <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" className="border-wrapper" />
-                                </InputGroup>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col> 
-                                <InputGroup  className="mb-3">
-                                    <InputGroup.Prepend className="background-wrapper">
-                                        <InputGroup.Text id="inputGroup-sizing-sm" >Email</InputGroup.Text>
-                                    </InputGroup.Prepend>
-                                    <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" className="border-wrapper" />
-                                </InputGroup>
-                            </Col>
-                            <Col> 
-                                <InputGroup  className="mb-3">
-                                    <InputGroup.Prepend className="background-wrapper">
-                                        <InputGroup.Text id="inputGroup-sizing-sm" >Fax #</InputGroup.Text>
-                                    </InputGroup.Prepend>
-                                    <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" className="border-wrapper" />
-                                </InputGroup>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col> 
-                                <InputGroup  className="mb-3">
-                                    <InputGroup.Prepend className="background-wrapper">
-                                        <InputGroup.Text id="inputGroup-sizing-sm" >Terms</InputGroup.Text>
-                                    </InputGroup.Prepend>
-                                    <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" className="border-wrapper" />
-                                </InputGroup>
-                            </Col>
-                            <Col> 
-                                <InputGroup  className="mb-3">
-                                    <InputGroup.Prepend className="background-wrapper">
-                                        <InputGroup.Text id="inputGroup-sizing-sm" >Description</InputGroup.Text>
-                                    </InputGroup.Prepend>
-                                    <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm" className="border-wrapper" />
-                                </InputGroup>
-                            </Col>
-                        </Row>
+                        <Form>
+                            <Form.Row>
+                                <Form.Group as={Col} controlId="supplier">
+                                    <Form.Label>Supplier</Form.Label>
+                                    <Form.Control type="text" placeholder="Enter Supplier" />
+                                </Form.Group>
+                                <Form.Group as={Col} controlId="contact-person">
+                                    <Form.Label>Contact Person</Form.Label>
+                                    <Form.Control type="text" placeholder="Enter Contact Person" />
+                                </Form.Group>
+                            </Form.Row>
+                            
+                            <Form.Group controlId="supplier-address">
+                                <Form.Label>Address</Form.Label>
+                                <Form.Control placeholder="Supplier Address" />
+                            </Form.Group>
+
+                            <Form.Row>
+                                <Form.Group as={Col} controlId="supplier-email">
+                                    <Form.Label>Email</Form.Label>
+                                    <Form.Control  placeholder="Supplier email"/>
+                                </Form.Group>
+                                <Form.Group as={Col} controlId="supplier-number">
+                                    <Form.Label>Number</Form.Label>
+                                    <Form.Control placeholder="Supplier number"/>
+                                </Form.Group>
+                                <Form.Group as={Col} controlId="supplier-fax">
+                                    <Form.Label>Fax No.</Form.Label>
+                                    <Form.Control placeholder="Supplier Fax"/>
+                                </Form.Group>
+
+                            </Form.Row>
+
+                            <Form.Row>
+                                <Form.Group as={Col} controlId="supplier-bank">
+                                    <Form.Label>Bank Account</Form.Label>
+                                    <Form.Control placeholder="Supplier bank account"/>
+                                </Form.Group>
+                                <Form.Group as={Col} controlId="supplier-description">
+                                    <Form.Label>Description</Form.Label>
+                                    <Form.Control placeholder="Optional"/>
+                                </Form.Group>
+                            </Form.Row>
+
+                        </Form>
                         <div style={buttonStyle}>
                             <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} >
                             <FontAwesomeIcon icon={faPlusCircle} className="icon-space" />

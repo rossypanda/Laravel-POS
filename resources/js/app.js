@@ -12,8 +12,8 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-require('./components/Example');
-require('./components/Supplier');
-require('./components/PONumber');
+require('./modules/Example');
+require('./modules/Supplier');
+require('./modules/PONumber');
 
 
