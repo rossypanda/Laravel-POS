@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
 class CreateTblSupplier extends Migration
 {
@@ -19,17 +20,17 @@ class CreateTblSupplier extends Migration
             $table->increments('supplier_id');
             $table->string('supplier', 50);
             $table->string('address',100);
-            $table->integer('zip_code')->default(null);
-            $table->string('contact_no',50)->default(null);
-            $table->string('email',50)->default(null);
-            $table->string('fax_no',50)->default(null);
-            $table->string('contact_person',50)->default(null);
-            $table->integer('terms')->default(null);
-            $table->string('bankaccount_no',50)->default(null);
-            $table->integer('company_id');
-            $table->timestamp('date_added');
-            $table->string('description');
-            $table->string('encoded_by', 20);
+            $table->integer('zip_code')->nullable();
+            $table->string('contact_no',50)->nullable();
+            $table->string('email',50)->nullable();
+            $table->string('fax_no',50)->nullable();
+            $table->string('contact_person',50)->nullable();
+            $table->integer('terms')->nullable();
+            $table->string('bankaccount_no',50)->nullable();
+            $table->integer('company_id')->nullable();
+            $table->timestamp('date_added')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->string('description')->nullable();
+            $table->string('encoded_by', 20)->nullable();
         });
     }
 

@@ -1,9 +1,13 @@
-import React from 'react';
+import React,{useState} from 'react';
 import ReactDOM from 'react-dom';
 import {Button,Container,Row,Table,Modal,ModalTitle,ModalDialog,ModalBody,ModalDialogProps,ModalFooter,Card,InputGroup,FormControl,InputGroupProps,Col,Form} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusSquare,faTrashAlt,faEye,faCheck,faUserTag,faPlusCircle,faBan} from '@fortawesome/free-solid-svg-icons';
 import { faLastfmSquare } from '@fortawesome/free-brands-svg-icons';
+import { useForm } from "react-hook-form";
+import baseUrl from '../helpers/BaseUrl';
+import axios from 'axios';
+import SweetAlert from 'react-bootstrap-sweetalert';
 
 function MyVerticallyCenteredModal(props) {
     return (
@@ -41,6 +45,8 @@ function Supplier() {
     const [modalShow, setModalShow] = React.useState(false);
     const [hideAddSupplier, setHideAddSupplier] = React.useState(true);
     const [hideSupplierTable, setHideAddSupplierTable] = React.useState(false);
+    const [customAlert, setCustomAlert] = useState(null);
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
    
 
     const buttonStyle ={
@@ -49,6 +55,26 @@ function Supplier() {
         marginBottom:"1rem"
     };
 
+    const onSubmit = (data) => {
+        axios
+        .post('/supplier/create', {
+           data
+        })
+        .then((response) => {
+            if(response.errors.length == 0){
+                setCustomAlert(<SweetAlert
+                success
+                title="Success!"
+                onConfirm={this.hideAlert}
+                >
+                New Supplier Added
+                </SweetAlert>);
+            }
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+    }
 
    const hideTableShowAddSupplier = (isCurrentlyHidden) => {
         if(isCurrentlyHidden){
@@ -127,6 +153,7 @@ function Supplier() {
             </Container>
 
             <Container fluid hidden={hideAddSupplier}>
+                {customAlert}
                 <Card className="border-wrapper">
                     <Card.Body>
                         <h4 className="mb-4"><FontAwesomeIcon icon={faUserTag} className="icon-space"/>Add Supplier</h4>
@@ -134,31 +161,34 @@ function Supplier() {
                             <Form.Row>
                                 <Form.Group as={Col} controlId="supplier">
                                     <Form.Label>Supplier</Form.Label>
-                                    <Form.Control type="text" placeholder="Enter Supplier" />
+                                    <Form.Control type="text" placeholder="Enter Supplier" {...register("supplier",{required:true})} isInvalid={errors.supplier} />
+                                    <Form.Control.Feedback type="invalid">Supplier is required</Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group as={Col} controlId="contact-person">
                                     <Form.Label>Contact Person</Form.Label>
-                                    <Form.Control type="text" placeholder="Enter Contact Person" />
+                                    <Form.Control type="text" placeholder="Enter Contact Person" {...register("contactPerson",{required:true})} isInvalid={errors.contactPerson} />
+                                    <Form.Control.Feedback type="invalid">Contact person is required</Form.Control.Feedback>
                                 </Form.Group>
                             </Form.Row>
                             
                             <Form.Group controlId="supplier-address">
                                 <Form.Label>Address</Form.Label>
-                                <Form.Control placeholder="Supplier Address" />
+                                <Form.Control placeholder="Supplier Address" {...register("address",{required:true})} isInvalid={errors.address}/>
+                                <Form.Control.Feedback type="invalid">Address is required</Form.Control.Feedback>
                             </Form.Group>
 
                             <Form.Row>
                                 <Form.Group as={Col} controlId="supplier-email">
                                     <Form.Label>Email</Form.Label>
-                                    <Form.Control  placeholder="Supplier email"/>
+                                    <Form.Control  placeholder="Supplier email" {...register("email")} />
                                 </Form.Group>
                                 <Form.Group as={Col} controlId="supplier-number">
                                     <Form.Label>Number</Form.Label>
-                                    <Form.Control placeholder="Supplier number"/>
+                                    <Form.Control placeholder="Supplier number" {...register("number")} />
                                 </Form.Group>
                                 <Form.Group as={Col} controlId="supplier-fax">
                                     <Form.Label>Fax No.</Form.Label>
-                                    <Form.Control placeholder="Supplier Fax"/>
+                                    <Form.Control placeholder="Supplier Fax" {...register("fax")}/>
                                 </Form.Group>
 
                             </Form.Row>
@@ -166,17 +196,17 @@ function Supplier() {
                             <Form.Row>
                                 <Form.Group as={Col} controlId="supplier-bank">
                                     <Form.Label>Bank Account</Form.Label>
-                                    <Form.Control placeholder="Supplier bank account"/>
+                                    <Form.Control placeholder="Supplier bank account" {...register("bank")}/>
                                 </Form.Group>
                                 <Form.Group as={Col} controlId="supplier-description">
                                     <Form.Label>Description</Form.Label>
-                                    <Form.Control placeholder="Optional"/>
+                                    <Form.Control placeholder="Optional" {...register("description")}/>
                                 </Form.Group>
                             </Form.Row>
 
                         </Form>
                         <div style={buttonStyle}>
-                            <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} >
+                            <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} onClick={handleSubmit(onSubmit)} >
                             <FontAwesomeIcon icon={faPlusCircle} className="icon-space" />
                              Add    
                             </Button>

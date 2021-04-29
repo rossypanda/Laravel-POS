@@ -19,21 +19,21 @@ class CreateTblPoHeader extends Migration
             $table->increments('po_header_id');
             $table->string('po_reference', 50);
             $table->foreignId('po_number');
-            $table->date('date')->default(null);
+            $table->date('date')->nullable();
             $table->foreignId('supplier_id');
-            $table->string('supplier_address',50)->default(null);
-            $table->string('payment_type',1)->default(null);
-            $table->string('project_name',50)->default(null);
-            $table->string('requested_by',50)->default(null);
-            $table->string('canvassed_by',50)->default(null);
-            $table->string('approved_by',50)->default(null);
-            $table->string('project_in_charge',50)->default(null);
-            $table->string('purchaser',50)->default(null);
-            $table->string('manager',50)->default(null);
-            $table->string('bank',50)->default(null);
-            $table->string('contact_person',50)->default(null);
-            $table->integer('terms')->default(null);
-            $table->string('encoded_by', 20);
+            $table->string('supplier_address',50)->nullable();
+            $table->string('payment_type',1)->nullable();
+            $table->string('project_name',50)->nullable();
+            $table->string('requested_by',50)->nullable();
+            $table->string('canvassed_by',50)->nullable();
+            $table->string('approved_by',50)->nullable();
+            $table->string('project_in_charge',50)->nullable();
+            $table->string('purchaser',50)->nullable();
+            $table->string('manager',50)->nullable();
+            $table->string('bank',50)->nullable();
+            $table->string('contact_person',50)->nullable();
+            $table->integer('terms')->nullable();
+            $table->string('encoded_by', 20)->nullable();
         });
     }
 

@@ -12089,7 +12089,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./modules/Example */ "./resources/js/modules/Example.js");
 
-__webpack_require__(/*! ./modules/Supplier */ "./resources/js/modules/Supplier.js");
+__webpack_require__(/*! ./modules/Supplier */ "./resources/js/modules/Supplier.jsx");
 
 __webpack_require__(/*! ./modules/PONumber */ "./resources/js/modules/PONumber.js");
 
@@ -12136,6 +12136,25 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/helpers/BaseUrl.jsx":
+/*!******************************************!*\
+  !*** ./resources/js/helpers/BaseUrl.jsx ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+var baseUrl = function baseUrl(path) {
+  return "".concat(window.location.protocol, "/").concat(window.location.host).concat(path);
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (baseUrl);
 
 /***/ }),
 
@@ -12622,10 +12641,10 @@ if (document.getElementById('poNumber')) {
 
 /***/ }),
 
-/***/ "./resources/js/modules/Supplier.js":
-/*!******************************************!*\
-  !*** ./resources/js/modules/Supplier.js ***!
-  \******************************************/
+/***/ "./resources/js/modules/Supplier.jsx":
+/*!*******************************************!*\
+  !*** ./resources/js/modules/Supplier.jsx ***!
+  \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -12636,15 +12655,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Modal.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Button.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Table.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Card.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Form.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Col.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Modal.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Button.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Table.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Card.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Form.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Col.js");
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
+/* harmony import */ var react_hook_form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-hook-form */ "./node_modules/react-hook-form/dist/index.esm.js");
+/* harmony import */ var _helpers_BaseUrl__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../helpers/BaseUrl */ "./resources/js/helpers/BaseUrl.jsx");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap-sweetalert */ "./node_modules/react-bootstrap-sweetalert/dist/index.js");
+/* harmony import */ var react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
@@ -12673,32 +12698,36 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
+
+
+
 function MyVerticallyCenteredModal(props) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, _objectSpread(_objectSpread({}, props), {}, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default, _objectSpread(_objectSpread({}, props), {}, {
     size: "lg",
     "aria-labelledby": "contained-modal-title-vcenter",
     centered: true,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default.Header, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default.Header, {
       closeButton: true,
       className: "modal-color",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default.Title, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default.Title, {
         id: "contained-modal-title-vcenter",
         children: "Modal heading"
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default.Body, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default.Body, {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h4", {
         children: "Centered Modal"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", {
         children: "Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros."
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default.Footer, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default.Footer, {
       className: "modal-color",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
         variant: "success",
         size: "sm",
         onClick: props.onHide,
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faCheck,
+          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faCheck,
           className: "icon-space"
         }), "Save Changes"]
       })
@@ -12707,6 +12736,8 @@ function MyVerticallyCenteredModal(props) {
 }
 
 function Supplier() {
+  var _this = this;
+
   var _React$useState = react__WEBPACK_IMPORTED_MODULE_1__.useState(false),
       _React$useState2 = _slicedToArray(_React$useState, 2),
       modalShow = _React$useState2[0],
@@ -12722,10 +12753,38 @@ function Supplier() {
       hideSupplierTable = _React$useState6[0],
       setHideAddSupplierTable = _React$useState6[1];
 
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),
+      _useState2 = _slicedToArray(_useState, 2),
+      customAlert = _useState2[0],
+      setCustomAlert = _useState2[1];
+
+  var _useForm = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_4__.useForm)(),
+      register = _useForm.register,
+      handleSubmit = _useForm.handleSubmit,
+      watch = _useForm.watch,
+      errors = _useForm.formState.errors;
+
   var buttonStyle = {
     display: "flex",
     justifyContent: "flex-end",
     marginBottom: "1rem"
+  };
+
+  var onSubmit = function onSubmit(data) {
+    axios__WEBPACK_IMPORTED_MODULE_6___default().post('/supplier/create', {
+      data: data
+    }).then(function (response) {
+      if (response.errors.length == 0) {
+        setCustomAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)((react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_7___default()), {
+          success: true,
+          title: "Success!",
+          onConfirm: _this.hideAlert,
+          children: "New Supplier Added"
+        }));
+      }
+    })["catch"](function (err) {
+      console.log(err);
+    });
   };
 
   var hideTableShowAddSupplier = function hideTableShowAddSupplier(isCurrentlyHidden) {
@@ -12739,12 +12798,12 @@ function Supplier() {
   };
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default, {
       fluid: true,
       hidden: hideSupplierTable,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
         style: buttonStyle,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
           variant: "success",
           size: "sm",
           style: {
@@ -12754,11 +12813,11 @@ function Supplier() {
             return hideTableShowAddSupplier(true);
           },
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-            icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faPlusSquare,
+            icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faPlusSquare,
             className: "icon-space"
           }), "Add Supplier"]
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
         striped: true,
         bordered: true,
         hover: true,
@@ -12788,21 +12847,21 @@ function Supplier() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
               children: "jabee@manamit.com"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("td", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
                 variant: "outline-info",
                 size: "sm",
                 onClick: function onClick() {
                   return setModalShow(true);
                 },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-                  icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faEye,
+                  icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faEye,
                   className: "icon-space"
                 }), "View"]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
                 variant: "outline-danger",
                 size: "sm",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-                  icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faTrashAlt,
+                  icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faTrashAlt,
                   className: "icon-space"
                 }), "Delete"]
               })]
@@ -12817,21 +12876,21 @@ function Supplier() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
               children: "jcdo@jolibee.com"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("td", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
                 variant: "outline-info",
                 size: "sm",
                 onClick: function onClick() {
                   return setModalShow(true);
                 },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-                  icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faEye,
+                  icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faEye,
                   className: "icon-space"
                 }), "View"]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
                 variant: "outline-danger",
                 size: "sm",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-                  icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faTrashAlt,
+                  icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faTrashAlt,
                   className: "icon-space"
                 }), "Delete"]
               })]
@@ -12846,21 +12905,21 @@ function Supplier() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
               children: "Grab@gmail.com"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("td", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
                 variant: "outline-info",
                 size: "sm",
                 onClick: function onClick() {
                   return setModalShow(true);
                 },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-                  icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faEye,
+                  icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faEye,
                   className: "icon-space"
                 }), "View"]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
                 variant: "outline-danger",
                 size: "sm",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-                  icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faTrashAlt,
+                  icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faTrashAlt,
                   className: "icon-space"
                 }), "Delete"]
               })]
@@ -12868,104 +12927,126 @@ function Supplier() {
           })]
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default, {
       fluid: true,
       hidden: hideAddSupplier,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
+      children: [customAlert, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default, {
         className: "border-wrapper",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Body, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default.Body, {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("h4", {
             className: "mb-4",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-              icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faUserTag,
+              icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faUserTag,
               className: "icon-space"
             }), "Add Supplier"]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Row, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
                 controlId: "supplier",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
                   children: "Supplier"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread(_objectSpread({
                   type: "text",
                   placeholder: "Enter Supplier"
+                }, register("supplier", {
+                  required: true
+                })), {}, {
+                  isInvalid: errors.supplier
+                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control.Feedback, {
+                  type: "invalid",
+                  children: "Supplier is required"
                 })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
                 controlId: "contact-person",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
                   children: "Contact Person"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread(_objectSpread({
                   type: "text",
                   placeholder: "Enter Contact Person"
+                }, register("contactPerson", {
+                  required: true
+                })), {}, {
+                  isInvalid: errors.contactPerson
+                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control.Feedback, {
+                  type: "invalid",
+                  children: "Contact person is required"
                 })]
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
               controlId: "supplier-address",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
                 children: "Address"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread(_objectSpread({
                 placeholder: "Supplier Address"
+              }, register("address", {
+                required: true
+              })), {}, {
+                isInvalid: errors.address
+              })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control.Feedback, {
+                type: "invalid",
+                children: "Address is required"
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Row, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
                 controlId: "supplier-email",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
                   children: "Email"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread({
                   placeholder: "Supplier email"
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                }, register("email")))]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
                 controlId: "supplier-number",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
                   children: "Number"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread({
                   placeholder: "Supplier number"
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                }, register("number")))]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
                 controlId: "supplier-fax",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
                   children: "Fax No."
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread({
                   placeholder: "Supplier Fax"
-                })]
+                }, register("fax")))]
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Row, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
                 controlId: "supplier-bank",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
                   children: "Bank Account"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread({
                   placeholder: "Supplier bank account"
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                }, register("bank")))]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
                 controlId: "supplier-description",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
                   children: "Description"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread({
                   placeholder: "Optional"
-                })]
+                }, register("description")))]
               })]
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
             style: buttonStyle,
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
               variant: "success",
               size: "sm",
               style: {
                 marginRight: "0.5rem"
               },
+              onClick: handleSubmit(onSubmit),
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faPlusCircle,
+                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faPlusCircle,
                 className: "icon-space"
               }), "Add"]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
               variant: "danger",
               size: "sm",
               style: {
@@ -12975,13 +13056,13 @@ function Supplier() {
                 return hideTableShowAddSupplier(false);
               },
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faBan,
+                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faBan,
                 className: "icon-space"
               }), "Cancel"]
             })]
           })]
         })
-      })
+      })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MyVerticallyCenteredModal, {
       show: modalShow,
       onHide: function onHide() {
@@ -49951,6 +50032,1648 @@ module.exports = ReactPropTypesSecret;
 
 /***/ }),
 
+/***/ "./node_modules/react-bootstrap-sweetalert/dist/components/Buttons.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/react-bootstrap-sweetalert/dist/components/Buttons.js ***!
+  \****************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var styles = __importStar(__webpack_require__(/*! ../styles/SweetAlertStyles */ "./node_modules/react-bootstrap-sweetalert/dist/styles/SweetAlertStyles.js"));
+var SweetAlertStyles_1 = __webpack_require__(/*! ../styles/SweetAlertStyles */ "./node_modules/react-bootstrap-sweetalert/dist/styles/SweetAlertStyles.js");
+var Buttons = /** @class */ (function (_super) {
+    __extends(Buttons, _super);
+    function Buttons() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.buttonStyles = {};
+        _this.confirmButtonElement = null;
+        _this.cancelButtonElement = null;
+        _this.setConfirmButtonElementRef = function (element) {
+            _this.confirmButtonElement = element;
+        };
+        _this.setCancelButtonElementRef = function (element) {
+            _this.cancelButtonElement = element;
+        };
+        _this.getButtonStyle = function (bsStyle) {
+            if (bsStyle === 'error')
+                bsStyle = 'danger';
+            if (_this.buttonStyles[bsStyle] == null) {
+                var style = Buttons.styles[bsStyle] || Buttons.styles.default;
+                _this.buttonStyles[bsStyle] = {
+                    borderColor: "" + style.borderColor,
+                    boxShadow: "inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px " + style.shadowColor,
+                };
+            }
+            return _this.buttonStyles[bsStyle];
+        };
+        return _this;
+    }
+    Buttons.prototype.componentDidMount = function () {
+        this.focusButton();
+    };
+    Buttons.prototype.componentDidUpdate = function (prevProps) {
+        var _this = this;
+        // when displaying back to back alerts React will treat this
+        // as an update to the same alert. this causes componentDidMount
+        // to not be called for the subsequent alerts. i hope to find a better
+        // way to handle this in the future, but for now i'm checking if the
+        // title, type, or button text has changed
+        if (prevProps.type !== this.props.type ||
+            prevProps.confirmBtnText !== this.props.confirmBtnText ||
+            prevProps.title !== this.props.title) {
+            setTimeout(function () { return _this.focusButton(); }, 0);
+        }
+    };
+    Buttons.prototype.focusButton = function () {
+        if (this.props.focusCancelBtn && this.cancelButtonElement) {
+            try {
+                this.cancelButtonElement.focus();
+            }
+            catch (e) {
+                // whoops
+            }
+        }
+        else if (this.props.focusConfirmBtn && this.confirmButtonElement) {
+            try {
+                this.confirmButtonElement.focus();
+            }
+            catch (e) {
+                // whoops
+            }
+        }
+    };
+    Buttons.prototype.confirmButtonRender = function () {
+        var _this = this;
+        if (!this.props.showConfirm)
+            return false;
+        var confirmBtnBsStyle = this.props.confirmBtnBsStyle === 'error' ? 'danger' : this.props.confirmBtnBsStyle;
+        var confirmButtonStyle = Object.assign({}, styles.button, this.getButtonStyle(confirmBtnBsStyle), this.props.confirmBtnStyle || {});
+        /**
+         * These buttons are <a> anchor tags because for some reason React is triggering click events on <button>
+         * elements when an enter key event is fired from an input field in the alert.
+         * Please do not change this back to any other type of element.
+         */
+        return (react_1.default.createElement("a", { ref: this.setConfirmButtonElementRef, href: '#', style: confirmButtonStyle, className: "btn btn-" + this.props.btnSize + " btn-" + confirmBtnBsStyle + " " + this.props.confirmBtnCssClass + " " + (this.props.disabled ? 'disabled' : ''), onClick: function (e) {
+                e.stopPropagation();
+                e.preventDefault();
+                if (!_this.props.disabled) {
+                    _this.props.onConfirm();
+                }
+            } }, this.props.confirmBtnText));
+    };
+    Buttons.prototype.cancelButtonRender = function () {
+        var _this = this;
+        if (!this.props.showCancel)
+            return false;
+        var cancelBtnBsStyle = this.props.cancelBtnBsStyle === 'error' ? 'danger' : this.props.cancelBtnBsStyle;
+        var cancelButtonStyle = Object.assign({}, styles.button, this.props.cancelBtnStyle || {});
+        /**
+         * These buttons are <a> anchor tags because for some reason React is triggering click events on <button>
+         * elements when an enter key event is fired from an input field in the alert.
+         * Please do not change this back to any other type of element.
+         */
+        return (react_1.default.createElement("a", { ref: this.setCancelButtonElementRef, href: '#', style: cancelButtonStyle, className: "btn btn-" + this.props.btnSize + " btn-" + cancelBtnBsStyle + " " + this.props.cancelBtnCssClass, onClick: function (e) {
+                e.stopPropagation();
+                e.preventDefault();
+                _this.props.onCancel();
+            } }, this.props.cancelBtnText));
+    };
+    Buttons.prototype.render = function () {
+        if (!this.props.showConfirm && !this.props.showCancel) {
+            return false;
+        }
+        return (react_1.default.createElement("p", { style: SweetAlertStyles_1.actions }, this.props.customButtons ? (this.props.customButtons) : (react_1.default.createElement(react_1.default.Fragment, null, !this.props.reverseButtons ? (react_1.default.createElement(react_1.default.Fragment, null,
+            this.cancelButtonRender(),
+            this.confirmButtonRender())) : (react_1.default.createElement(react_1.default.Fragment, null,
+            this.confirmButtonRender(),
+            this.cancelButtonRender()))))));
+    };
+    Buttons.defaultProps = {
+        confirmBtnText: 'OK',
+        confirmBtnBsStyle: 'primary',
+        confirmBtnCssClass: '',
+        confirmBtnStyle: {},
+        cancelBtnText: 'Cancel',
+        cancelBtnBsStyle: 'link',
+        cancelBtnCssClass: '',
+        cancelBtnStyle: {},
+        focusConfirmBtn: true,
+        focusCancelBtn: false,
+        showConfirm: true,
+        showCancel: false,
+        reverseButtons: false,
+        btnSize: 'lg',
+    };
+    Buttons.styles = {
+        primary: {
+            borderColor: '#286090',
+            shadowColor: 'rgb(165, 202, 234)'
+        },
+        success: {
+            borderColor: '#4cae4c',
+            shadowColor: 'rgba(76, 174, 76, 0.6)'
+        },
+        info: {
+            borderColor: '#46b8da',
+            shadowColor: 'rgba(70, 184, 218, 0.6)'
+        },
+        danger: {
+            borderColor: '#d43f3a',
+            shadowColor: 'rgba(212, 63, 58, 0.6)'
+        },
+        warning: {
+            borderColor: '#eea236',
+            shadowColor: 'rgba(238, 162, 54, 0.6)'
+        },
+        default: {
+            borderColor: '#cccccc',
+            shadowColor: 'rgba(204, 204, 204, 0.6)'
+        },
+        secondary: {
+            borderColor: '#cccccc',
+            shadowColor: 'rgba(204, 204, 204, 0.6)'
+        }
+    };
+    return Buttons;
+}(react_1.default.Component));
+exports.default = Buttons;
+//# sourceMappingURL=Buttons.js.map
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap-sweetalert/dist/components/Content.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/react-bootstrap-sweetalert/dist/components/Content.js ***!
+  \****************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var SweetAlertStyles_1 = __webpack_require__(/*! ../styles/SweetAlertStyles */ "./node_modules/react-bootstrap-sweetalert/dist/styles/SweetAlertStyles.js");
+var Content = function (_a) {
+    var children = _a.children;
+    return (react_1.default.createElement("div", { style: SweetAlertStyles_1.contentContainer }, children));
+};
+exports.default = Content;
+//# sourceMappingURL=Content.js.map
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap-sweetalert/dist/components/CustomIcon.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/react-bootstrap-sweetalert/dist/components/CustomIcon.js ***!
+  \*******************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var styles = __importStar(__webpack_require__(/*! ../styles/SweetAlertStyles */ "./node_modules/react-bootstrap-sweetalert/dist/styles/SweetAlertStyles.js"));
+var defaultStyle = Object.assign({}, styles.icon, styles.iconCustom);
+var CustomIcon = function (_a) {
+    var iconUrl = _a.iconUrl;
+    var backgroundImage = "url(" + iconUrl;
+    var style = Object.assign({}, defaultStyle, { backgroundImage: backgroundImage });
+    return react_1.default.createElement("div", { style: style });
+};
+exports.default = CustomIcon;
+//# sourceMappingURL=CustomIcon.js.map
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap-sweetalert/dist/components/ErrorIcon.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/react-bootstrap-sweetalert/dist/components/ErrorIcon.js ***!
+  \******************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var styles = __importStar(__webpack_require__(/*! ../styles/SweetAlertStyles */ "./node_modules/react-bootstrap-sweetalert/dist/styles/SweetAlertStyles.js"));
+var ErrorIcon = function () { return (react_1.default.createElement("div", { style: Object.assign({}, styles.icon, styles.iconError) },
+    react_1.default.createElement("span", { style: styles.iconErrorX },
+        react_1.default.createElement("span", { style: Object.assign({}, styles.iconErrorLine, styles.iconErrorLineLeft) }),
+        react_1.default.createElement("span", { style: Object.assign({}, styles.iconErrorLine, styles.iconErrorLineRight) })))); };
+exports.default = ErrorIcon;
+//# sourceMappingURL=ErrorIcon.js.map
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap-sweetalert/dist/components/InfoIcon.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/react-bootstrap-sweetalert/dist/components/InfoIcon.js ***!
+  \*****************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var styles = __importStar(__webpack_require__(/*! ../styles/SweetAlertStyles */ "./node_modules/react-bootstrap-sweetalert/dist/styles/SweetAlertStyles.js"));
+var InfoIcon = function () { return (react_1.default.createElement("div", { style: Object.assign({}, styles.icon, styles.iconInfo) },
+    react_1.default.createElement("div", { style: styles.iconInfoBefore }),
+    react_1.default.createElement("div", { style: styles.iconInfoAfter }))); };
+exports.default = InfoIcon;
+//# sourceMappingURL=InfoIcon.js.map
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap-sweetalert/dist/components/Input.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/react-bootstrap-sweetalert/dist/components/Input.js ***!
+  \**************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var styles = __importStar(__webpack_require__(/*! ../styles/SweetAlertStyles */ "./node_modules/react-bootstrap-sweetalert/dist/styles/SweetAlertStyles.js"));
+var Input = /** @class */ (function (_super) {
+    __extends(Input, _super);
+    function Input() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.inputElement = null;
+        _this.setInputElementRef = function (element) {
+            _this.inputElement = element;
+        };
+        return _this;
+    }
+    Input.prototype.componentDidMount = function () {
+        if (this.props.type === 'input') {
+            try {
+                this.inputElement.focus();
+            }
+            catch (e) {
+                // whoops
+            }
+        }
+    };
+    Input.prototype.render = function () {
+        var _this = this;
+        return (react_1.default.createElement("div", { style: { position: 'relative' } },
+            this.props.inputType === 'textarea' ? (react_1.default.createElement("textarea", { ref: this.setInputElementRef, rows: 4, className: "form-control", value: this.props.inputValue || '', onChange: function (e) { return _this.props.onChangeInput(e); }, onKeyDown: function (e) { return _this.props.onInputKeyDown(e); }, placeholder: this.props.placeholder })) : (react_1.default.createElement("input", { type: this.props.inputType, ref: this.setInputElementRef, className: "form-control", value: this.props.inputValue || '', onChange: function (e) { return _this.props.onChangeInput(e); }, onKeyDown: function (e) { return _this.props.onInputKeyDown(e); }, placeholder: this.props.placeholder })),
+            this.props.showValidationMessage && (react_1.default.createElement("div", { style: styles.inputErrorIcon },
+                react_1.default.createElement("div", { style: Object.assign({}, styles.inputErrorIconBeforeAfter, styles.inputErrorIconBefore) }),
+                react_1.default.createElement("div", { style: Object.assign({}, styles.inputErrorIconBeforeAfter, styles.inputErrorIconAfter) })))));
+    };
+    return Input;
+}(react_1.default.Component));
+exports.default = Input;
+//# sourceMappingURL=Input.js.map
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap-sweetalert/dist/components/Overlay.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/react-bootstrap-sweetalert/dist/components/Overlay.js ***!
+  \****************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var SweetAlertStyles_1 = __webpack_require__(/*! ../styles/SweetAlertStyles */ "./node_modules/react-bootstrap-sweetalert/dist/styles/SweetAlertStyles.js");
+var Overlay = /** @class */ (function (_super) {
+    __extends(Overlay, _super);
+    function Overlay() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.overlayElement = null;
+        _this.setOverlayElementRef = function (element) {
+            _this.overlayElement = element;
+        };
+        return _this;
+    }
+    Overlay.prototype.componentDidMount = function () {
+        if (this.overlayElement) {
+            this.overlayElement.scrollTop = 0;
+        }
+    };
+    Overlay.prototype.render = function () {
+        var _a = this.props, show = _a.show, onClick = _a.onClick, onKeyDown = _a.onKeyDown, children = _a.children;
+        return show ? (react_1.default.createElement("div", { ref: this.setOverlayElementRef, style: __assign(__assign({}, SweetAlertStyles_1.overlay), SweetAlertStyles_1.sweetAlertContainer), onClick: function (e) { return onClick(e); }, tabIndex: 0, onKeyDown: function (e) { return onKeyDown(e); } }, children)) : (react_1.default.createElement("div", { style: SweetAlertStyles_1.sweetAlertContainer, tabIndex: 0, onKeyDown: function (e) { return onKeyDown(e); } }, children));
+    };
+    return Overlay;
+}(react_1.default.Component));
+exports.default = Overlay;
+//# sourceMappingURL=Overlay.js.map
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap-sweetalert/dist/components/SuccessIcon.js":
+/*!********************************************************************************!*\
+  !*** ./node_modules/react-bootstrap-sweetalert/dist/components/SuccessIcon.js ***!
+  \********************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var styles = __importStar(__webpack_require__(/*! ../styles/SweetAlertStyles */ "./node_modules/react-bootstrap-sweetalert/dist/styles/SweetAlertStyles.js"));
+var SuccessIcon = function () { return (react_1.default.createElement("div", { style: Object.assign({}, styles.icon, styles.iconSuccess) },
+    react_1.default.createElement("div", { style: Object.assign({}, styles.iconSuccessBeforeAfter, styles.iconSuccessBefore) }),
+    react_1.default.createElement("span", { style: Object.assign({}, styles.iconSuccessLine, styles.iconSuccessLineTip) }),
+    react_1.default.createElement("span", { style: Object.assign({}, styles.iconSuccessLine, styles.iconSuccessLineLong) }),
+    react_1.default.createElement("div", { style: styles.iconSuccessPlaceholder }),
+    react_1.default.createElement("div", { style: styles.iconSuccessFix }),
+    react_1.default.createElement("div", { style: Object.assign({}, styles.iconSuccessBeforeAfter, styles.iconSuccessAfter) }))); };
+exports.default = SuccessIcon;
+//# sourceMappingURL=SuccessIcon.js.map
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap-sweetalert/dist/components/SweetAlert.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/react-bootstrap-sweetalert/dist/components/SweetAlert.js ***!
+  \*******************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __spreadArrays = (this && this.__spreadArrays) || function () {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+// third-party
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+// components
+var SuccessIcon_1 = __importDefault(__webpack_require__(/*! ./SuccessIcon */ "./node_modules/react-bootstrap-sweetalert/dist/components/SuccessIcon.js"));
+var ErrorIcon_1 = __importDefault(__webpack_require__(/*! ./ErrorIcon */ "./node_modules/react-bootstrap-sweetalert/dist/components/ErrorIcon.js"));
+var InfoIcon_1 = __importDefault(__webpack_require__(/*! ./InfoIcon */ "./node_modules/react-bootstrap-sweetalert/dist/components/InfoIcon.js"));
+var WarningIcon_1 = __importDefault(__webpack_require__(/*! ./WarningIcon */ "./node_modules/react-bootstrap-sweetalert/dist/components/WarningIcon.js"));
+var CustomIcon_1 = __importDefault(__webpack_require__(/*! ./CustomIcon */ "./node_modules/react-bootstrap-sweetalert/dist/components/CustomIcon.js"));
+var Buttons_1 = __importDefault(__webpack_require__(/*! ./Buttons */ "./node_modules/react-bootstrap-sweetalert/dist/components/Buttons.js"));
+var Input_1 = __importDefault(__webpack_require__(/*! ./Input */ "./node_modules/react-bootstrap-sweetalert/dist/components/Input.js"));
+var ValidationMessage_1 = __importDefault(__webpack_require__(/*! ./ValidationMessage */ "./node_modules/react-bootstrap-sweetalert/dist/components/ValidationMessage.js"));
+var Title_1 = __importDefault(__webpack_require__(/*! ./Title */ "./node_modules/react-bootstrap-sweetalert/dist/components/Title.js"));
+var Content_1 = __importDefault(__webpack_require__(/*! ./Content */ "./node_modules/react-bootstrap-sweetalert/dist/components/Content.js"));
+var Overlay_1 = __importDefault(__webpack_require__(/*! ./Overlay */ "./node_modules/react-bootstrap-sweetalert/dist/components/Overlay.js"));
+// other
+var styles = __importStar(__webpack_require__(/*! ../styles/SweetAlertStyles */ "./node_modules/react-bootstrap-sweetalert/dist/styles/SweetAlertStyles.js"));
+var Patterns = __importStar(__webpack_require__(/*! ../constants/patterns */ "./node_modules/react-bootstrap-sweetalert/dist/constants/patterns.js"));
+var prop_types_1 = __webpack_require__(/*! ../prop-types */ "./node_modules/react-bootstrap-sweetalert/dist/prop-types.js");
+var default_props_1 = __webpack_require__(/*! ../default-props */ "./node_modules/react-bootstrap-sweetalert/dist/default-props.js");
+var SWEET_ALERT_DEFAULT_STYLES = styles.sweetAlert;
+var _resetting = {};
+var debugLogger = function () {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+    }
+    // uncomment the next line to get some debugging logs.
+    // console.log(...args);
+};
+var SweetAlert = /** @class */ (function (_super) {
+    __extends(SweetAlert, _super);
+    function SweetAlert(props) {
+        var _this = _super.call(this, props) || this;
+        _this.inputElement = null;
+        _this.unsupportedProp = function (oldProp, message) {
+            try {
+                console.warn("react-bootstrap-sweetalert: Unsupported prop '" + oldProp + "'. Please " + message);
+            }
+            catch (e) {
+                // do nothing
+            }
+        };
+        _this.focusInput = function () {
+            debugLogger('inputElement', _this.inputElement);
+            if (_this.inputElement) {
+                debugLogger('inputElement trying to focus', _this.inputElement);
+                try {
+                    _this.inputElement.focus();
+                }
+                catch (e) {
+                    debugLogger('inputElement focus error', e);
+                    // whoops
+                }
+            }
+        };
+        _this.getIcon = function () {
+            switch (_this.state.type) {
+                case 'danger':
+                case 'error':
+                    return react_1.default.createElement(ErrorIcon_1.default, null);
+                case 'warning':
+                    return react_1.default.createElement(WarningIcon_1.default, null);
+                case 'info':
+                    return react_1.default.createElement(InfoIcon_1.default, null);
+                case 'success':
+                    return react_1.default.createElement(SuccessIcon_1.default, null);
+                case 'custom':
+                    if (_this.props.customIcon) {
+                        if (typeof _this.props.customIcon == 'string') {
+                            return react_1.default.createElement(CustomIcon_1.default, { iconUrl: _this.props.customIcon });
+                        }
+                        return _this.props.customIcon;
+                    }
+                    return null;
+                default:
+                    return null;
+            }
+        };
+        _this.onChangeInput = function (e) {
+            var target = e.target;
+            _this.setState({
+                inputValue: target.value,
+                showValidationMessage: false
+            });
+        };
+        _this.isValidInput = function () {
+            if (!_this.props.required) {
+                return true;
+            }
+            var regex = _this.props.validationRegex || (_this.props.inputType === 'email' ? Patterns.emailRegex : Patterns.defaultRegex);
+            return regex.test(_this.state.inputValue);
+        };
+        _this.isDisabled = function () {
+            return _this.props.onCancel && _this.props.disabled;
+        };
+        _this.onAlertClose = function (callback) {
+            _resetting[_this.state.id] = true;
+            debugLogger('onAlertClose resetting state');
+            _this.setState(__assign(__assign({}, SweetAlert.getDefaultState()), { id: _this.state.id }), function () {
+                _resetting[_this.state.id] = false;
+                callback();
+            });
+        };
+        _this.beforeCloseAlert = function (closingAction, callback) {
+            debugLogger('in beforeCloseAlert: setting show to false');
+            _this.setState({ show: false, closingAction: closingAction }, function () {
+                debugLogger('state updated', _this.state.show);
+                if (!_this.state.show) {
+                    debugLogger('invoking callback');
+                    callback();
+                }
+            });
+        };
+        _this.onConfirm = function (handleCloseAnimations) {
+            if (handleCloseAnimations === void 0) { handleCloseAnimations = true; }
+            if (_this.isDisabled()) {
+                return;
+            }
+            // if this is an input alert, then we will send the input value to the props.onConfirm function
+            var isInput = _this.state.type === 'input';
+            var inputValue = _this.state.inputValue;
+            // if this is a controlled alert, then we will send the dependencies value to the props.onConfirm function
+            var isControlled = _this.state.type === 'controlled';
+            var dependencies = __spreadArrays(_this.state.dependencies);
+            if (isInput && !_this.isValidInput()) {
+                _this.setState({
+                    showValidationMessage: true
+                });
+                return;
+            }
+            var confirm = function () {
+                debugLogger('in confirm callback');
+                if (isInput) {
+                    _this.onAlertClose(function () {
+                        _this.props.onConfirm(inputValue);
+                    });
+                }
+                else if (isControlled) {
+                    _this.onAlertClose(function () {
+                        _this.props.onConfirm(dependencies);
+                    });
+                }
+                else {
+                    _this.onAlertClose(function () { return _this.props.onConfirm(); });
+                }
+            };
+            if (handleCloseAnimations) {
+                debugLogger('calling beforeCloseAlert');
+                _this.beforeCloseAlert('confirm', function () { return confirm(); });
+            }
+            else {
+                confirm();
+            }
+        };
+        _this.onCancel = function (handleCloseAnimations) {
+            if (handleCloseAnimations === void 0) { handleCloseAnimations = true; }
+            var cancel = function () {
+                _this.onAlertClose(function () {
+                    if (_this.props.onCancel) {
+                        _this.props.onCancel();
+                    }
+                });
+            };
+            if (handleCloseAnimations) {
+                _this.beforeCloseAlert('cancel', function () { return cancel(); });
+            }
+            else {
+                cancel();
+            }
+        };
+        _this.onInputKeyDown = function (e) {
+            if (e.keyCode == 13) {
+                e.stopPropagation();
+                _this.onConfirm();
+            }
+        };
+        _this.onKeyDown = function (e) {
+            if (e.keyCode == 27) {
+                if (_this.props.allowEscape && _this.props.onCancel) {
+                    e.stopPropagation();
+                    _this.onCancel();
+                }
+            }
+        };
+        _this.onClickInside = function (e) {
+            e.stopPropagation();
+        };
+        _this.onClickOutside = function () {
+            if (_this.props.closeOnClickOutside && _this.props.onCancel) {
+                _this.onCancel();
+            }
+        };
+        _this.setAutoFocusInputRef = function (element) {
+            _this.inputElement = element;
+        };
+        _this.getComposedStyle = function () {
+            return Object.assign({}, SWEET_ALERT_DEFAULT_STYLES, _this.props.style, { animation: _this.state.animation });
+        };
+        _this.getAlertContent = function () {
+            // Support for render props for content of alert
+            if (typeof _this.props.children === 'function') {
+                var renderProps = {
+                    onEnterKeyDownConfirm: function (event) {
+                        if (event.key === 'Enter') {
+                            event.preventDefault();
+                            event.stopPropagation();
+                            _this.onConfirm();
+                        }
+                    },
+                    confirm: function () { return _this.onConfirm(); },
+                    cancel: function () { return _this.onCancel(); },
+                    setAutoFocusInputRef: _this.setAutoFocusInputRef.bind(_this),
+                };
+                return _this.props.children(renderProps);
+            }
+            return _this.props.children;
+        };
+        _this.getCloseButton = function () {
+            if (!_this.props.showCloseButton || !_this.props.onCancel) {
+                return null;
+            }
+            return (react_1.default.createElement("span", { className: 'btn', style: Object.assign({}, styles.closeButton, _this.props.closeBtnStyle), onClick: function () { return _this.onCancel(); } }, "x"));
+        };
+        _this.getInputField = function () {
+            if (_this.state.type !== 'input') {
+                return null;
+            }
+            return (react_1.default.createElement(Input_1.default, __assign({}, _this.props, _this.state, { type: _this.state.type, onInputKeyDown: _this.onInputKeyDown, onChangeInput: _this.onChangeInput })));
+        };
+        _this.getValidationMessage = function () {
+            if (!_this.state.showValidationMessage) {
+                return null;
+            }
+            return react_1.default.createElement(ValidationMessage_1.default, __assign({}, _this.props));
+        };
+        _this.getButtons = function () {
+            return (react_1.default.createElement(Buttons_1.default, __assign({}, _this.props, { type: _this.state.type, onConfirm: _this.onConfirm, onCancel: _this.onCancel, focusConfirmBtn: _this.state.focusConfirmBtn, focusCancelBtn: _this.state.focusCancelBtn, disabled: _this.isDisabled() })));
+        };
+        _this.getInjectedStyles = function () {
+            return (react_1.default.createElement(react_1.default.Fragment, null,
+                react_1.default.createElement("style", { type: "text/css", dangerouslySetInnerHTML: {
+                        __html: "\n                body.sweetalert-overflow-hidden {\n                  overflow: hidden;\n                }\n                body .sweet-alert button {\n                  outline: none !important;\n                }\n              "
+                    } }),
+                react_1.default.createElement("style", { type: "text/css" }, "@-webkit-keyframes showSweetAlert {  0% {    transform: scale(0.7);    -webkit-transform: scale(0.7);  }  45% {    transform: scale(1.05);    -webkit-transform: scale(1.05);  }  80% {    transform: scale(0.95);    -webkit-tranform: scale(0.95);  }  100% {    transform: scale(1);    -webkit-transform: scale(1);  }}@keyframes showSweetAlert {  0% {    transform: scale(0.7);    -webkit-transform: scale(0.7);  }  45% {    transform: scale(1.05);    -webkit-transform: scale(1.05);  }  80% {    transform: scale(0.95);    -webkit-tranform: scale(0.95);  }  100% {    transform: scale(1);    -webkit-transform: scale(1);  }}@-webkit-keyframes hideSweetAlert {  0% {    transform: scale(1);    -webkit-transform: scale(1);  }  100% {    transform: scale(0.4);    -webkit-transform: scale(0.4);  }}@keyframes hideSweetAlert {  0% {    transform: scale(1);    -webkit-transform: scale(1);  }  100% {    transform: scale(0.4);    -webkit-transform: scale(0.4);  }}@-webkit-keyframes animateSuccessTip {  0% {    width: 0;    left: 1px;    top: 19px;  }  54% {    width: 0;    left: 1px;    top: 19px;  }  70% {    width: 50px;    left: -8px;    top: 37px;  }  84% {    width: 17px;    left: 21px;    top: 48px;  }  100% {    width: 25px;    left: 14px;    top: 45px;  }}@keyframes animateSuccessTip {  0% {    width: 0;    left: 1px;    top: 19px;  }  54% {    width: 0;    left: 1px;    top: 19px;  }  70% {    width: 50px;    left: -8px;    top: 37px;  }  84% {    width: 17px;    left: 21px;    top: 48px;  }  100% {    width: 25px;    left: 14px;    top: 45px;  }}@-webkit-keyframes animateSuccessLong {  0% {    width: 0;    right: 46px;    top: 54px;  }  65% {    width: 0;    right: 46px;    top: 54px;  }  84% {    width: 55px;    right: 0px;    top: 35px;  }  100% {    width: 47px;    right: 8px;    top: 38px;  }}@keyframes animateSuccessLong {  0% {    width: 0;    right: 46px;    top: 54px;  }  65% {    width: 0;    right: 46px;    top: 54px;  }  84% {    width: 55px;    right: 0px;    top: 35px;  }  100% {    width: 47px;    right: 8px;    top: 38px;  }}@-webkit-keyframes rotatePlaceholder {  0% {    transform: rotate(-45deg);    -webkit-transform: rotate(-45deg);  }  5% {    transform: rotate(-45deg);    -webkit-transform: rotate(-45deg);  }  12% {    transform: rotate(-405deg);    -webkit-transform: rotate(-405deg);  }  100% {    transform: rotate(-405deg);    -webkit-transform: rotate(-405deg);  }}@keyframes rotatePlaceholder {  0% {    transform: rotate(-45deg);    -webkit-transform: rotate(-45deg);  }  5% {    transform: rotate(-45deg);    -webkit-transform: rotate(-45deg);  }  12% {    transform: rotate(-405deg);    -webkit-transform: rotate(-405deg);  }  100% {    transform: rotate(-405deg);    -webkit-transform: rotate(-405deg);  }}@-webkit-keyframes animateErrorIcon {  0% {    transform: rotateX(100deg);    -webkit-transform: rotateX(100deg);    opacity: 0;  }  100% {    transform: rotateX(0deg);    -webkit-transform: rotateX(0deg);    opacity: 1;  }}@keyframes animateErrorIcon {  0% {    transform: rotateX(100deg);    -webkit-transform: rotateX(100deg);    opacity: 0;  }  100% {    transform: rotateX(0deg);    -webkit-transform: rotateX(0deg);    opacity: 1;  }}@-webkit-keyframes animateXMark {  0% {    transform: scale(0.4);    -webkit-transform: scale(0.4);    margin-top: 26px;    opacity: 0;  }  50% {    transform: scale(0.4);    -webkit-transform: scale(0.4);    margin-top: 26px;    opacity: 0;  }  80% {    transform: scale(1.15);    -webkit-transform: scale(1.15);    margin-top: -6px;  }  100% {    transform: scale(1);    -webkit-transform: scale(1);    margin-top: 0;    opacity: 1;  }}@keyframes animateXMark {  0% {    transform: scale(0.4);    -webkit-transform: scale(0.4);    margin-top: 26px;    opacity: 0;  }  50% {    transform: scale(0.4);    -webkit-transform: scale(0.4);    margin-top: 26px;    opacity: 0;  }  80% {    transform: scale(1.15);    -webkit-transform: scale(1.15);    margin-top: -6px;  }  100% {    transform: scale(1);    -webkit-transform: scale(1);    margin-top: 0;    opacity: 1;  }}@-webkit-keyframes pulseWarning {  0% {    border-color: #F8D486;  }  100% {    border-color: #F8BB86;  }}@keyframes pulseWarning {  0% {    border-color: #F8D486;  }  100% {    border-color: #F8BB86;  }}@-webkit-keyframes pulseWarningIns {  0% {    background-color: #F8D486;  }  100% {    background-color: #F8BB86;  }}@keyframes pulseWarningIns {  0% {    background-color: #F8D486;  }  100% {    background-color: #F8BB86;  }}")));
+        };
+        if (_this.props.beforeUpdate) {
+            _this.unsupportedProp('beforeUpdate', 'use props.afterUpdate');
+        }
+        var newState = Object.assign(SweetAlert.getDefaultState(), {
+            hideTimeoutHandlerFunc: _this.hideTimeoutHandler.bind(_this)
+        });
+        if (_this.props.defaultValue != null) {
+            newState.inputValue = _this.props.defaultValue;
+        }
+        _this.state = newState;
+        _this.props.beforeMount();
+        return _this;
+    }
+    SweetAlert.prototype.componentDidMount = function () {
+        document.body.classList.add('sweetalert-overflow-hidden');
+        this.focusInput();
+        if (this.props.afterMount) {
+            this.props.afterMount();
+        }
+    };
+    SweetAlert.generateId = function () {
+        return '' + Date.now() + Math.ceil(Math.random() * 10000000000) + Math.ceil(Math.random() * 10000000000);
+    };
+    SweetAlert.getDefaultState = function () {
+        return {
+            id: SweetAlert.generateId(),
+            show: true,
+            focusConfirmBtn: true,
+            focusCancelBtn: false,
+            inputValue: '',
+            showValidationMessage: false,
+            timer: null,
+            animation: "",
+            prevTimeout: 0,
+            closingAction: null,
+            dependencies: [],
+        };
+    };
+    SweetAlert.getDerivedStateFromProps = function (nextProps, nextState) {
+        if (_resetting[nextState.id]) {
+            return {};
+        }
+        var newState = {};
+        var typeChanged = nextState.type !== SweetAlert.getTypeFromProps(nextProps);
+        var dependenciesChanged = nextState.dependencies !== nextProps.dependencies;
+        var timeoutChanged = nextState.prevTimeout !== nextProps.timeout;
+        // if the type of the alert changed, or the dependencies changed, then update the state from props
+        if (typeChanged || dependenciesChanged) {
+            newState = __assign(__assign({}, newState), SweetAlert.getStateFromProps(nextProps));
+        }
+        // if the state is changing, or the timeout changed, then reset the timeout timer
+        if (JSON.stringify(newState) !== '{}' || timeoutChanged) {
+            newState = __assign(__assign({}, newState), SweetAlert.handleTimeout(nextProps, nextState.timer));
+        }
+        // return the partially updated state
+        return __assign(__assign({}, newState), SweetAlert.handleAnimState(nextProps, nextState, nextState.hideTimeoutHandlerFunc));
+    };
+    SweetAlert.prototype.componentDidUpdate = function (prevProps, prevState) {
+        if (this.props.beforeUpdate) {
+            this.props.beforeUpdate(prevProps, prevState);
+        }
+        if (!prevState.show && this.state.show) {
+            this.focusInput();
+        }
+        this.props.afterUpdate(this.props, this.state);
+    };
+    SweetAlert.prototype.componentWillUnmount = function () {
+        document.body.classList.remove('sweetalert-overflow-hidden');
+        if (this.state.timer) {
+            clearTimeout(this.state.timer);
+        }
+        if (this.props.beforeUnmount) {
+            this.props.beforeUnmount();
+        }
+    };
+    SweetAlert.prototype.hideTimeoutHandler = function (time) {
+        var _this = this;
+        setTimeout(function () {
+            var closingAction = _this.state.closingAction;
+            /**
+             * Removing the closing action (shouldn't trigger another animation timeout)
+             */
+            _this.setState({ show: false, closingAction: null }, function () {
+                // handle the action that was started before the closing animation was started
+                switch (closingAction) {
+                    case 'confirm':
+                        _this.onConfirm(false);
+                        break;
+                    case 'cancel':
+                        _this.onCancel(false);
+                        break;
+                    default:
+                        break;
+                }
+            });
+        }, time);
+    };
+    ;
+    SweetAlert.handleTimeout = function (props, currentTimer) {
+        if (currentTimer) {
+            clearTimeout(currentTimer);
+        }
+        if (props.timeout && props.timeout > 0) {
+            var timer = setTimeout(function () { return props.onConfirm(); }, props.timeout);
+            return { timer: timer, prevTimeout: props.timeout };
+        }
+        return null;
+    };
+    SweetAlert.isAnimation = function (animProp) {
+        return animProp && typeof animProp !== 'boolean';
+    };
+    SweetAlert.animationFromProp = function (animProp) {
+        return animProp.name + ' ' + animProp.duration + 'ms';
+    };
+    SweetAlert.handleAnimState = function (props, state, hideTimeout) {
+        var userDefinedShow = typeof props.show === 'boolean';
+        var show = (userDefinedShow && !state.closingAction) ? props.show : state.show;
+        var animation = '';
+        if (show) {
+            if (props.openAnim) {
+                if (SweetAlert.isAnimation(props.openAnim)) {
+                    animation = SweetAlert.animationFromProp(props.openAnim);
+                }
+                else if (SweetAlert.isAnimation(SweetAlert.defaultProps.openAnim)) {
+                    animation = SweetAlert.animationFromProp(SweetAlert.defaultProps.openAnim);
+                }
+            }
+        }
+        else if (state.closingAction && props.closeAnim) {
+            var animProp = void 0;
+            if (SweetAlert.isAnimation(props.closeAnim)) {
+                animProp = props.closeAnim;
+            }
+            else if (SweetAlert.isAnimation(SweetAlert.defaultProps.closeAnim)) {
+                animProp = SweetAlert.defaultProps.closeAnim;
+            }
+            if (animProp) {
+                animation = SweetAlert.animationFromProp(animProp);
+                hideTimeout(animProp.duration);
+                show = true;
+            }
+        }
+        return { show: show, animation: animation };
+    };
+    ;
+    SweetAlert.prototype.render = function () {
+        if (!this.state.show) {
+            return null;
+        }
+        return (react_1.default.createElement("div", null,
+            this.getInjectedStyles(),
+            react_1.default.createElement(Overlay_1.default, { show: !this.props.hideOverlay, onClick: this.onClickOutside, onKeyDown: this.onKeyDown },
+                react_1.default.createElement("div", { style: this.getComposedStyle(), tabIndex: 0, onKeyDown: this.onKeyDown, onClick: this.onClickInside, className: 'sweet-alert ' + this.props.customClass },
+                    this.getCloseButton(),
+                    this.getIcon(),
+                    react_1.default.createElement(Title_1.default, null, this.props.title),
+                    react_1.default.createElement(Content_1.default, null, this.getAlertContent()),
+                    this.getInputField(),
+                    this.getValidationMessage(),
+                    this.getButtons()))));
+    };
+    SweetAlert.propTypes = prop_types_1.SWEET_ALERT_PROP_TYPES;
+    SweetAlert.defaultProps = default_props_1.SWEET_ALERT_DEFAULT_PROPS;
+    SweetAlert.SuccessIcon = SuccessIcon_1.default;
+    SweetAlert.ErrorIcon = ErrorIcon_1.default;
+    SweetAlert.InfoIcon = InfoIcon_1.default;
+    SweetAlert.WarningIcon = WarningIcon_1.default;
+    SweetAlert.CustomIcon = CustomIcon_1.default;
+    SweetAlert.Buttons = Buttons_1.default;
+    SweetAlert.Input = Input_1.default;
+    SweetAlert.ValidationMessage = ValidationMessage_1.default;
+    SweetAlert.Title = Title_1.default;
+    SweetAlert.Content = Content_1.default;
+    SweetAlert.getStateFromProps = function (props) {
+        var type = SweetAlert.getTypeFromProps(props);
+        return {
+            type: type,
+            focusConfirmBtn: props.focusConfirmBtn && type !== 'input',
+            focusCancelBtn: props.focusCancelBtn && type !== 'input',
+            dependencies: props.dependencies,
+        };
+    };
+    SweetAlert.getTypeFromProps = function (props) {
+        if (props.type)
+            return props.type;
+        if (props.secondary)
+            return 'secondary';
+        if (props.info)
+            return 'info';
+        if (props.success)
+            return 'success';
+        if (props.warning)
+            return 'warning';
+        if (props.danger || props.error)
+            return 'danger';
+        if (props.input)
+            return 'input';
+        if (props.custom)
+            return 'custom';
+        return 'default';
+    };
+    return SweetAlert;
+}(react_1.default.Component));
+exports.default = SweetAlert;
+//# sourceMappingURL=SweetAlert.js.map
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap-sweetalert/dist/components/Title.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/react-bootstrap-sweetalert/dist/components/Title.js ***!
+  \**************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var SweetAlertStyles_1 = __webpack_require__(/*! ../styles/SweetAlertStyles */ "./node_modules/react-bootstrap-sweetalert/dist/styles/SweetAlertStyles.js");
+var Title = function (_a) {
+    var children = _a.children;
+    return react_1.default.createElement("h2", { style: SweetAlertStyles_1.title }, children);
+};
+exports.default = Title;
+//# sourceMappingURL=Title.js.map
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap-sweetalert/dist/components/ValidationMessage.js":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/react-bootstrap-sweetalert/dist/components/ValidationMessage.js ***!
+  \**************************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var styles = __importStar(__webpack_require__(/*! ../styles/SweetAlertStyles */ "./node_modules/react-bootstrap-sweetalert/dist/styles/SweetAlertStyles.js"));
+var defaultMessage = 'Please enter a response!';
+var emailMessage = 'Please enter a valid email!';
+var ValidationMessage = function (_a) {
+    var validationMsg = _a.validationMsg, inputType = _a.inputType;
+    var message = validationMsg || (inputType === 'email' ? emailMessage : defaultMessage);
+    return (react_1.default.createElement("div", { style: styles.validationMessage },
+        react_1.default.createElement("div", { style: styles.exclamationIcon }, "!"),
+        message));
+};
+exports.default = ValidationMessage;
+//# sourceMappingURL=ValidationMessage.js.map
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap-sweetalert/dist/components/WarningIcon.js":
+/*!********************************************************************************!*\
+  !*** ./node_modules/react-bootstrap-sweetalert/dist/components/WarningIcon.js ***!
+  \********************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var styles = __importStar(__webpack_require__(/*! ../styles/SweetAlertStyles */ "./node_modules/react-bootstrap-sweetalert/dist/styles/SweetAlertStyles.js"));
+exports.default = (function () { return (react_1.default.createElement("div", { style: Object.assign({}, styles.icon, styles.iconWarning) },
+    react_1.default.createElement("span", { style: styles.iconWarningBody }),
+    react_1.default.createElement("span", { style: styles.iconWarningDot }))); });
+//# sourceMappingURL=WarningIcon.js.map
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap-sweetalert/dist/constants/patterns.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/react-bootstrap-sweetalert/dist/constants/patterns.js ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.emailRegex = exports.defaultRegex = void 0;
+exports.defaultRegex = /^.+$/;
+// tslint:disable-next-line:max-line-length
+exports.emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//# sourceMappingURL=patterns.js.map
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap-sweetalert/dist/default-props.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/react-bootstrap-sweetalert/dist/default-props.js ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.SWEET_ALERT_DEFAULT_PROPS = void 0;
+exports.SWEET_ALERT_DEFAULT_PROPS = {
+    allowEscape: true,
+    closeOnClickOutside: true,
+    inputType: "text",
+    customClass: "",
+    validationMsg: null,
+    validationRegex: null,
+    hideOverlay: false,
+    required: true,
+    disabled: false,
+    focusConfirmBtn: true,
+    focusCancelBtn: false,
+    showCloseButton: false,
+    confirmBtnBsStyle: "primary",
+    cancelBtnBsStyle: "link",
+    beforeMount: function () { },
+    afterMount: function () { },
+    beforeUpdate: null,
+    afterUpdate: function () { },
+    beforeUnmount: function () { },
+    style: {},
+    closeBtnStyle: {},
+    timeout: 0,
+    openAnim: { name: "showSweetAlert", duration: 300 },
+    closeAnim: false,
+    reverseButtons: false,
+    dependencies: [],
+};
+//# sourceMappingURL=default-props.js.map
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap-sweetalert/dist/index.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/react-bootstrap-sweetalert/dist/index.js ***!
+  \***************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var SweetAlert_1 = __importDefault(__webpack_require__(/*! ./components/SweetAlert */ "./node_modules/react-bootstrap-sweetalert/dist/components/SweetAlert.js"));
+exports.default = SweetAlert_1.default;
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap-sweetalert/dist/prop-types.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/react-bootstrap-sweetalert/dist/prop-types.js ***!
+  \********************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.SWEET_ALERT_PROP_TYPES = void 0;
+var prop_types_1 = __importDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+exports.SWEET_ALERT_PROP_TYPES = {
+    type: prop_types_1.default.oneOf(["default", "info", "success", "warning", "danger", "error", "input", "custom", "controlled"]),
+    // shortcut props for type
+    info: prop_types_1.default.bool,
+    success: prop_types_1.default.bool,
+    warning: prop_types_1.default.bool,
+    danger: prop_types_1.default.bool,
+    error: prop_types_1.default.bool,
+    input: prop_types_1.default.bool,
+    custom: prop_types_1.default.bool,
+    controlled: prop_types_1.default.bool,
+    title: prop_types_1.default.oneOfType([prop_types_1.default.node, prop_types_1.default.string]).isRequired,
+    onCancel: prop_types_1.default.func,
+    onConfirm: prop_types_1.default.func.isRequired,
+    confirmBtnText: prop_types_1.default.oneOfType([prop_types_1.default.node, prop_types_1.default.string]),
+    confirmBtnBsStyle: prop_types_1.default.string,
+    confirmBtnCssClass: prop_types_1.default.string,
+    confirmBtnStyle: prop_types_1.default.object,
+    cancelBtnText: prop_types_1.default.oneOfType([prop_types_1.default.node, prop_types_1.default.string]),
+    cancelBtnBsStyle: prop_types_1.default.string,
+    cancelBtnCssClass: prop_types_1.default.string,
+    cancelBtnStyle: prop_types_1.default.object,
+    btnSize: prop_types_1.default.string,
+    customIcon: prop_types_1.default.oneOfType([prop_types_1.default.node, prop_types_1.default.string]),
+    show: prop_types_1.default.bool,
+    required: prop_types_1.default.bool,
+    placeholder: prop_types_1.default.string,
+    validationMsg: prop_types_1.default.string,
+    validationRegex: prop_types_1.default.object,
+    defaultValue: prop_types_1.default.oneOfType([prop_types_1.default.number, prop_types_1.default.string]),
+    inputType: prop_types_1.default.string,
+    style: prop_types_1.default.object,
+    closeBtnStyle: prop_types_1.default.object,
+    customClass: prop_types_1.default.string,
+    showConfirm: prop_types_1.default.bool,
+    showCancel: prop_types_1.default.bool,
+    showCloseButton: prop_types_1.default.bool,
+    allowEscape: prop_types_1.default.bool,
+    closeOnClickOutside: prop_types_1.default.bool,
+    hideOverlay: prop_types_1.default.bool,
+    disabled: prop_types_1.default.bool,
+    focusConfirmBtn: prop_types_1.default.bool,
+    focusCancelBtn: prop_types_1.default.bool,
+    beforeMount: prop_types_1.default.func,
+    afterMount: prop_types_1.default.func,
+    beforeUpdate: prop_types_1.default.func,
+    afterUpdate: prop_types_1.default.func,
+    beforeUnmount: prop_types_1.default.func,
+    timeout: prop_types_1.default.number,
+    openAnim: prop_types_1.default.any,
+    closeAnim: prop_types_1.default.any,
+    reverseButtons: prop_types_1.default.bool,
+    customButtons: prop_types_1.default.node,
+    dependencies: prop_types_1.default.arrayOf(prop_types_1.default.any),
+};
+//# sourceMappingURL=prop-types.js.map
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap-sweetalert/dist/styles/SweetAlertStyles.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/react-bootstrap-sweetalert/dist/styles/SweetAlertStyles.js ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.closeButton = exports.inputErrorIconAfter = exports.inputErrorIconBefore = exports.inputErrorIconBeforeAfter = exports.inputErrorIcon = exports.exclamationIcon = exports.validationMessage = exports.button = exports.iconCustom = exports.iconSuccessLineLong = exports.iconSuccessLineTip = exports.iconSuccessLine = exports.iconSuccessFix = exports.iconSuccessPlaceholder = exports.iconSuccessAfter = exports.iconSuccessBefore = exports.iconSuccessBeforeAfter = exports.iconSuccess = exports.iconInfoAfter = exports.iconInfoBefore = exports.iconInfo = exports.iconWarningDot = exports.iconWarningBody = exports.iconWarning = exports.iconErrorLineRight = exports.iconErrorLineLeft = exports.iconErrorLine = exports.iconErrorX = exports.iconError = exports.icon = exports.actions = exports.contentContainer = exports.title = exports.sweetAlert = exports.sweetAlertContainer = exports.overlay = void 0;
+exports.overlay = {
+    backgroundColor: "rgba(0, 0, 0, 0.4)",
+    position: "fixed",
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    zIndex: 5000
+};
+exports.sweetAlertContainer = {
+    display: "flex",
+    position: "fixed",
+    top: 0,
+    right: 0,
+    left: 0,
+    bottom: 0,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: ".625em",
+    overflowX: "hidden",
+    overflowY: "auto",
+    zIndex: 5400
+};
+exports.sweetAlert = {
+    display: "flex",
+    overflow: "hidden",
+    backgroundColor: "#fff",
+    outline: "none",
+    width: "32em",
+    padding: "1.25rem",
+    margin: "auto",
+    borderRadius: ".3125em",
+    textAlign: "center",
+    position: "relative",
+    flexDirection: "column",
+    justifyContent: "center",
+    maxWidth: "100%",
+    zIndex: 5600
+};
+exports.title = {
+    position: "relative",
+    maxWidth: "100%",
+    margin: "0 0 .4em",
+    padding: 0,
+    fontSize: "1.875em",
+    fontWeight: 600,
+    textAlign: "center",
+    textTransform: "none",
+    wordWrap: "break-word"
+};
+exports.contentContainer = {
+    zIndex: 1,
+    justifyContent: "center",
+    margin: 0,
+    padding: 0,
+    fontSize: "1.125em",
+    fontWeight: 300,
+    lineHeight: "normal",
+    textAlign: "center",
+    wordWrap: "break-word"
+};
+exports.actions = {
+    display: "flex",
+    zIndex: 1,
+    flexWrap: "wrap",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+    margin: "1.25em auto 0"
+};
+exports.icon = {
+    width: 80,
+    height: 80,
+    borderWidth: 4,
+    borderStyle: "solid",
+    borderColor: "gray",
+    borderRadius: "50%",
+    margin: "20px auto",
+    position: "relative",
+    boxSizing: "content-box"
+};
+exports.iconError = {
+    borderColor: "#d43f3a",
+    animation: "animateErrorIcon 0.5s"
+};
+exports.iconErrorX = {
+    position: "relative",
+    display: "block",
+    animation: "animateXMark 0.5s"
+};
+exports.iconErrorLine = {
+    position: "absolute",
+    height: 5,
+    width: 47,
+    backgroundColor: "#d9534f",
+    display: "block",
+    top: 37,
+    borderRadius: 2
+};
+exports.iconErrorLineLeft = {
+    transform: "rotate(45deg)",
+    left: 17
+};
+exports.iconErrorLineRight = {
+    transform: "rotate(-45deg)",
+    right: 16
+};
+exports.iconWarning = {
+    borderColor: "#eea236",
+    animation: "pulseWarning 0.75s infinite alternate"
+};
+exports.iconWarningBody = {
+    position: "absolute",
+    width: 5,
+    height: 47,
+    left: "50%",
+    top: 10,
+    borderRadius: 2,
+    marginLeft: -2,
+    backgroundColor: "#f0ad4e",
+    animation: "pulseWarningIns 0.75s infinite alternate"
+};
+exports.iconWarningDot = {
+    position: "absolute",
+    width: 7,
+    height: 7,
+    borderRadius: "50%",
+    marginLeft: -3,
+    left: "50%",
+    bottom: 10,
+    backgroundColor: "#f0ad4e",
+    animation: "pulseWarningIns 0.75s infinite alternate"
+};
+exports.iconInfo = {
+    borderColor: "#46b8da"
+};
+exports.iconInfoBefore = {
+    content: "",
+    position: "absolute",
+    width: 5,
+    height: 29,
+    left: "50%",
+    bottom: 17,
+    borderRadius: 2,
+    marginLeft: -2,
+    backgroundColor: "#5bc0de"
+};
+exports.iconInfoAfter = {
+    content: "",
+    position: "absolute",
+    width: 7,
+    height: 7,
+    borderRadius: "50%",
+    marginLeft: -3,
+    left: "50%",
+    top: 19,
+    backgroundColor: "#5bc0de"
+};
+exports.iconSuccess = {
+    borderColor: "#4cae4c"
+};
+exports.iconSuccessBeforeAfter = {
+    content: "",
+    borderRadius: "50%",
+    position: "absolute",
+    width: 60,
+    height: 120,
+    background: "white",
+    transform: "rotate(45deg)"
+};
+exports.iconSuccessBefore = {
+    borderRadius: "120px 0 0 120px",
+    height: 100,
+    top: -7,
+    left: -33,
+    transform: "rotate(-45deg)",
+    transformOrigin: "60px 60px"
+};
+exports.iconSuccessAfter = {
+    borderRadius: "0 120px 120px 0",
+    top: -11,
+    left: 30,
+    transform: "rotate(-45deg)",
+    transformOrigin: "0px 60px",
+    animation: "rotatePlaceholder 4.25s ease-in"
+};
+exports.iconSuccessPlaceholder = {
+    width: 80,
+    height: 80,
+    border: "4px solid rgba(92, 184, 92, 0.2)",
+    borderRadius: "50%",
+    boxSizing: "content-box",
+    position: "absolute",
+    left: -4,
+    top: -4,
+    zIndex: 2
+};
+exports.iconSuccessFix = {
+    width: 5,
+    height: 90,
+    backgroundColor: "#fff",
+    position: "absolute",
+    left: 28,
+    top: 8,
+    zIndex: 1,
+    transform: "rotate(-45deg)"
+};
+exports.iconSuccessLine = {
+    height: 5,
+    backgroundColor: "#5cb85c",
+    display: "block",
+    borderRadius: 2,
+    position: "absolute",
+    zIndex: 2
+};
+exports.iconSuccessLineTip = {
+    width: 25,
+    left: 14,
+    top: 46,
+    transform: "rotate(45deg)",
+    animation: "animateSuccessTip 0.75s"
+};
+exports.iconSuccessLineLong = {
+    width: 47,
+    right: 8,
+    top: 38,
+    transform: "rotate(-45deg)",
+    animation: "animateSuccessLong 0.75s"
+};
+exports.iconCustom = {
+    backgroundSize: "contain",
+    borderRadius: 0,
+    border: "none",
+    backgroundPosition: "center center",
+    backgroundRepeat: "no-repeat"
+};
+exports.button = {
+    marginRight: 8,
+};
+exports.validationMessage = {
+    display: "block",
+    backgroundColor: "#f1f1f1",
+    marginLeft: "-1.25rem",
+    marginRight: "-1.25rem",
+    marginTop: 20,
+    overflow: "hidden",
+    padding: 10,
+    maxHeight: 100,
+    transition: "padding 0.25s, max-height 0.25s",
+    color: "#797979",
+    fontSize: 16,
+    textAlign: "center",
+    fontWeight: 300
+};
+exports.exclamationIcon = {
+    display: "inline-block",
+    width: 24,
+    height: 24,
+    borderRadius: "50%",
+    backgroundColor: "#ea7d7d",
+    color: "white",
+    lineHeight: "24px",
+    textAlign: "center",
+    marginRight: 5
+};
+exports.inputErrorIcon = {
+    position: "absolute",
+    top: 8,
+    right: 8,
+    width: 20,
+    height: 20,
+    transformOrigin: "50% 50%",
+    transition: "all 0.1s",
+    opacity: 1,
+    transform: "scale(1)"
+};
+exports.inputErrorIconBeforeAfter = {
+    content: "",
+    width: 20,
+    height: 6,
+    backgroundColor: "#f06e57",
+    borderRadius: 3,
+    position: "absolute",
+    top: "50%",
+    marginTop: -4,
+    left: "50%",
+    marginLeft: -9
+};
+exports.inputErrorIconBefore = {
+    transform: "rotate(-45deg)"
+};
+exports.inputErrorIconAfter = {
+    transform: "rotate(45deg)"
+};
+exports.closeButton = {
+    position: "absolute",
+    right: 4,
+    top: -2,
+    fontSize: 25,
+    fontWeight: 900,
+    color: "rgb(113, 113, 113)",
+    zIndex: 1,
+    cursor: "pointer"
+};
+//# sourceMappingURL=SweetAlertStyles.js.map
+
+/***/ }),
+
 /***/ "./node_modules/react-bootstrap/esm/BootstrapModalManager.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/react-bootstrap/esm/BootstrapModalManager.js ***!
@@ -77641,6 +79364,1713 @@ function checkDCE() {
 if (false) {} else {
   module.exports = __webpack_require__(/*! ./cjs/react-dom.development.js */ "./node_modules/react-dom/cjs/react-dom.development.js");
 }
+
+
+/***/ }),
+
+/***/ "./node_modules/react-hook-form/dist/index.esm.js":
+/*!********************************************************!*\
+  !*** ./node_modules/react-hook-form/dist/index.esm.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Controller": () => /* binding */ Controller,
+/* harmony export */   "FormProvider": () => /* binding */ FormProvider,
+/* harmony export */   "appendErrors": () => /* binding */ appendErrors,
+/* harmony export */   "get": () => /* binding */ get,
+/* harmony export */   "set": () => /* binding */ set,
+/* harmony export */   "useController": () => /* binding */ useController,
+/* harmony export */   "useFieldArray": () => /* binding */ useFieldArray,
+/* harmony export */   "useForm": () => /* binding */ useForm,
+/* harmony export */   "useFormContext": () => /* binding */ useFormContext,
+/* harmony export */   "useFormState": () => /* binding */ useFormState,
+/* harmony export */   "useWatch": () => /* binding */ useWatch
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+var isCheckBoxInput = (element) => element.type === 'checkbox';
+
+var isNullOrUndefined = (value) => value == null;
+
+const isObjectType = (value) => typeof value === 'object';
+var isObject = (value) => !isNullOrUndefined(value) &&
+    !Array.isArray(value) &&
+    isObjectType(value) &&
+    !(value instanceof Date);
+
+var getControllerValue = (event) => isObject(event) && event.target
+    ? isCheckBoxInput(event.target)
+        ? event.target.checked
+        : event.target.value
+    : event;
+
+var getNodeParentName = (name) => name.substring(0, name.search(/.\d/)) || name;
+
+var isNameInFieldArray = (names, name) => [...names].some((current) => getNodeParentName(name) === current);
+
+var compact = (value) => value.filter(Boolean);
+
+var isUndefined = (val) => val === undefined;
+
+var get = (obj = {}, path, defaultValue) => {
+    const result = compact(path.split(/[,[\].]+?/)).reduce((result, key) => (isNullOrUndefined(result) ? result : result[key]), obj);
+    return isUndefined(result) || result === obj
+        ? isUndefined(obj[path])
+            ? defaultValue
+            : obj[path]
+        : result;
+};
+
+const EVENTS = {
+    BLUR: 'blur',
+    CHANGE: 'change',
+};
+const VALIDATION_MODE = {
+    onBlur: 'onBlur',
+    onChange: 'onChange',
+    onSubmit: 'onSubmit',
+    onTouched: 'onTouched',
+    all: 'all',
+};
+const SELECT = 'select';
+const UNDEFINED = 'undefined';
+const INPUT_VALIDATION_RULES = {
+    max: 'max',
+    min: 'min',
+    maxLength: 'maxLength',
+    minLength: 'minLength',
+    pattern: 'pattern',
+    required: 'required',
+    validate: 'validate',
+};
+
+var omit = (source, key) => {
+    const copy = Object.assign({}, source);
+    delete copy[key];
+    return copy;
+};
+
+const FormContext = react__WEBPACK_IMPORTED_MODULE_0__.createContext(null);
+FormContext.displayName = 'RHFContext';
+const useFormContext = () => react__WEBPACK_IMPORTED_MODULE_0__.useContext(FormContext);
+const FormProvider = (props) => (react__WEBPACK_IMPORTED_MODULE_0__.createElement(FormContext.Provider, { value: omit(props, 'children') }, props.children));
+
+var getProxyFormState = (isProxyEnabled, formState, readFormStateRef, localReadFormStateRef, isRoot = true) => isProxyEnabled
+    ? new Proxy(formState, {
+        get: (obj, prop) => {
+            if (prop in obj) {
+                if (readFormStateRef.current[prop] !== VALIDATION_MODE.all) {
+                    readFormStateRef.current[prop] = isRoot
+                        ? VALIDATION_MODE.all
+                        : true;
+                }
+                localReadFormStateRef &&
+                    (localReadFormStateRef.current[prop] = true);
+                return obj[prop];
+            }
+            return undefined;
+        },
+    })
+    : formState;
+
+var isEmptyObject = (value) => isObject(value) && !Object.keys(value).length;
+
+var shouldRenderFormState = (formState, readFormStateRef, isRoot) => isEmptyObject(formState) ||
+    Object.keys(formState).length >= Object.keys(readFormStateRef).length ||
+    Object.keys(formState).find((key) => readFormStateRef[key] ===
+        (isRoot ? VALIDATION_MODE.all : true));
+
+var isWeb = typeof window !== UNDEFINED &&
+    typeof window.HTMLElement !== UNDEFINED &&
+    typeof document !== UNDEFINED;
+
+const isProxyEnabled = isWeb ? 'Proxy' in window : typeof Proxy !== UNDEFINED;
+
+function useFormState(props) {
+    const methods = useFormContext();
+    const { formStateRef, formStateSubjectRef, readFormStateRef } = (props && props.control) || methods.control;
+    const [formState, updateFormState] = react__WEBPACK_IMPORTED_MODULE_0__.useState(formStateRef.current);
+    const readFormState = react__WEBPACK_IMPORTED_MODULE_0__.useRef({
+        isDirty: false,
+        dirtyFields: false,
+        touchedFields: false,
+        isValidating: false,
+        isValid: false,
+        errors: false,
+    });
+    react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
+        const formStateSubscription = formStateSubjectRef.current.subscribe({
+            next: (formState) => {
+                shouldRenderFormState(formState, readFormState.current) &&
+                    updateFormState(Object.assign(Object.assign({}, formStateRef.current), formState));
+            },
+        });
+        return () => formStateSubscription.unsubscribe();
+    }, []);
+    return getProxyFormState(isProxyEnabled, formState, readFormStateRef, readFormState, false);
+}
+
+function useController({ name, rules, defaultValue, control, shouldUnregister, }) {
+    const methods = useFormContext();
+    const { defaultValuesRef, register, fieldsRef, unregister, fieldArrayNamesRef, controllerSubjectRef, shouldUnmountUnregister, } = control || methods.control;
+    const { onChange, onBlur, ref } = register(name, rules);
+    const [value, setInputStateValue] = react__WEBPACK_IMPORTED_MODULE_0__.useState(isUndefined(get(fieldsRef.current, name)._f.value) ||
+        isNameInFieldArray(fieldArrayNamesRef.current, name)
+        ? isUndefined(defaultValue)
+            ? get(defaultValuesRef.current, name)
+            : defaultValue
+        : get(fieldsRef.current, name)._f.value);
+    const formState = useFormState({
+        control: control || methods.control,
+    });
+    get(fieldsRef.current, name)._f.value = value;
+    react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
+        const controllerSubscription = controllerSubjectRef.current.subscribe({
+            next: (data) => (!data.name || name === data.name) &&
+                setInputStateValue(get(data.values, name)),
+        });
+        return () => {
+            controllerSubscription.unsubscribe();
+            (shouldUnmountUnregister || shouldUnregister) && unregister(name);
+        };
+    }, [name]);
+    return {
+        field: {
+            onChange: (event) => {
+                const value = getControllerValue(event);
+                setInputStateValue(value);
+                onChange({
+                    target: {
+                        value,
+                        name: name,
+                    },
+                    type: EVENTS.CHANGE,
+                });
+            },
+            onBlur: () => {
+                onBlur({
+                    target: {
+                        name: name,
+                    },
+                    type: EVENTS.BLUR,
+                });
+            },
+            name,
+            value,
+            ref: (elm) => elm && ref(elm),
+        },
+        formState,
+        fieldState: Object.defineProperties({}, {
+            invalid: {
+                get() {
+                    return !!get(formState.errors, name);
+                },
+            },
+            isDirty: {
+                get() {
+                    return !!get(formState.dirtyFields, name);
+                },
+            },
+            isTouched: {
+                get() {
+                    return !!get(formState.touchedFields, name);
+                },
+            },
+            error: {
+                get() {
+                    return get(formState.errors, name);
+                },
+            },
+        }),
+    };
+}
+
+const Controller = (props) => props.render(useController(props));
+
+var appendErrors = (name, validateAllFieldCriteria, errors, type, message) => validateAllFieldCriteria
+    ? Object.assign(Object.assign({}, errors[name]), { types: Object.assign(Object.assign({}, (errors[name] && errors[name].types ? errors[name].types : {})), { [type]: message || true }) }) : {};
+
+var isKey = (value) => /^\w*$/.test(value);
+
+var stringToPath = (input) => compact(input.replace(/["|']|\]/g, '').split(/\.|\[/));
+
+function set(object, path, value) {
+    let index = -1;
+    const tempPath = isKey(path) ? [path] : stringToPath(path);
+    const length = tempPath.length;
+    const lastIndex = length - 1;
+    while (++index < length) {
+        const key = tempPath[index];
+        let newValue = value;
+        if (index !== lastIndex) {
+            const objValue = object[key];
+            newValue =
+                isObject(objValue) || Array.isArray(objValue)
+                    ? objValue
+                    : !isNaN(+tempPath[index + 1])
+                        ? []
+                        : {};
+        }
+        object[key] = newValue;
+        object = object[key];
+    }
+    return object;
+}
+
+const focusFieldBy = (fields, callback, fieldsNames) => {
+    for (const key of fieldsNames || Object.keys(fields)) {
+        const field = get(fields, key);
+        if (field) {
+            const _f = field._f;
+            const current = omit(field, '_f');
+            if (_f && callback(_f.name)) {
+                if (_f.ref.focus && isUndefined(_f.ref.focus())) {
+                    break;
+                }
+                else if (_f.refs) {
+                    _f.refs[0].focus();
+                    break;
+                }
+            }
+            else if (isObject(current)) {
+                focusFieldBy(current, callback);
+            }
+        }
+    }
+};
+
+const getFieldsValues = (fieldsRef, defaultValuesRef, output = {}) => {
+    for (const name in fieldsRef.current) {
+        const field = fieldsRef.current[name];
+        if (field) {
+            const _f = field._f;
+            const current = omit(field, '_f');
+            set(output, name, _f
+                ? _f.ref.disabled || (_f.refs && _f.refs.every((ref) => ref.disabled))
+                    ? undefined
+                    : _f.value
+                : Array.isArray(field)
+                    ? []
+                    : {});
+            if (current) {
+                getFieldsValues({
+                    current,
+                }, defaultValuesRef, output[name]);
+            }
+        }
+    }
+    return Object.assign(Object.assign({}, defaultValuesRef), output);
+};
+
+var generateId = () => {
+    const d = typeof performance === UNDEFINED ? Date.now() : performance.now() * 1000;
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+        const r = (Math.random() * 16 + d) % 16 | 0;
+        return (c == 'x' ? r : (r & 0x3) | 0x8).toString(16);
+    });
+};
+
+var mapIds = (values = [], keyName) => values.map((value) => (Object.assign({ [keyName]: (value && value[keyName]) || generateId() }, value)));
+
+var isPrimitive = (value) => isNullOrUndefined(value) || !isObjectType(value);
+
+function deepEqual(object1, object2, isErrorObject) {
+    if (isPrimitive(object1) ||
+        isPrimitive(object2) ||
+        object1 instanceof Date ||
+        object2 instanceof Date) {
+        return object1 === object2;
+    }
+    if (!react__WEBPACK_IMPORTED_MODULE_0__.isValidElement(object1)) {
+        const keys1 = Object.keys(object1);
+        const keys2 = Object.keys(object2);
+        if (keys1.length !== keys2.length) {
+            return false;
+        }
+        for (const key of keys1) {
+            const val1 = object1[key];
+            if (!(isErrorObject && key === 'ref')) {
+                const val2 = object2[key];
+                if ((isObject(val1) || Array.isArray(val1)) &&
+                    (isObject(val2) || Array.isArray(val2))
+                    ? !deepEqual(val1, val2, isErrorObject)
+                    : val1 !== val2) {
+                    return false;
+                }
+            }
+        }
+    }
+    return true;
+}
+
+function deepMerge(target, source) {
+    if (isPrimitive(target) || isPrimitive(source)) {
+        return source;
+    }
+    for (const key in source) {
+        const targetValue = target[key];
+        const sourceValue = source[key];
+        try {
+            target[key] =
+                (isObject(targetValue) && isObject(sourceValue)) ||
+                    (Array.isArray(targetValue) && Array.isArray(sourceValue))
+                    ? deepMerge(targetValue, sourceValue)
+                    : sourceValue;
+        }
+        catch (_a) { }
+    }
+    return target;
+}
+
+function setDirtyFields(values, defaultValues, dirtyFields, parentNode, parentName) {
+    let index = -1;
+    while (++index < values.length) {
+        for (const key in values[index]) {
+            if (Array.isArray(values[index][key])) {
+                !dirtyFields[index] && (dirtyFields[index] = {});
+                dirtyFields[index][key] = [];
+                setDirtyFields(values[index][key], get(defaultValues[index] || {}, key, []), dirtyFields[index][key], dirtyFields[index], key);
+            }
+            else {
+                deepEqual(get(defaultValues[index] || {}, key), values[index][key])
+                    ? set(dirtyFields[index] || {}, key)
+                    : (dirtyFields[index] = Object.assign(Object.assign({}, dirtyFields[index]), { [key]: true }));
+            }
+        }
+        parentNode &&
+            !dirtyFields.length &&
+            delete parentNode[parentName];
+    }
+    return dirtyFields;
+}
+var setFieldArrayDirtyFields = (values, defaultValues, dirtyFields) => deepMerge(setDirtyFields(values, defaultValues, dirtyFields.slice(0, values.length)), setDirtyFields(defaultValues, values, dirtyFields.slice(0, values.length)));
+
+function append(data, value) {
+    return [...data, ...(Array.isArray(value) ? value : [value])];
+}
+
+var fillEmptyArray = (value) => Array.isArray(value) ? Array(value.length).fill(undefined) : undefined;
+
+function insert(data, index, value) {
+    return [
+        ...data.slice(0, index),
+        ...(Array.isArray(value) ? value : [value]),
+        ...data.slice(index),
+    ];
+}
+
+var moveArrayAt = (data, from, to) => {
+    if (Array.isArray(data)) {
+        if (isUndefined(data[to])) {
+            data[to] = undefined;
+        }
+        data.splice(to, 0, data.splice(from, 1)[0]);
+        return data;
+    }
+    return [];
+};
+
+function prepend(data, value) {
+    return [...(Array.isArray(value) ? value : [value]), ...data];
+}
+
+function removeAtIndexes(data, indexes) {
+    let i = 0;
+    const temp = [...data];
+    for (const index of indexes) {
+        temp.splice(index - i, 1);
+        i++;
+    }
+    return compact(temp).length ? temp : [];
+}
+var removeArrayAt = (data, index) => isUndefined(index)
+    ? []
+    : removeAtIndexes(data, (Array.isArray(index) ? index : [index]).sort((a, b) => a - b));
+
+var swapArrayAt = (data, indexA, indexB) => {
+    data[indexA] = [data[indexB], (data[indexB] = data[indexA])][0];
+};
+
+var isBoolean = (value) => typeof value === 'boolean';
+
+function baseGet(object, updatePath) {
+    const length = updatePath.slice(0, -1).length;
+    let index = 0;
+    while (index < length) {
+        object = isUndefined(object) ? index++ : object[updatePath[index++]];
+    }
+    return object;
+}
+function unset(object, path) {
+    const updatePath = isKey(path) ? [path] : stringToPath(path);
+    const childObject = updatePath.length == 1 ? object : baseGet(object, updatePath);
+    const key = updatePath[updatePath.length - 1];
+    let previousObjRef;
+    if (childObject) {
+        delete childObject[key];
+    }
+    for (let k = 0; k < updatePath.slice(0, -1).length; k++) {
+        let index = -1;
+        let objectRef;
+        const currentPaths = updatePath.slice(0, -(k + 1));
+        const currentPathsLength = currentPaths.length - 1;
+        if (k > 0) {
+            previousObjRef = object;
+        }
+        while (++index < currentPaths.length) {
+            const item = currentPaths[index];
+            objectRef = objectRef ? objectRef[item] : object[item];
+            if (currentPathsLength === index &&
+                ((isObject(objectRef) && isEmptyObject(objectRef)) ||
+                    (Array.isArray(objectRef) &&
+                        !objectRef.filter((data) => (isObject(data) && !isEmptyObject(data)) || isBoolean(data)).length))) {
+                previousObjRef ? delete previousObjRef[item] : delete object[item];
+            }
+            previousObjRef = objectRef;
+        }
+    }
+    return object;
+}
+
+const useFieldArray = ({ control, name, keyName = 'id', shouldUnregister, }) => {
+    const methods = useFormContext();
+    const focusNameRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef('');
+    const { isWatchAllRef, watchFieldsRef, getIsDirty, watchSubjectRef, fieldArraySubjectRef, fieldArrayNamesRef, fieldsRef, defaultValuesRef, formStateRef, formStateSubjectRef, readFormStateRef, validFieldsRef, fieldsWithValidationRef, fieldArrayDefaultValuesRef, unregister, shouldUnmountUnregister, } = control || methods.control;
+    const [fields, setFields] = react__WEBPACK_IMPORTED_MODULE_0__.useState(mapIds(get(fieldArrayDefaultValuesRef.current, getNodeParentName(name))
+        ? get(fieldArrayDefaultValuesRef.current, name, [])
+        : get(defaultValuesRef.current, name, []), keyName));
+    set(fieldArrayDefaultValuesRef.current, name, [...fields]);
+    fieldArrayNamesRef.current.add(name);
+    const omitKey = (fields) => fields.map((field) => omit((field || {}), keyName));
+    const getCurrentFieldsValues = () => {
+        const values = get(getFieldsValues(fieldsRef, defaultValuesRef.current), name, []);
+        return mapIds(get(fieldArrayDefaultValuesRef.current, name, []).map((item, index) => (Object.assign(Object.assign({}, item), values[index]))), keyName);
+    };
+    const getFocusDetail = (index, options) => options
+        ? !isUndefined(options.focusIndex)
+            ? `${name}.${options.focusIndex}`
+            : options.focusName
+                ? options.focusName
+                : !options.shouldFocus
+                    ? ''
+                    : `${name}.${index}`
+        : `${name}.${index}`;
+    const resetFields = (index) => (Array.isArray(index) ? index : [index]).forEach((currentIndex) => set(fieldsRef.current, `${name}${isUndefined(currentIndex) ? '' : `.${currentIndex}`}`, isUndefined(currentIndex) ? [] : undefined));
+    const setFieldsAndNotify = (fieldsValues = []) => setFields(mapIds(fieldsValues, keyName));
+    const cleanup = (ref) => !compact(get(ref, name, [])).length && unset(ref, name);
+    const updateDirtyFieldsWithDefaultValues = (updatedFieldArrayValues) => updatedFieldArrayValues &&
+        set(formStateRef.current.dirtyFields, name, setFieldArrayDirtyFields(omitKey(updatedFieldArrayValues), get(defaultValuesRef.current, name, []), get(formStateRef.current.dirtyFields, name, [])));
+    const batchStateUpdate = (method, args, updatedFieldArrayValues = [], shouldSet = true) => {
+        if (get(fieldsRef.current, name)) {
+            const output = method(get(fieldsRef.current, name), args.argA, args.argB);
+            shouldSet && set(fieldsRef.current, name, output);
+        }
+        if (Array.isArray(get(formStateRef.current.errors, name))) {
+            const output = method(get(formStateRef.current.errors, name), args.argA, args.argB);
+            shouldSet && set(formStateRef.current.errors, name, output);
+            cleanup(formStateRef.current.errors);
+        }
+        if (readFormStateRef.current.touchedFields &&
+            get(formStateRef.current.touchedFields, name)) {
+            const output = method(get(formStateRef.current.touchedFields, name), args.argA, args.argB);
+            shouldSet && set(formStateRef.current.touchedFields, name, output);
+            cleanup(formStateRef.current.touchedFields);
+        }
+        if (readFormStateRef.current.dirtyFields ||
+            readFormStateRef.current.isDirty) {
+            set(formStateRef.current.dirtyFields, name, setFieldArrayDirtyFields(omitKey(updatedFieldArrayValues), get(defaultValuesRef.current, name, []), get(formStateRef.current.dirtyFields, name, [])));
+            updateDirtyFieldsWithDefaultValues(updatedFieldArrayValues);
+            cleanup(formStateRef.current.dirtyFields);
+        }
+        if (readFormStateRef.current.isValid) {
+            set(validFieldsRef.current, name, method(get(validFieldsRef.current, name, []), args.argA));
+            cleanup(validFieldsRef.current);
+            set(fieldsWithValidationRef.current, name, method(get(fieldsWithValidationRef.current, name, []), args.argA));
+            cleanup(fieldsWithValidationRef.current);
+        }
+        formStateSubjectRef.current.next({
+            isDirty: getIsDirty(name, omitKey(updatedFieldArrayValues)),
+            errors: formStateRef.current.errors,
+            isValid: formStateRef.current.isValid,
+        });
+    };
+    const registerFieldArray = (values, index = 0, parentName = '') => values.forEach((appendValueItem, valueIndex) => !isPrimitive(appendValueItem) &&
+        Object.entries(appendValueItem).forEach(([key, value]) => {
+            const inputName = `${parentName || name}.${parentName ? valueIndex : index + valueIndex}.${key}`;
+            Array.isArray(value)
+                ? registerFieldArray(value, valueIndex, inputName)
+                : set(fieldsRef.current, inputName, {
+                    _f: {
+                        ref: {
+                            name: inputName,
+                        },
+                        name: inputName,
+                        value,
+                    },
+                });
+        }));
+    const append$1 = (value, options) => {
+        const appendValue = Array.isArray(value) ? value : [value];
+        const updatedFieldArrayValues = append(getCurrentFieldsValues(), appendValue);
+        const currentIndex = updatedFieldArrayValues.length - appendValue.length;
+        setFieldsAndNotify(updatedFieldArrayValues);
+        batchStateUpdate(append, {
+            argA: fillEmptyArray(value),
+        }, updatedFieldArrayValues, false);
+        registerFieldArray(appendValue, currentIndex);
+        focusNameRef.current = getFocusDetail(currentIndex, options);
+    };
+    const prepend$1 = (value, options) => {
+        const prependValue = Array.isArray(value) ? value : [value];
+        const updatedFieldArrayValues = prepend(getCurrentFieldsValues(), prependValue);
+        setFieldsAndNotify(updatedFieldArrayValues);
+        batchStateUpdate(prepend, {
+            argA: fillEmptyArray(value),
+        }, updatedFieldArrayValues);
+        registerFieldArray(prependValue);
+        focusNameRef.current = getFocusDetail(0, options);
+    };
+    const remove = (index) => {
+        const updatedFieldArrayValues = removeArrayAt(getCurrentFieldsValues(), index);
+        resetFields(index);
+        setFieldsAndNotify(updatedFieldArrayValues);
+        batchStateUpdate(removeArrayAt, {
+            argA: index,
+        }, updatedFieldArrayValues);
+    };
+    const insert$1 = (index, value, options) => {
+        const insertValue = Array.isArray(value) ? value : [value];
+        const updatedFieldArrayValues = insert(getCurrentFieldsValues(), index, insertValue);
+        setFieldsAndNotify(updatedFieldArrayValues);
+        batchStateUpdate(insert, {
+            argA: index,
+            argB: fillEmptyArray(value),
+        }, updatedFieldArrayValues);
+        registerFieldArray(insertValue, index);
+        focusNameRef.current = getFocusDetail(index, options);
+    };
+    const swap = (indexA, indexB) => {
+        const fieldValues = getCurrentFieldsValues();
+        swapArrayAt(fieldValues, indexA, indexB);
+        batchStateUpdate(swapArrayAt, {
+            argA: indexA,
+            argB: indexB,
+        }, fieldValues, false);
+        setFieldsAndNotify(fieldValues);
+    };
+    const move = (from, to) => {
+        const fieldValues = getCurrentFieldsValues();
+        moveArrayAt(fieldValues, from, to);
+        setFieldsAndNotify(fieldValues);
+        batchStateUpdate(moveArrayAt, {
+            argA: from,
+            argB: to,
+        }, fieldValues, false);
+    };
+    react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
+        if (isWatchAllRef.current) {
+            formStateSubjectRef.current.next({});
+        }
+        else {
+            for (const watchField of watchFieldsRef.current) {
+                if (name.startsWith(watchField)) {
+                    formStateSubjectRef.current.next({});
+                    break;
+                }
+            }
+        }
+        watchSubjectRef.current.next({
+            name,
+            value: get(getFieldsValues(fieldsRef, defaultValuesRef.current), name, []),
+        });
+        focusNameRef.current &&
+            focusFieldBy(fieldsRef.current, (key) => key.startsWith(focusNameRef.current));
+        focusNameRef.current = '';
+        fieldArraySubjectRef.current.next({
+            name,
+            fields: omitKey([...fields]),
+        });
+    }, [fields, name]);
+    react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
+        const fieldArraySubscription = fieldArraySubjectRef.current.subscribe({
+            next({ name: inputFieldArrayName, fields, isReset }) {
+                if (isReset) {
+                    unset(fieldsRef.current, inputFieldArrayName || name);
+                    inputFieldArrayName
+                        ? set(fieldArrayDefaultValuesRef.current, inputFieldArrayName, fields)
+                        : (fieldArrayDefaultValuesRef.current = fields);
+                    setFieldsAndNotify(get(fieldArrayDefaultValuesRef.current, name));
+                }
+            },
+        });
+        !get(fieldsRef.current, name) && set(fieldsRef.current, name, []);
+        return () => {
+            fieldArraySubscription.unsubscribe();
+            (shouldUnmountUnregister || shouldUnregister) && unregister(name);
+        };
+    }, []);
+    return {
+        swap: react__WEBPACK_IMPORTED_MODULE_0__.useCallback(swap, [name]),
+        move: react__WEBPACK_IMPORTED_MODULE_0__.useCallback(move, [name]),
+        prepend: react__WEBPACK_IMPORTED_MODULE_0__.useCallback(prepend$1, [name]),
+        append: react__WEBPACK_IMPORTED_MODULE_0__.useCallback(append$1, [name]),
+        remove: react__WEBPACK_IMPORTED_MODULE_0__.useCallback(remove, [name]),
+        insert: react__WEBPACK_IMPORTED_MODULE_0__.useCallback(insert$1, [name]),
+        fields: fields,
+    };
+};
+
+function getFields(fieldsNames, fieldsRefs) {
+    const currentFields = {};
+    for (const name of fieldsNames) {
+        const field = get(fieldsRefs, name);
+        if (field) {
+            !isKey(name)
+                ? set(currentFields, name, field._f)
+                : (currentFields[name] = field._f);
+        }
+    }
+    return currentFields;
+}
+
+var isFileInput = (element) => element.type === 'file';
+
+var isMultipleSelect = (element) => element.type === `${SELECT}-multiple`;
+
+var isRadioInput = (element) => element.type === 'radio';
+
+const defaultResult = {
+    value: false,
+    isValid: false,
+};
+const validResult = { value: true, isValid: true };
+var getCheckboxValue = (options) => {
+    if (Array.isArray(options)) {
+        if (options.length > 1) {
+            const values = options
+                .filter((option) => option && option.checked && !option.disabled)
+                .map((option) => option.value);
+            return { value: values, isValid: !!values.length };
+        }
+        return options[0].checked && !options[0].disabled
+            ? // @ts-expect-error expected to work in the browser
+                options[0].attributes && !isUndefined(options[0].attributes.value)
+                    ? isUndefined(options[0].value) || options[0].value === ''
+                        ? validResult
+                        : { value: options[0].value, isValid: true }
+                    : validResult
+            : defaultResult;
+    }
+    return defaultResult;
+};
+
+var getFieldValueAs = (value, { valueAsNumber, valueAsDate, setValueAs }) => valueAsNumber
+    ? value === ''
+        ? NaN
+        : +value
+    : valueAsDate
+        ? new Date(value)
+        : setValueAs
+            ? setValueAs(value)
+            : value;
+
+var getMultipleSelectValue = (options) => [...options]
+    .filter(({ selected }) => selected)
+    .map(({ value }) => value);
+
+const defaultReturn = {
+    isValid: false,
+    value: null,
+};
+var getRadioValue = (options) => Array.isArray(options)
+    ? options.reduce((previous, option) => option && option.checked && !option.disabled
+        ? {
+            isValid: true,
+            value: option.value,
+        }
+        : previous, defaultReturn)
+    : defaultReturn;
+
+function getFieldValue(field) {
+    if (field && field._f) {
+        const ref = field._f.ref;
+        if (ref.disabled) {
+            return;
+        }
+        if (isFileInput(ref)) {
+            return ref.files;
+        }
+        if (isRadioInput(ref)) {
+            return getRadioValue(field._f.refs).value;
+        }
+        if (isMultipleSelect(ref)) {
+            return getMultipleSelectValue(ref.options);
+        }
+        if (isCheckBoxInput(ref)) {
+            return getCheckboxValue(field._f.refs).value;
+        }
+        return getFieldValueAs(isUndefined(ref.value) ? field._f.ref.value : ref.value, field._f);
+    }
+}
+
+var hasValidation = (options) => options &&
+    (options.required ||
+        options.min ||
+        options.max ||
+        options.maxLength ||
+        options.minLength ||
+        options.pattern ||
+        options.validate);
+
+var skipValidation = ({ isOnBlur, isOnChange, isOnTouch, isTouched, isReValidateOnBlur, isReValidateOnChange, isBlurEvent, isSubmitted, isOnAll, }) => {
+    if (isOnAll) {
+        return false;
+    }
+    else if (!isSubmitted && isOnTouch) {
+        return !(isTouched || isBlurEvent);
+    }
+    else if (isSubmitted ? isReValidateOnBlur : isOnBlur) {
+        return !isBlurEvent;
+    }
+    else if (isSubmitted ? isReValidateOnChange : isOnChange) {
+        return isBlurEvent;
+    }
+    return true;
+};
+
+var isFunction = (value) => typeof value === 'function';
+
+var isString = (value) => typeof value === 'string';
+
+var isMessage = (value) => isString(value) || react__WEBPACK_IMPORTED_MODULE_0__.isValidElement(value);
+
+var isRegex = (value) => value instanceof RegExp;
+
+function getValidateError(result, ref, type = 'validate') {
+    if (isMessage(result) || (isBoolean(result) && !result)) {
+        return {
+            type,
+            message: isMessage(result) ? result : '',
+            ref,
+        };
+    }
+}
+
+var getValueAndMessage = (validationData) => isObject(validationData) && !isRegex(validationData)
+    ? validationData
+    : {
+        value: validationData,
+        message: '',
+    };
+
+var validateField = async ({ _f: { ref, refs, required, maxLength, minLength, min, max, pattern, validate, name, value: inputValue, valueAsNumber, }, }, validateAllFieldCriteria) => {
+    const error = {};
+    const isRadio = isRadioInput(ref);
+    const isCheckBox = isCheckBoxInput(ref);
+    const isRadioOrCheckbox = isRadio || isCheckBox;
+    const isEmpty = ((valueAsNumber || isFileInput(ref)) && !ref.value) ||
+        inputValue === '' ||
+        (Array.isArray(inputValue) && !inputValue.length);
+    const appendErrorsCurry = appendErrors.bind(null, name, validateAllFieldCriteria, error);
+    const getMinMaxMessage = (exceedMax, maxLengthMessage, minLengthMessage, maxType = INPUT_VALIDATION_RULES.maxLength, minType = INPUT_VALIDATION_RULES.minLength) => {
+        const message = exceedMax ? maxLengthMessage : minLengthMessage;
+        error[name] = Object.assign({ type: exceedMax ? maxType : minType, message,
+            ref }, appendErrorsCurry(exceedMax ? maxType : minType, message));
+    };
+    if (required &&
+        ((!isRadio && !isCheckBox && (isEmpty || isNullOrUndefined(inputValue))) ||
+            (isBoolean(inputValue) && !inputValue) ||
+            (isCheckBox && !getCheckboxValue(refs).isValid) ||
+            (isRadio && !getRadioValue(refs).isValid))) {
+        const { value, message } = isMessage(required)
+            ? { value: !!required, message: required }
+            : getValueAndMessage(required);
+        if (value) {
+            error[name] = Object.assign({ type: INPUT_VALIDATION_RULES.required, message, ref: isRadioOrCheckbox ? (refs || [])[0] || {} : ref }, appendErrorsCurry(INPUT_VALIDATION_RULES.required, message));
+            if (!validateAllFieldCriteria) {
+                return error;
+            }
+        }
+    }
+    if ((!isNullOrUndefined(min) || !isNullOrUndefined(max)) &&
+        inputValue !== '') {
+        let exceedMax;
+        let exceedMin;
+        const maxOutput = getValueAndMessage(max);
+        const minOutput = getValueAndMessage(min);
+        if (!isNaN(inputValue)) {
+            const valueNumber = ref.valueAsNumber || parseFloat(inputValue);
+            if (!isNullOrUndefined(maxOutput.value)) {
+                exceedMax = valueNumber > maxOutput.value;
+            }
+            if (!isNullOrUndefined(minOutput.value)) {
+                exceedMin = valueNumber < minOutput.value;
+            }
+        }
+        else {
+            const valueDate = ref.valueAsDate || new Date(inputValue);
+            if (isString(maxOutput.value)) {
+                exceedMax = valueDate > new Date(maxOutput.value);
+            }
+            if (isString(minOutput.value)) {
+                exceedMin = valueDate < new Date(minOutput.value);
+            }
+        }
+        if (exceedMax || exceedMin) {
+            getMinMaxMessage(!!exceedMax, maxOutput.message, minOutput.message, INPUT_VALIDATION_RULES.max, INPUT_VALIDATION_RULES.min);
+            if (!validateAllFieldCriteria) {
+                return error;
+            }
+        }
+    }
+    if (isString(inputValue) && !isEmpty && (maxLength || minLength)) {
+        const maxLengthOutput = getValueAndMessage(maxLength);
+        const minLengthOutput = getValueAndMessage(minLength);
+        const exceedMax = !isNullOrUndefined(maxLengthOutput.value) &&
+            inputValue.length > maxLengthOutput.value;
+        const exceedMin = !isNullOrUndefined(minLengthOutput.value) &&
+            inputValue.length < minLengthOutput.value;
+        if (exceedMax || exceedMin) {
+            getMinMaxMessage(exceedMax, maxLengthOutput.message, minLengthOutput.message);
+            if (!validateAllFieldCriteria) {
+                return error;
+            }
+        }
+    }
+    if (isString(inputValue) && pattern && !isEmpty) {
+        const { value: patternValue, message } = getValueAndMessage(pattern);
+        if (isRegex(patternValue) && !inputValue.match(patternValue)) {
+            error[name] = Object.assign({ type: INPUT_VALIDATION_RULES.pattern, message,
+                ref }, appendErrorsCurry(INPUT_VALIDATION_RULES.pattern, message));
+            if (!validateAllFieldCriteria) {
+                return error;
+            }
+        }
+    }
+    if (validate) {
+        const validateRef = isRadioOrCheckbox && refs ? refs[0] : ref;
+        if (isFunction(validate)) {
+            const result = await validate(inputValue);
+            const validateError = getValidateError(result, validateRef);
+            if (validateError) {
+                error[name] = Object.assign(Object.assign({}, validateError), appendErrorsCurry(INPUT_VALIDATION_RULES.validate, validateError.message));
+                if (!validateAllFieldCriteria) {
+                    return error;
+                }
+            }
+        }
+        else if (isObject(validate)) {
+            let validationResult = {};
+            for (const [key, validateFunction] of Object.entries(validate)) {
+                if (!isEmptyObject(validationResult) && !validateAllFieldCriteria) {
+                    break;
+                }
+                const validateResult = await validateFunction(inputValue);
+                const validateError = getValidateError(validateResult, validateRef, key);
+                if (validateError) {
+                    validationResult = Object.assign(Object.assign({}, validateError), appendErrorsCurry(key, validateError.message));
+                    if (validateAllFieldCriteria) {
+                        error[name] = validationResult;
+                    }
+                }
+            }
+            if (!isEmptyObject(validationResult)) {
+                error[name] = Object.assign({ ref: validateRef }, validationResult);
+                if (!validateAllFieldCriteria) {
+                    return error;
+                }
+            }
+        }
+    }
+    return error;
+};
+
+var getValidationModes = (mode) => ({
+    isOnSubmit: !mode || mode === VALIDATION_MODE.onSubmit,
+    isOnBlur: mode === VALIDATION_MODE.onBlur,
+    isOnChange: mode === VALIDATION_MODE.onChange,
+    isOnAll: mode === VALIDATION_MODE.all,
+    isOnTouch: mode === VALIDATION_MODE.onTouched,
+});
+
+var isHTMLElement = (value) => value instanceof HTMLElement;
+
+var isRadioOrCheckboxFunction = (ref) => isRadioInput(ref) || isCheckBoxInput(ref);
+
+class Subscription {
+    constructor() {
+        this.tearDowns = [];
+    }
+    add(tearDown) {
+        this.tearDowns.push(tearDown);
+    }
+    unsubscribe() {
+        for (const teardown of this.tearDowns) {
+            teardown();
+        }
+        this.tearDowns = [];
+    }
+}
+class Subscriber {
+    constructor(observer, subscription) {
+        this.observer = observer;
+        this.closed = false;
+        subscription.add(() => (this.closed = true));
+    }
+    next(value) {
+        if (!this.closed) {
+            this.observer.next(value);
+        }
+    }
+}
+class Subject {
+    constructor() {
+        this.observers = [];
+    }
+    next(value) {
+        for (const observer of this.observers) {
+            observer.next(value);
+        }
+    }
+    subscribe(observer) {
+        const subscription = new Subscription();
+        const subscriber = new Subscriber(observer, subscription);
+        this.observers.push(subscriber);
+        return subscription;
+    }
+    unsubscribe() {
+        this.observers = [];
+    }
+}
+
+const isWindowUndefined = typeof window === UNDEFINED;
+function useForm({ mode = VALIDATION_MODE.onSubmit, reValidateMode = VALIDATION_MODE.onChange, resolver, context, defaultValues = {}, shouldFocusError = true, shouldUnregister, criteriaMode, } = {}) {
+    const fieldsRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef({});
+    const fieldsNamesRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef(new Set());
+    const formStateSubjectRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef(new Subject());
+    const unregisterFieldsNamesRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef(new Set());
+    const watchSubjectRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef(new Subject());
+    const controllerSubjectRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef(new Subject());
+    const fieldArraySubjectRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef(new Subject());
+    const fieldArrayDefaultValuesRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef({});
+    const watchFieldsRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef(new Set());
+    const isMountedRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef(false);
+    const fieldsWithValidationRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef({});
+    const validFieldsRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef({});
+    const defaultValuesRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef(defaultValues);
+    const isWatchAllRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef(false);
+    const contextRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef(context);
+    const resolverRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef(resolver);
+    const fieldArrayNamesRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef(new Set());
+    const validationMode = getValidationModes(mode);
+    const isValidateAllFieldCriteria = criteriaMode === VALIDATION_MODE.all;
+    const [formState, setFormState] = react__WEBPACK_IMPORTED_MODULE_0__.useState({
+        isDirty: false,
+        isValidating: false,
+        dirtyFields: {},
+        isSubmitted: false,
+        submitCount: 0,
+        touchedFields: {},
+        isSubmitting: false,
+        isSubmitSuccessful: false,
+        isValid: !validationMode.isOnSubmit,
+        errors: {},
+    });
+    const readFormStateRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef({
+        isDirty: !isProxyEnabled,
+        dirtyFields: !isProxyEnabled,
+        touchedFields: !isProxyEnabled,
+        isValidating: !isProxyEnabled,
+        isValid: !isProxyEnabled,
+        errors: !isProxyEnabled,
+    });
+    const formStateRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef(formState);
+    contextRef.current = context;
+    resolverRef.current = resolver;
+    const getIsValid = () => (formStateRef.current.isValid =
+        deepEqual(validFieldsRef.current, fieldsWithValidationRef.current) &&
+            isEmptyObject(formStateRef.current.errors));
+    const shouldRenderBaseOnError = react__WEBPACK_IMPORTED_MODULE_0__.useCallback((name, error, shouldRender = false, state = {}, isValid, isWatched) => {
+        const previousError = get(formStateRef.current.errors, name);
+        let shouldReRender = shouldRender ||
+            !deepEqual(previousError, error, true) ||
+            (readFormStateRef.current.isValid &&
+                isUndefined(error) &&
+                get(fieldsWithValidationRef.current, name) &&
+                !get(validFieldsRef.current, name));
+        if (error) {
+            unset(validFieldsRef.current, name);
+            shouldReRender =
+                shouldReRender ||
+                    !previousError ||
+                    !deepEqual(previousError, error, true);
+            set(formStateRef.current.errors, name, error);
+        }
+        else {
+            if (get(fieldsWithValidationRef.current, name) || resolverRef.current) {
+                set(validFieldsRef.current, name, true);
+                shouldReRender = shouldReRender || previousError;
+            }
+            unset(formStateRef.current.errors, name);
+        }
+        if ((shouldReRender && !isNullOrUndefined(shouldRender)) ||
+            !isEmptyObject(state) ||
+            isWatched) {
+            const updatedFormState = Object.assign(Object.assign({}, state), { isValid: resolverRef.current ? !!isValid : getIsValid(), errors: formStateRef.current.errors });
+            formStateRef.current = Object.assign(Object.assign({}, formStateRef.current), updatedFormState);
+            formStateSubjectRef.current.next(isWatched ? {} : updatedFormState);
+        }
+        formStateSubjectRef.current.next({
+            isValidating: false,
+        });
+    }, []);
+    const setFieldValue = react__WEBPACK_IMPORTED_MODULE_0__.useCallback((name, rawValue, options = {}, shouldRender, shouldRegister) => {
+        shouldRegister && register(name);
+        const _f = get(fieldsRef.current, name, {})._f;
+        if (_f) {
+            const value = isWeb && isHTMLElement(_f.ref) && isNullOrUndefined(rawValue)
+                ? ''
+                : rawValue;
+            _f.value = getFieldValueAs(rawValue, _f);
+            if (isRadioInput(_f.ref)) {
+                (_f.refs || []).forEach((radioRef) => (radioRef.checked = radioRef.value === value));
+            }
+            else if (isFileInput(_f.ref) && !isString(value)) {
+                _f.ref.files = value;
+            }
+            else if (isMultipleSelect(_f.ref)) {
+                [..._f.ref.options].forEach((selectRef) => (selectRef.selected = value.includes(selectRef.value)));
+            }
+            else if (isCheckBoxInput(_f.ref) && _f.refs) {
+                _f.refs.length > 1
+                    ? _f.refs.forEach((checkboxRef) => (checkboxRef.checked = Array.isArray(value)
+                        ? !!value.find((data) => data === checkboxRef.value)
+                        : value === checkboxRef.value))
+                    : (_f.refs[0].checked = !!value);
+            }
+            else {
+                _f.ref.value = value;
+            }
+            if (shouldRender) {
+                const values = getFieldsValues(fieldsRef);
+                set(values, name, rawValue);
+                controllerSubjectRef.current.next({
+                    values: Object.assign(Object.assign({}, defaultValuesRef.current), values),
+                    name,
+                });
+            }
+            options.shouldDirty && updateAndGetDirtyState(name, value);
+            options.shouldValidate && trigger(name);
+        }
+    }, []);
+    const getIsDirty = react__WEBPACK_IMPORTED_MODULE_0__.useCallback((name, data) => {
+        const formValues = getFieldsValues(fieldsRef);
+        name && data && set(formValues, name, data);
+        return !deepEqual(formValues, defaultValuesRef.current);
+    }, []);
+    const updateAndGetDirtyState = react__WEBPACK_IMPORTED_MODULE_0__.useCallback((name, inputValue, shouldRender = true) => {
+        if (readFormStateRef.current.isDirty ||
+            readFormStateRef.current.dirtyFields) {
+            const isFieldDirty = !deepEqual(get(defaultValuesRef.current, name), inputValue);
+            const isDirtyFieldExist = get(formStateRef.current.dirtyFields, name);
+            const previousIsDirty = formStateRef.current.isDirty;
+            isFieldDirty
+                ? set(formStateRef.current.dirtyFields, name, true)
+                : unset(formStateRef.current.dirtyFields, name);
+            formStateRef.current.isDirty = getIsDirty();
+            const state = {
+                isDirty: formStateRef.current.isDirty,
+                dirtyFields: formStateRef.current.dirtyFields,
+            };
+            const isChanged = (readFormStateRef.current.isDirty &&
+                previousIsDirty !== state.isDirty) ||
+                (readFormStateRef.current.dirtyFields &&
+                    isDirtyFieldExist !== get(formStateRef.current.dirtyFields, name));
+            isChanged && shouldRender && formStateSubjectRef.current.next(state);
+            return isChanged ? state : {};
+        }
+        return {};
+    }, []);
+    const executeValidation = react__WEBPACK_IMPORTED_MODULE_0__.useCallback(async (name, skipReRender) => {
+        const error = (await validateField(get(fieldsRef.current, name), isValidateAllFieldCriteria))[name];
+        shouldRenderBaseOnError(name, error, skipReRender);
+        return isUndefined(error);
+    }, [isValidateAllFieldCriteria]);
+    const executeSchemaOrResolverValidation = react__WEBPACK_IMPORTED_MODULE_0__.useCallback(async (names, currentNames = []) => {
+        const { errors } = await resolverRef.current(getFieldsValues(fieldsRef, shouldUnregister ? {} : defaultValuesRef.current), contextRef.current, {
+            criteriaMode,
+            names: currentNames,
+            fields: getFields(fieldsNamesRef.current, fieldsRef.current),
+        });
+        for (const name of names) {
+            const error = get(errors, name);
+            error
+                ? set(formStateRef.current.errors, name, error)
+                : unset(formStateRef.current.errors, name);
+        }
+        return errors;
+    }, [criteriaMode]);
+    const validateForm = async (fieldsRef) => {
+        for (const name in fieldsRef) {
+            const field = fieldsRef[name];
+            if (field) {
+                const _f = field._f;
+                const current = omit(field, '_f');
+                if (_f) {
+                    const fieldError = await validateField(field, isValidateAllFieldCriteria);
+                    if (fieldError[_f.name]) {
+                        set(formStateRef.current.errors, _f.name, fieldError[_f.name]);
+                        unset(validFieldsRef.current, _f.name);
+                    }
+                    else if (get(fieldsWithValidationRef.current, _f.name)) {
+                        set(validFieldsRef.current, _f.name, true);
+                        unset(formStateRef.current.errors, _f.name);
+                    }
+                }
+                current && (await validateForm(current));
+            }
+        }
+    };
+    const trigger = react__WEBPACK_IMPORTED_MODULE_0__.useCallback(async (name) => {
+        const fields = isUndefined(name)
+            ? Object.keys(fieldsRef.current)
+            : Array.isArray(name)
+                ? name
+                : [name];
+        let isValid;
+        formStateSubjectRef.current.next({
+            isValidating: true,
+        });
+        if (resolverRef.current) {
+            isValid = isEmptyObject(await executeSchemaOrResolverValidation(fields, isUndefined(name)
+                ? undefined
+                : fields));
+        }
+        else {
+            isValid = !!(isUndefined(name)
+                ? await validateForm(fieldsRef.current)
+                : (await Promise.all(fields
+                    .filter((fieldName) => get(fieldsRef.current, fieldName))
+                    .map(async (fieldName) => await executeValidation(fieldName, null)))).every(Boolean));
+        }
+        formStateSubjectRef.current.next({
+            errors: formStateRef.current.errors,
+            isValidating: false,
+            isValid: resolverRef.current ? isValid : getIsValid(),
+        });
+        return isValid;
+    }, [executeSchemaOrResolverValidation, executeValidation]);
+    const setInternalValues = react__WEBPACK_IMPORTED_MODULE_0__.useCallback((name, value, options) => Object.entries(value).forEach(([inputKey, inputValue]) => {
+        const fieldName = `${name}.${inputKey}`;
+        const field = get(fieldsRef.current, fieldName);
+        field && !field._f
+            ? setInternalValues(fieldName, inputValue, options)
+            : setFieldValue(fieldName, inputValue, options, true, !field);
+    }), [trigger]);
+    const isFieldWatched = (name) => isWatchAllRef.current ||
+        watchFieldsRef.current.has(name) ||
+        watchFieldsRef.current.has((name.match(/\w+/) || [])[0]);
+    const updateValidAndValue = (name, options, ref, isWithinRefCallback) => {
+        const field = get(fieldsRef.current, name);
+        const defaultValue = isUndefined(field._f.value)
+            ? get(defaultValuesRef.current, name)
+            : field._f.value;
+        if (field && !isUndefined(defaultValue)) {
+            if (ref && ref.defaultChecked) {
+                field._f.value = getFieldValue(field);
+            }
+            else if (!isNameInFieldArray(fieldArrayNamesRef.current, name)) {
+                setFieldValue(name, defaultValue);
+            }
+            else {
+                field._f.value = defaultValue;
+            }
+        }
+        if ((!isUndefined(defaultValue) || isWithinRefCallback) &&
+            hasValidation(options) &&
+            !validationMode.isOnSubmit &&
+            field &&
+            readFormStateRef.current.isValid) {
+            validateField(field, isValidateAllFieldCriteria).then((error) => {
+                isEmptyObject(error)
+                    ? set(validFieldsRef.current, name, true)
+                    : unset(validFieldsRef.current, name);
+                formStateRef.current.isValid !== getIsValid() &&
+                    setFormState(Object.assign(Object.assign({}, formStateRef.current), { isValid: getIsValid() }));
+            });
+        }
+        return defaultValue;
+    };
+    const setValue = (name, value, options = {}) => {
+        const field = get(fieldsRef.current, name);
+        const isFieldArray = fieldArrayNamesRef.current.has(name);
+        if (isFieldArray) {
+            fieldArraySubjectRef.current.next({
+                fields: value,
+                name,
+                isReset: true,
+            });
+            if ((readFormStateRef.current.isDirty ||
+                readFormStateRef.current.dirtyFields) &&
+                options.shouldDirty) {
+                set(formStateRef.current.dirtyFields, name, setFieldArrayDirtyFields(value, get(defaultValuesRef.current, name, []), get(formStateRef.current.dirtyFields, name, [])));
+                formStateSubjectRef.current.next({
+                    dirtyFields: formStateRef.current.dirtyFields,
+                    isDirty: getIsDirty(name, value),
+                });
+            }
+            !value.length &&
+                set(fieldsRef.current, name, []) &&
+                set(fieldArrayDefaultValuesRef.current, name, []);
+        }
+        (field && !field._f) || isFieldArray
+            ? setInternalValues(name, value, isFieldArray ? {} : options)
+            : setFieldValue(name, value, options, true, !field);
+        isFieldWatched(name) && formStateSubjectRef.current.next({});
+        watchSubjectRef.current.next({ name, value });
+    };
+    const handleChange = react__WEBPACK_IMPORTED_MODULE_0__.useCallback(async ({ type, target, target: { value, type: inputType } }) => {
+        let name = target.name;
+        let error;
+        let isValid;
+        const field = get(fieldsRef.current, name);
+        if (field) {
+            let inputValue = inputType ? getFieldValue(field) : undefined;
+            inputValue = isUndefined(inputValue) ? value : inputValue;
+            const isBlurEvent = type === EVENTS.BLUR;
+            const { isOnBlur: isReValidateOnBlur, isOnChange: isReValidateOnChange, } = getValidationModes(reValidateMode);
+            const shouldSkipValidation = (!hasValidation(field._f) &&
+                !resolverRef.current &&
+                !get(formStateRef.current.errors, name)) ||
+                skipValidation(Object.assign({ isBlurEvent, isTouched: !!get(formStateRef.current.touchedFields, name), isSubmitted: formStateRef.current.isSubmitted, isReValidateOnBlur,
+                    isReValidateOnChange }, validationMode));
+            const isWatched = !isBlurEvent && isFieldWatched(name);
+            if (!isUndefined(inputValue)) {
+                field._f.value = inputValue;
+            }
+            const state = updateAndGetDirtyState(name, field._f.value, false);
+            if (isBlurEvent && !get(formStateRef.current.touchedFields, name)) {
+                set(formStateRef.current.touchedFields, name, true);
+                readFormStateRef.current.touchedFields &&
+                    (state.touchedFields = formStateRef.current.touchedFields);
+            }
+            let shouldRender = !isEmptyObject(state) || isWatched;
+            if (shouldSkipValidation) {
+                !isBlurEvent &&
+                    watchSubjectRef.current.next({
+                        name,
+                        type,
+                        value: inputValue,
+                    });
+                return (shouldRender &&
+                    formStateSubjectRef.current.next(isWatched ? {} : state));
+            }
+            formStateSubjectRef.current.next({
+                isValidating: true,
+            });
+            if (resolverRef.current) {
+                const { errors } = await resolverRef.current(getFieldsValues(fieldsRef, shouldUnregister ? {} : defaultValuesRef.current), contextRef.current, {
+                    criteriaMode,
+                    fields: getFields([name], fieldsRef.current),
+                    names: [name],
+                });
+                const previousFormIsValid = formStateRef.current.isValid;
+                error = get(errors, name);
+                if (isCheckBoxInput(target) && !error) {
+                    const parentNodeName = getNodeParentName(name);
+                    const currentError = get(errors, parentNodeName, {});
+                    currentError.type && currentError.message && (error = currentError);
+                    if (currentError ||
+                        get(formStateRef.current.errors, parentNodeName)) {
+                        name = parentNodeName;
+                    }
+                }
+                isValid = isEmptyObject(errors);
+                previousFormIsValid !== isValid && (shouldRender = true);
+            }
+            else {
+                error = (await validateField(field, isValidateAllFieldCriteria))[name];
+            }
+            !isBlurEvent &&
+                watchSubjectRef.current.next({
+                    name,
+                    type,
+                    value: inputValue,
+                });
+            shouldRenderBaseOnError(name, error, shouldRender, state, isValid, isWatched);
+        }
+    }, []);
+    const getValues = (fieldNames) => {
+        const values = isMountedRef.current
+            ? getFieldsValues(fieldsRef, shouldUnregister ? {} : defaultValuesRef.current)
+            : defaultValuesRef.current;
+        return isUndefined(fieldNames)
+            ? values
+            : isString(fieldNames)
+                ? get(values, fieldNames)
+                : fieldNames.map((name) => get(values, name));
+    };
+    const updateIsValid = react__WEBPACK_IMPORTED_MODULE_0__.useCallback(async (values = {}) => {
+        const previousIsValid = formStateRef.current.isValid;
+        if (resolver) {
+            const { errors } = await resolverRef.current(Object.assign(Object.assign({}, getFieldsValues(fieldsRef, shouldUnregister ? {} : defaultValuesRef.current)), values), contextRef.current, {
+                criteriaMode,
+                fields: getFields(fieldsNamesRef.current, fieldsRef.current),
+            });
+            formStateRef.current.isValid = isEmptyObject(errors);
+        }
+        else {
+            getIsValid();
+        }
+        previousIsValid !== formStateRef.current.isValid &&
+            formStateSubjectRef.current.next({
+                isValid: formStateRef.current.isValid,
+            });
+    }, [criteriaMode]);
+    const clearErrors = (name) => {
+        name &&
+            (Array.isArray(name) ? name : [name]).forEach((inputName) => unset(formStateRef.current.errors, inputName));
+        formStateSubjectRef.current.next({
+            errors: name ? formStateRef.current.errors : {},
+        });
+    };
+    const setError = (name, error, options) => {
+        const ref = ((get(fieldsRef.current, name) || { _f: {} })._f || {}).ref;
+        set(formStateRef.current.errors, name, Object.assign(Object.assign({}, error), { ref }));
+        formStateSubjectRef.current.next({
+            errors: formStateRef.current.errors,
+            isValid: false,
+        });
+        options && options.shouldFocus && ref && ref.focus && ref.focus();
+    };
+    const watchInternal = react__WEBPACK_IMPORTED_MODULE_0__.useCallback((fieldNames, defaultValue, isGlobal) => {
+        const isArrayNames = Array.isArray(fieldNames);
+        const fieldValues = isMountedRef.current
+            ? getFieldsValues(fieldsRef, defaultValuesRef.current)
+            : isUndefined(defaultValue)
+                ? defaultValuesRef.current
+                : isArrayNames
+                    ? defaultValue || {}
+                    : { [fieldNames]: defaultValue };
+        if (isUndefined(fieldNames)) {
+            isGlobal && (isWatchAllRef.current = true);
+            return fieldValues;
+        }
+        const result = [];
+        for (const fieldName of isArrayNames ? fieldNames : [fieldNames]) {
+            isGlobal && watchFieldsRef.current.add(fieldName);
+            result.push(get(fieldValues, fieldName));
+        }
+        return isArrayNames ? result : result[0];
+    }, []);
+    const watch = (fieldName, defaultValue) => isFunction(fieldName)
+        ? watchSubjectRef.current.subscribe({
+            next: (info) => fieldName(watchInternal(undefined, defaultValue), info),
+        })
+        : watchInternal(fieldName, defaultValue, true);
+    const unregister = (name, options = {}) => {
+        for (const inputName of name
+            ? Array.isArray(name)
+                ? name
+                : [name]
+            : Object.keys(fieldsNamesRef.current)) {
+            fieldsNamesRef.current.delete(inputName);
+            fieldArrayNamesRef.current.delete(inputName);
+            if (get(fieldsRef.current, inputName)) {
+                if (!options.keepIsValid) {
+                    unset(fieldsWithValidationRef.current, inputName);
+                    unset(validFieldsRef.current, inputName);
+                }
+                !options.keepError && unset(formStateRef.current.errors, inputName);
+                !options.keepValue && unset(fieldsRef.current, inputName);
+                !options.keepDirty &&
+                    unset(formStateRef.current.dirtyFields, inputName);
+                !options.keepTouched &&
+                    unset(formStateRef.current.touchedFields, inputName);
+                !shouldUnregister &&
+                    !options.keepDefaultValue &&
+                    unset(defaultValuesRef.current, inputName);
+                watchSubjectRef.current.next({
+                    name: inputName,
+                });
+            }
+        }
+        formStateSubjectRef.current.next(Object.assign(Object.assign(Object.assign({}, formStateRef.current), (!options.keepDirty ? {} : { isDirty: getIsDirty() })), (resolverRef.current ? {} : { isValid: getIsValid() })));
+        !options.keepIsValid && updateIsValid();
+    };
+    const registerFieldRef = (name, ref, options) => {
+        register(name, options);
+        let field = get(fieldsRef.current, name);
+        const isRadioOrCheckbox = isRadioOrCheckboxFunction(ref);
+        if (ref === field._f.ref ||
+            (isWeb && isHTMLElement(field._f.ref) && !isHTMLElement(ref)) ||
+            (isRadioOrCheckbox &&
+                Array.isArray(field._f.refs) &&
+                compact(field._f.refs).find((option) => option === ref))) {
+            return;
+        }
+        field = {
+            _f: isRadioOrCheckbox
+                ? Object.assign(Object.assign({}, field._f), { refs: [
+                        ...compact(field._f.refs || []).filter((ref) => isHTMLElement(ref) && document.contains(ref)),
+                        ref,
+                    ], ref: { type: ref.type, name } }) : Object.assign(Object.assign({}, field._f), { ref }),
+        };
+        set(fieldsRef.current, name, field);
+        const defaultValue = updateValidAndValue(name, options, ref, true);
+        if (isRadioOrCheckbox && Array.isArray(defaultValue)
+            ? !deepEqual(get(fieldsRef.current, name)._f.value, defaultValue)
+            : isUndefined(get(fieldsRef.current, name)._f.value)) {
+            get(fieldsRef.current, name)._f.value = getFieldValue(get(fieldsRef.current, name));
+        }
+    };
+    const register = react__WEBPACK_IMPORTED_MODULE_0__.useCallback((name, options) => {
+        const isInitialRegister = !get(fieldsRef.current, name);
+        set(fieldsRef.current, name, {
+            _f: Object.assign(Object.assign(Object.assign({}, (isInitialRegister
+                ? { ref: { name } }
+                : Object.assign({ ref: (get(fieldsRef.current, name)._f || {}).ref }, get(fieldsRef.current, name)._f))), { name }), options),
+        });
+        hasValidation(options) &&
+            set(fieldsWithValidationRef.current, name, true);
+        fieldsNamesRef.current.add(name);
+        isInitialRegister && updateValidAndValue(name, options);
+        return isWindowUndefined
+            ? { name: name }
+            : {
+                name,
+                onChange: handleChange,
+                onBlur: handleChange,
+                ref: (ref) => {
+                    ref
+                        ? registerFieldRef(name, ref, options)
+                        : (shouldUnregister || (options && options.shouldUnregister)) &&
+                            isWeb &&
+                            unregisterFieldsNamesRef.current.add(name);
+                },
+            };
+    }, [defaultValuesRef.current]);
+    const handleSubmit = react__WEBPACK_IMPORTED_MODULE_0__.useCallback((onValid, onInvalid) => async (e) => {
+        if (e) {
+            e.preventDefault && e.preventDefault();
+            e.persist && e.persist();
+        }
+        let fieldValues = Object.assign(Object.assign({}, (shouldUnregister ? {} : defaultValuesRef.current)), getFieldsValues(fieldsRef));
+        formStateSubjectRef.current.next({
+            isSubmitting: true,
+        });
+        try {
+            if (resolverRef.current) {
+                const { errors, values } = await resolverRef.current(fieldValues, contextRef.current, {
+                    criteriaMode,
+                    fields: getFields(fieldsNamesRef.current, fieldsRef.current),
+                });
+                formStateRef.current.errors = errors;
+                fieldValues = values;
+            }
+            else {
+                await validateForm(fieldsRef.current);
+            }
+            if (isEmptyObject(formStateRef.current.errors) &&
+                Object.keys(formStateRef.current.errors).every((name) => get(fieldValues, name))) {
+                formStateSubjectRef.current.next({
+                    errors: {},
+                    isSubmitting: true,
+                });
+                await onValid(fieldValues, e);
+            }
+            else {
+                onInvalid && (await onInvalid(formStateRef.current.errors, e));
+                shouldFocusError &&
+                    focusFieldBy(fieldsRef.current, (key) => get(formStateRef.current.errors, key), fieldsNamesRef.current);
+            }
+        }
+        finally {
+            formStateRef.current.isSubmitted = true;
+            formStateSubjectRef.current.next({
+                isSubmitted: true,
+                isSubmitting: false,
+                isSubmitSuccessful: isEmptyObject(formStateRef.current.errors),
+                submitCount: formStateRef.current.submitCount + 1,
+                errors: formStateRef.current.errors,
+            });
+        }
+    }, [shouldFocusError, isValidateAllFieldCriteria, criteriaMode]);
+    const resetFromState = react__WEBPACK_IMPORTED_MODULE_0__.useCallback(({ keepErrors, keepDirty, keepIsSubmitted, keepTouched, keepDefaultValues, keepIsValid, keepSubmitCount, }, values) => {
+        if (!keepIsValid) {
+            validFieldsRef.current = {};
+            fieldsWithValidationRef.current = {};
+        }
+        watchFieldsRef.current = new Set();
+        isWatchAllRef.current = false;
+        formStateSubjectRef.current.next({
+            submitCount: keepSubmitCount ? formStateRef.current.submitCount : 0,
+            isDirty: keepDirty
+                ? formStateRef.current.isDirty
+                : keepDefaultValues
+                    ? deepEqual(values, defaultValuesRef.current)
+                    : false,
+            isSubmitted: keepIsSubmitted ? formStateRef.current.isSubmitted : false,
+            isValid: keepIsValid
+                ? formStateRef.current.isValid
+                : !!updateIsValid(values),
+            dirtyFields: keepDirty ? formStateRef.current.dirtyFields : {},
+            touchedFields: keepTouched ? formStateRef.current.touchedFields : {},
+            errors: keepErrors ? formStateRef.current.errors : {},
+            isSubmitting: false,
+            isSubmitSuccessful: false,
+        });
+    }, []);
+    const reset = (values, keepStateOptions = {}) => {
+        const updatedValues = values || defaultValuesRef.current;
+        if (isWeb && !keepStateOptions.keepValues) {
+            for (const name of fieldsNamesRef.current) {
+                const field = get(fieldsRef.current, name);
+                if (field && field._f) {
+                    const inputRef = Array.isArray(field._f.refs)
+                        ? field._f.refs[0]
+                        : field._f.ref;
+                    if (isHTMLElement(inputRef)) {
+                        try {
+                            inputRef.closest('form').reset();
+                            break;
+                        }
+                        catch (_a) { }
+                    }
+                }
+            }
+        }
+        !keepStateOptions.keepDefaultValues &&
+            (defaultValuesRef.current = Object.assign({}, updatedValues));
+        if (!keepStateOptions.keepValues) {
+            fieldsRef.current = {};
+            controllerSubjectRef.current.next({
+                values: Object.assign({}, updatedValues),
+            });
+            watchSubjectRef.current.next({
+                value: Object.assign({}, updatedValues),
+            });
+            fieldArraySubjectRef.current.next({
+                fields: Object.assign({}, updatedValues),
+                isReset: true,
+            });
+        }
+        resetFromState(keepStateOptions, values);
+        isMountedRef.current = false;
+    };
+    const setFocus = (name) => get(fieldsRef.current, name)._f.ref.focus();
+    react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
+        const formStateSubscription = formStateSubjectRef.current.subscribe({
+            next(formState = {}) {
+                if (shouldRenderFormState(formState, readFormStateRef.current, true)) {
+                    formStateRef.current = Object.assign(Object.assign({}, formStateRef.current), formState);
+                    setFormState(formStateRef.current);
+                }
+            },
+        });
+        const useFieldArraySubscription = fieldArraySubjectRef.current.subscribe({
+            next(state) {
+                if (state.fields && state.name && readFormStateRef.current.isValid) {
+                    const values = getFieldsValues(fieldsRef);
+                    set(values, state.name, state.fields);
+                    updateIsValid(values);
+                }
+            },
+        });
+        resolverRef.current && readFormStateRef.current.isValid && updateIsValid();
+        return () => {
+            watchSubjectRef.current.unsubscribe();
+            formStateSubscription.unsubscribe();
+            useFieldArraySubscription.unsubscribe();
+        };
+    }, []);
+    react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
+        const isLiveInDom = (ref) => !isHTMLElement(ref) || !document.contains(ref);
+        isMountedRef.current = true;
+        unregisterFieldsNamesRef.current.forEach((name) => {
+            const field = get(fieldsRef.current, name);
+            field &&
+                (field._f.refs
+                    ? field._f.refs.every(isLiveInDom)
+                    : isLiveInDom(field._f.ref)) &&
+                unregister(name);
+        });
+        unregisterFieldsNamesRef.current = new Set();
+    });
+    return {
+        control: react__WEBPACK_IMPORTED_MODULE_0__.useMemo(() => ({
+            register,
+            isWatchAllRef,
+            watchFieldsRef,
+            getIsDirty,
+            formStateSubjectRef,
+            fieldArraySubjectRef,
+            controllerSubjectRef,
+            watchSubjectRef,
+            watchInternal,
+            fieldsRef,
+            validFieldsRef,
+            fieldsWithValidationRef,
+            fieldArrayNamesRef,
+            readFormStateRef,
+            formStateRef,
+            defaultValuesRef,
+            fieldArrayDefaultValuesRef,
+            unregister,
+            shouldUnmountUnregister: shouldUnregister,
+        }), []),
+        formState: getProxyFormState(isProxyEnabled, formState, readFormStateRef),
+        trigger,
+        register,
+        handleSubmit,
+        watch: react__WEBPACK_IMPORTED_MODULE_0__.useCallback(watch, []),
+        setValue: react__WEBPACK_IMPORTED_MODULE_0__.useCallback(setValue, [setInternalValues]),
+        getValues: react__WEBPACK_IMPORTED_MODULE_0__.useCallback(getValues, []),
+        reset: react__WEBPACK_IMPORTED_MODULE_0__.useCallback(reset, []),
+        clearErrors: react__WEBPACK_IMPORTED_MODULE_0__.useCallback(clearErrors, []),
+        unregister: react__WEBPACK_IMPORTED_MODULE_0__.useCallback(unregister, []),
+        setError: react__WEBPACK_IMPORTED_MODULE_0__.useCallback(setError, []),
+        setFocus: react__WEBPACK_IMPORTED_MODULE_0__.useCallback(setFocus, []),
+    };
+}
+
+function useWatch(props) {
+    const { control, name, defaultValue } = props || {};
+    const methods = useFormContext();
+    const nameRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef(name);
+    nameRef.current = name;
+    const { watchInternal, watchSubjectRef } = control || methods.control;
+    const [value, updateValue] = react__WEBPACK_IMPORTED_MODULE_0__.useState(isUndefined(defaultValue)
+        ? watchInternal(name)
+        : defaultValue);
+    react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
+        watchInternal(name);
+        const watchSubscription = watchSubjectRef.current.subscribe({
+            next: ({ name: inputName, value }) => (!nameRef.current ||
+                !inputName ||
+                (Array.isArray(nameRef.current)
+                    ? nameRef.current
+                    : [nameRef.current]).some((fieldName) => inputName &&
+                    fieldName &&
+                    (fieldName.startsWith(inputName) ||
+                        inputName.startsWith(fieldName)))) &&
+                updateValue(isString(inputName) &&
+                    nameRef.current === inputName &&
+                    !isUndefined(value)
+                    ? value
+                    : watchInternal(nameRef.current, defaultValue)),
+        });
+        return () => watchSubscription.unsubscribe();
+    }, []);
+    return value;
+}
+
+
+//# sourceMappingURL=index.esm.js.map
 
 
 /***/ }),

@@ -36,7 +36,16 @@ class SupplierController extends Controller
      */
     public function store(Request $request)
     {
-        $supplier = Supplier::create(['name' => 'London to Paris']);
+         Supplier::create([
+             'supplier' => $request->supplier,
+             'contact_person' => $request->contactPerson,
+             'address' => $request->address,
+             'email' => $request->email,
+             'contact_no' => $request->number,
+             'fax_no' => $request->fax,
+             'bankaccount_no' => $request->bank,
+             'description' => $request->description,
+         ]);
     }
 
     /**

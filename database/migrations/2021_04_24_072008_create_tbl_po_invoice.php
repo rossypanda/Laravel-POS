@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
 class CreateTblPoInvoice extends Migration
 {
@@ -18,12 +19,12 @@ class CreateTblPoInvoice extends Migration
             $table->collation = 'utf8mb4_unicode_ci';        
             $table->increments('po_invoice_id');
             $table->foreignId('company_id');
-            $table->integer('start_range')->default(null);
-            $table->integer('end_range')->default(null);
+            $table->integer('start_range')->nullable();
+            $table->integer('end_range')->nullable();
             $table->string('invoice_type', 1);
             $table->smallInteger('invoice_usage');
-            $table->timestamp('date_added');
-            $table->string('encoded_by', 20);
+            $table->timestamp('date_added')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->string('encoded_by', 20)->nullable();
         });
     }
 
