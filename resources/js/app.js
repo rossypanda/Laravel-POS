@@ -13,7 +13,7 @@ require('./bootstrap');
  */
 
 require('./modules/Example');
-require('./modules/Supplier');
+require('./modules/supplier/Supplier');
 require('./modules/PONumber');
 
 

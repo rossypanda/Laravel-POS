@@ -55,21 +55,25 @@ function Supplier() {
         marginBottom:"1rem"
     };
 
+    const hideAlert = () => {
+        setCustomAlert(null)
+        hideTableShowAddSupplier(false)
+    }
+    
     const onSubmit = (data) => {
         axios
-        .post('/supplier/create', {
+        .post('/supplier', {
            data
         })
         .then((response) => {
-            if(response.errors.length == 0){
+            console.log(response);
                 setCustomAlert(<SweetAlert
                 success
                 title="Success!"
-                onConfirm={this.hideAlert}
+                onConfirm={() =>hideAlert()}
                 >
                 New Supplier Added
                 </SweetAlert>);
-            }
         })
         .catch((err) => {
             console.log(err);

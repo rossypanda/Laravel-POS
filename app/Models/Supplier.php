@@ -7,12 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Supplier extends Model
 {
+  public $timestamps = false;
    /**
      * The table associated with the model.
      *
      * @var string
      */
     protected $table = 'tbl_supplier';
+    protected $primaryKey = 'supplier_id';
 
     protected $guarded = 'supplier_id';
 

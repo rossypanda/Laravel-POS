@@ -36,15 +36,16 @@ class SupplierController extends Controller
      */
     public function store(Request $request)
     {
+         $field_data = $request->data;
          Supplier::create([
-             'supplier' => $request->supplier,
-             'contact_person' => $request->contactPerson,
-             'address' => $request->address,
-             'email' => $request->email,
-             'contact_no' => $request->number,
-             'fax_no' => $request->fax,
-             'bankaccount_no' => $request->bank,
-             'description' => $request->description,
+             'supplier' => $field_data['supplier'],
+             'contact_person' => $field_data['contactPerson'],
+             'address' => $field_data['address'],
+             'email' => $field_data['email'],
+             'contact_no' => $field_data['number'],
+             'fax_no' => $field_data['fax'],
+             'bankaccount_no' => $field_data['bank'],
+             'description' => $field_data['description'],
          ]);
     }
 
@@ -94,8 +95,19 @@ class SupplierController extends Controller
      */
     public function destroy($id)
     {
-        $supplier = Flight::find(1);
+        $supplier = Supplier::find(1);
 
         $supplier->delete();
+    }
+
+     /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function fetchSupplierData()
+    {
+         return Supplier::all()->toJson();
     }
 }
