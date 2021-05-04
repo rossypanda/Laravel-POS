@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Supplier;
 
 class SupplierController extends Controller
 {
@@ -35,7 +36,17 @@ class SupplierController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         $field_data = $request->data;
+         Supplier::create([
+             'supplier' => $field_data['supplier'],
+             'contact_person' => $field_data['contactPerson'],
+             'address' => $field_data['address'],
+             'email' => $field_data['email'],
+             'contact_no' => $field_data['number'],
+             'fax_no' => $field_data['fax'],
+             'bankaccount_no' => $field_data['bank'],
+             'description' => $field_data['description'],
+         ]);
     }
 
     /**
@@ -68,8 +79,20 @@ class SupplierController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        //
+    {   
+        
+        $field_data = $request->data;
+        $supplier = Supplier::find($field_data['supplier-id']);
+        $supplier->supplier = $field_data['supplier-edit'];
+        $supplier->contact_person = $field_data['contact-person-edit'];
+        $supplier->address = $field_data['address-edit'];
+        $supplier->email = $field_data['email-edit'];
+        $supplier->contact_no = $field_data['number-edit'];
+        $supplier->fax_no = $field_data['fax-edit'];
+        $supplier->bankaccount_no = $field_data['bank-edit'];
+        $supplier->description = $field_data['description-edit'];
+
+        $supplier->save();
     }
 
     /**
@@ -80,6 +103,19 @@ class SupplierController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $supplier = Supplier::find($id);
+
+        $supplier->delete();
+    }
+
+     /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function fetchSupplierData()
+    {
+         return Supplier::all()->toJson();
     }
 }

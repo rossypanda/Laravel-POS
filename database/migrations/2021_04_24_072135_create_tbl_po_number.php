@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
 class CreateTblPoNumber extends Migration
 {
@@ -18,12 +19,12 @@ class CreateTblPoNumber extends Migration
             $table->collation = 'utf8mb4_unicode_ci';        
             $table->increments('po_num_id');
             $table->foreignId('po_header_id');
-            $table->integer('start_range')->default(null);
-            $table->integer('end_range')->default(null);
-            $table->string('po_type',1)->default(null);
+            $table->integer('start_range')->nullable();
+            $table->integer('end_range')->nullable();
+            $table->string('po_type',1)->nullable();
             $table->integer('po_usage')->default(0);
-            $table->timestamp('date_encoded');
-            $table->string('encoded_by', 20);
+            $table->timestamp('date_encoded')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->string('encoded_by', 20)->nullable();
         });
     }
 

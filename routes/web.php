@@ -29,10 +29,11 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 // });
 
 // Route::get('/welcome', [WelcomeController::class, 'index']);
-Route::resource('poNumber', PoNumberController::class);
-Route::resource('purchaseOrder', PurchaseOrderController::class);
-Route::resource('poReport', PoReportController::class);
-Route::resource('supplier', SupplierController::class);
+Route::resource('poNumber', 'PoNumberController');
+Route::resource('purchaseOrder', 'PurchaseOrderController');
+Route::resource('poReport', 'PoReportController');
+Route::resource('supplier', 'SupplierController');
+Route::get('fetch/supplier','SupplierController@fetchSupplierData');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
