@@ -10,6 +10,12 @@ import axios from 'axios';
 import SweetAlert from 'react-bootstrap-sweetalert';
 
 function MyVerticallyCenteredModal(props) {
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const updateSupplierData = (data) => {
+        axios.patch(`/supplier/1}`,{data}).then(
+            alert('Updated')
+        );
+    }
     return (
       <Modal
         {...props}
@@ -19,20 +25,72 @@ function MyVerticallyCenteredModal(props) {
       >
         <Modal.Header closeButton className="modal-color">
           <Modal.Title id="contained-modal-title-vcenter">
-            Modal heading
+            {props.title}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h4>Centered Modal</h4>
-          <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-            consectetur ac, vestibulum at eros.
-          </p>
+        <Form>
+            <Form.Row>
+                <Form.Group as={Col} controlId="supplier-edit" hidden>
+                    <Form.Label>Supplier</Form.Label>
+                    <Form.Control type="text" placeholder="Enter Supplier" value={props.supplierId} {...register("supplier-id")} />
+                </Form.Group>
+                <Form.Group as={Col} controlId="supplier-edit">
+                    <Form.Label>Supplier</Form.Label>
+                    <Form.Control type="text" placeholder="Enter Supplier" value={props.supplier} {...register("supplier-edit")} />
+                </Form.Group>
+                <Form.Group as={Col} controlId="contact-person-edit">
+                    <Form.Label>Contact Person</Form.Label>
+                    <Form.Control type="text" placeholder="Enter Contact Person" value={props.contactPerson} {...register("contact-person-edit")} />
+                </Form.Group>
+            </Form.Row> 
+            <Form.Row>
+                <Form.Group as={Col} controlId="address-edit">
+                    <Form.Label>Address</Form.Label>
+                    <Form.Control type="text" placeholder="Enter Address" value={props.address} {...register("address-edit")} />
+                </Form.Group>
+            </Form.Row>
+            <Form.Row>
+                <Form.Group as={Col} controlId="email-edit">
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control type="text" placeholder="Enter Email" value={props.email} {...register("email-edit")} />
+                </Form.Group>
+                <Form.Group as={Col} controlId="number-edit">
+                    <Form.Label>Number</Form.Label>
+                    <Form.Control type="text" placeholder="Enter Address" value={props.email} {...register("number-edit")} />
+                </Form.Group>
+            </Form.Row>  
+            <Form.Row>
+                <Form.Group as={Col} controlId="fax-edit">
+                    <Form.Label>Fax</Form.Label>
+                    <Form.Control type="text" placeholder="Enter Email" value={props.fax} {...register("fax-edit")} />
+                </Form.Group>
+                <Form.Group as={Col} controlId="bank-edit">
+                    <Form.Label>Bank Account</Form.Label>
+                    <Form.Control type="text" placeholder="Enter Address" value={props.bank} {...register("bank-edit")} />
+                </Form.Group>
+            </Form.Row>
+            <Form.Row>
+                <Form.Group as={Col} controlId="date-edit">
+                    <Form.Label>Date Added</Form.Label>
+                    <Form.Control type="text" value={props.date} readOnly/>
+                </Form.Group>
+                <Form.Group as={Col} controlId="encoded-edit">
+                    <Form.Label>Encoded By</Form.Label>
+                    <Form.Control type="text" value={props.encoded} readOnly/>
+                </Form.Group>
+            </Form.Row>  
+            <Form.Row>
+                <Form.Group as={Col} controlId="description-edit">
+                    <Form.Label>Description</Form.Label>
+                    <Form.Control type="text" placeholder="Optional" value={props.description} {...register("description-edit")} />
+                </Form.Group>
+            </Form.Row>
+        </Form>
         </Modal.Body>
-        <Modal.Footer className="modal-color">
+        <Modal.Footer>
          
-          <Button variant="success" size="sm" onClick={props.onHide}>
+          <Button variant="success" size="sm" onClick={props.onHide} onClick={handleSubmit(updateSupplierData)}>
             <FontAwesomeIcon icon={faCheck} className="icon-space" />Save Changes
           </Button>
         </Modal.Footer>
@@ -135,6 +193,31 @@ function Supplier() {
         }
         
     }
+
+    
+   const showModalSupplierData = (id) => {
+      let supplierInfo = tableData[id];
+      console.log(supplierInfo)
+        setModalShow(
+            <MyVerticallyCenteredModal
+                show={true}
+                title={supplierInfo.supplier}
+                supplierId={supplierInfo.supplier_id}
+                supplier={supplierInfo.supplier}
+                contactPerson={supplierInfo.contact_person}
+                address={supplierInfo.address}
+                email={supplierInfo.email}
+                number={supplierInfo.contact_no}
+                fax={supplierInfo.fax_no}
+                bank={supplierInfo.bankaccount_no}
+                date={supplierInfo.date_added}
+                encoded={supplierInfo.encoded_by}
+                description={supplierInfo.description}
+                onHide={() => setModalShow(null)}
+            />
+        );
+    }
+    
     
     return (
         
@@ -158,14 +241,14 @@ function Supplier() {
                         </tr>
                     </thead>
                     <tbody>
-                    {tableData.map((data) => (
+                    {tableData.map((data,index) => (
                         <tr>
                         <td>{data.supplier_id}</td>
                         <td>{data.supplier}</td>
                         <td>{data.contact_no}</td>
                         <td>{data.email}</td>
                         <td> 
-                            <Button variant="outline-info" size="sm" onClick={() => setModalShow(true)}>
+                            <Button variant="outline-info" size="sm" onClick={() => showModalSupplierData(index)}>
                             <FontAwesomeIcon icon={faEye} className="icon-space"/>View</Button>
                             <Button variant="outline-danger" size="sm" onClick={() => removeSupplierConfirmation(data.supplier_id)}>
                                 <FontAwesomeIcon icon={faTrashAlt}  className="icon-space" />Delete
@@ -242,11 +325,7 @@ function Supplier() {
                     </Card.Body>
                 </Card>
             </Container>
-
-            <MyVerticallyCenteredModal
-                show={modalShow}
-                onHide={() => setModalShow(false)}
-            />
+            {modalShow}
         </div>
        
     );

@@ -79,10 +79,18 @@ class SupplierController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        $supplier = Supplier::find(1);
-
-        $supplier->supploer = 'Test';
+    {   
+        
+        $field_data = $request->data;
+        $supplier = Supplier::find($field_data['supplier-id']);
+        $supplier->supplier = $field_data['supplier-edit'];
+        $supplier->contact_person = $field_data['contact-person-edit'];
+        $supplier->address = $field_data['address-edit'];
+        $supplier->email = $field_data['email-edit'];
+        $supplier->contact_no = $field_data['number-edit'];
+        $supplier->fax_no = $field_data['fax-edit'];
+        $supplier->bankaccount_no = $field_data['bank-edit'];
+        $supplier->description = $field_data['description-edit'];
 
         $supplier->save();
     }
@@ -95,7 +103,7 @@ class SupplierController extends Controller
      */
     public function destroy($id)
     {
-        $supplier = Supplier::find(1);
+        $supplier = Supplier::find($id);
 
         $supplier->delete();
     }
