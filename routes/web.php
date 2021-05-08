@@ -34,6 +34,7 @@ Route::resource('purchaseOrder', 'PurchaseOrderController');
 Route::resource('poReport', 'PoReportController');
 Route::resource('supplier', 'SupplierController');
 Route::get('fetch/supplier','SupplierController@fetchSupplierData');
+Route::get('fetch/poNumber','PONumberController@fetchPONumberData');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

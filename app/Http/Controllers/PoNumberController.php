@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\PONumber;
 
 class PoNumberController extends Controller
 {
@@ -34,7 +35,12 @@ class PoNumberController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $field_data = $request->data;
+         PONumber::create([
+             'start_range' => $field_data['startRange'],
+             'end_range' => $field_data['endRange'],
+             'invoice_type' => $field_data['invoiceType']
+         ]);
     }
 
     /**
@@ -80,5 +86,17 @@ class PoNumberController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+      /**
+     * Get all data of tbl_po_invoice.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function fetchPONumberData()
+    {
+        return PONumber::all()->toJson();
     }
 }

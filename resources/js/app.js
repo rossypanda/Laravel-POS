@@ -14,6 +14,6 @@ require('./bootstrap');
 
 require('./modules/Example');
 require('./modules/supplier/Supplier');
-require('./modules/PONumber');
+require('./modules/po-number/PONumber');
 
 
