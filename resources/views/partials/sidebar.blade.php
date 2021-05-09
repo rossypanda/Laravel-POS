@@ -49,6 +49,18 @@
 
                 </ul>
             </li>
+            <li class="">
+                <a  href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <span class="pcoded-micon"><i class="feather icon-log-out"></i></span>
+                    <span class="pcoded-mtext">Log out</span>
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form> 
+                
+            </li>
+            
         </ul>
     </div>
 </nav>
