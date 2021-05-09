@@ -49,6 +49,33 @@
 
                 </ul>
             </li>
+
+            <li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
+                <a href="javascript:void(0)">
+                    <span class="pcoded-micon"><i class="feather icon-unlock"></i></span>
+                    <span class="pcoded-mtext">Admin</span>
+                </a>
+                <ul class="pcoded-submenu">
+                    <li class="">
+                        <a href="/permission" >
+                            <span class="pcoded-mtext">Permission</span>
+                        </a>
+                    </li>
+                    
+                    <li class="">
+                        <a href="/role" >
+                            <span class="pcoded-mtext">Role</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="user" >
+                            <span class="pcoded-mtext">User</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </li>
+
             <li class="">
                 <a  href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     <span class="pcoded-micon"><i class="feather icon-log-out"></i></span>
