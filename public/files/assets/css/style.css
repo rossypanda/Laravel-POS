@@ -25265,4 +25265,27 @@ body.dark #styleSelector .form-control {
   
 }
 
+.label-item {
+  margin-bottom: 0rem;
+}
+
+
+.item-wrapper{
+    /* border-style: solid;
+    border-radius: 0.5rem; */
+    margin-top:0.5rem;
+    /* border-width: thin;
+    background-color: #F3F3F3;
+    border-color: #7DB9FF; */
+}
+
+.item-button{
+    /* border-style: solid;
+    border-radius: 0.5rem; */
+    margin-top:1.3rem;
+    /* border-width: thin;
+    background-color: #F3F3F3;
+    border-color: #7DB9FF; */
+}
+
 /*# sourceMappingURL=style.css.map */
