@@ -4,42 +4,63 @@ import {Button,Container,Row,Table,Modal,ModalTitle,ModalDialog,ModalBody,ModalD
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusSquare,faTrashAlt,faEye,faCheck,faUserTag,faPlusCircle,faBan,faThList,faMoneyCheck,faCartPlus} from '@fortawesome/free-solid-svg-icons';
 import { faLastfmSquare } from '@fortawesome/free-brands-svg-icons';
-import { useForm } from "react-hook-form";
+import { useForm,useFieldArray } from "react-hook-form";
 
 
 
-function Items() {
-    
+function Items(props) {
+const [amount,setAmount] = useState(0);
+const [quantity,setQuantity] = useState(0);
+const [perUnit,setPerUnit] = useState(0);
+
+
+const handleChange = (value) => {
+    setPerUnit(value);
+    setAmount(
+        Number(quantity) * Number(value) 
+    );
+}
+
+
+const quantityChange = (value) => {
+    setQuantity(value);
+    setAmount(
+        Number(value) * Number(perUnit) 
+    );
+}
+
+
+
     return (
       <div>
            <Form.Row>
-                <Form.Group as={Col} xs={1} controlId="quantity">
-                    <Form.Control  placeholder="QTY"/>
+                <Form.Group as={Col} xs={1} >
+                    <Form.Control {...props.quantityName} placeholder="QTY" onChange={() => quantityChange(event.target.value)}   />
                 </Form.Group>
-                <Form.Group as={Col} xs={1} controlId="unit">
-                    <Form.Control  placeholder="Unit"/>
+                <Form.Group as={Col} xs={1} >
+                    <Form.Control  placeholder="Unit"  {...props.unitName} />
                 </Form.Group>
-                <Form.Group as={Col} xs={3} controlId="item-description">
-                    <Form.Control  placeholder="Item Desc"/>
+                <Form.Group as={Col} xs={3}>
+                    <Form.Control  placeholder="Item Desc"  {...props.descName} />
                 </Form.Group>
-                <Form.Group as={Col} xs={2}  controlId="brand">
-                    <Form.Control  placeholder="Brand"/>
+                <Form.Group as={Col} xs={2} >
+                    <Form.Control  placeholder="Brand"  {...props.brandName} />
                 </Form.Group>
-                <Form.Group as={Col} xs={2} controlId="model">
-                    <Form.Control  placeholder="Model"/>
+                <Form.Group as={Col} xs={2} >
+                    <Form.Control  placeholder="Model"  {...props.modelName} />
                 </Form.Group >
-                <Form.Group as={Col} xs={1} controlId="price">
-                    <Form.Control  placeholder="Per Unit"/>
+                <Form.Group as={Col} xs={1} >
+                    <Form.Control {...props.perUnitName} placeholder="Per Unit" onChange={() => handleChange(event.target.value)}  />
                 </Form.Group>
-                <Form.Group as={Col} xs={1} controlId="amount">
-                    <Form.Control  placeholder="Amount" readOnly/>
+                <Form.Group as={Col} xs={1} >
+                    <Form.Control  {...props.amount} placeholder="Amount" readOnly value={amount}  />
                 </Form.Group>
-                <Form.Group as={Col}  controlId="test">
-                    <Button variant="outline-danger" size="sm">
+                <Form.Group as={Col}  >
+                    <Button variant="outline-danger" size="sm" onClick={props.onClick}>
                         <FontAwesomeIcon icon={faTrashAlt} className="icon-space" />
                     </Button>
                 </Form.Group>
-        </Form.Row>
+            </Form.Row>
         </div>
     );
 }

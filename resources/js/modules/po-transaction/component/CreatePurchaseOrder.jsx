@@ -4,18 +4,37 @@ import {Button,Container,Row,Table,Modal,ModalTitle,ModalDialog,ModalBody,ModalD
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusSquare,faTrashAlt,faEye,faCheck,faUserTag,faPlusCircle,faBan,faThList,faMoneyCheck,faCartPlus} from '@fortawesome/free-solid-svg-icons';
 import { faLastfmSquare } from '@fortawesome/free-brands-svg-icons';
-import { useForm } from "react-hook-form";
+import { useForm,useFieldArray} from "react-hook-form";
 import Items from './Items';
+import Terms from './Terms';
 
 
 
 function CreatePurchaseOrder() {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { control,register,handleSubmit, watch, formState: { errors } } = useForm();
+    const { fields: itemFields, append, prepend, remove, swap, move, insert } = useFieldArray({
+        control, // control props comes from useForm (optional: if you are using FormContext)
+        name: "items", // unique name for your Field Array
+        // keyName: "id", default to "id", you can change the key name
+    });
+    
+
     const [items,setItems] = useState([]);
 
-    const addItems = () => {
+
+
+
+    
+    const addItems = (item) => {
         //Do something here
-        setItems([...items,'test'])
+        setItems([...items,{...item}])
+    }
+
+    const removeItems = (removeItems) => {
+        //Do something here
+      setItems(
+        items.filter((item) => item !== removeItems)
+      )
     }
 
     return (
@@ -51,7 +70,25 @@ function CreatePurchaseOrder() {
                                 <Form.Control placeholder="Supplier Address" {...register("address",{required:true})} isInvalid={errors.address}/>
                                 <Form.Control.Feedback type="invalid">Address is required</Form.Control.Feedback>
                             </Form.Group>
-
+                            <Button variant="info" size="sm" style={{marginRight:"0.5rem"}} onClick={() => append({})}>
+                                <FontAwesomeIcon icon={faCartPlus} className="icon-space" />
+                                Add Items
+                            </Button>
+                            <Container className="item-wrapper" fluid>
+                                {itemFields.map(({id},index) => (
+                                    <Items key={id} 
+                                    onClick={() => remove(index)}
+                                    quantityName={{...register(`items[${index}].quantity`)}}
+                                    unitName={{...register(`items[${index}].unit`)}}
+                                    descName={{...register(`items[${index}].description`)}}
+                                    brandName={{...register(`items[${index}].brand`)}}
+                                    modelName={{...register(`items[${index}].model`)}}
+                                    perUnitName={{...register(`items[${index}].per_unit`)}}
+                                    amountName={{...register(`items[${index}].amount`)}}
+                                    />
+                                ))}
+                             </Container>
+                             <Terms />
                             <Form.Row>
                                 <Form.Group as={Col} controlId="requested_by">
                                     <Form.Label>Requested</Form.Label>
@@ -68,16 +105,13 @@ function CreatePurchaseOrder() {
                             </Form.Row>
                         </Form>
                         <div >
-                            <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} onClick={() => addItems()}>
-                            <FontAwesomeIcon icon={faCartPlus} className="icon-space" />
-                            Add Items
-                            </Button>
+                            
                         </div>
-                        <Container className="item-wrapper" fluid>
-                        {items.map((data,idx) => (
-                            <Items key={idx}/>
-                         ))}
-                        </Container>
+                       
+                        <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} onClick={handleSubmit(console.log)}>
+                            <FontAwesomeIcon icon={faPlusSquare} className="icon-space" />
+                                Create Purchase Order
+                        </Button>
                     </Card.Body>
                 </Card>
             </Container>
