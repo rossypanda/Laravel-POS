@@ -29,8 +29,6 @@ const quantityChange = (value) => {
     );
 }
 
-
-
     return (
       <div>
            <Form.Row>

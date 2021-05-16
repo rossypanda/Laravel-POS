@@ -15,52 +15,26 @@ function Terms(props) {
     return (
       <div>
            <Form.Row>
-                <Form.Group as={Col} controlId="terms">
-                    <Form.Label>Terms</Form.Label>
-                    <Form.Control  placeholder="Terms" />
+                <Form.Group as={Col} >
+                    <Form.Control {...props.terms} placeholder="Terms" />
                 </Form.Group>
-                <Form.Group as={Col} controlId="terms_description">
-                    <Form.Label>Description</Form.Label>
-                    <Form.Control placeholder="Canvassed by"  />
+                <Form.Group as={Col} xs={3} >
+                    <Form.Control  {...props.termsDescription} placeholder="Description"  />
                 </Form.Group>
-                <Form.Group as={Col} controlId="terms_due">
-                    <Form.Label>Due Date</Form.Label>
-                    <Form.Control placeholder="approved_by" />
+                <Form.Group as={Col} >
+                    <Form.Control {...props.termsDue}  placeholder="Due" />
                 </Form.Group>
-                <Form.Group as={Col} controlId="terms_bank">
-                    <Form.Label>Type Of Bank</Form.Label>
-                    <Form.Control placeholder="approved_by" />
+                <Form.Group as={Col} >
+                    <Form.Control {...props.termsBank} placeholder="Type of Bank" />
                 </Form.Group>
-                <Form.Group as={Col} controlId="terms_percentage">
-                    <Form.Label>%</Form.Label>
-                    <Form.Control placeholder="%" />
+                <Form.Group as={Col} >
+                    <Form.Control {...props.termsPercent} placeholder="%" />
                 </Form.Group>
-                <Form.Group as={Col} controlId="terms_amount">
-                    <Form.Label>Amount</Form.Label>
-                    <Form.Control placeholder="%" />
+                <Form.Group as={Col} >
+                    <Form.Control {...props.termsAmount} placeholder="Amount" />
                 </Form.Group>
             </Form.Row>
             
-            <Form.Row>
-                <Form.Group as={Col}>
-                    <Form.Control />
-                </Form.Group>
-                <Form.Group as={Col}>
-                    <Form.Control />
-                </Form.Group>
-                <Form.Group as={Col}>
-                    <Form.Control />
-                </Form.Group>
-                <Form.Group as={Col}>
-                    <Form.Control />
-                </Form.Group>
-                <Form.Group as={Col}>
-                    <Form.Control />
-                </Form.Group>
-                <Form.Group as={Col}>
-                    <Form.Control />
-                </Form.Group>
-            </Form.Row>
         </div>
     );
 }

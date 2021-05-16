@@ -12,29 +12,35 @@ import Terms from './Terms';
 
 function CreatePurchaseOrder() {
     const { control,register,handleSubmit, watch, formState: { errors } } = useForm();
-    const { fields: itemFields, append, prepend, remove, swap, move, insert } = useFieldArray({
+    const { fields: itemFields, append:appendItem, remove:removeItem} = useFieldArray({
         control, // control props comes from useForm (optional: if you are using FormContext)
         name: "items", // unique name for your Field Array
         // keyName: "id", default to "id", you can change the key name
     });
+    const { fields: termFields, append:appendTerms, remove:removeTerms} = useFieldArray({
+        control, // control props comes from useForm (optional: if you are using FormContext)
+        name: "terms", // unique name for your Field Array
+        // keyName: "id", default to "id", you can change the key name
+    });
     
+    useEffect(() => {
+        appendItem({});
+        appendTerms([0,1]);
+    },[]);
 
-    const [items,setItems] = useState([]);
-
-
-
-
-    
-    const addItems = (item) => {
-        //Do something here
-        setItems([...items,{...item}])
-    }
-
-    const removeItems = (removeItems) => {
-        //Do something here
-      setItems(
-        items.filter((item) => item !== removeItems)
-      )
+      
+    const onSubmit = (data) => {
+        console.log(data);
+        axios
+        .post('/purchaseOrder', {
+           data
+        })
+        .then((response) => {
+           
+        })
+        .catch((err) => {
+            
+        });
     }
 
     return (
@@ -70,14 +76,14 @@ function CreatePurchaseOrder() {
                                 <Form.Control placeholder="Supplier Address" {...register("address",{required:true})} isInvalid={errors.address}/>
                                 <Form.Control.Feedback type="invalid">Address is required</Form.Control.Feedback>
                             </Form.Group>
-                            <Button variant="info" size="sm" style={{marginRight:"0.5rem"}} onClick={() => append({})}>
+                            <Button variant="info" size="sm" style={{marginRight:"0.5rem"}} onClick={() => appendItem({})}>
                                 <FontAwesomeIcon icon={faCartPlus} className="icon-space" />
                                 Add Items
                             </Button>
                             <Container className="item-wrapper" fluid>
                                 {itemFields.map(({id},index) => (
                                     <Items key={id} 
-                                    onClick={() => remove(index)}
+                                    onClick={() => removeItem(index)}
                                     quantityName={{...register(`items[${index}].quantity`)}}
                                     unitName={{...register(`items[${index}].unit`)}}
                                     descName={{...register(`items[${index}].description`)}}
@@ -88,7 +94,21 @@ function CreatePurchaseOrder() {
                                     />
                                 ))}
                              </Container>
-                             <Terms />
+
+                             <fieldset className="fieldset-wrapper">
+                                <legend className="legend-wrapper"><h6>Terms</h6></legend>
+                                {termFields.map(({id},index) => (
+                                    <Terms key={id} 
+                                        terms={{...register(`terms[${index}].terms`)}}
+                                        termsDescription={{...register(`terms[${index}].terms_description`)}}
+                                        termsDue={{...register(`terms[${index}].terms_due`)}}
+                                        termsBank={{...register(`terms[${index}].terms_bank`)}}
+                                        termsPercent={{...register(`terms[${index}].terms_percent`)}}
+                                        termsAmount={{...register(`terms[${index}].terms_amount`)}}
+                                    />
+                                ))}
+                             </fieldset>
+                            
                             <Form.Row>
                                 <Form.Group as={Col} controlId="requested_by">
                                     <Form.Label>Requested</Form.Label>
@@ -108,7 +128,7 @@ function CreatePurchaseOrder() {
                             
                         </div>
                        
-                        <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} onClick={handleSubmit(console.log)}>
+                        <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} onClick={handleSubmit(onSubmit)}>
                             <FontAwesomeIcon icon={faPlusSquare} className="icon-space" />
                                 Create Purchase Order
                         </Button>

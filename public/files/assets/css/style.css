@@ -25288,4 +25288,18 @@ body.dark #styleSelector .form-control {
     border-color: #7DB9FF; */
 }
 
+.fieldset-wrapper {
+    border-style: solid;
+    border-width: thin;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: revert;
+    width: auto;
+    border-color: #7db9ff;
+    border-radius: 0.5rem;
+}
+
+.legend-wrapper {
+    width: auto !important;
+ }
 /*# sourceMappingURL=style.css.map */
