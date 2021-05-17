@@ -41,7 +41,7 @@ function MyVerticallyCenteredModal(props) {
 }
 
 
-function User() {
+function Supplier() {
     const [modalShow, setModalShow] = React.useState(false);
     const [tableData, setTableData] = React.useState([]);
     const [hideAddSupplier, setHideAddSupplier] = React.useState(true);
@@ -235,6 +235,6 @@ function User() {
 
 export default Supplier;
 
-if (document.getElementById('user')) {
-    ReactDOM.render(<User />, document.getElementById('user'));
+if (document.getElementById('supplier')) {
+    ReactDOM.render(<Supplier />, document.getElementById('supplier'));
 }

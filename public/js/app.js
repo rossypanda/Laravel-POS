@@ -12106,6 +12106,8 @@ __webpack_require__(/*! ./modules/po-number/PONumber */ "./resources/js/modules/
 
 __webpack_require__(/*! ./modules/po-transaction/PurchaseOrder */ "./resources/js/modules/po-transaction/PurchaseOrder.jsx");
 
+__webpack_require__(/*! ./modules/user/User */ "./resources/js/modules/user/User.jsx");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -13560,6 +13562,535 @@ function Supplier() {
 
 if (document.getElementById('supplier')) {
   react_dom__WEBPACK_IMPORTED_MODULE_3__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Supplier, {}), document.getElementById('supplier'));
+}
+
+/***/ }),
+
+/***/ "./resources/js/modules/user/User.jsx":
+/*!********************************************!*\
+  !*** ./resources/js/modules/user/User.jsx ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Button.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Table.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Card.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Form.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Col.js");
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
+/* harmony import */ var react_hook_form__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-hook-form */ "./node_modules/react-hook-form/dist/index.esm.js");
+/* harmony import */ var _helpers_BaseUrl__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../helpers/BaseUrl */ "./resources/js/helpers/BaseUrl.jsx");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap-sweetalert */ "./node_modules/react-bootstrap-sweetalert/dist/index.js");
+/* harmony import */ var react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_8__);
+
+
+
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+
+ // function MyVerticallyCenteredModal(props) {
+//     const { register, handleSubmit, watch, formState: { errors } } = useForm();
+//     const updateSupplierData = (data) => {
+//         axios.patch(`/supplier/1}`,{data}).then(
+//             alert('Updated')
+//         );
+//     }
+//     return (
+//       <Modal
+//         {...props}
+//         size="lg"
+//         aria-labelledby="contained-modal-title-vcenter"
+//         centered
+//       >
+//         <Modal.Header closeButton className="modal-color">
+//           <Modal.Title id="contained-modal-title-vcenter">
+//             {props.title}
+//           </Modal.Title>
+//         </Modal.Header>
+//         <Modal.Body>
+//         <Form>
+//             <Form.Row>
+//                 <Form.Group as={Col} controlId="supplier-edit" hidden>
+//                     <Form.Label>Supplier</Form.Label>
+//                     <Form.Control type="text" placeholder="Enter Supplier" value={props.supplierId} {...register("supplier-id")} />
+//                 </Form.Group>
+//                 <Form.Group as={Col} controlId="supplier-edit">
+//                     <Form.Label>Supplier</Form.Label>
+//                     <Form.Control type="text" placeholder="Enter Supplier" value={props.supplier} {...register("supplier-edit")} />
+//                 </Form.Group>
+//                 <Form.Group as={Col} controlId="contact-person-edit">
+//                     <Form.Label>Contact Person</Form.Label>
+//                     <Form.Control type="text" placeholder="Enter Contact Person" value={props.contactPerson} {...register("contact-person-edit")} />
+//                 </Form.Group>
+//             </Form.Row> 
+//             <Form.Row>
+//                 <Form.Group as={Col} controlId="address-edit">
+//                     <Form.Label>Address</Form.Label>
+//                     <Form.Control type="text" placeholder="Enter Address" value={props.address} {...register("address-edit")} />
+//                 </Form.Group>
+//             </Form.Row>
+//             <Form.Row>
+//                 <Form.Group as={Col} controlId="email-edit">
+//                     <Form.Label>Email</Form.Label>
+//                     <Form.Control type="text" placeholder="Enter Email" value={props.email} {...register("email-edit")} />
+//                 </Form.Group>
+//                 <Form.Group as={Col} controlId="number-edit">
+//                     <Form.Label>Number</Form.Label>
+//                     <Form.Control type="text" placeholder="Enter Address" value={props.email} {...register("number-edit")} />
+//                 </Form.Group>
+//             </Form.Row>  
+//             <Form.Row>
+//                 <Form.Group as={Col} controlId="fax-edit">
+//                     <Form.Label>Fax</Form.Label>
+//                     <Form.Control type="text" placeholder="Enter Email" value={props.fax} {...register("fax-edit")} />
+//                 </Form.Group>
+//                 <Form.Group as={Col} controlId="bank-edit">
+//                     <Form.Label>Bank Account</Form.Label>
+//                     <Form.Control type="text" placeholder="Enter Address" value={props.bank} {...register("bank-edit")} />
+//                 </Form.Group>
+//             </Form.Row>
+//             <Form.Row>
+//                 <Form.Group as={Col} controlId="date-edit">
+//                     <Form.Label>Date Added</Form.Label>
+//                     <Form.Control type="text" value={props.date} readOnly/>
+//                 </Form.Group>
+//                 <Form.Group as={Col} controlId="encoded-edit">
+//                     <Form.Label>Encoded By</Form.Label>
+//                     <Form.Control type="text" value={props.encoded} readOnly/>
+//                 </Form.Group>
+//             </Form.Row>  
+//             <Form.Row>
+//                 <Form.Group as={Col} controlId="description-edit">
+//                     <Form.Label>Description</Form.Label>
+//                     <Form.Control type="text" placeholder="Optional" value={props.description} {...register("description-edit")} />
+//                 </Form.Group>
+//             </Form.Row>
+//         </Form>
+//         </Modal.Body>
+//         <Modal.Footer>
+//           <Button variant="success" size="sm" onClick={handleSubmit(updateSupplierData)}>
+//             <FontAwesomeIcon icon={faCheck} className="icon-space" />Save Changes
+//           </Button>
+//         </Modal.Footer>
+//       </Modal>
+//     );
+// }
+
+function User() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      modalShow = _useState2[0],
+      setModalShow = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(true),
+      _useState4 = _slicedToArray(_useState3, 2),
+      hideAddSupplier = _useState4[0],
+      setHideAddSupplier = _useState4[1];
+
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
+      _useState6 = _slicedToArray(_useState5, 2),
+      tableData = _useState6[0],
+      setTableData = _useState6[1];
+
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
+      _useState8 = _slicedToArray(_useState7, 2),
+      hideSupplierTable = _useState8[0],
+      setHideAddSupplierTable = _useState8[1];
+
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null),
+      _useState10 = _slicedToArray(_useState9, 2),
+      customAlert = _useState10[0],
+      setCustomAlert = _useState10[1];
+
+  var _useForm = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_5__.useForm)(),
+      register = _useForm.register,
+      handleSubmit = _useForm.handleSubmit,
+      watch = _useForm.watch,
+      errors = _useForm.formState.errors;
+
+  var test;
+  var buttonStyle = {
+    display: "flex",
+    justifyContent: "flex-end",
+    marginBottom: "1rem"
+  };
+
+  var fetchSupplier = /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return axios__WEBPACK_IMPORTED_MODULE_7___default().get('/fetch/supplier', {}).then(function (response) {
+                //get the object of supplier data to load to a table
+                console.log(response.data);
+                setTableData(response.data);
+              })["catch"](function (err) {
+                console.log(err);
+              });
+
+            case 2:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function fetchSupplier() {
+      return _ref.apply(this, arguments);
+    };
+  }();
+
+  (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
+    fetchSupplier();
+  }, []);
+
+  var hideAlert = function hideAlert() {
+    setCustomAlert(null);
+    hideTableShowAddSupplier(false);
+  };
+
+  var onSubmit = function onSubmit(data) {
+    axios__WEBPACK_IMPORTED_MODULE_7___default().post('/supplier', {
+      data: data
+    }).then(function (response) {
+      console.log(response);
+      setCustomAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)((react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_8___default()), {
+        success: true,
+        title: "Success!",
+        onConfirm: function onConfirm() {
+          return hideAlert();
+        },
+        children: "New Supplier Added"
+      }));
+    })["catch"](function (err) {
+      console.log(err);
+    });
+  };
+
+  var deleteSupplier = function deleteSupplier(id) {
+    axios__WEBPACK_IMPORTED_MODULE_7___default().delete("/supplier/".concat(id), {
+      data: id
+    }).then(setCustomAlert(null));
+  };
+
+  var removeSupplierConfirmation = function removeSupplierConfirmation(id) {
+    setCustomAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)((react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_8___default()), {
+      warning: true,
+      showCancel: true,
+      confirmBtnText: "Yes, delete it!",
+      confirmBtnBsStyle: "danger",
+      title: "Are you sure?",
+      onConfirm: function onConfirm() {
+        return deleteSupplier(id);
+      },
+      onCancel: function onCancel() {
+        return setCustomAlert(null);
+      },
+      focusCancelBtn: true,
+      children: "This Supplier data will be deleted"
+    }));
+  };
+
+  var hideTableShowAddSupplier = function hideTableShowAddSupplier(isCurrentlyHidden) {
+    if (isCurrentlyHidden) {
+      setHideAddSupplier(false);
+      setHideAddSupplierTable(true);
+    } else {
+      setHideAddSupplier(true);
+      setHideAddSupplierTable(false);
+    }
+  };
+
+  var showModalSupplierData = function showModalSupplierData(id) {
+    var supplierInfo = tableData[id];
+    console.log(supplierInfo);
+    setModalShow( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MyVerticallyCenteredModal, {
+      show: true,
+      title: supplierInfo.supplier,
+      supplierId: supplierInfo.supplier_id,
+      supplier: supplierInfo.supplier,
+      contactPerson: supplierInfo.contact_person,
+      address: supplierInfo.address,
+      email: supplierInfo.email,
+      number: supplierInfo.contact_no,
+      fax: supplierInfo.fax_no,
+      bank: supplierInfo.bankaccount_no,
+      date: supplierInfo.date_added,
+      encoded: supplierInfo.encoded_by,
+      description: supplierInfo.description,
+      onHide: function onHide() {
+        return setModalShow(null);
+      }
+    }));
+  };
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+    children: [customAlert, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
+      fluid: true,
+      hidden: hideSupplierTable,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+        style: buttonStyle,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
+          variant: "success",
+          size: "sm",
+          style: {
+            marginRight: "0.5rem"
+          },
+          onClick: function onClick() {
+            return hideTableShowAddSupplier(true);
+          },
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+            icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_11__.faPlusSquare,
+            className: "icon-space"
+          }), "Add User"]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+        striped: true,
+        bordered: true,
+        hover: true,
+        size: "sm",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("thead", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+              children: "User ID"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+              children: "User"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+              children: "Role"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+              children: "Status"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+              children: "Actions"
+            })]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("tbody", {
+          children: tableData.map(function (data, index) {
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: data.supplier_id
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: data.supplier
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: data.contact_no
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: data.email
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("td", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
+                  variant: "outline-info",
+                  size: "sm",
+                  onClick: function onClick() {
+                    return showModalSupplierData(index);
+                  },
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+                    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_11__.faEye,
+                    className: "icon-space"
+                  }), "View"]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
+                  variant: "outline-danger",
+                  size: "sm",
+                  onClick: function onClick() {
+                    return removeSupplierConfirmation(data.supplier_id);
+                  },
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+                    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_11__.faTrashAlt,
+                    className: "icon-space"
+                  }), "Delete"]
+                })]
+              })]
+            });
+          })
+        })]
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
+      fluid: true,
+      hidden: hideAddSupplier,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default, {
+        className: "border-wrapper",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default.Body, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("h4", {
+            className: "mb-4",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+              icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_11__.faUserTag,
+              className: "icon-space"
+            }), "Add Supplier"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Row, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
+                controlId: "supplier",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
+                  children: "Supplier"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread(_objectSpread({
+                  type: "text",
+                  placeholder: "Enter Supplier"
+                }, register("supplier", {
+                  required: true
+                })), {}, {
+                  isInvalid: errors.supplier
+                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control.Feedback, {
+                  type: "invalid",
+                  children: "Supplier is required"
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
+                controlId: "contact-person",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
+                  children: "Contact Person"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread(_objectSpread({
+                  type: "text",
+                  placeholder: "Enter Contact Person"
+                }, register("contactPerson", {
+                  required: true
+                })), {}, {
+                  isInvalid: errors.contactPerson
+                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control.Feedback, {
+                  type: "invalid",
+                  children: "Contact person is required"
+                })]
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
+              controlId: "supplier-address",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
+                children: "Address"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread(_objectSpread({
+                placeholder: "Supplier Address"
+              }, register("address", {
+                required: true
+              })), {}, {
+                isInvalid: errors.address
+              })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control.Feedback, {
+                type: "invalid",
+                children: "Address is required"
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Row, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
+                controlId: "supplier-email",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
+                  children: "Email"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread({
+                  placeholder: "Supplier email"
+                }, register("email")))]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
+                controlId: "supplier-number",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
+                  children: "Number"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread({
+                  placeholder: "Supplier number"
+                }, register("number")))]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
+                controlId: "supplier-fax",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
+                  children: "Fax No."
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread({
+                  placeholder: "Supplier Fax"
+                }, register("fax")))]
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Row, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
+                controlId: "supplier-bank",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
+                  children: "Bank Account"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread({
+                  placeholder: "Supplier bank account"
+                }, register("bank")))]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
+                controlId: "supplier-description",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
+                  children: "Description"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread({
+                  placeholder: "Optional"
+                }, register("description")))]
+              })]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+            style: buttonStyle,
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
+              variant: "success",
+              size: "sm",
+              style: {
+                marginRight: "0.5rem"
+              },
+              onClick: handleSubmit(onSubmit),
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_11__.faPlusCircle,
+                className: "icon-space"
+              }), "Add"]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
+              variant: "danger",
+              size: "sm",
+              style: {
+                marginRight: "0.5rem"
+              },
+              onClick: function onClick() {
+                return hideTableShowAddSupplier(false);
+              },
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_11__.faBan,
+                className: "icon-space"
+              }), "Cancel"]
+            })]
+          })]
+        })
+      })
+    }), modalShow]
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (User);
+
+if (document.getElementById('user')) {
+  react_dom__WEBPACK_IMPORTED_MODULE_3__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(User, {}), document.getElementById('user'));
 }
 
 /***/ }),
