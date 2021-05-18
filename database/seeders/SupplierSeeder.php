@@ -29,7 +29,7 @@ class SupplierSeeder extends Seeder
             'company_id' => random_int(1,100),
             'date_added' => date("Y/m/d"),
             'description' => Str::random(10).' description',
-            'encoded_by' => 'seeder'
+            'encoded_by' => 1
         ]);
     }
 }

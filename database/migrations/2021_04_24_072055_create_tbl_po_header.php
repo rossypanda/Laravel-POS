@@ -32,8 +32,9 @@ class CreateTblPoHeader extends Migration
             $table->string('manager',50)->nullable();
             $table->string('bank',50)->nullable();
             $table->string('contact_person',50)->nullable();
-            $table->integer('terms')->nullable();
-            $table->string('encoded_by', 20)->nullable();
+            $table->json('terms')->nullable();
+            $table->string('status',1)->default('F');
+            $table->integer('encoded_by')->nullable();
         });
     }
 

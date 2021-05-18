@@ -24,7 +24,7 @@ class CreateTblPoNumber extends Migration
             $table->string('po_type',1)->nullable();
             $table->integer('po_usage')->default(0);
             $table->timestamp('date_encoded')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->string('encoded_by', 20)->nullable();
+            $table->integer('encoded_by')->nullable();
         });
     }
 

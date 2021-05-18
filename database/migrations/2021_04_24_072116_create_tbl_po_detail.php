@@ -24,7 +24,7 @@ class CreateTblPoDetail extends Migration
             $table->decimal('price', 8, 2);
             $table->string('brand',50)->nullable();
             $table->string('model',50)->nullable();
-            $table->string('encoded_by', 20)->nullable();
+            $table->integer('encoded_by')->nullable();
         });
     }
 

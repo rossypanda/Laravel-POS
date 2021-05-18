@@ -24,7 +24,7 @@ class PODetailSeeder extends Seeder
             'price' => 99.99,
             'brand' => Str::random(10).' brand',
             'model' => Str::random(10).' model',
-            'encoded_by' => 'seeder'
+            'encoded_by' => 1
         ]);
     }
 }

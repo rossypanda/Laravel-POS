@@ -24,7 +24,7 @@ class CreateTblPoInvoice extends Migration
             $table->string('invoice_type', 1);
             $table->smallInteger('invoice_usage');
             $table->timestamp('date_added')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->string('encoded_by', 20)->nullable();
+            $table->integer('encoded_by')->nullable();
         });
     }
 
