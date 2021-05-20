@@ -7,7 +7,7 @@ import { faLastfmSquare } from '@fortawesome/free-brands-svg-icons';
 import { useForm,useFieldArray} from "react-hook-form";
 import Items from './Items';
 import Terms from './Terms';
-
+import SweetAlert from 'react-bootstrap-sweetalert';
 
 
 function CreatePurchaseOrder() {
@@ -22,6 +22,7 @@ function CreatePurchaseOrder() {
         name: "terms", // unique name for your Field Array
         // keyName: "id", default to "id", you can change the key name
     });
+    const [customAlert, setCustomAlert] = useState(null);
     
     useEffect(() => {
         appendItem({});
@@ -36,15 +37,22 @@ function CreatePurchaseOrder() {
            data
         })
         .then((response) => {
-           
+            console.log(response.data);
+           if(!response.data){
+            setCustomAlert(
+                <SweetAlert title="There are currently no open PO Invoice!" onConfirm={() => setCustomAlert(null)} />
+            );
+           }
         })
         .catch((err) => {
-            
+            //do something
         });
     }
 
     return (
+        
         <div>
+            {customAlert}
             <Container fluid >
                 <Card className="border-wrapper">
                     <Card.Body>
@@ -53,7 +61,7 @@ function CreatePurchaseOrder() {
                             <Form.Row>
                                 <Form.Group as={Col} controlId="supplier">
                                     <Form.Label>Supplier</Form.Label>
-                                    <Form.Control size="sm" as="select" {...register("invoiceType",{required:true})} isInvalid={errors.invoiceType} >
+                                    <Form.Control size="sm" as="select" {...register("supplier",{required:true})} isInvalid={errors.invoiceType} >
                                         <option value=''>Select Supplier</option>
                                         <option value='1'>Bacolod China Mart</option>
                                         <option value='2'>Bacolod Steel</option>
@@ -108,10 +116,16 @@ function CreatePurchaseOrder() {
                                     />
                                 ))}
                              </fieldset>
-                            
+                             <Form.Row>
+                                <Form.Group as={Col} controlId="project_name">
+                                    <Form.Label>Project Name</Form.Label>
+                                    <Form.Control  placeholder="Project Name" {...register("project_name",{required:true})}/>
+                                    <Form.Control.Feedback type="invalid">Project name is required</Form.Control.Feedback>
+                                </Form.Group>
+                            </Form.Row>
                             <Form.Row>
                                 <Form.Group as={Col} controlId="requested_by">
-                                    <Form.Label>Requested</Form.Label>
+                                    <Form.Label>Requested By</Form.Label>
                                     <Form.Control  placeholder="Requested By" {...register("requested_by")} />
                                 </Form.Group>
                                 <Form.Group as={Col} controlId="canvassed_by">
@@ -120,7 +134,7 @@ function CreatePurchaseOrder() {
                                 </Form.Group>
                                 <Form.Group as={Col} controlId="approved_by">
                                     <Form.Label>Approved By</Form.Label>
-                                    <Form.Control placeholder="approved_by" {...register("Approved By")}/>
+                                    <Form.Control placeholder="approved_by" {...register("approved_by")}/>
                                 </Form.Group>
                             </Form.Row>
                         </Form>

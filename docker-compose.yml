@@ -6,6 +6,8 @@ web:
         - ./:/var/www
     links:
         - db
+    container_name: web
+    
     environment:
         DB_HOST: db
         DB_DATABASE: dbname
@@ -16,6 +18,7 @@ db:
     image: mysql
     ports:
         - 8081:3306
+    container_name: db
     environment:
         # with mysql
         MYSQL_ROOT_PASSWORD: root

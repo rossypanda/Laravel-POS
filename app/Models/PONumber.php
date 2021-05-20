@@ -29,6 +29,7 @@ class PONumber extends Model
         'company_id',
         'start_range',
         'end_range',
+        'current_range',
         'invoice_type',
         'invoice_usage',
         'date_added',

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Helpers\PurchaseOrderHelper;
-
+use App\Models\PurchaseOrder;
 class PurchaseOrderController extends Controller
 {
     /**
@@ -35,19 +35,31 @@ class PurchaseOrderController extends Controller
      */
     public function store(Request $request)
     {
-        $field_data = $request->data;
-        $invoice_data  = PurchaseOrderHelper::checkAvailablePOInvoice('C');
-        dd($invoice_data);
-        // Supplier::create([
-        //     'supplier' => $field_data['supplier'],
-        //     'contact_person' => $field_data['contactPerson'],
-        //     'address' => $field_data['address'],
-        //     'email' => $field_data['email'],
-        //     'contact_no' => $field_data['number'],
-        //     'fax_no' => $field_data['fax'],
-        //     'bankaccount_no' => $field_data['bank'],
-        //     'description' => $field_data['description'],
-        // ]);
+        $formData = $request->data;
+        $poNumber = PurchaseOrderHelper::checkAvailablePOInvoice($formData['payment_type']);
+        if($poNumber){
+            PurchaseOrder::create([
+                'po_reference' => PurchaseOrderHelper::generatePOReference(),
+                'po_number' => $poNumber,
+                'date' => date('Y-m-d'),
+                'supplier_id' => $formData['supplier'],
+                'supplier_address' => $formData['address'],
+                'payment_type' => $formData['payment_type'],
+                'project_name' => $formData['project_name'],
+                'requested_by' => $formData['requested_by'],
+                'canvassed_by' => $formData['canvassed_by'],
+                'approved_by' => $formData['approved_by'],
+                //'project_in_charge' => $formData['project_name'],
+                //'purchaser' => $formData['project_name'],
+                //'manager' => $formData['project_name'],
+               // 'bank' => $formData['project_name'],
+               // 'contact_person' => $formData['project_name'],
+                'terms' => json_encode($formData['terms']),
+                'status' => 'F',
+                'encoded_by'  => $formData['requested_by']
+            ]);
+        }
+        return response()->json(false);
     }
 
     /**
@@ -93,5 +105,9 @@ class PurchaseOrderController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function fetchPurchaseOrderData(){
+        dd(PurchaseOrderHelper::checkAvailablePOInvoice('C'));
     }
 }
