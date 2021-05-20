@@ -22,6 +22,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Route::get('/', function () {
+//     if(auth()->user()) {
+//         auth()->user()->assignRole('admin');
+//     }
 //     return view('welcome');
 // });
 
@@ -39,6 +42,9 @@ Route::resource('supplier', 'SupplierController');
 Route::get('fetch/supplier','SupplierController@fetchSupplierData');
 Route::get('fetch/poNumber','PONumberController@fetchPONumberData');
 Route::get('fetch/purchaseOrder','PurchaseOrderController@fetchPurchaseOrderData');
+Route::get('fetch/user','UserController@fetchUserData');
+Route::get('fetch/role','RoleController@fetchRoleData');
+Route::get('fetch/permission','PermissionController@fetchPermissionData');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -11,7 +11,7 @@
                         <div class="container-fluid">
                             <h3>WELCOME TO CONSYS BETCHESS</h3>
 
-                            <div >
+                            {{-- <div >
                                 <a  href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
@@ -21,7 +21,7 @@
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>
-                            </div>
+                            </div> --}}
                         </div>
                         
                     </div>

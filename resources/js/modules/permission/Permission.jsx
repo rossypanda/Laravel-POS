@@ -99,7 +99,7 @@ import SweetAlert from 'react-bootstrap-sweetalert';
 // }
 
 
-function User() {
+function Permission() {
     const [modalShow, setModalShow] = useState(false);
     const [hideAddSupplier, setHideAddSupplier] = useState(true);
     const [tableData, setTableData] = useState([]);
@@ -114,9 +114,9 @@ function User() {
         marginBottom:"1rem"
     };
    
-    const fetchUser =  async () => {
+    const fetchPermission =  async () => {
        await axios
-        .get('/fetch/user', {
+        .get('/fetch/permission', {
     
         })
         .then((response) => {
@@ -130,7 +130,7 @@ function User() {
     }
 
     useEffect(() => {
-        fetchUser();
+        fetchPermission();
     },[]);
     
     const hideAlert = () => {
@@ -227,16 +227,14 @@ function User() {
                 <div style={buttonStyle}>
                     <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} onClick={() =>hideTableShowAddSupplier(true)}>
                         <FontAwesomeIcon icon={faPlusSquare} className="icon-space" />
-                        Add User   
+                        Add Permission   
                     </Button>
                 </div>
                 <Table striped bordered hover size="sm">
                     <thead>
                         <tr>
-                        <th>User ID</th>
-                        <th>User</th>
-                        <th>Email</th>
-                        <th>Role</th>
+                        <th>Permission ID</th>
+                        <th>Permission</th>
                         <th>Actions</th>
                         </tr>
                     </thead>
@@ -245,8 +243,6 @@ function User() {
                         <tr>
                         <td>{data.id}</td>
                         <td>{data.name}</td>
-                        <td>{data.email}</td>
-                        <td>{data.email}</td>
                         <td> 
                             <Button variant="outline-info" size="sm" onClick={() => showModalSupplierData(index)}>
                             <FontAwesomeIcon icon={faEye} className="icon-space"/>View</Button>
@@ -331,8 +327,8 @@ function User() {
     );
 }
 
-export default User;
+export default Permission;
 
-if (document.getElementById('user')) {
-    ReactDOM.render(<User />, document.getElementById('user'));
+if (document.getElementById('permission')) {
+    ReactDOM.render(<Permission />, document.getElementById('permission'));
 }
