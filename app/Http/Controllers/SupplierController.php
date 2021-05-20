@@ -7,6 +7,11 @@ use App\Models\Supplier;
 
 class SupplierController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -94,6 +99,9 @@ class SupplierController extends Controller
 
         $supplier->save();
     }
+
+
+    
 
     /**
      * Remove the specified resource from storage.
