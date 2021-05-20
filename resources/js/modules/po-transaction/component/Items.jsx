@@ -51,7 +51,7 @@ const quantityChange = (value) => {
                     <Form.Control {...props.perUnitName} placeholder="Per Unit" onChange={() => handleChange(event.target.value)}  />
                 </Form.Group>
                 <Form.Group as={Col} xs={1} >
-                    <Form.Control  {...props.amount} placeholder="Amount" readOnly value={amount}  />
+                    <Form.Control  {...props.amountName} placeholder="Amount"  value={amount}  />
                 </Form.Group>
                 <Form.Group as={Col}  >
                     <Button variant="outline-danger" size="sm" onClick={props.onClick}>

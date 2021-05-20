@@ -40,7 +40,19 @@ function CreatePurchaseOrder() {
             console.log(response.data);
            if(!response.data){
             setCustomAlert(
-                <SweetAlert title="There are currently no open PO Invoice!" onConfirm={() => setCustomAlert(null)} />
+                <SweetAlert danger title="Oops!" onConfirm={() => setCustomAlert(null)} >
+                    There are currently no open PO number
+                </SweetAlert>
+            );
+           }else{
+            setCustomAlert(
+                <SweetAlert
+                success
+                title={`PO# ` + response.data }
+                onConfirm={() =>setCustomAlert(null)}
+                >
+                Purchase Order Succesfully Created
+                </SweetAlert>
             );
            }
         })

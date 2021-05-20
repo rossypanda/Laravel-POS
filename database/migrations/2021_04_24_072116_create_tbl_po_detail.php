@@ -18,12 +18,13 @@ class CreateTblPoDetail extends Migration
             $table->collation = 'utf8mb4_unicode_ci';        
             $table->increments('po_detail_id');
             $table->foreignId('po_header_id');
-            $table->string('item',50)->nullable();
-            $table->string('description',50)->nullable();
             $table->decimal('quantity', 8, 2);
-            $table->decimal('price', 8, 2);
+            $table->string('unit',50)->nullable();
+            $table->string('item',50)->nullable();
             $table->string('brand',50)->nullable();
             $table->string('model',50)->nullable();
+            $table->decimal('per_unit', 8, 2);
+            $table->decimal('price', 8, 2);
             $table->integer('encoded_by')->nullable();
         });
     }

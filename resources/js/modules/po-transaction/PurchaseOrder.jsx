@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusSquare,faTrashAlt,faEye,faCheck,faUserTag,faPlusCircle,faBan,faThList} from '@fortawesome/free-solid-svg-icons';
 import { faLastfmSquare } from '@fortawesome/free-brands-svg-icons';
 import CreatePurchaseOrder from './component/CreatePurchaseOrder';
-
+import PurchaseOrderTabs from './component/PurchaseOrderTabs';
 
 
 function PurchaseOrder() {

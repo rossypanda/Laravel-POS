@@ -25302,4 +25302,11 @@ body.dark #styleSelector .form-control {
 .legend-wrapper {
     width: auto !important;
  }
+
+ .header-wrapper {
+    background-color: #3f51b5 !important;
+    color: white;
+    font-size: large;
+ }
+
 /*# sourceMappingURL=style.css.map */

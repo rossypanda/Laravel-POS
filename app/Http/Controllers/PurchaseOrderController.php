@@ -41,11 +41,14 @@ class PurchaseOrderController extends Controller
     public function store(Request $request)
     {
         $formData = $request->data;
+        $formData['items'];
         $poNumber = PurchaseOrderHelper::checkAvailablePOInvoice($formData['payment_type']);
         if($poNumber){
-            PurchaseOrder::create([
+
+            //Insert and return PO header id
+            $po_header_id = PurchaseOrder::create([
                 'po_reference' => PurchaseOrderHelper::generatePOReference(),
-                'po_number' => $poNumber,
+                'po_number' => $poNumber['po_number'],
                 'date' => date('Y-m-d'),
                 'supplier_id' => $formData['supplier'],
                 'supplier_address' => $formData['address'],
@@ -62,7 +65,11 @@ class PurchaseOrderController extends Controller
                 'terms' => json_encode($formData['terms']),
                 'status' => 'F',
                 'encoded_by'  => $formData['requested_by']
-            ]);
+            ])->po_header_id;
+            PurchaseOrderHelper::insertPODetail($po_header_id,$formData['items']);
+            //Update Current Range
+            PurchaseOrderHelper::updateCurrentRange($poNumber['po_invoice_id'],$poNumber['po_number']);
+            return response()->json($poNumber['po_number']);
         }
         return response()->json(false);
     }
