@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class UserController extends Controller
 {
@@ -94,5 +95,10 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function fetchUserData()
+    {
+         return User::all()->toJson();
     }
 }
