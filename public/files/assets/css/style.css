@@ -25265,4 +25265,48 @@ body.dark #styleSelector .form-control {
   
 }
 
+.label-item {
+  margin-bottom: 0rem;
+}
+
+
+.item-wrapper{
+    /* border-style: solid;
+    border-radius: 0.5rem; */
+    margin-top:0.5rem;
+    /* border-width: thin;
+    background-color: #F3F3F3;
+    border-color: #7DB9FF; */
+}
+
+.item-button{
+    /* border-style: solid;
+    border-radius: 0.5rem; */
+    margin-top:1.3rem;
+    /* border-width: thin;
+    background-color: #F3F3F3;
+    border-color: #7DB9FF; */
+}
+
+.fieldset-wrapper {
+    border-style: solid;
+    border-width: thin;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: revert;
+    width: auto;
+    border-color: #7db9ff;
+    border-radius: 0.5rem;
+}
+
+.legend-wrapper {
+    width: auto !important;
+ }
+
+ .header-wrapper {
+    background-color: #3f51b5 !important;
+    color: white;
+    font-size: large;
+ }
+
 /*# sourceMappingURL=style.css.map */

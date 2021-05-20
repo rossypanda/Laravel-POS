@@ -24,7 +24,7 @@ class POInvoiceSeeder extends Seeder
             'invoice_type' => 'C',
             'invoice_usage' => 0,
             'date_added' => date("Y/m/d"),
-            'encoded_by' => 'seeder'
+            'encoded_by' => 1
         ]);
     }
 }

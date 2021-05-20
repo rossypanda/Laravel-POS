@@ -4,6 +4,9 @@ use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\PoNumberController;
 use App\Http\Controllers\PurchaseOrderController;
 use App\Http\Controllers\PoReportController;
+use App\Http\Controllers\PemissionController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
 // use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,6 +37,12 @@ Route::resource('purchaseOrder', 'PurchaseOrderController');
 Route::resource('poReport', 'PoReportController');
 Route::resource('supplier', 'SupplierController');
 Route::get('fetch/supplier','SupplierController@fetchSupplierData');
+Route::get('fetch/poNumber','PONumberController@fetchPONumberData');
+Route::get('fetch/purchaseOrder','PurchaseOrderController@fetchPurchaseOrderData');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('permission', 'PermissionController');
+Route::resource('role', 'RoleController');
+Route::resource('user', 'UserController');

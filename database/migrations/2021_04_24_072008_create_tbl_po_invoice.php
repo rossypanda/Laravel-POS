@@ -21,10 +21,11 @@ class CreateTblPoInvoice extends Migration
             $table->foreignId('company_id');
             $table->integer('start_range')->nullable();
             $table->integer('end_range')->nullable();
+            $table->integer('current_range')->default(0);
             $table->string('invoice_type', 1);
             $table->smallInteger('invoice_usage');
             $table->timestamp('date_added')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->string('encoded_by', 20)->nullable();
+            $table->integer('encoded_by')->nullable();
         });
     }
 

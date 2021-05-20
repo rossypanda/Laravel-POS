@@ -90,7 +90,7 @@ function MyVerticallyCenteredModal(props) {
         </Modal.Body>
         <Modal.Footer>
          
-          <Button variant="success" size="sm" onClick={props.onHide} onClick={handleSubmit(updateSupplierData)}>
+          <Button variant="success" size="sm" onClick={handleSubmit(updateSupplierData)}>
             <FontAwesomeIcon icon={faCheck} className="icon-space" />Save Changes
           </Button>
         </Modal.Footer>

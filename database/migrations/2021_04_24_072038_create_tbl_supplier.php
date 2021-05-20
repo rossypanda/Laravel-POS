@@ -30,7 +30,7 @@ class CreateTblSupplier extends Migration
             $table->integer('company_id')->nullable();
             $table->timestamp('date_added')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->string('description')->nullable();
-            $table->string('encoded_by', 20)->nullable();
+            $table->integer('encoded_by')->nullable();
         });
     }
 

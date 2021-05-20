@@ -32,8 +32,8 @@ class POHeaderSeeder extends Seeder
             'manager' => Str::random(10).' manager',
             'bank' => Str::random(10).' bank',
             'contact_person' => Str::random(10).' contact_person',
-            'terms' => 0,
-            'encoded_by' => 'seeder'
+            'terms' => '[]',
+            'encoded_by' => 1
         ]);
     }
 }
