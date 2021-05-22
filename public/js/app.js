@@ -12207,6 +12207,13 @@ __webpack_require__(/*! ./modules/po-transaction/PurchaseOrder */ "./resources/j
 
 __webpack_require__(/*! ./modules/user/User */ "./resources/js/modules/user/User.jsx");
 
+<<<<<<< HEAD
+=======
+__webpack_require__(/*! ./modules/role/Role */ "./resources/js/modules/role/Role.jsx");
+
+__webpack_require__(/*! ./modules/permission/Permission */ "./resources/js/modules/permission/Permission.jsx");
+
+>>>>>>> cb4ed3f736453f3da3a52e341b17158aae744080
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -14453,14 +14460,22 @@ function User() {
     marginBottom: "1rem"
   };
 
+<<<<<<< HEAD
   var fetchSupplier = /*#__PURE__*/function () {
+=======
+  var fetchUser = /*#__PURE__*/function () {
+>>>>>>> cb4ed3f736453f3da3a52e341b17158aae744080
     var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee() {
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
+<<<<<<< HEAD
               return axios__WEBPACK_IMPORTED_MODULE_7___default().get('/fetch/supplier', {}).then(function (response) {
+=======
+              return axios__WEBPACK_IMPORTED_MODULE_7___default().get('/fetch/user', {}).then(function (response) {
+>>>>>>> cb4ed3f736453f3da3a52e341b17158aae744080
                 //get the object of supplier data to load to a table
                 console.log(response.data);
                 setTableData(response.data);
@@ -14476,13 +14491,21 @@ function User() {
       }, _callee);
     }));
 
+<<<<<<< HEAD
     return function fetchSupplier() {
+=======
+    return function fetchUser() {
+>>>>>>> cb4ed3f736453f3da3a52e341b17158aae744080
       return _ref.apply(this, arguments);
     };
   }();
 
   (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
+<<<<<<< HEAD
     fetchSupplier();
+=======
+    fetchUser();
+>>>>>>> cb4ed3f736453f3da3a52e341b17158aae744080
   }, []);
 
   var hideAlert = function hideAlert() {

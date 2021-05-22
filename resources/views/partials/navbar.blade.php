@@ -90,8 +90,8 @@
                             {{-- <img src="files\assets\images\avatar-4.jpg" class="img-radius" alt="User-Profile-Image"> --}}
                             {{-- <img src="{{ asset('')}}" class="img-radius" alt="User-Profile-Image"> --}}
                             <img src="{{ asset('')}}" class="img-radius" >
-                            <span>John Doe</span>
-                            <i class="feather icon-chevron-down"></i>
+                            <span>{{ Auth::user()->name }}</span>
+                            {{-- <i class="feather icon-chevron-down"></i> --}}
                         </div>
                         <ul class="show-notification profile-notification dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
                             <li>
@@ -120,7 +120,6 @@
                                 </a>
                             </li>
                         </ul>
-
                     </div>
                 </li>
             </ul>

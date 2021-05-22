@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Permission;
 
 class PermissionController extends Controller
 {
@@ -86,5 +87,10 @@ class PermissionController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function fetchPermissionData()
+    {
+         return Permission::all()->toJson();
     }
 }

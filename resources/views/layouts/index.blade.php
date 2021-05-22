@@ -79,6 +79,7 @@
                     @include('partials.sidebar')
                     <div class="pcoded-content">
                         @yield('breadcrumb')
+                        
                         @yield('content')
                         
                     </div>
