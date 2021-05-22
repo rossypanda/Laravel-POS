@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import {Button,Container,Row,Table,Modal,ModalTitle,ModalDialog,ModalBody,ModalDialogProps,ModalFooter,Card,InputGroup,FormControl,InputGroupProps,Col,Form} from 'react-bootstrap';
+import {Button,Container,Row,Table,Modal,ModalTitle,ModalDialog,ModalBody,ModalDialogProps,ModalFooter,Card,InputGroup,FormControl,InputGroupProps,Col,Form,Badge} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusSquare,faTrashAlt,faEye,faCheck,faUserTag,faPlusCircle,faBan,faThList,faMoneyCheck,faCartPlus} from '@fortawesome/free-solid-svg-icons';
 import { faLastfmSquare } from '@fortawesome/free-brands-svg-icons';
@@ -13,7 +13,10 @@ import SweetAlert from 'react-bootstrap-sweetalert';
 
 
 function CreatePurchaseOrder() {
-    const { register,control,handleSubmit, watch,reset, formState: { errors } } = useForm();
+    const { register,control,handleSubmit, watch,reset,setValue, formState: { errors } } = useForm();
+    const watchPaymentType = watch("payment_type", 'C');
+    const [supplier,setSupplier] = useState([]);
+    const [users,setUsers] = useState([]);
     const { fields: itemFields, append:appendItem, remove:removeItem} = useFieldArray({
         control, // control props comes from useForm (optional: if you are using FormContext)
         name: "items", // unique name for your Field Array
@@ -25,15 +28,35 @@ function CreatePurchaseOrder() {
         // keyName: "id", default to "id", you can change the key name
     });
     const [customAlert, setCustomAlert] = useState(null);
+    window.supplierAddress;
+    window.totalAmount;
+
+    const fetchPODropdown =  async () => {
+        await axios
+         .get('/fetch/po_dropdown', {
+     
+         })
+         .then((response) => {
+            console.log(response.data);
+            window.supplierAddress = response.data.supplier_address;
+            setSupplier(response.data.supplier);
+            setUsers(response.data.user)
+           
+         })
+         .catch((err) => {
+             console.log(err);
+         });
+     }
+
     
     useEffect(() => {
         appendItem({});
         appendTerms([0,1]);
+        fetchPODropdown();
     },[]);
 
       
     const onSubmit = (data) => {
-        console.log(data);
         axios
         .post('/purchaseOrder', {
            data
@@ -72,16 +95,12 @@ function CreatePurchaseOrder() {
         })
       
         for(let x=0; x < value.length; x++){
-            totalPrice = Number(value[x].amount) + Number(totalPrice);
+            totalPrice = totalPrice + (Number(value[x].quantity) * Number(value[x].per_unit));
         }
-      console.log(totalPrice);
-    
+        
         return (
-            <div>
-                <Form.Group as={Col} controlId="amount">
-                        <Form.Label>Total</Form.Label>
-                        <Form.Control  placeholder="Total" value={totalPrice} {...register}/>
-                </Form.Group>
+            <div style={{marginRight:'5rem'}} id="amount-span">
+                    <Badge style={{borderRadius:'0',padding:'0.5rem',fontSize:'0.9em'}} variant="info">Total: {totalPrice}</Badge>
             </div>
         );
     }
@@ -93,14 +112,17 @@ function CreatePurchaseOrder() {
             name:`items[${index}]`,
             defaultValue:0
         })
-        console.log(value);
+
        unitPrice = Number(value.quantity) * Number(value.per_unit);
-     
         return (
             <Form.Group as={Col} xs={1} >
-                <Form.Control  placeholder="Amount"  value={unitPrice} {...register}  />
+                <Form.Control  placeholder="Amount"  value={isNaN(unitPrice) ? 0 : unitPrice} {...register} readOnly  />
             </Form.Group>
         );
+    }
+
+    const handleChange = (supplier_id) => {
+       setValue("address",window.supplierAddress[supplier_id]);
     }
     
 
@@ -116,16 +138,18 @@ function CreatePurchaseOrder() {
                             <Form.Row>
                                 <Form.Group as={Col} controlId="supplier">
                                     <Form.Label>Supplier</Form.Label>
-                                    <Form.Control size="sm" as="select" {...register("supplier",{required:true})} isInvalid={errors.invoiceType} >
+                                    <Form.Control size="sm" as="select" {...register("supplier",{required:true})} isInvalid={errors.invoiceType} onChange={() => handleChange(event.target.value)}>
                                         <option value=''>Select Supplier</option>
-                                        <option value='1'>Bacolod China Mart</option>
-                                        <option value='2'>Bacolod Steel</option>
+                                        {supplier.map((data,index) => (
+                                             <option key={index} value={data.supplier_id}>{data.supplier}</option>
+                                        ))}
+                                       
                                     </Form.Control>
                                     <Form.Control.Feedback type="invalid">Supplier is required</Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group as={Col} controlId="payment_type">
                                     <Form.Label>Payment Type</Form.Label>
-                                    <Form.Control size="sm" as="select" {...register("payment_type",{required:true})} isInvalid={errors.invoiceType} >
+                                    <Form.Control size="sm" as="select" {...register("payment_type",{required:true})} isInvalid={errors.payment_type} >
                                         <option value=''>Select Payment Type</option>
                                         <option value='C'>Cash</option>
                                         <option value='H'>Check</option>
@@ -136,7 +160,7 @@ function CreatePurchaseOrder() {
                             
                             <Form.Group controlId="supplier_address">
                                 <Form.Label>Address</Form.Label>
-                                <Form.Control placeholder="Supplier Address" {...register("address",{required:true})} isInvalid={errors.address}/>
+                                <Form.Control placeholder="Supplier Address"  {...register("address",{required:true})} isInvalid={errors.address}/>
                                 <Form.Control.Feedback type="invalid">Address is required</Form.Control.Feedback>
                             </Form.Group>
                             <Button variant="info" size="sm" style={{marginRight:"0.5rem"}} onClick={() => appendItem({})}>
@@ -147,7 +171,7 @@ function CreatePurchaseOrder() {
                                 {itemFields.map(({id},index) => (
                                     <Form.Row key={id}>
                                         <Form.Group as={Col} xs={1} >
-                                            <Form.Control {...register(`items[${index}].quantity`)} placeholder="QTY"/>
+                                            <Form.Control type="number" {...register(`items[${index}].quantity`)} placeholder="QTY"/>
                                         </Form.Group>
                                         <Form.Group as={Col} xs={1} >
                                             <Form.Control {...register(`items[${index}].unit`)}  placeholder="Unit"/>
@@ -162,10 +186,10 @@ function CreatePurchaseOrder() {
                                             <Form.Control {...register(`items[${index}].model`)} placeholder="Model"  />
                                         </Form.Group >
                                         <Form.Group as={Col} xs={1} >
-                                            <Form.Control {...register(`items[${index}].per_unit`)} placeholder="Per Unit"   />
+                                            <Form.Control {...register(`items[${index}].per_unit`)} placeholder="Per Unit"  />
                                         </Form.Group>
-                                        <PriceUnit control={control} index={index} register={{...register(`items[${index}].amount`)}} />
-                                        <Form.Group as={Col}  >
+                                        <PriceUnit type="number" control={control} index={index} register={{...register(`items[${index}].amount`)}} />
+                                        <Form.Group as={Col} xs={1} >
                                             <Button variant="outline-danger" size="sm" onClick={() => removeItem(index)}>
                                                 <FontAwesomeIcon icon={faTrashAlt} className="icon-space" />
                                             </Button>
@@ -175,42 +199,66 @@ function CreatePurchaseOrder() {
             
                                 ))}
                             <Form.Row xs={1} className="flex-row-reverse">
-                               {/* <PriceTotal control={control} register={{...register('total_amount')}} />  */}
+                               <PriceTotal control={control}/> 
                             </Form.Row>
                              </Container>
-                            
-                             <fieldset className="fieldset-wrapper">
-                                <legend className="legend-wrapper"><h6>Terms</h6></legend>
-                                {termFields.map(({id},index) => (
-                                    <Terms key={id} 
-                                        terms={{...register(`terms[${index}].terms`)}}
-                                        termsDescription={{...register(`terms[${index}].terms_description`)}}
-                                        termsDue={{...register(`terms[${index}].terms_due`)}}
-                                        termsBank={{...register(`terms[${index}].terms_bank`)}}
-                                        termsPercent={{...register(`terms[${index}].terms_percent`)}}
-                                        termsAmount={{...register(`terms[${index}].terms_amount`)}}
-                                    />
-                                ))}
-                             </fieldset>
+
+                             { 
+                               watchPaymentType === 'H' && (
+        
+                                <fieldset className="fieldset-wrapper" >
+                                    <legend className="legend-wrapper"><h6>Terms</h6></legend>
+                                    {termFields.map(({id},index) => (
+                                        <Terms key={id} 
+                                            terms={{...register(`terms[${index}].terms`)}}
+                                            termsDescription={{...register(`terms[${index}].terms_description`)}}
+                                            termsDue={{...register(`terms[${index}].terms_due`)}}
+                                            termsBank={{...register(`terms[${index}].terms_bank`)}}
+                                            termsPercent={{...register(`terms[${index}].terms_percent`)}}
+                                            termsAmount={{...register(`terms[${index}].terms_amount`)}}
+                                        />
+                                    ))}
+                                </fieldset>
+                               )
+                            }
+
                              <Form.Row>
                                 <Form.Group as={Col} controlId="project_name">
                                     <Form.Label>Project Name</Form.Label>
-                                    <Form.Control  placeholder="Project Name" {...register("project_name",{required:true})}/>
+                                    <Form.Control  placeholder="Project Name" {...register("project_name",{required:true})} isInvalid={errors.project_name}/>
                                     <Form.Control.Feedback type="invalid">Project name is required</Form.Control.Feedback>
                                 </Form.Group>
                             </Form.Row>
                             <Form.Row>
                                 <Form.Group as={Col} controlId="requested_by">
-                                    <Form.Label>Requested By</Form.Label>
-                                    <Form.Control  placeholder="Requested By" {...register("requested_by")} />
+                                    <Form.Label>Approved By</Form.Label>
+                                    <Form.Control size="sm" as="select" {...register("requested_by",{required:true})} isInvalid={errors.requested_by} >
+                                        <option value=''> -- Requested By --</option>
+                                        {users.map((data,index) => (
+                                             <option key={index} value={data.id}>{data.name}</option>
+                                        ))}
+                                    </Form.Control>
+                                    <Form.Control.Feedback type="invalid">Requested By is required</Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group as={Col} controlId="canvassed_by">
-                                    <Form.Label>Canvassed By</Form.Label>
-                                    <Form.Control placeholder="Canvassed by" {...register("canvassed_by")} />
+                                    <Form.Label>Approved By</Form.Label>
+                                    <Form.Control size="sm" as="select" {...register("canvassed_by",{required:true})} isInvalid={errors.canvassed_by} >
+                                        <option value=''> --  Canvassed By --</option>
+                                        {users.map((data,index) => (
+                                             <option key={index} value={data.id}>{data.name}</option>
+                                        ))}
+                                    </Form.Control>
+                                    <Form.Control.Feedback type="invalid">Canvassed By is required</Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group as={Col} controlId="approved_by">
                                     <Form.Label>Approved By</Form.Label>
-                                    <Form.Control placeholder="approved_by" {...register("approved_by")}/>
+                                    <Form.Control size="sm" as="select" {...register("approved_by",{required:true})} isInvalid={errors.approved_by} >
+                                        <option value=''> -- Approved By --</option>
+                                        {users.map((data,index) => (
+                                             <option key={index} value={data.id}>{data.name}</option>
+                                        ))}
+                                    </Form.Control>
+                                    <Form.Control.Feedback type="invalid">Approved By is required</Form.Control.Feedback>
                                 </Form.Group>
                             </Form.Row>
                         </Form>

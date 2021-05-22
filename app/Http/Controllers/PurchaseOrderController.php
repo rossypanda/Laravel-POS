@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Helpers\PurchaseOrderHelper;
 use App\Models\PurchaseOrder;
 use Illuminate\Support\Facades\DB;
+use App\Models\User;
+use App\Models\Supplier;
+
 class PurchaseOrderController extends Controller
 {
     public function __construct()
@@ -42,10 +45,11 @@ class PurchaseOrderController extends Controller
     public function store(Request $request)
     {
         $formData = $request->data;
+        dd($request->total_amount);
         $formData['items'];
         $poNumber = PurchaseOrderHelper::checkAvailablePOInvoice($formData['payment_type']);
         if($poNumber){
-          
+            DB::transaction(function () use ($poNumber,$formData) {
                 //Insert and return PO header id
                 $po_header_id = PurchaseOrder::create([
                     'po_reference' => PurchaseOrderHelper::generatePOReference(),
@@ -61,15 +65,16 @@ class PurchaseOrderController extends Controller
                     //'project_in_charge' => $formData['project_name'],
                     //'purchaser' => $formData['project_name'],
                     //'manager' => $formData['project_name'],
-                // 'bank' => $formData['project_name'],
-                // 'contact_person' => $formData['project_name'],
+                    // 'bank' => $formData['project_name'],
+                    // 'contact_person' => $formData['project_name'],
                     'terms' => json_encode($formData['terms']),
                     'status' => 'F',
-                    'encoded_by'  => $formData['requested_by']
+                    'total_amount'  => $formData['requested_by']
                 ])->po_header_id;
                 PurchaseOrderHelper::insertPODetail($po_header_id,$formData['items']);
                 //Update Current Range
                 PurchaseOrderHelper::updateCurrentRange($poNumber['po_invoice_id'],$poNumber['po_number']);
+            });
             return response()->json($poNumber['po_number']);
         }
         return response()->json(false);
@@ -128,6 +133,19 @@ class PurchaseOrderController extends Controller
             'cancelled' => PurchaseOrder::where('status','C')->get()
         ])
         );
+   
+    }
+
+    public function fetchPurchaseOrderDropdownOptions(){
+  
+        return response()->json(
+            array(
+                'user' =>  User::all(),
+                'supplier' =>  Supplier::all(),
+                'supplier_address' =>  Supplier::all()->pluck('address','supplier_id')
+            )
+        );
+      
    
     }
 
