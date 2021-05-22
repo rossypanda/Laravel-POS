@@ -67,7 +67,7 @@ class PurchaseOrderHelper
             "description" => $item['description'],
             "item" => $item['description'],
             "per_unit" => $item['per_unit'],
-            "price" => $item['amount'],
+           // "price" => $item['amount'],
             "brand" => $item['brand'],
             "model" => $item['model']
        ]);

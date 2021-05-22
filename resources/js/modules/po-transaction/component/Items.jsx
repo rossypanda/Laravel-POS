@@ -17,23 +17,25 @@ const [perUnit,setPerUnit] = useState(0);
 const handleChange = (value) => {
     setPerUnit(value);
     setAmount(
-        Number(quantity) * Number(value) 
+        Number(quantity) * Number(perUnit) 
     );
+    console.log(amount);
 }
 
 
 const quantityChange = (value) => {
     setQuantity(value);
     setAmount(
-        Number(value) * Number(perUnit) 
+        Number(quantity) * Number(perUnit) 
     );
+    console.log(amount);
 }
 
     return (
       <div>
            <Form.Row>
                 <Form.Group as={Col} xs={1} >
-                    <Form.Control {...props.quantityName} placeholder="QTY" onChange={() => quantityChange(event.target.value)}   />
+                    <Form.Control {...props.quantityName} placeholder="QTY" />
                 </Form.Group>
                 <Form.Group as={Col} xs={1} >
                     <Form.Control  placeholder="Unit"  {...props.unitName} />
@@ -48,10 +50,10 @@ const quantityChange = (value) => {
                     <Form.Control  placeholder="Model"  {...props.modelName} />
                 </Form.Group >
                 <Form.Group as={Col} xs={1} >
-                    <Form.Control {...props.perUnitName} placeholder="Per Unit" onChange={() => handleChange(event.target.value)}  />
+                    <Form.Control {...props.perUnitName} placeholder="Per Unit"   />
                 </Form.Group>
-                <Form.Group as={Col} xs={1} >
-                    <Form.Control  {...props.amountName} placeholder="Amount"  value={amount}  />
+                <Form.Group as={Col} controlId="amount">
+                     {props.amountComponent}
                 </Form.Group>
                 <Form.Group as={Col}  >
                     <Button variant="outline-danger" size="sm" onClick={props.onClick}>

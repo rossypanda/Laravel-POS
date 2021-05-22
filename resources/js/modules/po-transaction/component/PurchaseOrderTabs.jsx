@@ -11,20 +11,49 @@ import PurchaseOrderList from './PurchaseOrderList';
 
 function PurchaseOrderTabs(props) {
 
+const [pendingPO, setPendingPO] = useState([]);
+const [approvedPO, setApprovedPO] = useState([]);
+const [cancelledPO, setCancelledPO] = useState([]);
+
+    const fethPurchaseOrderData =  async () => {
+        await axios
+         .get('/fetch/purchaseOrder', {
+     
+         })
+         .then((response) => {
+            console.log(response.data)
+         })
+         .catch((err) => {
+             console.log(err);
+         });
+     }
+
+    useEffect(() => {
+        fethPurchaseOrderData();
+    },[]);
 
 
     return (
     <div>
-        <Container fluid>
+        <Container fluid hidden>
             <Tabs fill defaultActiveKey="pending" transition={false} id="noanim-tab-example">
                 <Tab eventKey="pending" title="Pending"> 
-                   <PurchaseOrderList name="Pending"/>
+                    <Card className='mt-3 card-wrapper'>
+                        <Card.Header className='header-wrapper'>Pending</Card.Header>
+                            <PurchaseOrderList />
+                    </Card>
                 </Tab>
                 <Tab eventKey="approved" title="Approved">
-                    <PurchaseOrderList name="Approved"/>
+                    <Card className='mt-3 card-wrapper'>
+                        <Card.Header className='header-wrapper'>Approved</Card.Header>
+                
+                    </Card>
                 </Tab>
                 <Tab eventKey="cancelled" title="Cancelled">
-                    <PurchaseOrderList name="Cancelled"/>
+                    <Card className='mt-3 card-wrapper'>
+                        <Card.Header className='header-wrapper'>Cancelled</Card.Header>
+                
+                    </Card>
                 </Tab>
             </Tabs>
         </Container>

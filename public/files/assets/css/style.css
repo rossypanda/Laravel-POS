@@ -25309,4 +25309,28 @@ body.dark #styleSelector .form-control {
     font-size: large;
  }
 
+ .card-wrapper {
+     box-shadow: none !important;
+     background-color: transparent !important;
+     color: #0000007a !important;
+ }
+
+ .text-wrapper {
+    background: #f1f1f1;
+    padding: 1rem;
+ }
+
+ .footer-wrapper {
+    background-color: #fff !important;
+    border-top: solid !important;
+    border-width: thin !important;
+    border-color: #f1f1f1 !important;
+    margin-left: 0;
+    padding: 12px 0px;
+ }
+
+ .badge-wrapper {
+    border-radius: 0px !important;
+    padding: 0.4rem !important;
+ }
 /*# sourceMappingURL=style.css.map */

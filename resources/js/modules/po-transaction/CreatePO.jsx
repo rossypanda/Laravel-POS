@@ -8,18 +8,17 @@ import CreatePurchaseOrder from './component/CreatePurchaseOrder';
 import PurchaseOrderTabs from './component/PurchaseOrderTabs';
 
 
-function PurchaseOrder() {
+function CreatePO() {
 
     return (
     <div>
         <CreatePurchaseOrder />
-        <PurchaseOrderTabs />
     </div>
     );
 }
 
-export default PurchaseOrder;
+export default CreatePO;
 
-if (document.getElementById('purchase-order')) {
-    ReactDOM.render(<PurchaseOrder />, document.getElementById('purchase-order'));
+if (document.getElementById('create-po')) {
+    ReactDOM.render(<CreatePO />, document.getElementById('create-po'));
 }

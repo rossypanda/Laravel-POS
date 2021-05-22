@@ -32,6 +32,11 @@
                             <span class="pcoded-mtext">Purchase Order</span>
                         </a>
                     </li>
+                    <li class=" ">
+                        <a href="/create/purchase_order">
+                            <span class="pcoded-mtext">Create Purchase Order</span>
+                        </a>
+                    </li>
                 </ul>
             </li>
             <li class="pcoded-hasmenu">
