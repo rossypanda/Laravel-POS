@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import ReactDOM from 'react-dom';
-import {Button,Container,Row,Table,Modal,ModalTitle,ModalDialog,ModalBody,ModalDialogProps,ModalFooter,Card,InputGroup,FormControl,InputGroupProps,Col,Form} from 'react-bootstrap';
+import {Button,Container,Row,Table,Modal,ModalTitle,ModalDialog,ModalBody,ModalDialogProps,ModalFooter,Card,InputGroup,FormControl,InputGroupProps,Col,Form,Alert} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusSquare,faTrashAlt,faEye,faCheck,faUserTag,faPlusCircle,faBan} from '@fortawesome/free-solid-svg-icons';
 import { faLastfmSquare } from '@fortawesome/free-brands-svg-icons';
@@ -13,9 +13,12 @@ function MyVerticallyCenteredModal(props) {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const updateSupplierData = (data) => {
         axios.patch(`/supplier/1}`,{data}).then(
-            alert('Updated')
+            setAlert(  <Alert  variant="success">
+            Data Updated
+           </Alert>)
         );
     }
+    const [alert,setAlert] = useState(null);
     return (
       <Modal
         {...props}
@@ -29,6 +32,7 @@ function MyVerticallyCenteredModal(props) {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
+            {alert}
         <Form>
             <Form.Row>
                 <Form.Group as={Col} controlId="supplier-edit" hidden>
@@ -64,10 +68,6 @@ function MyVerticallyCenteredModal(props) {
                 <Form.Group as={Col} controlId="fax-edit">
                     <Form.Label>Fax</Form.Label>
                     <Form.Control type="text" placeholder="Enter Email" value={props.fax} {...register("fax-edit")} />
-                </Form.Group>
-                <Form.Group as={Col} controlId="bank-edit">
-                    <Form.Label>Bank Account</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Address" value={props.bank} {...register("bank-edit")} />
                 </Form.Group>
             </Form.Row>
             <Form.Row>
@@ -131,7 +131,7 @@ function Supplier() {
 
     useEffect(() => {
         fetchSupplier();
-    },[]);
+    });
     
     const hideAlert = () => {
         setCustomAlert(null)
@@ -301,10 +301,6 @@ function Supplier() {
                             </Form.Row>
 
                             <Form.Row>
-                                <Form.Group as={Col} controlId="supplier-bank">
-                                    <Form.Label>Bank Account</Form.Label>
-                                    <Form.Control placeholder="Supplier bank account" {...register("bank")}/>
-                                </Form.Group>
                                 <Form.Group as={Col} controlId="supplier-description">
                                     <Form.Label>Description</Form.Label>
                                     <Form.Control placeholder="Optional" {...register("description")}/>

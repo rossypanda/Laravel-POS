@@ -80,7 +80,7 @@ class PoNumberController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
     }
 
     /**
@@ -91,7 +91,9 @@ class PoNumberController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $po = PONumber::find($id);
+
+        $po->delete();
     }
 
 

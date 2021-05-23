@@ -24,12 +24,17 @@
                 <a href="javascript:void(0)">
                     <span class="pcoded-micon"><i class="feather icon-server"></i></span>
                     <span class="pcoded-mtext">Transaction</span>
-                    <span class="pcoded-badge label label-warning">NEW</span>
+                    {{-- <span class="pcoded-badge label label-warning">NEW</span> --}}
                 </a>
                 <ul class="pcoded-submenu">
                     <li class=" ">
                         <a href="/purchaseOrder">
                             <span class="pcoded-mtext">Purchase Order</span>
+                        </a>
+                    </li>
+                    <li class=" ">
+                        <a href="/create/purchase_order">
+                            <span class="pcoded-mtext">Create Purchase Order</span>
                         </a>
                     </li>
                 </ul>
@@ -38,7 +43,7 @@
                 <a href="javascript:void(0)">
                     <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
                     <span class="pcoded-mtext">Report</span>
-                    <span class="pcoded-badge label label-danger">100+</span>
+                    {{-- <span class="pcoded-badge label label-danger">100+</span> --}}
                 </a>
                 <ul class="pcoded-submenu">
                     <li class=" ">
@@ -50,6 +55,7 @@
                 </ul>
             </li>
 
+            @role('admin') 
             <li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
                 <a href="javascript:void(0)">
                     <span class="pcoded-micon"><i class="feather icon-unlock"></i></span>
@@ -75,6 +81,9 @@
                     
                 </ul>
             </li>
+            @endrole
+
+            
 
             <li class="">
                 <a  href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

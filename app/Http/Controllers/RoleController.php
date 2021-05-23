@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Role;
 
 class RoleController extends Controller
 {
@@ -85,5 +86,10 @@ class RoleController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function fetchRoleData()
+    {
+         return Role::all()->toJson();
     }
 }

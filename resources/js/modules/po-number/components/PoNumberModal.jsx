@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import {Button,Container,Row,Table,Modal,ModalTitle,ModalDialog,ModalBody,ModalDialogProps,ModalFooter,Card,InputGroup,FormControl,InputGroupProps,Col,Form} from 'react-bootstrap';
+import {Button,Container,Row,Table,Modal,ModalTitle,ModalDialog,ModalBody,ModalDialogProps,ModalFooter,Card,InputGroup,FormControl,InputGroupProps,Col,Form,Alert} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faThList,faCheck,faWindowClose} from '@fortawesome/free-solid-svg-icons';
 import { faLastfmSquare } from '@fortawesome/free-brands-svg-icons';
@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form";
 function PoNumberModal(props) {
     const [modalShow,setModalShow] = useState(false);
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const [alert,setAlert] = useState(null);
     const addNewPONumber = (data) => {
         axios
         .post('/poNumber', {
@@ -16,7 +17,9 @@ function PoNumberModal(props) {
         })
         .then((response) => {
             console.log(response);
-              aler('added');
+            setAlert(  <Alert  variant="success">
+             Succesfully Added
+            </Alert>);
         })
         .catch((err) => {
             console.log(err);
@@ -35,6 +38,7 @@ function PoNumberModal(props) {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          {alert}
         <Form>
             <Form.Row>
                 <Form.Group as={Col} controlId="invoice-type">

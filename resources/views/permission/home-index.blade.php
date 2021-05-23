@@ -9,13 +9,13 @@
             </a>
         </li>
         <li class="breadcrumb-item">
-            <a href="#!">Permission</a>
+            <a href="/permission">Permission</a>
         </li>
     </ul>
 </div>
 @endsection
 @section('content')
-    <div id='poNumber'>
+    <div id='permission'>
        
     </div>
 @endsection

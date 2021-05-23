@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Helpers\PurchaseOrderHelper;
 use App\Models\PurchaseOrder;
+use Illuminate\Support\Facades\DB;
+use App\Models\User;
+use App\Models\Supplier;
+
 class PurchaseOrderController extends Controller
 {
     public function __construct()
@@ -44,31 +48,31 @@ class PurchaseOrderController extends Controller
         $formData['items'];
         $poNumber = PurchaseOrderHelper::checkAvailablePOInvoice($formData['payment_type']);
         if($poNumber){
-
-            //Insert and return PO header id
-            $po_header_id = PurchaseOrder::create([
-                'po_reference' => PurchaseOrderHelper::generatePOReference(),
-                'po_number' => $poNumber['po_number'],
-                'date' => date('Y-m-d'),
-                'supplier_id' => $formData['supplier'],
-                'supplier_address' => $formData['address'],
-                'payment_type' => $formData['payment_type'],
-                'project_name' => $formData['project_name'],
-                'requested_by' => $formData['requested_by'],
-                'canvassed_by' => $formData['canvassed_by'],
-                'approved_by' => $formData['approved_by'],
-                //'project_in_charge' => $formData['project_name'],
-                //'purchaser' => $formData['project_name'],
-                //'manager' => $formData['project_name'],
-               // 'bank' => $formData['project_name'],
-               // 'contact_person' => $formData['project_name'],
-                'terms' => json_encode($formData['terms']),
-                'status' => 'F',
-                'encoded_by'  => $formData['requested_by']
-            ])->po_header_id;
-            PurchaseOrderHelper::insertPODetail($po_header_id,$formData['items']);
-            //Update Current Range
-            PurchaseOrderHelper::updateCurrentRange($poNumber['po_invoice_id'],$poNumber['po_number']);
+            DB::transaction(function () use ($poNumber,$formData) {
+                //Insert and return PO header id
+                $po_header_id = PurchaseOrder::create([
+                    'po_reference' => PurchaseOrderHelper::generatePOReference(),
+                    'po_number' => $poNumber['po_number'],
+                    'date' => date('Y-m-d'),
+                    'supplier_id' => $formData['supplier'],
+                    'supplier_address' => $formData['address'],
+                    'payment_type' => $formData['payment_type'],
+                    'project_name' => $formData['project_name'],
+                    'requested_by' => $formData['requested_by'],
+                    'canvassed_by' => $formData['canvassed_by'],
+                    'approved_by' => $formData['approved_by'],
+                    //'project_in_charge' => $formData['project_name'],
+                    //'purchaser' => $formData['project_name'],
+                    //'manager' => $formData['project_name'],
+                    // 'bank' => $formData['project_name'],
+                    // 'contact_person' => $formData['project_name'],
+                    'terms' => json_encode($formData['terms']),
+                    'status' => 'F'
+                ])->po_header_id;
+                PurchaseOrderHelper::insertPODetail($po_header_id,$formData['items']);
+                //Update Current Range
+                PurchaseOrderHelper::updateCurrentRange($poNumber['po_invoice_id'],$poNumber['po_number']);
+            });
             return response()->json($poNumber['po_number']);
         }
         return response()->json(false);
@@ -120,6 +124,38 @@ class PurchaseOrderController extends Controller
     }
 
     public function fetchPurchaseOrderData(){
-        dd(PurchaseOrderHelper::checkAvailablePOInvoice('C'));
+       
+        return response(([
+            'pending' => PurchaseOrder::where('status','F')->get(),
+            'approved' => PurchaseOrder::where('status','A')->get(),
+            'cancelled' => PurchaseOrder::where('status','C')->get(),
+            'supplier' => [Supplier::all()->pluck('address','supplier_id')],
+            'users' => [User::all()->pluck('name','id')]
+        ])
+        );
+   
+    }
+
+    public function fetchPurchaseOrderDropdownOptions(){
+  
+        return response()->json(
+            array(
+                'user' =>  User::all(),
+                'supplier' =>  Supplier::all(),
+                'supplier_address' =>  Supplier::all()->pluck('address','supplier_id')
+            )
+        );
+      
+   
+    }
+
+     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function createPO()
+    {
+        return view('purchaseOrder.create-po');
     }
 }
