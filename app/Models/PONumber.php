@@ -16,7 +16,7 @@ class PONumber extends Model
      * @var string
      */
     protected $table = 'tbl_po_invoice';
-    protected $primaryKey = 'tbl_po_invoice_id';
+    protected $primaryKey = 'po_invoice_id';
 
     protected $guarded = 'tbl_po_invoice';
 

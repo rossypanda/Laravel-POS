@@ -11,9 +11,9 @@ import PurchaseOrderTabs from './component/PurchaseOrderTabs';
 function CreatePO() {
 
     return (
-    <div>
-        <CreatePurchaseOrder />
-    </div>
+        <div>
+            <CreatePurchaseOrder />
+        </div>
     );
 }
 

@@ -45,7 +45,6 @@ class PurchaseOrderController extends Controller
     public function store(Request $request)
     {
         $formData = $request->data;
-        dd($request->total_amount);
         $formData['items'];
         $poNumber = PurchaseOrderHelper::checkAvailablePOInvoice($formData['payment_type']);
         if($poNumber){
@@ -68,8 +67,7 @@ class PurchaseOrderController extends Controller
                     // 'bank' => $formData['project_name'],
                     // 'contact_person' => $formData['project_name'],
                     'terms' => json_encode($formData['terms']),
-                    'status' => 'F',
-                    'total_amount'  => $formData['requested_by']
+                    'status' => 'F'
                 ])->po_header_id;
                 PurchaseOrderHelper::insertPODetail($po_header_id,$formData['items']);
                 //Update Current Range
@@ -126,11 +124,13 @@ class PurchaseOrderController extends Controller
     }
 
     public function fetchPurchaseOrderData(){
-         
+       
         return response(([
-            'pending' => PurchaseOrder::where('status','C')->get(),
-            'approved' => PurchaseOrder::where('status','C')->get(),
-            'cancelled' => PurchaseOrder::where('status','C')->get()
+            'pending' => PurchaseOrder::where('status','F')->get(),
+            'approved' => PurchaseOrder::where('status','A')->get(),
+            'cancelled' => PurchaseOrder::where('status','C')->get(),
+            'supplier' => [Supplier::all()->pluck('address','supplier_id')],
+            'users' => [User::all()->pluck('name','id')]
         ])
         );
    

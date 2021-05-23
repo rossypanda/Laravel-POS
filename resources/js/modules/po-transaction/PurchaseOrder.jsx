@@ -12,7 +12,6 @@ function PurchaseOrder() {
 
     return (
     <div>
-        <CreatePurchaseOrder />
         <PurchaseOrderTabs />
     </div>
     );

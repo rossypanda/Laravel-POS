@@ -94,7 +94,7 @@ class SupplierController extends Controller
         $supplier->email = $field_data['email-edit'];
         $supplier->contact_no = $field_data['number-edit'];
         $supplier->fax_no = $field_data['fax-edit'];
-        $supplier->bankaccount_no = $field_data['bank-edit'];
+        // $supplier->bankaccount_no = $field_data['bank-edit'];
         $supplier->description = $field_data['description-edit'];
 
         $supplier->save();

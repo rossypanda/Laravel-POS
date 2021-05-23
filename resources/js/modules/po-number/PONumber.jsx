@@ -5,13 +5,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusSquare,faTrashAlt,faEye,faCheck,faUserTag,faPlusCircle,faBan,faThList} from '@fortawesome/free-solid-svg-icons';
 import { faLastfmSquare } from '@fortawesome/free-brands-svg-icons';
 import PoNumberModal from './components/PoNumberModal';
+import SweetAlert from 'react-bootstrap-sweetalert';
 
 
 
 function PONumber() {
  const [tableData,setTableData] = useState([]);
  const [modal,setModal] = useState(null);
-   
+ const [customAlert, setCustomAlert] = useState(null);
+ const PO_TYPE = {'C' :'Cash','H' : 'Check'}
 
     const buttonStyle ={
         display:"flex",
@@ -22,12 +24,13 @@ function PONumber() {
     const fetchPoNumber =  async () => {
         await axios
          .get('/fetch/poNumber', {
-     
+           
          })
          .then((response) => {
              //get the object of supplier data to load to a table
              console.log(response.data);
              setTableData(response.data);
+             
          })
          .catch((err) => {
              console.log(err);
@@ -37,7 +40,7 @@ function PONumber() {
      
     useEffect(() => {
         fetchPoNumber();
-    },[]);
+    });
 
     const showModal = () => {
         setModal(
@@ -47,12 +50,38 @@ function PONumber() {
             />
         )
     }
+
+    const deletePONumber = (id) => {
+        axios.delete(`/poNumber/${id}`, { data: id }).then(
+            setCustomAlert(null)
+         );
+    }
+    
+       
+    const deleteConfirmation = (id) => {
+        setCustomAlert(
+        <SweetAlert
+            warning
+            showCancel
+            confirmBtnText="Yes, delete it!"
+            confirmBtnBsStyle="danger"
+            title="Are you sure?"
+            onConfirm={() =>deletePONumber(id)}
+            onCancel={() => setCustomAlert(null)}
+            focusCancelBtn
+          >
+            This Supplier data will be deleted
+          </SweetAlert>
+          )
+       
+    }
     
     
     return (
         
         <div>
             <Container fluid>
+                {customAlert}
                 <div style={buttonStyle}>
                     <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} onClick={() => showModal()}>
                         <FontAwesomeIcon icon={faPlusSquare} className="icon-space" />
@@ -75,15 +104,15 @@ function PONumber() {
                     {tableData.map((data,index) => (
                         <tr>
                             <td>{data.po_invoice_id}</td>
-                            <td>{data.invoice_type}</td>
+                            <td>{PO_TYPE[data.invoice_type]}</td>
                             <td>{data.start_range}</td>
                             <td>{data.end_range}</td>
                             <td>{data.invoice_usage}</td>
                             <td>{data.encoded_by}</td>
                             <td> 
-                                <Button variant="outline-info" size="sm" >
-                                <FontAwesomeIcon icon={faEye} className="icon-space"/>View</Button>
-                                <Button variant="outline-danger" size="sm">
+                                {/* <Button variant="outline-info" size="sm" >
+                                <FontAwesomeIcon icon={faEye} className="icon-space"/>View</Button> */}
+                                <Button variant="outline-danger" size="sm" onClick={() => deleteConfirmation(data.po_invoice_id)}>
                                     <FontAwesomeIcon icon={faTrashAlt}  className="icon-space" />Delete
                                 </Button>
                             </td>
