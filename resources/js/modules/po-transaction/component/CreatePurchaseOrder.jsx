@@ -231,7 +231,7 @@ function CreatePurchaseOrder() {
                             </Form.Row>
                             <Form.Row>
                                 <Form.Group as={Col} controlId="requested_by">
-                                    <Form.Label>Approved By</Form.Label>
+                                    <Form.Label>Requested By</Form.Label>
                                     <Form.Control size="sm" as="select" {...register("requested_by",{required:true})} isInvalid={errors.requested_by} >
                                         <option value=''> -- Requested By --</option>
                                         {users.map((data,index) => (
@@ -241,7 +241,7 @@ function CreatePurchaseOrder() {
                                     <Form.Control.Feedback type="invalid">Requested By is required</Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group as={Col} controlId="canvassed_by">
-                                    <Form.Label>Approved By</Form.Label>
+                                    <Form.Label>Canvassed By</Form.Label>
                                     <Form.Control size="sm" as="select" {...register("canvassed_by",{required:true})} isInvalid={errors.canvassed_by} >
                                         <option value=''> --  Canvassed By --</option>
                                         {users.map((data,index) => (
