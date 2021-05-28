@@ -14,8 +14,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            PODetailSeeder::class,
-            POHeaderSeeder::class,
+          //  PODetailSeeder::class,
+            //POHeaderSeeder::class,
             POInvoiceSeeder::class,
             SupplierSeeder::class,
         ]);

@@ -19,7 +19,7 @@ class PODetailSeeder extends Seeder
         DB::table('tbl_po_detail')->insert([
             'po_header_id' => random_int(10,20),
             'item' => Str::random(10).'item',
-            'description' => Str::random(10).' description',
+           // 'description' => Str::random(10).' description',
             'quantity' => 100,
             'price' => 99.99,
             'brand' => Str::random(10).' brand',
