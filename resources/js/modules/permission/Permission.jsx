@@ -9,94 +9,44 @@ import baseUrl from '../../helpers/BaseUrl';
 import axios from 'axios';
 import SweetAlert from 'react-bootstrap-sweetalert';
 
-// function MyVerticallyCenteredModal(props) {
-//     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-//     const updateSupplierData = (data) => {
-//         axios.patch(`/supplier/1}`,{data}).then(
-//             alert('Updated')
-//         );
-//     }
-//     return (
-//       <Modal
-//         {...props}
-//         size="lg"
-//         aria-labelledby="contained-modal-title-vcenter"
-//         centered
-//       >
-//         <Modal.Header closeButton className="modal-color">
-//           <Modal.Title id="contained-modal-title-vcenter">
-//             {props.title}
-//           </Modal.Title>
-//         </Modal.Header>
-//         <Modal.Body>
-//         <Form>
-//             <Form.Row>
-//                 <Form.Group as={Col} controlId="supplier-edit" hidden>
-//                     <Form.Label>Supplier</Form.Label>
-//                     <Form.Control type="text" placeholder="Enter Supplier" value={props.supplierId} {...register("supplier-id")} />
-//                 </Form.Group>
-//                 <Form.Group as={Col} controlId="supplier-edit">
-//                     <Form.Label>Supplier</Form.Label>
-//                     <Form.Control type="text" placeholder="Enter Supplier" value={props.supplier} {...register("supplier-edit")} />
-//                 </Form.Group>
-//                 <Form.Group as={Col} controlId="contact-person-edit">
-//                     <Form.Label>Contact Person</Form.Label>
-//                     <Form.Control type="text" placeholder="Enter Contact Person" value={props.contactPerson} {...register("contact-person-edit")} />
-//                 </Form.Group>
-//             </Form.Row> 
-//             <Form.Row>
-//                 <Form.Group as={Col} controlId="address-edit">
-//                     <Form.Label>Address</Form.Label>
-//                     <Form.Control type="text" placeholder="Enter Address" value={props.address} {...register("address-edit")} />
-//                 </Form.Group>
-//             </Form.Row>
-//             <Form.Row>
-//                 <Form.Group as={Col} controlId="email-edit">
-//                     <Form.Label>Email</Form.Label>
-//                     <Form.Control type="text" placeholder="Enter Email" value={props.email} {...register("email-edit")} />
-//                 </Form.Group>
-//                 <Form.Group as={Col} controlId="number-edit">
-//                     <Form.Label>Number</Form.Label>
-//                     <Form.Control type="text" placeholder="Enter Address" value={props.email} {...register("number-edit")} />
-//                 </Form.Group>
-//             </Form.Row>  
-//             <Form.Row>
-//                 <Form.Group as={Col} controlId="fax-edit">
-//                     <Form.Label>Fax</Form.Label>
-//                     <Form.Control type="text" placeholder="Enter Email" value={props.fax} {...register("fax-edit")} />
-//                 </Form.Group>
-//                 <Form.Group as={Col} controlId="bank-edit">
-//                     <Form.Label>Bank Account</Form.Label>
-//                     <Form.Control type="text" placeholder="Enter Address" value={props.bank} {...register("bank-edit")} />
-//                 </Form.Group>
-//             </Form.Row>
-//             <Form.Row>
-//                 <Form.Group as={Col} controlId="date-edit">
-//                     <Form.Label>Date Added</Form.Label>
-//                     <Form.Control type="text" value={props.date} readOnly/>
-//                 </Form.Group>
-//                 <Form.Group as={Col} controlId="encoded-edit">
-//                     <Form.Label>Encoded By</Form.Label>
-//                     <Form.Control type="text" value={props.encoded} readOnly/>
-//                 </Form.Group>
-//             </Form.Row>  
-//             <Form.Row>
-//                 <Form.Group as={Col} controlId="description-edit">
-//                     <Form.Label>Description</Form.Label>
-//                     <Form.Control type="text" placeholder="Optional" value={props.description} {...register("description-edit")} />
-//                 </Form.Group>
-//             </Form.Row>
-//         </Form>
-//         </Modal.Body>
-//         <Modal.Footer>
+function MyVerticallyCenteredModal(props) {
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const updateSupplierData = (data) => {
+        axios.patch(`/supplier/1}`,{data}).then(
+            alert('Updated')
+        );
+    }
+    return (
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton className="modal-color">
+          <Modal.Title id="contained-modal-title-vcenter">
+            {props.title}
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <Form> 
+            <Form.Row>
+                <Form.Group as={Col} controlId="description-edit">
+                    <Form.Label>Permission</Form.Label>
+                    <Form.Control type="text" placeholder="Permission" value={props.description} {...register("description-edit")} />
+                </Form.Group>
+            </Form.Row>
+        </Form>
+        </Modal.Body>
+        <Modal.Footer>
          
-//           <Button variant="success" size="sm" onClick={handleSubmit(updateSupplierData)}>
-//             <FontAwesomeIcon icon={faCheck} className="icon-space" />Save Changes
-//           </Button>
-//         </Modal.Footer>
-//       </Modal>
-//     );
-// }
+          <Button variant="success" size="sm" onClick={handleSubmit(updateSupplierData)}>
+            <FontAwesomeIcon icon={faCheck} className="icon-space" />Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    );
+}
 
 
 function Permission() {
@@ -259,52 +209,15 @@ function Permission() {
             <Container fluid hidden={hideAddSupplier}>
                 <Card className="border-wrapper">
                     <Card.Body>
-                        <h4 className="mb-4"><FontAwesomeIcon icon={faUserTag} className="icon-space"/>Add Supplier</h4>
+                        <h4 className="mb-4"><FontAwesomeIcon icon={faUserTag} className="icon-space"/>Add Permission</h4>
                         <Form>
                             <Form.Row>
                                 <Form.Group as={Col} controlId="supplier">
-                                    <Form.Label>Supplier</Form.Label>
-                                    <Form.Control type="text" placeholder="Enter Supplier" {...register("supplier",{required:true})} isInvalid={errors.supplier} />
+                                    <Form.Label>Permission</Form.Label>
+                                    <Form.Control type="text" placeholder="Permission" {...register("supplier",{required:true})} isInvalid={errors.supplier} />
                                     <Form.Control.Feedback type="invalid">Supplier is required</Form.Control.Feedback>
                                 </Form.Group>
-                                <Form.Group as={Col} controlId="contact-person">
-                                    <Form.Label>Contact Person</Form.Label>
-                                    <Form.Control type="text" placeholder="Enter Contact Person" {...register("contactPerson",{required:true})} isInvalid={errors.contactPerson} />
-                                    <Form.Control.Feedback type="invalid">Contact person is required</Form.Control.Feedback>
-                                </Form.Group>
-                            </Form.Row>
-                            
-                            <Form.Group controlId="supplier-address">
-                                <Form.Label>Address</Form.Label>
-                                <Form.Control placeholder="Supplier Address" {...register("address",{required:true})} isInvalid={errors.address}/>
-                                <Form.Control.Feedback type="invalid">Address is required</Form.Control.Feedback>
-                            </Form.Group>
-
-                            <Form.Row>
-                                <Form.Group as={Col} controlId="supplier-email">
-                                    <Form.Label>Email</Form.Label>
-                                    <Form.Control  placeholder="Supplier email" {...register("email")} />
-                                </Form.Group>
-                                <Form.Group as={Col} controlId="supplier-number">
-                                    <Form.Label>Number</Form.Label>
-                                    <Form.Control placeholder="Supplier number" {...register("number")} />
-                                </Form.Group>
-                                <Form.Group as={Col} controlId="supplier-fax">
-                                    <Form.Label>Fax No.</Form.Label>
-                                    <Form.Control placeholder="Supplier Fax" {...register("fax")}/>
-                                </Form.Group>
-
-                            </Form.Row>
-
-                            <Form.Row>
-                                <Form.Group as={Col} controlId="supplier-bank">
-                                    <Form.Label>Bank Account</Form.Label>
-                                    <Form.Control placeholder="Supplier bank account" {...register("bank")}/>
-                                </Form.Group>
-                                <Form.Group as={Col} controlId="supplier-description">
-                                    <Form.Label>Description</Form.Label>
-                                    <Form.Control placeholder="Optional" {...register("description")}/>
-                                </Form.Group>
+                                
                             </Form.Row>
 
                         </Form>
