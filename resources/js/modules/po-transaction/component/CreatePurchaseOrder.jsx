@@ -186,7 +186,7 @@ function CreatePurchaseOrder() {
                                             <Form.Control {...register(`items[${index}].model`)} placeholder="Model"  />
                                         </Form.Group >
                                         <Form.Group as={Col} xs={1} >
-                                            <Form.Control {...register(`items[${index}].per_unit`)} placeholder="Per Unit"  />
+                                            <Form.Control type="number" {...register(`items[${index}].per_unit`)} placeholder="Per Unit"  />
                                         </Form.Group>
                                         <PriceUnit type="number" control={control} index={index} register={{...register(`items[${index}].amount`)}} />
                                         <Form.Group as={Col} xs={1} >

@@ -4,6 +4,7 @@ namespace App\Helpers;
  
 use Illuminate\Support\Facades\DB;
 use App\Models\PODetail;
+use Illuminate\Support\Facades\Auth;
 
 class PurchaseOrderHelper
 {    
@@ -39,8 +40,8 @@ class PurchaseOrderHelper
      * @param  mixed $poNumber
      * @return String
      */
-    public static function generatePOReference(){
-         return 'PO-'.date("dmyhis");  
+    public static function generatePOReference($poNumber){
+         return 'PO-'.$poNumber.'-'.date("dmyhis");  
     }
 
 
@@ -57,19 +58,42 @@ class PurchaseOrderHelper
         ;
    }
 
+    /**
+     * Insert PO Detail
+     *
+     * @param int $po_header_id
+     * @param Object $items
+     */
    public static function insertPODetail($po_header_id,$items){
-
-    foreach($items as $item)
-       PODetail::create([
+       foreach ($items as $item) {
+           PODetail::create([
             "po_header_id" => $po_header_id,
             "unit" => $item['unit'],
             "quantity" => $item['quantity'],
-            "description" => $item['description'],
+            //"description" => $item['description'],
             "item" => $item['description'],
             "per_unit" => $item['per_unit'],
             "price" => $item['quantity'] * $item['per_unit'] ,
             "brand" => $item['brand'],
-            "model" => $item['model']
+            "model" => $item['model'],
+            'encoded_by' => Auth::id()
        ]);
+       }
+   }
+
+   
+      /**
+     * Generate PO Reference
+     *
+     * @param  mixed $poNumber
+     * @return int $totalAmount
+     */
+    public static function calculateItemsTotalAmount($items){
+      
+        $totalAmount = 0;
+       foreach($items as $item){
+            $totalAmount =  $totalAmount + ($item['quantity'] * $item['per_unit']);
+       }
+       return $totalAmount;
    }
 }

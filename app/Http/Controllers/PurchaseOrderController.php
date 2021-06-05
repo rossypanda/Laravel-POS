@@ -8,6 +8,7 @@ use App\Models\PurchaseOrder;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use App\Models\Supplier;
+use Illuminate\Support\Facades\Auth;
 
 class PurchaseOrderController extends Controller
 {
@@ -51,7 +52,7 @@ class PurchaseOrderController extends Controller
             DB::transaction(function () use ($poNumber,$formData) {
                 //Insert and return PO header id
                 $po_header_id = PurchaseOrder::create([
-                    'po_reference' => PurchaseOrderHelper::generatePOReference(),
+                    'po_reference' => PurchaseOrderHelper::generatePOReference($poNumber['po_number']),
                     'po_number' => $poNumber['po_number'],
                     'date' => date('Y-m-d'),
                     'supplier_id' => $formData['supplier'],
@@ -66,8 +67,10 @@ class PurchaseOrderController extends Controller
                     //'manager' => $formData['project_name'],
                     // 'bank' => $formData['project_name'],
                     // 'contact_person' => $formData['project_name'],
+                    'total_amount' => PurchaseOrderHelper::calculateItemsTotalAmount($formData['items']),
                     'terms' => json_encode($formData['terms']),
-                    'status' => 'F'
+                    'status' => 'F',
+                    'encoded_by' => Auth::id()
                 ])->po_header_id;
                 PurchaseOrderHelper::insertPODetail($po_header_id,$formData['items']);
                 //Update Current Range
