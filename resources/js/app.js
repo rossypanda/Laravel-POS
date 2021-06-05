@@ -17,6 +17,7 @@ require('./modules/supplier/Supplier');
 require('./modules/po-number/PONumber');
 require('./modules/po-transaction/PurchaseOrder');
 require('./modules/po-transaction/CreatePO');
+require('./modules/po-transaction/PurchaseOrderView');
 require('./modules/user/User');
 require('./modules/role/Role');
 require('./modules/permission/Permission');

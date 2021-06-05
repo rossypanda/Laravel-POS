@@ -8,6 +8,7 @@ use App\Models\PurchaseOrder;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use App\Models\Supplier;
+use App\Models\PODetail;
 use Illuminate\Support\Facades\Auth;
 
 class PurchaseOrderController extends Controller
@@ -89,9 +90,9 @@ class PurchaseOrderController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('purchaseOrder.view-po')
+            ->with('id', $id);
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -160,5 +161,19 @@ class PurchaseOrderController extends Controller
     public function createPO()
     {
         return view('purchaseOrder.create-po');
+    }
+
+    /**
+     * Display the full detail of individal Purchase Order
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function fetchPOFullDetail($id){
+        return response()->json(
+            array(
+                'po_header' =>  PurchaseOrder::where('po_header_id',$id)->get(),
+                'po_detail' =>  PODetail::where('po_header_id',$id)->get()
+            )
+        );
     }
 }

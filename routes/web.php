@@ -45,11 +45,13 @@ Route::resource('user', 'UserController');
 Route::get('fetch/supplier','SupplierController@fetchSupplierData');
 Route::get('fetch/poNumber','PONumberController@fetchPONumberData');
 Route::get('fetch/purchaseOrder','PurchaseOrderController@fetchPurchaseOrderData');
+Route::get('fetch/purchase_order/{id}','PurchaseOrderController@fetchPOFullDetail');
 Route::get('fetch/po_dropdown','PurchaseOrderController@fetchPurchaseOrderDropdownOptions');
 Route::get('create/purchase_order','PurchaseOrderController@createPO');
 Route::get('fetch/user','UserController@fetchUserData');
 Route::get('fetch/role','RoleController@fetchRoleData');
 Route::get('fetch/permission','PermissionController@fetchPermissionData');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
