@@ -51,6 +51,7 @@ const PAYMENT_TYPE = {'C' :'Cash','H':'Check'};
                         <Card.Header className='header-wrapper'>Pending</Card.Header>
                             {pendingPO.map((data,index) => (
                                 <PurchaseOrderList 
+                                    poHeaderId = {data.po_header_id}
                                     poNumber={data.po_number}
                                     icon={faClock}
                                     projectName={data.project_name}

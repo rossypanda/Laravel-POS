@@ -41,7 +41,7 @@ class PurchaseOrderHelper
      * @return String
      */
     public static function generatePOReference($poNumber){
-         return 'PO-'.$poNumber.'-'.date("dmyhis");  
+         return 'PO-'.$poNumber.'-'.date("Y");  
     }
 
 

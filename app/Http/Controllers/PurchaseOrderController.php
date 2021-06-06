@@ -169,10 +169,14 @@ class PurchaseOrderController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function fetchPOFullDetail($id){
+        $po =  PurchaseOrder::where('po_header_id',$id)->get()->toArray();
         return response()->json(
             array(
                 'po_header' =>  PurchaseOrder::where('po_header_id',$id)->get(),
-                'po_detail' =>  PODetail::where('po_header_id',$id)->get()
+                'po_detail' =>  PODetail::where('po_header_id',$id)->get(),
+                'supplier' =>  Supplier::all(),
+                'terms' =>   json_decode($po[0]['terms']),
+                'users' =>  User::all()
             )
         );
     }

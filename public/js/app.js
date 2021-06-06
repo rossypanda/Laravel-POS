@@ -13259,6 +13259,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Card.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Form.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Col.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Badge.js");
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
+/* harmony import */ var react_hook_form__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-hook-form */ "./node_modules/react-hook-form/dist/index.esm.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
@@ -13273,11 +13284,52 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
 
 
 
 function PurchaseOrderView(props) {
-  console.log(props);
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      header = _useState2[0],
+      setHeader = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
+      _useState4 = _slicedToArray(_useState3, 2),
+      detail = _useState4[0],
+      setDetail = _useState4[1];
+
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
+      _useState6 = _slicedToArray(_useState5, 2),
+      supplier = _useState6[0],
+      setSupplier = _useState6[1];
+
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
+      _useState8 = _slicedToArray(_useState7, 2),
+      terms = _useState8[0],
+      setTerms = _useState8[1];
+
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
+      _useState10 = _slicedToArray(_useState9, 2),
+      users = _useState10[0],
+      setUsers = _useState10[1];
 
   var fetchPoData = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee() {
@@ -13288,7 +13340,11 @@ function PurchaseOrderView(props) {
               _context.next = 2;
               return axios.get("/fetch/purchase_order/".concat(props.tsid, "}"), {}).then(function (response) {
                 //get the object of supplier data to load to a table
-                console.log(response.data);
+                setHeader(response.data.po_header[0]);
+                setDetail(response.data.po_detail);
+                setSupplier(response.data.supplier);
+                setTerms(response.data.terms);
+                setUsers(response.data.users);
               })["catch"](function (err) {
                 alert(err);
               });
@@ -13310,8 +13366,318 @@ function PurchaseOrderView(props) {
     fetchPoData();
   }, []);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", {
-      children: "test"
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
+      fluid: true,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default, {
+        className: "border-wrapper",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default.Body, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("h4", {
+            className: "mb-4",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+              icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_9__.faMoneyCheck,
+              className: "icon-space"
+            }), "PO# ", header.po_number]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                controlId: "supplier",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                  children: "Supplier"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                  size: "sm",
+                  as: "select",
+                  value: header.supplier_id,
+                  readOnly: true,
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                    value: "",
+                    children: "Select Supplier"
+                  }), supplier.map(function (data, index) {
+                    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                      value: data.supplier_id,
+                      children: data.supplier
+                    }, index);
+                  })]
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                controlId: "payment_type",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                  children: "Payment Type"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                  size: "sm",
+                  as: "select",
+                  value: header.payment_type,
+                  readOnly: true,
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                    value: "",
+                    children: "Select Payment Type"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                    value: "C",
+                    children: "Cash"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                    value: "H",
+                    children: "Check"
+                  })]
+                })]
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+              controlId: "supplier_address",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                children: "Address"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                placeholder: "Supplier Address",
+                value: header.supplier_address,
+                readOnly: true
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("fieldset", {
+              className: "fieldset-wrapper",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("legend", {
+                className: "legend-wrapper",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h6", {
+                  children: "Items"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
+                className: "item-wrapper",
+                fluid: true,
+                children: [detail.map(function (data, index) {
+                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                      xs: 1,
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                        type: "number",
+                        placeholder: "QTY",
+                        value: data.quantity,
+                        readOnly: true
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                      xs: 1,
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                        placeholder: "Unit",
+                        value: data.unit,
+                        readOnly: true
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                      xs: 3,
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                        placeholder: "Item Desc",
+                        value: data.item,
+                        readOnly: true
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                      xs: 2,
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                        placeholder: "Brand",
+                        value: data.brand,
+                        readOnly: true
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                      xs: 2,
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                        placeholder: "Model",
+                        value: data.model,
+                        readOnly: true
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                      xs: 1,
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                        type: "number",
+                        placeholder: "Per Unit",
+                        value: data.per_unit,
+                        readOnly: true
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                      xs: 1,
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                        type: "number",
+                        placeholder: "Price",
+                        value: data.quantity * data.per_unit,
+                        readOnly: true
+                      })
+                    })]
+                  }, index);
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
+                  xs: 1,
+                  className: "flex-row-reverse",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+                    style: {
+                      marginRight: '8rem'
+                    },
+                    id: "amount-span",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+                      style: {
+                        borderRadius: '0',
+                        padding: '0.5rem',
+                        fontSize: '0.9em'
+                      },
+                      variant: "info",
+                      children: ["Total: ", header.total_amount]
+                    })
+                  })
+                })]
+              })]
+            }), header.payment_type === 'C' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("fieldset", {
+              className: "fieldset-wrapper",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("legend", {
+                className: "legend-wrapper",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h6", {
+                  children: "Terms"
+                })
+              }), terms.map(function (data, index) {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+                    as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                      placeholder: "Terms",
+                      value: data.terms,
+                      readOnly: true
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+                    as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                    xs: 3,
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                      placeholder: "Description",
+                      value: data.terms_description,
+                      readOnly: true
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+                    as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                      placeholder: "Due",
+                      value: data.terms_due,
+                      readOnly: true
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+                    as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                      placeholder: "Type of Bank",
+                      value: data.terms_bank,
+                      readOnly: true
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+                    as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                      placeholder: "%",
+                      value: data.terms_percent,
+                      readOnly: true
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+                    as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                      placeholder: "Amount",
+                      value: data.terms_amount,
+                      readOnly: true
+                    })
+                  })]
+                }, index);
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                controlId: "project_name",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                  children: "Project Name"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                  placeholder: "Project Name",
+                  value: header.project_name,
+                  readOnly: true
+                })]
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                controlId: "requested_by",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                  children: "Requested By"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                  size: "sm",
+                  as: "select",
+                  value: header.requested_by,
+                  readOnly: true,
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                    value: "",
+                    children: " -- Requested By --"
+                  }), users.map(function (data, index) {
+                    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                      value: data.id,
+                      children: data.name
+                    }, index);
+                  })]
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                controlId: "canvassed_by",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                  children: "Canvassed By"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                  size: "sm",
+                  as: "select",
+                  value: header.canvassed_by,
+                  readOnly: true,
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                    value: "",
+                    children: " --  Canvassed By --"
+                  }), users.map(function (data, index) {
+                    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                      value: data.id,
+                      children: data.name
+                    }, index);
+                  })]
+                })]
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                controlId: "encoded_by",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                  children: "Encoded By"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                  size: "sm",
+                  as: "select",
+                  value: header.encoded_by,
+                  readOnly: true,
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                    value: "",
+                    children: " --  Encoded By --"
+                  }), users.map(function (data, index) {
+                    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                      value: data.id,
+                      children: data.name
+                    }, index);
+                  })]
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                controlId: "approved_by",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                  children: "Approved By"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                  size: "sm",
+                  as: "select",
+                  value: header.approved_by,
+                  readOnly: true,
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                    value: "",
+                    children: " -- Approved By --"
+                  }), users.map(function (data, index) {
+                    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                      value: data.id,
+                      children: data.name
+                    }, index);
+                  })]
+                })]
+              })]
+            })]
+          })]
+        })
+      })
     })
   });
 }
@@ -13586,16 +13952,9 @@ function CreatePurchaseOrder() {
                 controlId: "supplier",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
                   children: "Supplier"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
                   size: "sm",
-                  as: "select"
-                }, register("supplier", {
-                  required: true
-                })), {}, {
-                  isInvalid: errors.suplier,
-                  onChange: function onChange() {
-                    return handleChange(event.target.value);
-                  },
+                  as: "select",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
                     value: "",
                     children: "Select Supplier"
@@ -13605,9 +13964,6 @@ function CreatePurchaseOrder() {
                       children: data.supplier
                     }, index);
                   })]
-                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
-                  type: "invalid",
-                  children: "Supplier is required"
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
                 as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
@@ -14102,6 +14458,8 @@ function PurchaseOrderList(props) {
               style: {
                 marginRight: "0.5rem"
               },
+              href: "purchaseOrder/".concat(props.poHeaderId),
+              target: "_blank",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
                 icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faExternalLinkAlt,
                 size: "lg",
@@ -14271,6 +14629,7 @@ function PurchaseOrderTabs(props) {
               children: "Pending"
             }), pendingPO.map(function (data, index) {
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_PurchaseOrderList__WEBPACK_IMPORTED_MODULE_6__.default, {
+                poHeaderId: data.po_header_id,
                 poNumber: data.po_number,
                 icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_11__.faClock,
                 projectName: data.project_name,
