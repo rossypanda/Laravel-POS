@@ -48,6 +48,7 @@ Route::get('fetch/purchaseOrder','PurchaseOrderController@fetchPurchaseOrderData
 Route::get('fetch/purchase_order/{id}','PurchaseOrderController@fetchPOFullDetail');
 Route::get('fetch/po_dropdown','PurchaseOrderController@fetchPurchaseOrderDropdownOptions');
 Route::get('create/purchase_order','PurchaseOrderController@createPO');
+Route::get('fetch/pdf/{id}','PurchaseOrderController@generatePdf');
 Route::get('fetch/user','UserController@fetchUserData');
 Route::get('fetch/role','RoleController@fetchRoleData');
 Route::get('fetch/permission','PermissionController@fetchPermissionData');

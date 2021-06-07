@@ -105,7 +105,7 @@ function PurchaseOrderView(props) {
                             </fieldset>
 
                              { 
-                               header.payment_type === 'C' && (
+                               header.payment_type === 'H' && (
         
                                 <fieldset className="fieldset-wrapper" >
                                     <legend className="legend-wrapper"><h6>Terms</h6></legend>

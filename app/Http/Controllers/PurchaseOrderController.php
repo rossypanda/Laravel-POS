@@ -11,6 +11,9 @@ use App\Models\Supplier;
 use App\Models\PODetail;
 use Illuminate\Support\Facades\Auth;
 
+
+
+
 class PurchaseOrderController extends Controller
 {
     public function __construct()
@@ -179,5 +182,16 @@ class PurchaseOrderController extends Controller
                 'users' =>  User::all()
             )
         );
+    }
+
+       /**
+     * Display the full detail of individal Purchase Order
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function generatePdf($id){
+        // $pdf = \PDF::loadView('pdf.po-pdf');
+        // return $pdf->download('invoice.pdf');
+        return view('pdf.po-pdf');
     }
 }

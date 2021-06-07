@@ -13523,7 +13523,7 @@ function PurchaseOrderView(props) {
                   })
                 })]
               })]
-            }), header.payment_type === 'C' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("fieldset", {
+            }), header.payment_type === 'H' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("fieldset", {
               className: "fieldset-wrapper",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("legend", {
                 className: "legend-wrapper",
@@ -14447,8 +14447,10 @@ function PurchaseOrderList(props) {
               style: {
                 marginRight: "0.5rem"
               },
+              href: "purchaseOrder/".concat(props.poHeaderId),
+              target: "_blank",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faPrint,
+                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faExternalLinkAlt,
                 size: "lg",
                 className: "icon-space"
               })
@@ -14458,10 +14460,8 @@ function PurchaseOrderList(props) {
               style: {
                 marginRight: "0.5rem"
               },
-              href: "purchaseOrder/".concat(props.poHeaderId),
-              target: "_blank",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faExternalLinkAlt,
+                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faPrint,
                 size: "lg",
                 className: "icon-space"
               })

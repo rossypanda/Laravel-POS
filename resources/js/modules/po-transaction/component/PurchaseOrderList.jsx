@@ -19,8 +19,8 @@ function PurchaseOrderList(props) {
                     <Card className="mt-3">
                         <Card.Body>
                             <Card.Title>
-                                <FontAwesomeIcon icon={props.icon} className="icon-space" />
-                                PO# {props.poNumber}
+                                <FontAwesomeIcon icon={props.icon} className="icon-space"  />
+                                    PO# {props.poNumber}
                                 <span style={{fontSize: "0.8rem"}} className="float-right">
                                 <FontAwesomeIcon icon={faCalendar} className="icon-space" />
                                     {props.date}
@@ -38,12 +38,13 @@ function PurchaseOrderList(props) {
                             <Badge variant="info" className="badge-wrapper">{props.paymentType}</Badge>{' '}
 
                             <span className="float-right">
-                            <Button variant="outline-secondary" size="sm" style={{marginRight:"0.5rem"}}>
-                                <FontAwesomeIcon icon={faPrint} size="lg" className="icon-space" />
-                             </Button>
                             <Button variant="outline-secondary" size="sm" style={{marginRight:"0.5rem"}} href={`purchaseOrder/${props.poHeaderId}`} target="_blank">
                                 <FontAwesomeIcon icon={faExternalLinkAlt} size="lg" className="icon-space" />
                              </Button>
+                            <Button variant="outline-secondary" size="sm" style={{marginRight:"0.5rem"}}>
+                                <FontAwesomeIcon icon={faPrint} size="lg" className="icon-space" />
+                             </Button>
+                          
                              {/* <Button variant="outline-secondary" size="sm" style={{marginRight:"0.5rem"}}>
                                 <FontAwesomeIcon icon={faEdit} size="lg" className="icon-space" />
                              </Button> */}
