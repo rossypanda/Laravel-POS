@@ -10,7 +10,7 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _extends)
+/* harmony export */   "default": () => /* binding */ _extends
 /* harmony export */ });
 function _extends() {
   _extends = Object.assign || function (target) {
@@ -41,7 +41,7 @@ function _extends() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _inheritsLoose)
+/* harmony export */   "default": () => /* binding */ _inheritsLoose
 /* harmony export */ });
 function _inheritsLoose(subClass, superClass) {
   subClass.prototype = Object.create(superClass.prototype);
@@ -60,7 +60,7 @@ function _inheritsLoose(subClass, superClass) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _objectWithoutPropertiesLoose)
+/* harmony export */   "default": () => /* binding */ _objectWithoutPropertiesLoose
 /* harmony export */ });
 function _objectWithoutPropertiesLoose(source, excluded) {
   if (source == null) return {};
@@ -99,17 +99,17 @@ module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "icon": () => (/* binding */ icon),
-/* harmony export */   "noAuto": () => (/* binding */ noAuto),
-/* harmony export */   "config": () => (/* binding */ config),
-/* harmony export */   "toHtml": () => (/* binding */ toHtml),
-/* harmony export */   "layer": () => (/* binding */ layer),
-/* harmony export */   "text": () => (/* binding */ text),
-/* harmony export */   "counter": () => (/* binding */ counter),
-/* harmony export */   "library": () => (/* binding */ library),
-/* harmony export */   "dom": () => (/* binding */ dom),
-/* harmony export */   "parse": () => (/* binding */ parse),
-/* harmony export */   "findIconDefinition": () => (/* binding */ findIconDefinition)
+/* harmony export */   "icon": () => /* binding */ icon,
+/* harmony export */   "noAuto": () => /* binding */ noAuto,
+/* harmony export */   "config": () => /* binding */ config,
+/* harmony export */   "toHtml": () => /* binding */ toHtml,
+/* harmony export */   "layer": () => /* binding */ layer,
+/* harmony export */   "text": () => /* binding */ text,
+/* harmony export */   "counter": () => /* binding */ counter,
+/* harmony export */   "library": () => /* binding */ library,
+/* harmony export */   "dom": () => /* binding */ dom,
+/* harmony export */   "parse": () => /* binding */ parse,
+/* harmony export */   "findIconDefinition": () => /* binding */ findIconDefinition
 /* harmony export */ });
 /*!
  * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
@@ -2559,1010 +2559,1010 @@ var autoReplace = function autoReplace() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "fas": () => (/* binding */ _iconsCache),
-/* harmony export */   "prefix": () => (/* binding */ prefix),
-/* harmony export */   "faAd": () => (/* binding */ faAd),
-/* harmony export */   "faAddressBook": () => (/* binding */ faAddressBook),
-/* harmony export */   "faAddressCard": () => (/* binding */ faAddressCard),
-/* harmony export */   "faAdjust": () => (/* binding */ faAdjust),
-/* harmony export */   "faAirFreshener": () => (/* binding */ faAirFreshener),
-/* harmony export */   "faAlignCenter": () => (/* binding */ faAlignCenter),
-/* harmony export */   "faAlignJustify": () => (/* binding */ faAlignJustify),
-/* harmony export */   "faAlignLeft": () => (/* binding */ faAlignLeft),
-/* harmony export */   "faAlignRight": () => (/* binding */ faAlignRight),
-/* harmony export */   "faAllergies": () => (/* binding */ faAllergies),
-/* harmony export */   "faAmbulance": () => (/* binding */ faAmbulance),
-/* harmony export */   "faAmericanSignLanguageInterpreting": () => (/* binding */ faAmericanSignLanguageInterpreting),
-/* harmony export */   "faAnchor": () => (/* binding */ faAnchor),
-/* harmony export */   "faAngleDoubleDown": () => (/* binding */ faAngleDoubleDown),
-/* harmony export */   "faAngleDoubleLeft": () => (/* binding */ faAngleDoubleLeft),
-/* harmony export */   "faAngleDoubleRight": () => (/* binding */ faAngleDoubleRight),
-/* harmony export */   "faAngleDoubleUp": () => (/* binding */ faAngleDoubleUp),
-/* harmony export */   "faAngleDown": () => (/* binding */ faAngleDown),
-/* harmony export */   "faAngleLeft": () => (/* binding */ faAngleLeft),
-/* harmony export */   "faAngleRight": () => (/* binding */ faAngleRight),
-/* harmony export */   "faAngleUp": () => (/* binding */ faAngleUp),
-/* harmony export */   "faAngry": () => (/* binding */ faAngry),
-/* harmony export */   "faAnkh": () => (/* binding */ faAnkh),
-/* harmony export */   "faAppleAlt": () => (/* binding */ faAppleAlt),
-/* harmony export */   "faArchive": () => (/* binding */ faArchive),
-/* harmony export */   "faArchway": () => (/* binding */ faArchway),
-/* harmony export */   "faArrowAltCircleDown": () => (/* binding */ faArrowAltCircleDown),
-/* harmony export */   "faArrowAltCircleLeft": () => (/* binding */ faArrowAltCircleLeft),
-/* harmony export */   "faArrowAltCircleRight": () => (/* binding */ faArrowAltCircleRight),
-/* harmony export */   "faArrowAltCircleUp": () => (/* binding */ faArrowAltCircleUp),
-/* harmony export */   "faArrowCircleDown": () => (/* binding */ faArrowCircleDown),
-/* harmony export */   "faArrowCircleLeft": () => (/* binding */ faArrowCircleLeft),
-/* harmony export */   "faArrowCircleRight": () => (/* binding */ faArrowCircleRight),
-/* harmony export */   "faArrowCircleUp": () => (/* binding */ faArrowCircleUp),
-/* harmony export */   "faArrowDown": () => (/* binding */ faArrowDown),
-/* harmony export */   "faArrowLeft": () => (/* binding */ faArrowLeft),
-/* harmony export */   "faArrowRight": () => (/* binding */ faArrowRight),
-/* harmony export */   "faArrowUp": () => (/* binding */ faArrowUp),
-/* harmony export */   "faArrowsAlt": () => (/* binding */ faArrowsAlt),
-/* harmony export */   "faArrowsAltH": () => (/* binding */ faArrowsAltH),
-/* harmony export */   "faArrowsAltV": () => (/* binding */ faArrowsAltV),
-/* harmony export */   "faAssistiveListeningSystems": () => (/* binding */ faAssistiveListeningSystems),
-/* harmony export */   "faAsterisk": () => (/* binding */ faAsterisk),
-/* harmony export */   "faAt": () => (/* binding */ faAt),
-/* harmony export */   "faAtlas": () => (/* binding */ faAtlas),
-/* harmony export */   "faAtom": () => (/* binding */ faAtom),
-/* harmony export */   "faAudioDescription": () => (/* binding */ faAudioDescription),
-/* harmony export */   "faAward": () => (/* binding */ faAward),
-/* harmony export */   "faBaby": () => (/* binding */ faBaby),
-/* harmony export */   "faBabyCarriage": () => (/* binding */ faBabyCarriage),
-/* harmony export */   "faBackspace": () => (/* binding */ faBackspace),
-/* harmony export */   "faBackward": () => (/* binding */ faBackward),
-/* harmony export */   "faBacon": () => (/* binding */ faBacon),
-/* harmony export */   "faBacteria": () => (/* binding */ faBacteria),
-/* harmony export */   "faBacterium": () => (/* binding */ faBacterium),
-/* harmony export */   "faBahai": () => (/* binding */ faBahai),
-/* harmony export */   "faBalanceScale": () => (/* binding */ faBalanceScale),
-/* harmony export */   "faBalanceScaleLeft": () => (/* binding */ faBalanceScaleLeft),
-/* harmony export */   "faBalanceScaleRight": () => (/* binding */ faBalanceScaleRight),
-/* harmony export */   "faBan": () => (/* binding */ faBan),
-/* harmony export */   "faBandAid": () => (/* binding */ faBandAid),
-/* harmony export */   "faBarcode": () => (/* binding */ faBarcode),
-/* harmony export */   "faBars": () => (/* binding */ faBars),
-/* harmony export */   "faBaseballBall": () => (/* binding */ faBaseballBall),
-/* harmony export */   "faBasketballBall": () => (/* binding */ faBasketballBall),
-/* harmony export */   "faBath": () => (/* binding */ faBath),
-/* harmony export */   "faBatteryEmpty": () => (/* binding */ faBatteryEmpty),
-/* harmony export */   "faBatteryFull": () => (/* binding */ faBatteryFull),
-/* harmony export */   "faBatteryHalf": () => (/* binding */ faBatteryHalf),
-/* harmony export */   "faBatteryQuarter": () => (/* binding */ faBatteryQuarter),
-/* harmony export */   "faBatteryThreeQuarters": () => (/* binding */ faBatteryThreeQuarters),
-/* harmony export */   "faBed": () => (/* binding */ faBed),
-/* harmony export */   "faBeer": () => (/* binding */ faBeer),
-/* harmony export */   "faBell": () => (/* binding */ faBell),
-/* harmony export */   "faBellSlash": () => (/* binding */ faBellSlash),
-/* harmony export */   "faBezierCurve": () => (/* binding */ faBezierCurve),
-/* harmony export */   "faBible": () => (/* binding */ faBible),
-/* harmony export */   "faBicycle": () => (/* binding */ faBicycle),
-/* harmony export */   "faBiking": () => (/* binding */ faBiking),
-/* harmony export */   "faBinoculars": () => (/* binding */ faBinoculars),
-/* harmony export */   "faBiohazard": () => (/* binding */ faBiohazard),
-/* harmony export */   "faBirthdayCake": () => (/* binding */ faBirthdayCake),
-/* harmony export */   "faBlender": () => (/* binding */ faBlender),
-/* harmony export */   "faBlenderPhone": () => (/* binding */ faBlenderPhone),
-/* harmony export */   "faBlind": () => (/* binding */ faBlind),
-/* harmony export */   "faBlog": () => (/* binding */ faBlog),
-/* harmony export */   "faBold": () => (/* binding */ faBold),
-/* harmony export */   "faBolt": () => (/* binding */ faBolt),
-/* harmony export */   "faBomb": () => (/* binding */ faBomb),
-/* harmony export */   "faBone": () => (/* binding */ faBone),
-/* harmony export */   "faBong": () => (/* binding */ faBong),
-/* harmony export */   "faBook": () => (/* binding */ faBook),
-/* harmony export */   "faBookDead": () => (/* binding */ faBookDead),
-/* harmony export */   "faBookMedical": () => (/* binding */ faBookMedical),
-/* harmony export */   "faBookOpen": () => (/* binding */ faBookOpen),
-/* harmony export */   "faBookReader": () => (/* binding */ faBookReader),
-/* harmony export */   "faBookmark": () => (/* binding */ faBookmark),
-/* harmony export */   "faBorderAll": () => (/* binding */ faBorderAll),
-/* harmony export */   "faBorderNone": () => (/* binding */ faBorderNone),
-/* harmony export */   "faBorderStyle": () => (/* binding */ faBorderStyle),
-/* harmony export */   "faBowlingBall": () => (/* binding */ faBowlingBall),
-/* harmony export */   "faBox": () => (/* binding */ faBox),
-/* harmony export */   "faBoxOpen": () => (/* binding */ faBoxOpen),
-/* harmony export */   "faBoxTissue": () => (/* binding */ faBoxTissue),
-/* harmony export */   "faBoxes": () => (/* binding */ faBoxes),
-/* harmony export */   "faBraille": () => (/* binding */ faBraille),
-/* harmony export */   "faBrain": () => (/* binding */ faBrain),
-/* harmony export */   "faBreadSlice": () => (/* binding */ faBreadSlice),
-/* harmony export */   "faBriefcase": () => (/* binding */ faBriefcase),
-/* harmony export */   "faBriefcaseMedical": () => (/* binding */ faBriefcaseMedical),
-/* harmony export */   "faBroadcastTower": () => (/* binding */ faBroadcastTower),
-/* harmony export */   "faBroom": () => (/* binding */ faBroom),
-/* harmony export */   "faBrush": () => (/* binding */ faBrush),
-/* harmony export */   "faBug": () => (/* binding */ faBug),
-/* harmony export */   "faBuilding": () => (/* binding */ faBuilding),
-/* harmony export */   "faBullhorn": () => (/* binding */ faBullhorn),
-/* harmony export */   "faBullseye": () => (/* binding */ faBullseye),
-/* harmony export */   "faBurn": () => (/* binding */ faBurn),
-/* harmony export */   "faBus": () => (/* binding */ faBus),
-/* harmony export */   "faBusAlt": () => (/* binding */ faBusAlt),
-/* harmony export */   "faBusinessTime": () => (/* binding */ faBusinessTime),
-/* harmony export */   "faCalculator": () => (/* binding */ faCalculator),
-/* harmony export */   "faCalendar": () => (/* binding */ faCalendar),
-/* harmony export */   "faCalendarAlt": () => (/* binding */ faCalendarAlt),
-/* harmony export */   "faCalendarCheck": () => (/* binding */ faCalendarCheck),
-/* harmony export */   "faCalendarDay": () => (/* binding */ faCalendarDay),
-/* harmony export */   "faCalendarMinus": () => (/* binding */ faCalendarMinus),
-/* harmony export */   "faCalendarPlus": () => (/* binding */ faCalendarPlus),
-/* harmony export */   "faCalendarTimes": () => (/* binding */ faCalendarTimes),
-/* harmony export */   "faCalendarWeek": () => (/* binding */ faCalendarWeek),
-/* harmony export */   "faCamera": () => (/* binding */ faCamera),
-/* harmony export */   "faCameraRetro": () => (/* binding */ faCameraRetro),
-/* harmony export */   "faCampground": () => (/* binding */ faCampground),
-/* harmony export */   "faCandyCane": () => (/* binding */ faCandyCane),
-/* harmony export */   "faCannabis": () => (/* binding */ faCannabis),
-/* harmony export */   "faCapsules": () => (/* binding */ faCapsules),
-/* harmony export */   "faCar": () => (/* binding */ faCar),
-/* harmony export */   "faCarAlt": () => (/* binding */ faCarAlt),
-/* harmony export */   "faCarBattery": () => (/* binding */ faCarBattery),
-/* harmony export */   "faCarCrash": () => (/* binding */ faCarCrash),
-/* harmony export */   "faCarSide": () => (/* binding */ faCarSide),
-/* harmony export */   "faCaravan": () => (/* binding */ faCaravan),
-/* harmony export */   "faCaretDown": () => (/* binding */ faCaretDown),
-/* harmony export */   "faCaretLeft": () => (/* binding */ faCaretLeft),
-/* harmony export */   "faCaretRight": () => (/* binding */ faCaretRight),
-/* harmony export */   "faCaretSquareDown": () => (/* binding */ faCaretSquareDown),
-/* harmony export */   "faCaretSquareLeft": () => (/* binding */ faCaretSquareLeft),
-/* harmony export */   "faCaretSquareRight": () => (/* binding */ faCaretSquareRight),
-/* harmony export */   "faCaretSquareUp": () => (/* binding */ faCaretSquareUp),
-/* harmony export */   "faCaretUp": () => (/* binding */ faCaretUp),
-/* harmony export */   "faCarrot": () => (/* binding */ faCarrot),
-/* harmony export */   "faCartArrowDown": () => (/* binding */ faCartArrowDown),
-/* harmony export */   "faCartPlus": () => (/* binding */ faCartPlus),
-/* harmony export */   "faCashRegister": () => (/* binding */ faCashRegister),
-/* harmony export */   "faCat": () => (/* binding */ faCat),
-/* harmony export */   "faCertificate": () => (/* binding */ faCertificate),
-/* harmony export */   "faChair": () => (/* binding */ faChair),
-/* harmony export */   "faChalkboard": () => (/* binding */ faChalkboard),
-/* harmony export */   "faChalkboardTeacher": () => (/* binding */ faChalkboardTeacher),
-/* harmony export */   "faChargingStation": () => (/* binding */ faChargingStation),
-/* harmony export */   "faChartArea": () => (/* binding */ faChartArea),
-/* harmony export */   "faChartBar": () => (/* binding */ faChartBar),
-/* harmony export */   "faChartLine": () => (/* binding */ faChartLine),
-/* harmony export */   "faChartPie": () => (/* binding */ faChartPie),
-/* harmony export */   "faCheck": () => (/* binding */ faCheck),
-/* harmony export */   "faCheckCircle": () => (/* binding */ faCheckCircle),
-/* harmony export */   "faCheckDouble": () => (/* binding */ faCheckDouble),
-/* harmony export */   "faCheckSquare": () => (/* binding */ faCheckSquare),
-/* harmony export */   "faCheese": () => (/* binding */ faCheese),
-/* harmony export */   "faChess": () => (/* binding */ faChess),
-/* harmony export */   "faChessBishop": () => (/* binding */ faChessBishop),
-/* harmony export */   "faChessBoard": () => (/* binding */ faChessBoard),
-/* harmony export */   "faChessKing": () => (/* binding */ faChessKing),
-/* harmony export */   "faChessKnight": () => (/* binding */ faChessKnight),
-/* harmony export */   "faChessPawn": () => (/* binding */ faChessPawn),
-/* harmony export */   "faChessQueen": () => (/* binding */ faChessQueen),
-/* harmony export */   "faChessRook": () => (/* binding */ faChessRook),
-/* harmony export */   "faChevronCircleDown": () => (/* binding */ faChevronCircleDown),
-/* harmony export */   "faChevronCircleLeft": () => (/* binding */ faChevronCircleLeft),
-/* harmony export */   "faChevronCircleRight": () => (/* binding */ faChevronCircleRight),
-/* harmony export */   "faChevronCircleUp": () => (/* binding */ faChevronCircleUp),
-/* harmony export */   "faChevronDown": () => (/* binding */ faChevronDown),
-/* harmony export */   "faChevronLeft": () => (/* binding */ faChevronLeft),
-/* harmony export */   "faChevronRight": () => (/* binding */ faChevronRight),
-/* harmony export */   "faChevronUp": () => (/* binding */ faChevronUp),
-/* harmony export */   "faChild": () => (/* binding */ faChild),
-/* harmony export */   "faChurch": () => (/* binding */ faChurch),
-/* harmony export */   "faCircle": () => (/* binding */ faCircle),
-/* harmony export */   "faCircleNotch": () => (/* binding */ faCircleNotch),
-/* harmony export */   "faCity": () => (/* binding */ faCity),
-/* harmony export */   "faClinicMedical": () => (/* binding */ faClinicMedical),
-/* harmony export */   "faClipboard": () => (/* binding */ faClipboard),
-/* harmony export */   "faClipboardCheck": () => (/* binding */ faClipboardCheck),
-/* harmony export */   "faClipboardList": () => (/* binding */ faClipboardList),
-/* harmony export */   "faClock": () => (/* binding */ faClock),
-/* harmony export */   "faClone": () => (/* binding */ faClone),
-/* harmony export */   "faClosedCaptioning": () => (/* binding */ faClosedCaptioning),
-/* harmony export */   "faCloud": () => (/* binding */ faCloud),
-/* harmony export */   "faCloudDownloadAlt": () => (/* binding */ faCloudDownloadAlt),
-/* harmony export */   "faCloudMeatball": () => (/* binding */ faCloudMeatball),
-/* harmony export */   "faCloudMoon": () => (/* binding */ faCloudMoon),
-/* harmony export */   "faCloudMoonRain": () => (/* binding */ faCloudMoonRain),
-/* harmony export */   "faCloudRain": () => (/* binding */ faCloudRain),
-/* harmony export */   "faCloudShowersHeavy": () => (/* binding */ faCloudShowersHeavy),
-/* harmony export */   "faCloudSun": () => (/* binding */ faCloudSun),
-/* harmony export */   "faCloudSunRain": () => (/* binding */ faCloudSunRain),
-/* harmony export */   "faCloudUploadAlt": () => (/* binding */ faCloudUploadAlt),
-/* harmony export */   "faCocktail": () => (/* binding */ faCocktail),
-/* harmony export */   "faCode": () => (/* binding */ faCode),
-/* harmony export */   "faCodeBranch": () => (/* binding */ faCodeBranch),
-/* harmony export */   "faCoffee": () => (/* binding */ faCoffee),
-/* harmony export */   "faCog": () => (/* binding */ faCog),
-/* harmony export */   "faCogs": () => (/* binding */ faCogs),
-/* harmony export */   "faCoins": () => (/* binding */ faCoins),
-/* harmony export */   "faColumns": () => (/* binding */ faColumns),
-/* harmony export */   "faComment": () => (/* binding */ faComment),
-/* harmony export */   "faCommentAlt": () => (/* binding */ faCommentAlt),
-/* harmony export */   "faCommentDollar": () => (/* binding */ faCommentDollar),
-/* harmony export */   "faCommentDots": () => (/* binding */ faCommentDots),
-/* harmony export */   "faCommentMedical": () => (/* binding */ faCommentMedical),
-/* harmony export */   "faCommentSlash": () => (/* binding */ faCommentSlash),
-/* harmony export */   "faComments": () => (/* binding */ faComments),
-/* harmony export */   "faCommentsDollar": () => (/* binding */ faCommentsDollar),
-/* harmony export */   "faCompactDisc": () => (/* binding */ faCompactDisc),
-/* harmony export */   "faCompass": () => (/* binding */ faCompass),
-/* harmony export */   "faCompress": () => (/* binding */ faCompress),
-/* harmony export */   "faCompressAlt": () => (/* binding */ faCompressAlt),
-/* harmony export */   "faCompressArrowsAlt": () => (/* binding */ faCompressArrowsAlt),
-/* harmony export */   "faConciergeBell": () => (/* binding */ faConciergeBell),
-/* harmony export */   "faCookie": () => (/* binding */ faCookie),
-/* harmony export */   "faCookieBite": () => (/* binding */ faCookieBite),
-/* harmony export */   "faCopy": () => (/* binding */ faCopy),
-/* harmony export */   "faCopyright": () => (/* binding */ faCopyright),
-/* harmony export */   "faCouch": () => (/* binding */ faCouch),
-/* harmony export */   "faCreditCard": () => (/* binding */ faCreditCard),
-/* harmony export */   "faCrop": () => (/* binding */ faCrop),
-/* harmony export */   "faCropAlt": () => (/* binding */ faCropAlt),
-/* harmony export */   "faCross": () => (/* binding */ faCross),
-/* harmony export */   "faCrosshairs": () => (/* binding */ faCrosshairs),
-/* harmony export */   "faCrow": () => (/* binding */ faCrow),
-/* harmony export */   "faCrown": () => (/* binding */ faCrown),
-/* harmony export */   "faCrutch": () => (/* binding */ faCrutch),
-/* harmony export */   "faCube": () => (/* binding */ faCube),
-/* harmony export */   "faCubes": () => (/* binding */ faCubes),
-/* harmony export */   "faCut": () => (/* binding */ faCut),
-/* harmony export */   "faDatabase": () => (/* binding */ faDatabase),
-/* harmony export */   "faDeaf": () => (/* binding */ faDeaf),
-/* harmony export */   "faDemocrat": () => (/* binding */ faDemocrat),
-/* harmony export */   "faDesktop": () => (/* binding */ faDesktop),
-/* harmony export */   "faDharmachakra": () => (/* binding */ faDharmachakra),
-/* harmony export */   "faDiagnoses": () => (/* binding */ faDiagnoses),
-/* harmony export */   "faDice": () => (/* binding */ faDice),
-/* harmony export */   "faDiceD20": () => (/* binding */ faDiceD20),
-/* harmony export */   "faDiceD6": () => (/* binding */ faDiceD6),
-/* harmony export */   "faDiceFive": () => (/* binding */ faDiceFive),
-/* harmony export */   "faDiceFour": () => (/* binding */ faDiceFour),
-/* harmony export */   "faDiceOne": () => (/* binding */ faDiceOne),
-/* harmony export */   "faDiceSix": () => (/* binding */ faDiceSix),
-/* harmony export */   "faDiceThree": () => (/* binding */ faDiceThree),
-/* harmony export */   "faDiceTwo": () => (/* binding */ faDiceTwo),
-/* harmony export */   "faDigitalTachograph": () => (/* binding */ faDigitalTachograph),
-/* harmony export */   "faDirections": () => (/* binding */ faDirections),
-/* harmony export */   "faDisease": () => (/* binding */ faDisease),
-/* harmony export */   "faDivide": () => (/* binding */ faDivide),
-/* harmony export */   "faDizzy": () => (/* binding */ faDizzy),
-/* harmony export */   "faDna": () => (/* binding */ faDna),
-/* harmony export */   "faDog": () => (/* binding */ faDog),
-/* harmony export */   "faDollarSign": () => (/* binding */ faDollarSign),
-/* harmony export */   "faDolly": () => (/* binding */ faDolly),
-/* harmony export */   "faDollyFlatbed": () => (/* binding */ faDollyFlatbed),
-/* harmony export */   "faDonate": () => (/* binding */ faDonate),
-/* harmony export */   "faDoorClosed": () => (/* binding */ faDoorClosed),
-/* harmony export */   "faDoorOpen": () => (/* binding */ faDoorOpen),
-/* harmony export */   "faDotCircle": () => (/* binding */ faDotCircle),
-/* harmony export */   "faDove": () => (/* binding */ faDove),
-/* harmony export */   "faDownload": () => (/* binding */ faDownload),
-/* harmony export */   "faDraftingCompass": () => (/* binding */ faDraftingCompass),
-/* harmony export */   "faDragon": () => (/* binding */ faDragon),
-/* harmony export */   "faDrawPolygon": () => (/* binding */ faDrawPolygon),
-/* harmony export */   "faDrum": () => (/* binding */ faDrum),
-/* harmony export */   "faDrumSteelpan": () => (/* binding */ faDrumSteelpan),
-/* harmony export */   "faDrumstickBite": () => (/* binding */ faDrumstickBite),
-/* harmony export */   "faDumbbell": () => (/* binding */ faDumbbell),
-/* harmony export */   "faDumpster": () => (/* binding */ faDumpster),
-/* harmony export */   "faDumpsterFire": () => (/* binding */ faDumpsterFire),
-/* harmony export */   "faDungeon": () => (/* binding */ faDungeon),
-/* harmony export */   "faEdit": () => (/* binding */ faEdit),
-/* harmony export */   "faEgg": () => (/* binding */ faEgg),
-/* harmony export */   "faEject": () => (/* binding */ faEject),
-/* harmony export */   "faEllipsisH": () => (/* binding */ faEllipsisH),
-/* harmony export */   "faEllipsisV": () => (/* binding */ faEllipsisV),
-/* harmony export */   "faEnvelope": () => (/* binding */ faEnvelope),
-/* harmony export */   "faEnvelopeOpen": () => (/* binding */ faEnvelopeOpen),
-/* harmony export */   "faEnvelopeOpenText": () => (/* binding */ faEnvelopeOpenText),
-/* harmony export */   "faEnvelopeSquare": () => (/* binding */ faEnvelopeSquare),
-/* harmony export */   "faEquals": () => (/* binding */ faEquals),
-/* harmony export */   "faEraser": () => (/* binding */ faEraser),
-/* harmony export */   "faEthernet": () => (/* binding */ faEthernet),
-/* harmony export */   "faEuroSign": () => (/* binding */ faEuroSign),
-/* harmony export */   "faExchangeAlt": () => (/* binding */ faExchangeAlt),
-/* harmony export */   "faExclamation": () => (/* binding */ faExclamation),
-/* harmony export */   "faExclamationCircle": () => (/* binding */ faExclamationCircle),
-/* harmony export */   "faExclamationTriangle": () => (/* binding */ faExclamationTriangle),
-/* harmony export */   "faExpand": () => (/* binding */ faExpand),
-/* harmony export */   "faExpandAlt": () => (/* binding */ faExpandAlt),
-/* harmony export */   "faExpandArrowsAlt": () => (/* binding */ faExpandArrowsAlt),
-/* harmony export */   "faExternalLinkAlt": () => (/* binding */ faExternalLinkAlt),
-/* harmony export */   "faExternalLinkSquareAlt": () => (/* binding */ faExternalLinkSquareAlt),
-/* harmony export */   "faEye": () => (/* binding */ faEye),
-/* harmony export */   "faEyeDropper": () => (/* binding */ faEyeDropper),
-/* harmony export */   "faEyeSlash": () => (/* binding */ faEyeSlash),
-/* harmony export */   "faFan": () => (/* binding */ faFan),
-/* harmony export */   "faFastBackward": () => (/* binding */ faFastBackward),
-/* harmony export */   "faFastForward": () => (/* binding */ faFastForward),
-/* harmony export */   "faFaucet": () => (/* binding */ faFaucet),
-/* harmony export */   "faFax": () => (/* binding */ faFax),
-/* harmony export */   "faFeather": () => (/* binding */ faFeather),
-/* harmony export */   "faFeatherAlt": () => (/* binding */ faFeatherAlt),
-/* harmony export */   "faFemale": () => (/* binding */ faFemale),
-/* harmony export */   "faFighterJet": () => (/* binding */ faFighterJet),
-/* harmony export */   "faFile": () => (/* binding */ faFile),
-/* harmony export */   "faFileAlt": () => (/* binding */ faFileAlt),
-/* harmony export */   "faFileArchive": () => (/* binding */ faFileArchive),
-/* harmony export */   "faFileAudio": () => (/* binding */ faFileAudio),
-/* harmony export */   "faFileCode": () => (/* binding */ faFileCode),
-/* harmony export */   "faFileContract": () => (/* binding */ faFileContract),
-/* harmony export */   "faFileCsv": () => (/* binding */ faFileCsv),
-/* harmony export */   "faFileDownload": () => (/* binding */ faFileDownload),
-/* harmony export */   "faFileExcel": () => (/* binding */ faFileExcel),
-/* harmony export */   "faFileExport": () => (/* binding */ faFileExport),
-/* harmony export */   "faFileImage": () => (/* binding */ faFileImage),
-/* harmony export */   "faFileImport": () => (/* binding */ faFileImport),
-/* harmony export */   "faFileInvoice": () => (/* binding */ faFileInvoice),
-/* harmony export */   "faFileInvoiceDollar": () => (/* binding */ faFileInvoiceDollar),
-/* harmony export */   "faFileMedical": () => (/* binding */ faFileMedical),
-/* harmony export */   "faFileMedicalAlt": () => (/* binding */ faFileMedicalAlt),
-/* harmony export */   "faFilePdf": () => (/* binding */ faFilePdf),
-/* harmony export */   "faFilePowerpoint": () => (/* binding */ faFilePowerpoint),
-/* harmony export */   "faFilePrescription": () => (/* binding */ faFilePrescription),
-/* harmony export */   "faFileSignature": () => (/* binding */ faFileSignature),
-/* harmony export */   "faFileUpload": () => (/* binding */ faFileUpload),
-/* harmony export */   "faFileVideo": () => (/* binding */ faFileVideo),
-/* harmony export */   "faFileWord": () => (/* binding */ faFileWord),
-/* harmony export */   "faFill": () => (/* binding */ faFill),
-/* harmony export */   "faFillDrip": () => (/* binding */ faFillDrip),
-/* harmony export */   "faFilm": () => (/* binding */ faFilm),
-/* harmony export */   "faFilter": () => (/* binding */ faFilter),
-/* harmony export */   "faFingerprint": () => (/* binding */ faFingerprint),
-/* harmony export */   "faFire": () => (/* binding */ faFire),
-/* harmony export */   "faFireAlt": () => (/* binding */ faFireAlt),
-/* harmony export */   "faFireExtinguisher": () => (/* binding */ faFireExtinguisher),
-/* harmony export */   "faFirstAid": () => (/* binding */ faFirstAid),
-/* harmony export */   "faFish": () => (/* binding */ faFish),
-/* harmony export */   "faFistRaised": () => (/* binding */ faFistRaised),
-/* harmony export */   "faFlag": () => (/* binding */ faFlag),
-/* harmony export */   "faFlagCheckered": () => (/* binding */ faFlagCheckered),
-/* harmony export */   "faFlagUsa": () => (/* binding */ faFlagUsa),
-/* harmony export */   "faFlask": () => (/* binding */ faFlask),
-/* harmony export */   "faFlushed": () => (/* binding */ faFlushed),
-/* harmony export */   "faFolder": () => (/* binding */ faFolder),
-/* harmony export */   "faFolderMinus": () => (/* binding */ faFolderMinus),
-/* harmony export */   "faFolderOpen": () => (/* binding */ faFolderOpen),
-/* harmony export */   "faFolderPlus": () => (/* binding */ faFolderPlus),
-/* harmony export */   "faFont": () => (/* binding */ faFont),
-/* harmony export */   "faFontAwesomeLogoFull": () => (/* binding */ faFontAwesomeLogoFull),
-/* harmony export */   "faFootballBall": () => (/* binding */ faFootballBall),
-/* harmony export */   "faForward": () => (/* binding */ faForward),
-/* harmony export */   "faFrog": () => (/* binding */ faFrog),
-/* harmony export */   "faFrown": () => (/* binding */ faFrown),
-/* harmony export */   "faFrownOpen": () => (/* binding */ faFrownOpen),
-/* harmony export */   "faFunnelDollar": () => (/* binding */ faFunnelDollar),
-/* harmony export */   "faFutbol": () => (/* binding */ faFutbol),
-/* harmony export */   "faGamepad": () => (/* binding */ faGamepad),
-/* harmony export */   "faGasPump": () => (/* binding */ faGasPump),
-/* harmony export */   "faGavel": () => (/* binding */ faGavel),
-/* harmony export */   "faGem": () => (/* binding */ faGem),
-/* harmony export */   "faGenderless": () => (/* binding */ faGenderless),
-/* harmony export */   "faGhost": () => (/* binding */ faGhost),
-/* harmony export */   "faGift": () => (/* binding */ faGift),
-/* harmony export */   "faGifts": () => (/* binding */ faGifts),
-/* harmony export */   "faGlassCheers": () => (/* binding */ faGlassCheers),
-/* harmony export */   "faGlassMartini": () => (/* binding */ faGlassMartini),
-/* harmony export */   "faGlassMartiniAlt": () => (/* binding */ faGlassMartiniAlt),
-/* harmony export */   "faGlassWhiskey": () => (/* binding */ faGlassWhiskey),
-/* harmony export */   "faGlasses": () => (/* binding */ faGlasses),
-/* harmony export */   "faGlobe": () => (/* binding */ faGlobe),
-/* harmony export */   "faGlobeAfrica": () => (/* binding */ faGlobeAfrica),
-/* harmony export */   "faGlobeAmericas": () => (/* binding */ faGlobeAmericas),
-/* harmony export */   "faGlobeAsia": () => (/* binding */ faGlobeAsia),
-/* harmony export */   "faGlobeEurope": () => (/* binding */ faGlobeEurope),
-/* harmony export */   "faGolfBall": () => (/* binding */ faGolfBall),
-/* harmony export */   "faGopuram": () => (/* binding */ faGopuram),
-/* harmony export */   "faGraduationCap": () => (/* binding */ faGraduationCap),
-/* harmony export */   "faGreaterThan": () => (/* binding */ faGreaterThan),
-/* harmony export */   "faGreaterThanEqual": () => (/* binding */ faGreaterThanEqual),
-/* harmony export */   "faGrimace": () => (/* binding */ faGrimace),
-/* harmony export */   "faGrin": () => (/* binding */ faGrin),
-/* harmony export */   "faGrinAlt": () => (/* binding */ faGrinAlt),
-/* harmony export */   "faGrinBeam": () => (/* binding */ faGrinBeam),
-/* harmony export */   "faGrinBeamSweat": () => (/* binding */ faGrinBeamSweat),
-/* harmony export */   "faGrinHearts": () => (/* binding */ faGrinHearts),
-/* harmony export */   "faGrinSquint": () => (/* binding */ faGrinSquint),
-/* harmony export */   "faGrinSquintTears": () => (/* binding */ faGrinSquintTears),
-/* harmony export */   "faGrinStars": () => (/* binding */ faGrinStars),
-/* harmony export */   "faGrinTears": () => (/* binding */ faGrinTears),
-/* harmony export */   "faGrinTongue": () => (/* binding */ faGrinTongue),
-/* harmony export */   "faGrinTongueSquint": () => (/* binding */ faGrinTongueSquint),
-/* harmony export */   "faGrinTongueWink": () => (/* binding */ faGrinTongueWink),
-/* harmony export */   "faGrinWink": () => (/* binding */ faGrinWink),
-/* harmony export */   "faGripHorizontal": () => (/* binding */ faGripHorizontal),
-/* harmony export */   "faGripLines": () => (/* binding */ faGripLines),
-/* harmony export */   "faGripLinesVertical": () => (/* binding */ faGripLinesVertical),
-/* harmony export */   "faGripVertical": () => (/* binding */ faGripVertical),
-/* harmony export */   "faGuitar": () => (/* binding */ faGuitar),
-/* harmony export */   "faHSquare": () => (/* binding */ faHSquare),
-/* harmony export */   "faHamburger": () => (/* binding */ faHamburger),
-/* harmony export */   "faHammer": () => (/* binding */ faHammer),
-/* harmony export */   "faHamsa": () => (/* binding */ faHamsa),
-/* harmony export */   "faHandHolding": () => (/* binding */ faHandHolding),
-/* harmony export */   "faHandHoldingHeart": () => (/* binding */ faHandHoldingHeart),
-/* harmony export */   "faHandHoldingMedical": () => (/* binding */ faHandHoldingMedical),
-/* harmony export */   "faHandHoldingUsd": () => (/* binding */ faHandHoldingUsd),
-/* harmony export */   "faHandHoldingWater": () => (/* binding */ faHandHoldingWater),
-/* harmony export */   "faHandLizard": () => (/* binding */ faHandLizard),
-/* harmony export */   "faHandMiddleFinger": () => (/* binding */ faHandMiddleFinger),
-/* harmony export */   "faHandPaper": () => (/* binding */ faHandPaper),
-/* harmony export */   "faHandPeace": () => (/* binding */ faHandPeace),
-/* harmony export */   "faHandPointDown": () => (/* binding */ faHandPointDown),
-/* harmony export */   "faHandPointLeft": () => (/* binding */ faHandPointLeft),
-/* harmony export */   "faHandPointRight": () => (/* binding */ faHandPointRight),
-/* harmony export */   "faHandPointUp": () => (/* binding */ faHandPointUp),
-/* harmony export */   "faHandPointer": () => (/* binding */ faHandPointer),
-/* harmony export */   "faHandRock": () => (/* binding */ faHandRock),
-/* harmony export */   "faHandScissors": () => (/* binding */ faHandScissors),
-/* harmony export */   "faHandSparkles": () => (/* binding */ faHandSparkles),
-/* harmony export */   "faHandSpock": () => (/* binding */ faHandSpock),
-/* harmony export */   "faHands": () => (/* binding */ faHands),
-/* harmony export */   "faHandsHelping": () => (/* binding */ faHandsHelping),
-/* harmony export */   "faHandsWash": () => (/* binding */ faHandsWash),
-/* harmony export */   "faHandshake": () => (/* binding */ faHandshake),
-/* harmony export */   "faHandshakeAltSlash": () => (/* binding */ faHandshakeAltSlash),
-/* harmony export */   "faHandshakeSlash": () => (/* binding */ faHandshakeSlash),
-/* harmony export */   "faHanukiah": () => (/* binding */ faHanukiah),
-/* harmony export */   "faHardHat": () => (/* binding */ faHardHat),
-/* harmony export */   "faHashtag": () => (/* binding */ faHashtag),
-/* harmony export */   "faHatCowboy": () => (/* binding */ faHatCowboy),
-/* harmony export */   "faHatCowboySide": () => (/* binding */ faHatCowboySide),
-/* harmony export */   "faHatWizard": () => (/* binding */ faHatWizard),
-/* harmony export */   "faHdd": () => (/* binding */ faHdd),
-/* harmony export */   "faHeadSideCough": () => (/* binding */ faHeadSideCough),
-/* harmony export */   "faHeadSideCoughSlash": () => (/* binding */ faHeadSideCoughSlash),
-/* harmony export */   "faHeadSideMask": () => (/* binding */ faHeadSideMask),
-/* harmony export */   "faHeadSideVirus": () => (/* binding */ faHeadSideVirus),
-/* harmony export */   "faHeading": () => (/* binding */ faHeading),
-/* harmony export */   "faHeadphones": () => (/* binding */ faHeadphones),
-/* harmony export */   "faHeadphonesAlt": () => (/* binding */ faHeadphonesAlt),
-/* harmony export */   "faHeadset": () => (/* binding */ faHeadset),
-/* harmony export */   "faHeart": () => (/* binding */ faHeart),
-/* harmony export */   "faHeartBroken": () => (/* binding */ faHeartBroken),
-/* harmony export */   "faHeartbeat": () => (/* binding */ faHeartbeat),
-/* harmony export */   "faHelicopter": () => (/* binding */ faHelicopter),
-/* harmony export */   "faHighlighter": () => (/* binding */ faHighlighter),
-/* harmony export */   "faHiking": () => (/* binding */ faHiking),
-/* harmony export */   "faHippo": () => (/* binding */ faHippo),
-/* harmony export */   "faHistory": () => (/* binding */ faHistory),
-/* harmony export */   "faHockeyPuck": () => (/* binding */ faHockeyPuck),
-/* harmony export */   "faHollyBerry": () => (/* binding */ faHollyBerry),
-/* harmony export */   "faHome": () => (/* binding */ faHome),
-/* harmony export */   "faHorse": () => (/* binding */ faHorse),
-/* harmony export */   "faHorseHead": () => (/* binding */ faHorseHead),
-/* harmony export */   "faHospital": () => (/* binding */ faHospital),
-/* harmony export */   "faHospitalAlt": () => (/* binding */ faHospitalAlt),
-/* harmony export */   "faHospitalSymbol": () => (/* binding */ faHospitalSymbol),
-/* harmony export */   "faHospitalUser": () => (/* binding */ faHospitalUser),
-/* harmony export */   "faHotTub": () => (/* binding */ faHotTub),
-/* harmony export */   "faHotdog": () => (/* binding */ faHotdog),
-/* harmony export */   "faHotel": () => (/* binding */ faHotel),
-/* harmony export */   "faHourglass": () => (/* binding */ faHourglass),
-/* harmony export */   "faHourglassEnd": () => (/* binding */ faHourglassEnd),
-/* harmony export */   "faHourglassHalf": () => (/* binding */ faHourglassHalf),
-/* harmony export */   "faHourglassStart": () => (/* binding */ faHourglassStart),
-/* harmony export */   "faHouseDamage": () => (/* binding */ faHouseDamage),
-/* harmony export */   "faHouseUser": () => (/* binding */ faHouseUser),
-/* harmony export */   "faHryvnia": () => (/* binding */ faHryvnia),
-/* harmony export */   "faICursor": () => (/* binding */ faICursor),
-/* harmony export */   "faIceCream": () => (/* binding */ faIceCream),
-/* harmony export */   "faIcicles": () => (/* binding */ faIcicles),
-/* harmony export */   "faIcons": () => (/* binding */ faIcons),
-/* harmony export */   "faIdBadge": () => (/* binding */ faIdBadge),
-/* harmony export */   "faIdCard": () => (/* binding */ faIdCard),
-/* harmony export */   "faIdCardAlt": () => (/* binding */ faIdCardAlt),
-/* harmony export */   "faIgloo": () => (/* binding */ faIgloo),
-/* harmony export */   "faImage": () => (/* binding */ faImage),
-/* harmony export */   "faImages": () => (/* binding */ faImages),
-/* harmony export */   "faInbox": () => (/* binding */ faInbox),
-/* harmony export */   "faIndent": () => (/* binding */ faIndent),
-/* harmony export */   "faIndustry": () => (/* binding */ faIndustry),
-/* harmony export */   "faInfinity": () => (/* binding */ faInfinity),
-/* harmony export */   "faInfo": () => (/* binding */ faInfo),
-/* harmony export */   "faInfoCircle": () => (/* binding */ faInfoCircle),
-/* harmony export */   "faItalic": () => (/* binding */ faItalic),
-/* harmony export */   "faJedi": () => (/* binding */ faJedi),
-/* harmony export */   "faJoint": () => (/* binding */ faJoint),
-/* harmony export */   "faJournalWhills": () => (/* binding */ faJournalWhills),
-/* harmony export */   "faKaaba": () => (/* binding */ faKaaba),
-/* harmony export */   "faKey": () => (/* binding */ faKey),
-/* harmony export */   "faKeyboard": () => (/* binding */ faKeyboard),
-/* harmony export */   "faKhanda": () => (/* binding */ faKhanda),
-/* harmony export */   "faKiss": () => (/* binding */ faKiss),
-/* harmony export */   "faKissBeam": () => (/* binding */ faKissBeam),
-/* harmony export */   "faKissWinkHeart": () => (/* binding */ faKissWinkHeart),
-/* harmony export */   "faKiwiBird": () => (/* binding */ faKiwiBird),
-/* harmony export */   "faLandmark": () => (/* binding */ faLandmark),
-/* harmony export */   "faLanguage": () => (/* binding */ faLanguage),
-/* harmony export */   "faLaptop": () => (/* binding */ faLaptop),
-/* harmony export */   "faLaptopCode": () => (/* binding */ faLaptopCode),
-/* harmony export */   "faLaptopHouse": () => (/* binding */ faLaptopHouse),
-/* harmony export */   "faLaptopMedical": () => (/* binding */ faLaptopMedical),
-/* harmony export */   "faLaugh": () => (/* binding */ faLaugh),
-/* harmony export */   "faLaughBeam": () => (/* binding */ faLaughBeam),
-/* harmony export */   "faLaughSquint": () => (/* binding */ faLaughSquint),
-/* harmony export */   "faLaughWink": () => (/* binding */ faLaughWink),
-/* harmony export */   "faLayerGroup": () => (/* binding */ faLayerGroup),
-/* harmony export */   "faLeaf": () => (/* binding */ faLeaf),
-/* harmony export */   "faLemon": () => (/* binding */ faLemon),
-/* harmony export */   "faLessThan": () => (/* binding */ faLessThan),
-/* harmony export */   "faLessThanEqual": () => (/* binding */ faLessThanEqual),
-/* harmony export */   "faLevelDownAlt": () => (/* binding */ faLevelDownAlt),
-/* harmony export */   "faLevelUpAlt": () => (/* binding */ faLevelUpAlt),
-/* harmony export */   "faLifeRing": () => (/* binding */ faLifeRing),
-/* harmony export */   "faLightbulb": () => (/* binding */ faLightbulb),
-/* harmony export */   "faLink": () => (/* binding */ faLink),
-/* harmony export */   "faLiraSign": () => (/* binding */ faLiraSign),
-/* harmony export */   "faList": () => (/* binding */ faList),
-/* harmony export */   "faListAlt": () => (/* binding */ faListAlt),
-/* harmony export */   "faListOl": () => (/* binding */ faListOl),
-/* harmony export */   "faListUl": () => (/* binding */ faListUl),
-/* harmony export */   "faLocationArrow": () => (/* binding */ faLocationArrow),
-/* harmony export */   "faLock": () => (/* binding */ faLock),
-/* harmony export */   "faLockOpen": () => (/* binding */ faLockOpen),
-/* harmony export */   "faLongArrowAltDown": () => (/* binding */ faLongArrowAltDown),
-/* harmony export */   "faLongArrowAltLeft": () => (/* binding */ faLongArrowAltLeft),
-/* harmony export */   "faLongArrowAltRight": () => (/* binding */ faLongArrowAltRight),
-/* harmony export */   "faLongArrowAltUp": () => (/* binding */ faLongArrowAltUp),
-/* harmony export */   "faLowVision": () => (/* binding */ faLowVision),
-/* harmony export */   "faLuggageCart": () => (/* binding */ faLuggageCart),
-/* harmony export */   "faLungs": () => (/* binding */ faLungs),
-/* harmony export */   "faLungsVirus": () => (/* binding */ faLungsVirus),
-/* harmony export */   "faMagic": () => (/* binding */ faMagic),
-/* harmony export */   "faMagnet": () => (/* binding */ faMagnet),
-/* harmony export */   "faMailBulk": () => (/* binding */ faMailBulk),
-/* harmony export */   "faMale": () => (/* binding */ faMale),
-/* harmony export */   "faMap": () => (/* binding */ faMap),
-/* harmony export */   "faMapMarked": () => (/* binding */ faMapMarked),
-/* harmony export */   "faMapMarkedAlt": () => (/* binding */ faMapMarkedAlt),
-/* harmony export */   "faMapMarker": () => (/* binding */ faMapMarker),
-/* harmony export */   "faMapMarkerAlt": () => (/* binding */ faMapMarkerAlt),
-/* harmony export */   "faMapPin": () => (/* binding */ faMapPin),
-/* harmony export */   "faMapSigns": () => (/* binding */ faMapSigns),
-/* harmony export */   "faMarker": () => (/* binding */ faMarker),
-/* harmony export */   "faMars": () => (/* binding */ faMars),
-/* harmony export */   "faMarsDouble": () => (/* binding */ faMarsDouble),
-/* harmony export */   "faMarsStroke": () => (/* binding */ faMarsStroke),
-/* harmony export */   "faMarsStrokeH": () => (/* binding */ faMarsStrokeH),
-/* harmony export */   "faMarsStrokeV": () => (/* binding */ faMarsStrokeV),
-/* harmony export */   "faMask": () => (/* binding */ faMask),
-/* harmony export */   "faMedal": () => (/* binding */ faMedal),
-/* harmony export */   "faMedkit": () => (/* binding */ faMedkit),
-/* harmony export */   "faMeh": () => (/* binding */ faMeh),
-/* harmony export */   "faMehBlank": () => (/* binding */ faMehBlank),
-/* harmony export */   "faMehRollingEyes": () => (/* binding */ faMehRollingEyes),
-/* harmony export */   "faMemory": () => (/* binding */ faMemory),
-/* harmony export */   "faMenorah": () => (/* binding */ faMenorah),
-/* harmony export */   "faMercury": () => (/* binding */ faMercury),
-/* harmony export */   "faMeteor": () => (/* binding */ faMeteor),
-/* harmony export */   "faMicrochip": () => (/* binding */ faMicrochip),
-/* harmony export */   "faMicrophone": () => (/* binding */ faMicrophone),
-/* harmony export */   "faMicrophoneAlt": () => (/* binding */ faMicrophoneAlt),
-/* harmony export */   "faMicrophoneAltSlash": () => (/* binding */ faMicrophoneAltSlash),
-/* harmony export */   "faMicrophoneSlash": () => (/* binding */ faMicrophoneSlash),
-/* harmony export */   "faMicroscope": () => (/* binding */ faMicroscope),
-/* harmony export */   "faMinus": () => (/* binding */ faMinus),
-/* harmony export */   "faMinusCircle": () => (/* binding */ faMinusCircle),
-/* harmony export */   "faMinusSquare": () => (/* binding */ faMinusSquare),
-/* harmony export */   "faMitten": () => (/* binding */ faMitten),
-/* harmony export */   "faMobile": () => (/* binding */ faMobile),
-/* harmony export */   "faMobileAlt": () => (/* binding */ faMobileAlt),
-/* harmony export */   "faMoneyBill": () => (/* binding */ faMoneyBill),
-/* harmony export */   "faMoneyBillAlt": () => (/* binding */ faMoneyBillAlt),
-/* harmony export */   "faMoneyBillWave": () => (/* binding */ faMoneyBillWave),
-/* harmony export */   "faMoneyBillWaveAlt": () => (/* binding */ faMoneyBillWaveAlt),
-/* harmony export */   "faMoneyCheck": () => (/* binding */ faMoneyCheck),
-/* harmony export */   "faMoneyCheckAlt": () => (/* binding */ faMoneyCheckAlt),
-/* harmony export */   "faMonument": () => (/* binding */ faMonument),
-/* harmony export */   "faMoon": () => (/* binding */ faMoon),
-/* harmony export */   "faMortarPestle": () => (/* binding */ faMortarPestle),
-/* harmony export */   "faMosque": () => (/* binding */ faMosque),
-/* harmony export */   "faMotorcycle": () => (/* binding */ faMotorcycle),
-/* harmony export */   "faMountain": () => (/* binding */ faMountain),
-/* harmony export */   "faMouse": () => (/* binding */ faMouse),
-/* harmony export */   "faMousePointer": () => (/* binding */ faMousePointer),
-/* harmony export */   "faMugHot": () => (/* binding */ faMugHot),
-/* harmony export */   "faMusic": () => (/* binding */ faMusic),
-/* harmony export */   "faNetworkWired": () => (/* binding */ faNetworkWired),
-/* harmony export */   "faNeuter": () => (/* binding */ faNeuter),
-/* harmony export */   "faNewspaper": () => (/* binding */ faNewspaper),
-/* harmony export */   "faNotEqual": () => (/* binding */ faNotEqual),
-/* harmony export */   "faNotesMedical": () => (/* binding */ faNotesMedical),
-/* harmony export */   "faObjectGroup": () => (/* binding */ faObjectGroup),
-/* harmony export */   "faObjectUngroup": () => (/* binding */ faObjectUngroup),
-/* harmony export */   "faOilCan": () => (/* binding */ faOilCan),
-/* harmony export */   "faOm": () => (/* binding */ faOm),
-/* harmony export */   "faOtter": () => (/* binding */ faOtter),
-/* harmony export */   "faOutdent": () => (/* binding */ faOutdent),
-/* harmony export */   "faPager": () => (/* binding */ faPager),
-/* harmony export */   "faPaintBrush": () => (/* binding */ faPaintBrush),
-/* harmony export */   "faPaintRoller": () => (/* binding */ faPaintRoller),
-/* harmony export */   "faPalette": () => (/* binding */ faPalette),
-/* harmony export */   "faPallet": () => (/* binding */ faPallet),
-/* harmony export */   "faPaperPlane": () => (/* binding */ faPaperPlane),
-/* harmony export */   "faPaperclip": () => (/* binding */ faPaperclip),
-/* harmony export */   "faParachuteBox": () => (/* binding */ faParachuteBox),
-/* harmony export */   "faParagraph": () => (/* binding */ faParagraph),
-/* harmony export */   "faParking": () => (/* binding */ faParking),
-/* harmony export */   "faPassport": () => (/* binding */ faPassport),
-/* harmony export */   "faPastafarianism": () => (/* binding */ faPastafarianism),
-/* harmony export */   "faPaste": () => (/* binding */ faPaste),
-/* harmony export */   "faPause": () => (/* binding */ faPause),
-/* harmony export */   "faPauseCircle": () => (/* binding */ faPauseCircle),
-/* harmony export */   "faPaw": () => (/* binding */ faPaw),
-/* harmony export */   "faPeace": () => (/* binding */ faPeace),
-/* harmony export */   "faPen": () => (/* binding */ faPen),
-/* harmony export */   "faPenAlt": () => (/* binding */ faPenAlt),
-/* harmony export */   "faPenFancy": () => (/* binding */ faPenFancy),
-/* harmony export */   "faPenNib": () => (/* binding */ faPenNib),
-/* harmony export */   "faPenSquare": () => (/* binding */ faPenSquare),
-/* harmony export */   "faPencilAlt": () => (/* binding */ faPencilAlt),
-/* harmony export */   "faPencilRuler": () => (/* binding */ faPencilRuler),
-/* harmony export */   "faPeopleArrows": () => (/* binding */ faPeopleArrows),
-/* harmony export */   "faPeopleCarry": () => (/* binding */ faPeopleCarry),
-/* harmony export */   "faPepperHot": () => (/* binding */ faPepperHot),
-/* harmony export */   "faPercent": () => (/* binding */ faPercent),
-/* harmony export */   "faPercentage": () => (/* binding */ faPercentage),
-/* harmony export */   "faPersonBooth": () => (/* binding */ faPersonBooth),
-/* harmony export */   "faPhone": () => (/* binding */ faPhone),
-/* harmony export */   "faPhoneAlt": () => (/* binding */ faPhoneAlt),
-/* harmony export */   "faPhoneSlash": () => (/* binding */ faPhoneSlash),
-/* harmony export */   "faPhoneSquare": () => (/* binding */ faPhoneSquare),
-/* harmony export */   "faPhoneSquareAlt": () => (/* binding */ faPhoneSquareAlt),
-/* harmony export */   "faPhoneVolume": () => (/* binding */ faPhoneVolume),
-/* harmony export */   "faPhotoVideo": () => (/* binding */ faPhotoVideo),
-/* harmony export */   "faPiggyBank": () => (/* binding */ faPiggyBank),
-/* harmony export */   "faPills": () => (/* binding */ faPills),
-/* harmony export */   "faPizzaSlice": () => (/* binding */ faPizzaSlice),
-/* harmony export */   "faPlaceOfWorship": () => (/* binding */ faPlaceOfWorship),
-/* harmony export */   "faPlane": () => (/* binding */ faPlane),
-/* harmony export */   "faPlaneArrival": () => (/* binding */ faPlaneArrival),
-/* harmony export */   "faPlaneDeparture": () => (/* binding */ faPlaneDeparture),
-/* harmony export */   "faPlaneSlash": () => (/* binding */ faPlaneSlash),
-/* harmony export */   "faPlay": () => (/* binding */ faPlay),
-/* harmony export */   "faPlayCircle": () => (/* binding */ faPlayCircle),
-/* harmony export */   "faPlug": () => (/* binding */ faPlug),
-/* harmony export */   "faPlus": () => (/* binding */ faPlus),
-/* harmony export */   "faPlusCircle": () => (/* binding */ faPlusCircle),
-/* harmony export */   "faPlusSquare": () => (/* binding */ faPlusSquare),
-/* harmony export */   "faPodcast": () => (/* binding */ faPodcast),
-/* harmony export */   "faPoll": () => (/* binding */ faPoll),
-/* harmony export */   "faPollH": () => (/* binding */ faPollH),
-/* harmony export */   "faPoo": () => (/* binding */ faPoo),
-/* harmony export */   "faPooStorm": () => (/* binding */ faPooStorm),
-/* harmony export */   "faPoop": () => (/* binding */ faPoop),
-/* harmony export */   "faPortrait": () => (/* binding */ faPortrait),
-/* harmony export */   "faPoundSign": () => (/* binding */ faPoundSign),
-/* harmony export */   "faPowerOff": () => (/* binding */ faPowerOff),
-/* harmony export */   "faPray": () => (/* binding */ faPray),
-/* harmony export */   "faPrayingHands": () => (/* binding */ faPrayingHands),
-/* harmony export */   "faPrescription": () => (/* binding */ faPrescription),
-/* harmony export */   "faPrescriptionBottle": () => (/* binding */ faPrescriptionBottle),
-/* harmony export */   "faPrescriptionBottleAlt": () => (/* binding */ faPrescriptionBottleAlt),
-/* harmony export */   "faPrint": () => (/* binding */ faPrint),
-/* harmony export */   "faProcedures": () => (/* binding */ faProcedures),
-/* harmony export */   "faProjectDiagram": () => (/* binding */ faProjectDiagram),
-/* harmony export */   "faPumpMedical": () => (/* binding */ faPumpMedical),
-/* harmony export */   "faPumpSoap": () => (/* binding */ faPumpSoap),
-/* harmony export */   "faPuzzlePiece": () => (/* binding */ faPuzzlePiece),
-/* harmony export */   "faQrcode": () => (/* binding */ faQrcode),
-/* harmony export */   "faQuestion": () => (/* binding */ faQuestion),
-/* harmony export */   "faQuestionCircle": () => (/* binding */ faQuestionCircle),
-/* harmony export */   "faQuidditch": () => (/* binding */ faQuidditch),
-/* harmony export */   "faQuoteLeft": () => (/* binding */ faQuoteLeft),
-/* harmony export */   "faQuoteRight": () => (/* binding */ faQuoteRight),
-/* harmony export */   "faQuran": () => (/* binding */ faQuran),
-/* harmony export */   "faRadiation": () => (/* binding */ faRadiation),
-/* harmony export */   "faRadiationAlt": () => (/* binding */ faRadiationAlt),
-/* harmony export */   "faRainbow": () => (/* binding */ faRainbow),
-/* harmony export */   "faRandom": () => (/* binding */ faRandom),
-/* harmony export */   "faReceipt": () => (/* binding */ faReceipt),
-/* harmony export */   "faRecordVinyl": () => (/* binding */ faRecordVinyl),
-/* harmony export */   "faRecycle": () => (/* binding */ faRecycle),
-/* harmony export */   "faRedo": () => (/* binding */ faRedo),
-/* harmony export */   "faRedoAlt": () => (/* binding */ faRedoAlt),
-/* harmony export */   "faRegistered": () => (/* binding */ faRegistered),
-/* harmony export */   "faRemoveFormat": () => (/* binding */ faRemoveFormat),
-/* harmony export */   "faReply": () => (/* binding */ faReply),
-/* harmony export */   "faReplyAll": () => (/* binding */ faReplyAll),
-/* harmony export */   "faRepublican": () => (/* binding */ faRepublican),
-/* harmony export */   "faRestroom": () => (/* binding */ faRestroom),
-/* harmony export */   "faRetweet": () => (/* binding */ faRetweet),
-/* harmony export */   "faRibbon": () => (/* binding */ faRibbon),
-/* harmony export */   "faRing": () => (/* binding */ faRing),
-/* harmony export */   "faRoad": () => (/* binding */ faRoad),
-/* harmony export */   "faRobot": () => (/* binding */ faRobot),
-/* harmony export */   "faRocket": () => (/* binding */ faRocket),
-/* harmony export */   "faRoute": () => (/* binding */ faRoute),
-/* harmony export */   "faRss": () => (/* binding */ faRss),
-/* harmony export */   "faRssSquare": () => (/* binding */ faRssSquare),
-/* harmony export */   "faRubleSign": () => (/* binding */ faRubleSign),
-/* harmony export */   "faRuler": () => (/* binding */ faRuler),
-/* harmony export */   "faRulerCombined": () => (/* binding */ faRulerCombined),
-/* harmony export */   "faRulerHorizontal": () => (/* binding */ faRulerHorizontal),
-/* harmony export */   "faRulerVertical": () => (/* binding */ faRulerVertical),
-/* harmony export */   "faRunning": () => (/* binding */ faRunning),
-/* harmony export */   "faRupeeSign": () => (/* binding */ faRupeeSign),
-/* harmony export */   "faSadCry": () => (/* binding */ faSadCry),
-/* harmony export */   "faSadTear": () => (/* binding */ faSadTear),
-/* harmony export */   "faSatellite": () => (/* binding */ faSatellite),
-/* harmony export */   "faSatelliteDish": () => (/* binding */ faSatelliteDish),
-/* harmony export */   "faSave": () => (/* binding */ faSave),
-/* harmony export */   "faSchool": () => (/* binding */ faSchool),
-/* harmony export */   "faScrewdriver": () => (/* binding */ faScrewdriver),
-/* harmony export */   "faScroll": () => (/* binding */ faScroll),
-/* harmony export */   "faSdCard": () => (/* binding */ faSdCard),
-/* harmony export */   "faSearch": () => (/* binding */ faSearch),
-/* harmony export */   "faSearchDollar": () => (/* binding */ faSearchDollar),
-/* harmony export */   "faSearchLocation": () => (/* binding */ faSearchLocation),
-/* harmony export */   "faSearchMinus": () => (/* binding */ faSearchMinus),
-/* harmony export */   "faSearchPlus": () => (/* binding */ faSearchPlus),
-/* harmony export */   "faSeedling": () => (/* binding */ faSeedling),
-/* harmony export */   "faServer": () => (/* binding */ faServer),
-/* harmony export */   "faShapes": () => (/* binding */ faShapes),
-/* harmony export */   "faShare": () => (/* binding */ faShare),
-/* harmony export */   "faShareAlt": () => (/* binding */ faShareAlt),
-/* harmony export */   "faShareAltSquare": () => (/* binding */ faShareAltSquare),
-/* harmony export */   "faShareSquare": () => (/* binding */ faShareSquare),
-/* harmony export */   "faShekelSign": () => (/* binding */ faShekelSign),
-/* harmony export */   "faShieldAlt": () => (/* binding */ faShieldAlt),
-/* harmony export */   "faShieldVirus": () => (/* binding */ faShieldVirus),
-/* harmony export */   "faShip": () => (/* binding */ faShip),
-/* harmony export */   "faShippingFast": () => (/* binding */ faShippingFast),
-/* harmony export */   "faShoePrints": () => (/* binding */ faShoePrints),
-/* harmony export */   "faShoppingBag": () => (/* binding */ faShoppingBag),
-/* harmony export */   "faShoppingBasket": () => (/* binding */ faShoppingBasket),
-/* harmony export */   "faShoppingCart": () => (/* binding */ faShoppingCart),
-/* harmony export */   "faShower": () => (/* binding */ faShower),
-/* harmony export */   "faShuttleVan": () => (/* binding */ faShuttleVan),
-/* harmony export */   "faSign": () => (/* binding */ faSign),
-/* harmony export */   "faSignInAlt": () => (/* binding */ faSignInAlt),
-/* harmony export */   "faSignLanguage": () => (/* binding */ faSignLanguage),
-/* harmony export */   "faSignOutAlt": () => (/* binding */ faSignOutAlt),
-/* harmony export */   "faSignal": () => (/* binding */ faSignal),
-/* harmony export */   "faSignature": () => (/* binding */ faSignature),
-/* harmony export */   "faSimCard": () => (/* binding */ faSimCard),
-/* harmony export */   "faSink": () => (/* binding */ faSink),
-/* harmony export */   "faSitemap": () => (/* binding */ faSitemap),
-/* harmony export */   "faSkating": () => (/* binding */ faSkating),
-/* harmony export */   "faSkiing": () => (/* binding */ faSkiing),
-/* harmony export */   "faSkiingNordic": () => (/* binding */ faSkiingNordic),
-/* harmony export */   "faSkull": () => (/* binding */ faSkull),
-/* harmony export */   "faSkullCrossbones": () => (/* binding */ faSkullCrossbones),
-/* harmony export */   "faSlash": () => (/* binding */ faSlash),
-/* harmony export */   "faSleigh": () => (/* binding */ faSleigh),
-/* harmony export */   "faSlidersH": () => (/* binding */ faSlidersH),
-/* harmony export */   "faSmile": () => (/* binding */ faSmile),
-/* harmony export */   "faSmileBeam": () => (/* binding */ faSmileBeam),
-/* harmony export */   "faSmileWink": () => (/* binding */ faSmileWink),
-/* harmony export */   "faSmog": () => (/* binding */ faSmog),
-/* harmony export */   "faSmoking": () => (/* binding */ faSmoking),
-/* harmony export */   "faSmokingBan": () => (/* binding */ faSmokingBan),
-/* harmony export */   "faSms": () => (/* binding */ faSms),
-/* harmony export */   "faSnowboarding": () => (/* binding */ faSnowboarding),
-/* harmony export */   "faSnowflake": () => (/* binding */ faSnowflake),
-/* harmony export */   "faSnowman": () => (/* binding */ faSnowman),
-/* harmony export */   "faSnowplow": () => (/* binding */ faSnowplow),
-/* harmony export */   "faSoap": () => (/* binding */ faSoap),
-/* harmony export */   "faSocks": () => (/* binding */ faSocks),
-/* harmony export */   "faSolarPanel": () => (/* binding */ faSolarPanel),
-/* harmony export */   "faSort": () => (/* binding */ faSort),
-/* harmony export */   "faSortAlphaDown": () => (/* binding */ faSortAlphaDown),
-/* harmony export */   "faSortAlphaDownAlt": () => (/* binding */ faSortAlphaDownAlt),
-/* harmony export */   "faSortAlphaUp": () => (/* binding */ faSortAlphaUp),
-/* harmony export */   "faSortAlphaUpAlt": () => (/* binding */ faSortAlphaUpAlt),
-/* harmony export */   "faSortAmountDown": () => (/* binding */ faSortAmountDown),
-/* harmony export */   "faSortAmountDownAlt": () => (/* binding */ faSortAmountDownAlt),
-/* harmony export */   "faSortAmountUp": () => (/* binding */ faSortAmountUp),
-/* harmony export */   "faSortAmountUpAlt": () => (/* binding */ faSortAmountUpAlt),
-/* harmony export */   "faSortDown": () => (/* binding */ faSortDown),
-/* harmony export */   "faSortNumericDown": () => (/* binding */ faSortNumericDown),
-/* harmony export */   "faSortNumericDownAlt": () => (/* binding */ faSortNumericDownAlt),
-/* harmony export */   "faSortNumericUp": () => (/* binding */ faSortNumericUp),
-/* harmony export */   "faSortNumericUpAlt": () => (/* binding */ faSortNumericUpAlt),
-/* harmony export */   "faSortUp": () => (/* binding */ faSortUp),
-/* harmony export */   "faSpa": () => (/* binding */ faSpa),
-/* harmony export */   "faSpaceShuttle": () => (/* binding */ faSpaceShuttle),
-/* harmony export */   "faSpellCheck": () => (/* binding */ faSpellCheck),
-/* harmony export */   "faSpider": () => (/* binding */ faSpider),
-/* harmony export */   "faSpinner": () => (/* binding */ faSpinner),
-/* harmony export */   "faSplotch": () => (/* binding */ faSplotch),
-/* harmony export */   "faSprayCan": () => (/* binding */ faSprayCan),
-/* harmony export */   "faSquare": () => (/* binding */ faSquare),
-/* harmony export */   "faSquareFull": () => (/* binding */ faSquareFull),
-/* harmony export */   "faSquareRootAlt": () => (/* binding */ faSquareRootAlt),
-/* harmony export */   "faStamp": () => (/* binding */ faStamp),
-/* harmony export */   "faStar": () => (/* binding */ faStar),
-/* harmony export */   "faStarAndCrescent": () => (/* binding */ faStarAndCrescent),
-/* harmony export */   "faStarHalf": () => (/* binding */ faStarHalf),
-/* harmony export */   "faStarHalfAlt": () => (/* binding */ faStarHalfAlt),
-/* harmony export */   "faStarOfDavid": () => (/* binding */ faStarOfDavid),
-/* harmony export */   "faStarOfLife": () => (/* binding */ faStarOfLife),
-/* harmony export */   "faStepBackward": () => (/* binding */ faStepBackward),
-/* harmony export */   "faStepForward": () => (/* binding */ faStepForward),
-/* harmony export */   "faStethoscope": () => (/* binding */ faStethoscope),
-/* harmony export */   "faStickyNote": () => (/* binding */ faStickyNote),
-/* harmony export */   "faStop": () => (/* binding */ faStop),
-/* harmony export */   "faStopCircle": () => (/* binding */ faStopCircle),
-/* harmony export */   "faStopwatch": () => (/* binding */ faStopwatch),
-/* harmony export */   "faStopwatch20": () => (/* binding */ faStopwatch20),
-/* harmony export */   "faStore": () => (/* binding */ faStore),
-/* harmony export */   "faStoreAlt": () => (/* binding */ faStoreAlt),
-/* harmony export */   "faStoreAltSlash": () => (/* binding */ faStoreAltSlash),
-/* harmony export */   "faStoreSlash": () => (/* binding */ faStoreSlash),
-/* harmony export */   "faStream": () => (/* binding */ faStream),
-/* harmony export */   "faStreetView": () => (/* binding */ faStreetView),
-/* harmony export */   "faStrikethrough": () => (/* binding */ faStrikethrough),
-/* harmony export */   "faStroopwafel": () => (/* binding */ faStroopwafel),
-/* harmony export */   "faSubscript": () => (/* binding */ faSubscript),
-/* harmony export */   "faSubway": () => (/* binding */ faSubway),
-/* harmony export */   "faSuitcase": () => (/* binding */ faSuitcase),
-/* harmony export */   "faSuitcaseRolling": () => (/* binding */ faSuitcaseRolling),
-/* harmony export */   "faSun": () => (/* binding */ faSun),
-/* harmony export */   "faSuperscript": () => (/* binding */ faSuperscript),
-/* harmony export */   "faSurprise": () => (/* binding */ faSurprise),
-/* harmony export */   "faSwatchbook": () => (/* binding */ faSwatchbook),
-/* harmony export */   "faSwimmer": () => (/* binding */ faSwimmer),
-/* harmony export */   "faSwimmingPool": () => (/* binding */ faSwimmingPool),
-/* harmony export */   "faSynagogue": () => (/* binding */ faSynagogue),
-/* harmony export */   "faSync": () => (/* binding */ faSync),
-/* harmony export */   "faSyncAlt": () => (/* binding */ faSyncAlt),
-/* harmony export */   "faSyringe": () => (/* binding */ faSyringe),
-/* harmony export */   "faTable": () => (/* binding */ faTable),
-/* harmony export */   "faTableTennis": () => (/* binding */ faTableTennis),
-/* harmony export */   "faTablet": () => (/* binding */ faTablet),
-/* harmony export */   "faTabletAlt": () => (/* binding */ faTabletAlt),
-/* harmony export */   "faTablets": () => (/* binding */ faTablets),
-/* harmony export */   "faTachometerAlt": () => (/* binding */ faTachometerAlt),
-/* harmony export */   "faTag": () => (/* binding */ faTag),
-/* harmony export */   "faTags": () => (/* binding */ faTags),
-/* harmony export */   "faTape": () => (/* binding */ faTape),
-/* harmony export */   "faTasks": () => (/* binding */ faTasks),
-/* harmony export */   "faTaxi": () => (/* binding */ faTaxi),
-/* harmony export */   "faTeeth": () => (/* binding */ faTeeth),
-/* harmony export */   "faTeethOpen": () => (/* binding */ faTeethOpen),
-/* harmony export */   "faTemperatureHigh": () => (/* binding */ faTemperatureHigh),
-/* harmony export */   "faTemperatureLow": () => (/* binding */ faTemperatureLow),
-/* harmony export */   "faTenge": () => (/* binding */ faTenge),
-/* harmony export */   "faTerminal": () => (/* binding */ faTerminal),
-/* harmony export */   "faTextHeight": () => (/* binding */ faTextHeight),
-/* harmony export */   "faTextWidth": () => (/* binding */ faTextWidth),
-/* harmony export */   "faTh": () => (/* binding */ faTh),
-/* harmony export */   "faThLarge": () => (/* binding */ faThLarge),
-/* harmony export */   "faThList": () => (/* binding */ faThList),
-/* harmony export */   "faTheaterMasks": () => (/* binding */ faTheaterMasks),
-/* harmony export */   "faThermometer": () => (/* binding */ faThermometer),
-/* harmony export */   "faThermometerEmpty": () => (/* binding */ faThermometerEmpty),
-/* harmony export */   "faThermometerFull": () => (/* binding */ faThermometerFull),
-/* harmony export */   "faThermometerHalf": () => (/* binding */ faThermometerHalf),
-/* harmony export */   "faThermometerQuarter": () => (/* binding */ faThermometerQuarter),
-/* harmony export */   "faThermometerThreeQuarters": () => (/* binding */ faThermometerThreeQuarters),
-/* harmony export */   "faThumbsDown": () => (/* binding */ faThumbsDown),
-/* harmony export */   "faThumbsUp": () => (/* binding */ faThumbsUp),
-/* harmony export */   "faThumbtack": () => (/* binding */ faThumbtack),
-/* harmony export */   "faTicketAlt": () => (/* binding */ faTicketAlt),
-/* harmony export */   "faTimes": () => (/* binding */ faTimes),
-/* harmony export */   "faTimesCircle": () => (/* binding */ faTimesCircle),
-/* harmony export */   "faTint": () => (/* binding */ faTint),
-/* harmony export */   "faTintSlash": () => (/* binding */ faTintSlash),
-/* harmony export */   "faTired": () => (/* binding */ faTired),
-/* harmony export */   "faToggleOff": () => (/* binding */ faToggleOff),
-/* harmony export */   "faToggleOn": () => (/* binding */ faToggleOn),
-/* harmony export */   "faToilet": () => (/* binding */ faToilet),
-/* harmony export */   "faToiletPaper": () => (/* binding */ faToiletPaper),
-/* harmony export */   "faToiletPaperSlash": () => (/* binding */ faToiletPaperSlash),
-/* harmony export */   "faToolbox": () => (/* binding */ faToolbox),
-/* harmony export */   "faTools": () => (/* binding */ faTools),
-/* harmony export */   "faTooth": () => (/* binding */ faTooth),
-/* harmony export */   "faTorah": () => (/* binding */ faTorah),
-/* harmony export */   "faToriiGate": () => (/* binding */ faToriiGate),
-/* harmony export */   "faTractor": () => (/* binding */ faTractor),
-/* harmony export */   "faTrademark": () => (/* binding */ faTrademark),
-/* harmony export */   "faTrafficLight": () => (/* binding */ faTrafficLight),
-/* harmony export */   "faTrailer": () => (/* binding */ faTrailer),
-/* harmony export */   "faTrain": () => (/* binding */ faTrain),
-/* harmony export */   "faTram": () => (/* binding */ faTram),
-/* harmony export */   "faTransgender": () => (/* binding */ faTransgender),
-/* harmony export */   "faTransgenderAlt": () => (/* binding */ faTransgenderAlt),
-/* harmony export */   "faTrash": () => (/* binding */ faTrash),
-/* harmony export */   "faTrashAlt": () => (/* binding */ faTrashAlt),
-/* harmony export */   "faTrashRestore": () => (/* binding */ faTrashRestore),
-/* harmony export */   "faTrashRestoreAlt": () => (/* binding */ faTrashRestoreAlt),
-/* harmony export */   "faTree": () => (/* binding */ faTree),
-/* harmony export */   "faTrophy": () => (/* binding */ faTrophy),
-/* harmony export */   "faTruck": () => (/* binding */ faTruck),
-/* harmony export */   "faTruckLoading": () => (/* binding */ faTruckLoading),
-/* harmony export */   "faTruckMonster": () => (/* binding */ faTruckMonster),
-/* harmony export */   "faTruckMoving": () => (/* binding */ faTruckMoving),
-/* harmony export */   "faTruckPickup": () => (/* binding */ faTruckPickup),
-/* harmony export */   "faTshirt": () => (/* binding */ faTshirt),
-/* harmony export */   "faTty": () => (/* binding */ faTty),
-/* harmony export */   "faTv": () => (/* binding */ faTv),
-/* harmony export */   "faUmbrella": () => (/* binding */ faUmbrella),
-/* harmony export */   "faUmbrellaBeach": () => (/* binding */ faUmbrellaBeach),
-/* harmony export */   "faUnderline": () => (/* binding */ faUnderline),
-/* harmony export */   "faUndo": () => (/* binding */ faUndo),
-/* harmony export */   "faUndoAlt": () => (/* binding */ faUndoAlt),
-/* harmony export */   "faUniversalAccess": () => (/* binding */ faUniversalAccess),
-/* harmony export */   "faUniversity": () => (/* binding */ faUniversity),
-/* harmony export */   "faUnlink": () => (/* binding */ faUnlink),
-/* harmony export */   "faUnlock": () => (/* binding */ faUnlock),
-/* harmony export */   "faUnlockAlt": () => (/* binding */ faUnlockAlt),
-/* harmony export */   "faUpload": () => (/* binding */ faUpload),
-/* harmony export */   "faUser": () => (/* binding */ faUser),
-/* harmony export */   "faUserAlt": () => (/* binding */ faUserAlt),
-/* harmony export */   "faUserAltSlash": () => (/* binding */ faUserAltSlash),
-/* harmony export */   "faUserAstronaut": () => (/* binding */ faUserAstronaut),
-/* harmony export */   "faUserCheck": () => (/* binding */ faUserCheck),
-/* harmony export */   "faUserCircle": () => (/* binding */ faUserCircle),
-/* harmony export */   "faUserClock": () => (/* binding */ faUserClock),
-/* harmony export */   "faUserCog": () => (/* binding */ faUserCog),
-/* harmony export */   "faUserEdit": () => (/* binding */ faUserEdit),
-/* harmony export */   "faUserFriends": () => (/* binding */ faUserFriends),
-/* harmony export */   "faUserGraduate": () => (/* binding */ faUserGraduate),
-/* harmony export */   "faUserInjured": () => (/* binding */ faUserInjured),
-/* harmony export */   "faUserLock": () => (/* binding */ faUserLock),
-/* harmony export */   "faUserMd": () => (/* binding */ faUserMd),
-/* harmony export */   "faUserMinus": () => (/* binding */ faUserMinus),
-/* harmony export */   "faUserNinja": () => (/* binding */ faUserNinja),
-/* harmony export */   "faUserNurse": () => (/* binding */ faUserNurse),
-/* harmony export */   "faUserPlus": () => (/* binding */ faUserPlus),
-/* harmony export */   "faUserSecret": () => (/* binding */ faUserSecret),
-/* harmony export */   "faUserShield": () => (/* binding */ faUserShield),
-/* harmony export */   "faUserSlash": () => (/* binding */ faUserSlash),
-/* harmony export */   "faUserTag": () => (/* binding */ faUserTag),
-/* harmony export */   "faUserTie": () => (/* binding */ faUserTie),
-/* harmony export */   "faUserTimes": () => (/* binding */ faUserTimes),
-/* harmony export */   "faUsers": () => (/* binding */ faUsers),
-/* harmony export */   "faUsersCog": () => (/* binding */ faUsersCog),
-/* harmony export */   "faUsersSlash": () => (/* binding */ faUsersSlash),
-/* harmony export */   "faUtensilSpoon": () => (/* binding */ faUtensilSpoon),
-/* harmony export */   "faUtensils": () => (/* binding */ faUtensils),
-/* harmony export */   "faVectorSquare": () => (/* binding */ faVectorSquare),
-/* harmony export */   "faVenus": () => (/* binding */ faVenus),
-/* harmony export */   "faVenusDouble": () => (/* binding */ faVenusDouble),
-/* harmony export */   "faVenusMars": () => (/* binding */ faVenusMars),
-/* harmony export */   "faVest": () => (/* binding */ faVest),
-/* harmony export */   "faVestPatches": () => (/* binding */ faVestPatches),
-/* harmony export */   "faVial": () => (/* binding */ faVial),
-/* harmony export */   "faVials": () => (/* binding */ faVials),
-/* harmony export */   "faVideo": () => (/* binding */ faVideo),
-/* harmony export */   "faVideoSlash": () => (/* binding */ faVideoSlash),
-/* harmony export */   "faVihara": () => (/* binding */ faVihara),
-/* harmony export */   "faVirus": () => (/* binding */ faVirus),
-/* harmony export */   "faVirusSlash": () => (/* binding */ faVirusSlash),
-/* harmony export */   "faViruses": () => (/* binding */ faViruses),
-/* harmony export */   "faVoicemail": () => (/* binding */ faVoicemail),
-/* harmony export */   "faVolleyballBall": () => (/* binding */ faVolleyballBall),
-/* harmony export */   "faVolumeDown": () => (/* binding */ faVolumeDown),
-/* harmony export */   "faVolumeMute": () => (/* binding */ faVolumeMute),
-/* harmony export */   "faVolumeOff": () => (/* binding */ faVolumeOff),
-/* harmony export */   "faVolumeUp": () => (/* binding */ faVolumeUp),
-/* harmony export */   "faVoteYea": () => (/* binding */ faVoteYea),
-/* harmony export */   "faVrCardboard": () => (/* binding */ faVrCardboard),
-/* harmony export */   "faWalking": () => (/* binding */ faWalking),
-/* harmony export */   "faWallet": () => (/* binding */ faWallet),
-/* harmony export */   "faWarehouse": () => (/* binding */ faWarehouse),
-/* harmony export */   "faWater": () => (/* binding */ faWater),
-/* harmony export */   "faWaveSquare": () => (/* binding */ faWaveSquare),
-/* harmony export */   "faWeight": () => (/* binding */ faWeight),
-/* harmony export */   "faWeightHanging": () => (/* binding */ faWeightHanging),
-/* harmony export */   "faWheelchair": () => (/* binding */ faWheelchair),
-/* harmony export */   "faWifi": () => (/* binding */ faWifi),
-/* harmony export */   "faWind": () => (/* binding */ faWind),
-/* harmony export */   "faWindowClose": () => (/* binding */ faWindowClose),
-/* harmony export */   "faWindowMaximize": () => (/* binding */ faWindowMaximize),
-/* harmony export */   "faWindowMinimize": () => (/* binding */ faWindowMinimize),
-/* harmony export */   "faWindowRestore": () => (/* binding */ faWindowRestore),
-/* harmony export */   "faWineBottle": () => (/* binding */ faWineBottle),
-/* harmony export */   "faWineGlass": () => (/* binding */ faWineGlass),
-/* harmony export */   "faWineGlassAlt": () => (/* binding */ faWineGlassAlt),
-/* harmony export */   "faWonSign": () => (/* binding */ faWonSign),
-/* harmony export */   "faWrench": () => (/* binding */ faWrench),
-/* harmony export */   "faXRay": () => (/* binding */ faXRay),
-/* harmony export */   "faYenSign": () => (/* binding */ faYenSign),
-/* harmony export */   "faYinYang": () => (/* binding */ faYinYang)
+/* harmony export */   "fas": () => /* binding */ _iconsCache,
+/* harmony export */   "prefix": () => /* binding */ prefix,
+/* harmony export */   "faAd": () => /* binding */ faAd,
+/* harmony export */   "faAddressBook": () => /* binding */ faAddressBook,
+/* harmony export */   "faAddressCard": () => /* binding */ faAddressCard,
+/* harmony export */   "faAdjust": () => /* binding */ faAdjust,
+/* harmony export */   "faAirFreshener": () => /* binding */ faAirFreshener,
+/* harmony export */   "faAlignCenter": () => /* binding */ faAlignCenter,
+/* harmony export */   "faAlignJustify": () => /* binding */ faAlignJustify,
+/* harmony export */   "faAlignLeft": () => /* binding */ faAlignLeft,
+/* harmony export */   "faAlignRight": () => /* binding */ faAlignRight,
+/* harmony export */   "faAllergies": () => /* binding */ faAllergies,
+/* harmony export */   "faAmbulance": () => /* binding */ faAmbulance,
+/* harmony export */   "faAmericanSignLanguageInterpreting": () => /* binding */ faAmericanSignLanguageInterpreting,
+/* harmony export */   "faAnchor": () => /* binding */ faAnchor,
+/* harmony export */   "faAngleDoubleDown": () => /* binding */ faAngleDoubleDown,
+/* harmony export */   "faAngleDoubleLeft": () => /* binding */ faAngleDoubleLeft,
+/* harmony export */   "faAngleDoubleRight": () => /* binding */ faAngleDoubleRight,
+/* harmony export */   "faAngleDoubleUp": () => /* binding */ faAngleDoubleUp,
+/* harmony export */   "faAngleDown": () => /* binding */ faAngleDown,
+/* harmony export */   "faAngleLeft": () => /* binding */ faAngleLeft,
+/* harmony export */   "faAngleRight": () => /* binding */ faAngleRight,
+/* harmony export */   "faAngleUp": () => /* binding */ faAngleUp,
+/* harmony export */   "faAngry": () => /* binding */ faAngry,
+/* harmony export */   "faAnkh": () => /* binding */ faAnkh,
+/* harmony export */   "faAppleAlt": () => /* binding */ faAppleAlt,
+/* harmony export */   "faArchive": () => /* binding */ faArchive,
+/* harmony export */   "faArchway": () => /* binding */ faArchway,
+/* harmony export */   "faArrowAltCircleDown": () => /* binding */ faArrowAltCircleDown,
+/* harmony export */   "faArrowAltCircleLeft": () => /* binding */ faArrowAltCircleLeft,
+/* harmony export */   "faArrowAltCircleRight": () => /* binding */ faArrowAltCircleRight,
+/* harmony export */   "faArrowAltCircleUp": () => /* binding */ faArrowAltCircleUp,
+/* harmony export */   "faArrowCircleDown": () => /* binding */ faArrowCircleDown,
+/* harmony export */   "faArrowCircleLeft": () => /* binding */ faArrowCircleLeft,
+/* harmony export */   "faArrowCircleRight": () => /* binding */ faArrowCircleRight,
+/* harmony export */   "faArrowCircleUp": () => /* binding */ faArrowCircleUp,
+/* harmony export */   "faArrowDown": () => /* binding */ faArrowDown,
+/* harmony export */   "faArrowLeft": () => /* binding */ faArrowLeft,
+/* harmony export */   "faArrowRight": () => /* binding */ faArrowRight,
+/* harmony export */   "faArrowUp": () => /* binding */ faArrowUp,
+/* harmony export */   "faArrowsAlt": () => /* binding */ faArrowsAlt,
+/* harmony export */   "faArrowsAltH": () => /* binding */ faArrowsAltH,
+/* harmony export */   "faArrowsAltV": () => /* binding */ faArrowsAltV,
+/* harmony export */   "faAssistiveListeningSystems": () => /* binding */ faAssistiveListeningSystems,
+/* harmony export */   "faAsterisk": () => /* binding */ faAsterisk,
+/* harmony export */   "faAt": () => /* binding */ faAt,
+/* harmony export */   "faAtlas": () => /* binding */ faAtlas,
+/* harmony export */   "faAtom": () => /* binding */ faAtom,
+/* harmony export */   "faAudioDescription": () => /* binding */ faAudioDescription,
+/* harmony export */   "faAward": () => /* binding */ faAward,
+/* harmony export */   "faBaby": () => /* binding */ faBaby,
+/* harmony export */   "faBabyCarriage": () => /* binding */ faBabyCarriage,
+/* harmony export */   "faBackspace": () => /* binding */ faBackspace,
+/* harmony export */   "faBackward": () => /* binding */ faBackward,
+/* harmony export */   "faBacon": () => /* binding */ faBacon,
+/* harmony export */   "faBacteria": () => /* binding */ faBacteria,
+/* harmony export */   "faBacterium": () => /* binding */ faBacterium,
+/* harmony export */   "faBahai": () => /* binding */ faBahai,
+/* harmony export */   "faBalanceScale": () => /* binding */ faBalanceScale,
+/* harmony export */   "faBalanceScaleLeft": () => /* binding */ faBalanceScaleLeft,
+/* harmony export */   "faBalanceScaleRight": () => /* binding */ faBalanceScaleRight,
+/* harmony export */   "faBan": () => /* binding */ faBan,
+/* harmony export */   "faBandAid": () => /* binding */ faBandAid,
+/* harmony export */   "faBarcode": () => /* binding */ faBarcode,
+/* harmony export */   "faBars": () => /* binding */ faBars,
+/* harmony export */   "faBaseballBall": () => /* binding */ faBaseballBall,
+/* harmony export */   "faBasketballBall": () => /* binding */ faBasketballBall,
+/* harmony export */   "faBath": () => /* binding */ faBath,
+/* harmony export */   "faBatteryEmpty": () => /* binding */ faBatteryEmpty,
+/* harmony export */   "faBatteryFull": () => /* binding */ faBatteryFull,
+/* harmony export */   "faBatteryHalf": () => /* binding */ faBatteryHalf,
+/* harmony export */   "faBatteryQuarter": () => /* binding */ faBatteryQuarter,
+/* harmony export */   "faBatteryThreeQuarters": () => /* binding */ faBatteryThreeQuarters,
+/* harmony export */   "faBed": () => /* binding */ faBed,
+/* harmony export */   "faBeer": () => /* binding */ faBeer,
+/* harmony export */   "faBell": () => /* binding */ faBell,
+/* harmony export */   "faBellSlash": () => /* binding */ faBellSlash,
+/* harmony export */   "faBezierCurve": () => /* binding */ faBezierCurve,
+/* harmony export */   "faBible": () => /* binding */ faBible,
+/* harmony export */   "faBicycle": () => /* binding */ faBicycle,
+/* harmony export */   "faBiking": () => /* binding */ faBiking,
+/* harmony export */   "faBinoculars": () => /* binding */ faBinoculars,
+/* harmony export */   "faBiohazard": () => /* binding */ faBiohazard,
+/* harmony export */   "faBirthdayCake": () => /* binding */ faBirthdayCake,
+/* harmony export */   "faBlender": () => /* binding */ faBlender,
+/* harmony export */   "faBlenderPhone": () => /* binding */ faBlenderPhone,
+/* harmony export */   "faBlind": () => /* binding */ faBlind,
+/* harmony export */   "faBlog": () => /* binding */ faBlog,
+/* harmony export */   "faBold": () => /* binding */ faBold,
+/* harmony export */   "faBolt": () => /* binding */ faBolt,
+/* harmony export */   "faBomb": () => /* binding */ faBomb,
+/* harmony export */   "faBone": () => /* binding */ faBone,
+/* harmony export */   "faBong": () => /* binding */ faBong,
+/* harmony export */   "faBook": () => /* binding */ faBook,
+/* harmony export */   "faBookDead": () => /* binding */ faBookDead,
+/* harmony export */   "faBookMedical": () => /* binding */ faBookMedical,
+/* harmony export */   "faBookOpen": () => /* binding */ faBookOpen,
+/* harmony export */   "faBookReader": () => /* binding */ faBookReader,
+/* harmony export */   "faBookmark": () => /* binding */ faBookmark,
+/* harmony export */   "faBorderAll": () => /* binding */ faBorderAll,
+/* harmony export */   "faBorderNone": () => /* binding */ faBorderNone,
+/* harmony export */   "faBorderStyle": () => /* binding */ faBorderStyle,
+/* harmony export */   "faBowlingBall": () => /* binding */ faBowlingBall,
+/* harmony export */   "faBox": () => /* binding */ faBox,
+/* harmony export */   "faBoxOpen": () => /* binding */ faBoxOpen,
+/* harmony export */   "faBoxTissue": () => /* binding */ faBoxTissue,
+/* harmony export */   "faBoxes": () => /* binding */ faBoxes,
+/* harmony export */   "faBraille": () => /* binding */ faBraille,
+/* harmony export */   "faBrain": () => /* binding */ faBrain,
+/* harmony export */   "faBreadSlice": () => /* binding */ faBreadSlice,
+/* harmony export */   "faBriefcase": () => /* binding */ faBriefcase,
+/* harmony export */   "faBriefcaseMedical": () => /* binding */ faBriefcaseMedical,
+/* harmony export */   "faBroadcastTower": () => /* binding */ faBroadcastTower,
+/* harmony export */   "faBroom": () => /* binding */ faBroom,
+/* harmony export */   "faBrush": () => /* binding */ faBrush,
+/* harmony export */   "faBug": () => /* binding */ faBug,
+/* harmony export */   "faBuilding": () => /* binding */ faBuilding,
+/* harmony export */   "faBullhorn": () => /* binding */ faBullhorn,
+/* harmony export */   "faBullseye": () => /* binding */ faBullseye,
+/* harmony export */   "faBurn": () => /* binding */ faBurn,
+/* harmony export */   "faBus": () => /* binding */ faBus,
+/* harmony export */   "faBusAlt": () => /* binding */ faBusAlt,
+/* harmony export */   "faBusinessTime": () => /* binding */ faBusinessTime,
+/* harmony export */   "faCalculator": () => /* binding */ faCalculator,
+/* harmony export */   "faCalendar": () => /* binding */ faCalendar,
+/* harmony export */   "faCalendarAlt": () => /* binding */ faCalendarAlt,
+/* harmony export */   "faCalendarCheck": () => /* binding */ faCalendarCheck,
+/* harmony export */   "faCalendarDay": () => /* binding */ faCalendarDay,
+/* harmony export */   "faCalendarMinus": () => /* binding */ faCalendarMinus,
+/* harmony export */   "faCalendarPlus": () => /* binding */ faCalendarPlus,
+/* harmony export */   "faCalendarTimes": () => /* binding */ faCalendarTimes,
+/* harmony export */   "faCalendarWeek": () => /* binding */ faCalendarWeek,
+/* harmony export */   "faCamera": () => /* binding */ faCamera,
+/* harmony export */   "faCameraRetro": () => /* binding */ faCameraRetro,
+/* harmony export */   "faCampground": () => /* binding */ faCampground,
+/* harmony export */   "faCandyCane": () => /* binding */ faCandyCane,
+/* harmony export */   "faCannabis": () => /* binding */ faCannabis,
+/* harmony export */   "faCapsules": () => /* binding */ faCapsules,
+/* harmony export */   "faCar": () => /* binding */ faCar,
+/* harmony export */   "faCarAlt": () => /* binding */ faCarAlt,
+/* harmony export */   "faCarBattery": () => /* binding */ faCarBattery,
+/* harmony export */   "faCarCrash": () => /* binding */ faCarCrash,
+/* harmony export */   "faCarSide": () => /* binding */ faCarSide,
+/* harmony export */   "faCaravan": () => /* binding */ faCaravan,
+/* harmony export */   "faCaretDown": () => /* binding */ faCaretDown,
+/* harmony export */   "faCaretLeft": () => /* binding */ faCaretLeft,
+/* harmony export */   "faCaretRight": () => /* binding */ faCaretRight,
+/* harmony export */   "faCaretSquareDown": () => /* binding */ faCaretSquareDown,
+/* harmony export */   "faCaretSquareLeft": () => /* binding */ faCaretSquareLeft,
+/* harmony export */   "faCaretSquareRight": () => /* binding */ faCaretSquareRight,
+/* harmony export */   "faCaretSquareUp": () => /* binding */ faCaretSquareUp,
+/* harmony export */   "faCaretUp": () => /* binding */ faCaretUp,
+/* harmony export */   "faCarrot": () => /* binding */ faCarrot,
+/* harmony export */   "faCartArrowDown": () => /* binding */ faCartArrowDown,
+/* harmony export */   "faCartPlus": () => /* binding */ faCartPlus,
+/* harmony export */   "faCashRegister": () => /* binding */ faCashRegister,
+/* harmony export */   "faCat": () => /* binding */ faCat,
+/* harmony export */   "faCertificate": () => /* binding */ faCertificate,
+/* harmony export */   "faChair": () => /* binding */ faChair,
+/* harmony export */   "faChalkboard": () => /* binding */ faChalkboard,
+/* harmony export */   "faChalkboardTeacher": () => /* binding */ faChalkboardTeacher,
+/* harmony export */   "faChargingStation": () => /* binding */ faChargingStation,
+/* harmony export */   "faChartArea": () => /* binding */ faChartArea,
+/* harmony export */   "faChartBar": () => /* binding */ faChartBar,
+/* harmony export */   "faChartLine": () => /* binding */ faChartLine,
+/* harmony export */   "faChartPie": () => /* binding */ faChartPie,
+/* harmony export */   "faCheck": () => /* binding */ faCheck,
+/* harmony export */   "faCheckCircle": () => /* binding */ faCheckCircle,
+/* harmony export */   "faCheckDouble": () => /* binding */ faCheckDouble,
+/* harmony export */   "faCheckSquare": () => /* binding */ faCheckSquare,
+/* harmony export */   "faCheese": () => /* binding */ faCheese,
+/* harmony export */   "faChess": () => /* binding */ faChess,
+/* harmony export */   "faChessBishop": () => /* binding */ faChessBishop,
+/* harmony export */   "faChessBoard": () => /* binding */ faChessBoard,
+/* harmony export */   "faChessKing": () => /* binding */ faChessKing,
+/* harmony export */   "faChessKnight": () => /* binding */ faChessKnight,
+/* harmony export */   "faChessPawn": () => /* binding */ faChessPawn,
+/* harmony export */   "faChessQueen": () => /* binding */ faChessQueen,
+/* harmony export */   "faChessRook": () => /* binding */ faChessRook,
+/* harmony export */   "faChevronCircleDown": () => /* binding */ faChevronCircleDown,
+/* harmony export */   "faChevronCircleLeft": () => /* binding */ faChevronCircleLeft,
+/* harmony export */   "faChevronCircleRight": () => /* binding */ faChevronCircleRight,
+/* harmony export */   "faChevronCircleUp": () => /* binding */ faChevronCircleUp,
+/* harmony export */   "faChevronDown": () => /* binding */ faChevronDown,
+/* harmony export */   "faChevronLeft": () => /* binding */ faChevronLeft,
+/* harmony export */   "faChevronRight": () => /* binding */ faChevronRight,
+/* harmony export */   "faChevronUp": () => /* binding */ faChevronUp,
+/* harmony export */   "faChild": () => /* binding */ faChild,
+/* harmony export */   "faChurch": () => /* binding */ faChurch,
+/* harmony export */   "faCircle": () => /* binding */ faCircle,
+/* harmony export */   "faCircleNotch": () => /* binding */ faCircleNotch,
+/* harmony export */   "faCity": () => /* binding */ faCity,
+/* harmony export */   "faClinicMedical": () => /* binding */ faClinicMedical,
+/* harmony export */   "faClipboard": () => /* binding */ faClipboard,
+/* harmony export */   "faClipboardCheck": () => /* binding */ faClipboardCheck,
+/* harmony export */   "faClipboardList": () => /* binding */ faClipboardList,
+/* harmony export */   "faClock": () => /* binding */ faClock,
+/* harmony export */   "faClone": () => /* binding */ faClone,
+/* harmony export */   "faClosedCaptioning": () => /* binding */ faClosedCaptioning,
+/* harmony export */   "faCloud": () => /* binding */ faCloud,
+/* harmony export */   "faCloudDownloadAlt": () => /* binding */ faCloudDownloadAlt,
+/* harmony export */   "faCloudMeatball": () => /* binding */ faCloudMeatball,
+/* harmony export */   "faCloudMoon": () => /* binding */ faCloudMoon,
+/* harmony export */   "faCloudMoonRain": () => /* binding */ faCloudMoonRain,
+/* harmony export */   "faCloudRain": () => /* binding */ faCloudRain,
+/* harmony export */   "faCloudShowersHeavy": () => /* binding */ faCloudShowersHeavy,
+/* harmony export */   "faCloudSun": () => /* binding */ faCloudSun,
+/* harmony export */   "faCloudSunRain": () => /* binding */ faCloudSunRain,
+/* harmony export */   "faCloudUploadAlt": () => /* binding */ faCloudUploadAlt,
+/* harmony export */   "faCocktail": () => /* binding */ faCocktail,
+/* harmony export */   "faCode": () => /* binding */ faCode,
+/* harmony export */   "faCodeBranch": () => /* binding */ faCodeBranch,
+/* harmony export */   "faCoffee": () => /* binding */ faCoffee,
+/* harmony export */   "faCog": () => /* binding */ faCog,
+/* harmony export */   "faCogs": () => /* binding */ faCogs,
+/* harmony export */   "faCoins": () => /* binding */ faCoins,
+/* harmony export */   "faColumns": () => /* binding */ faColumns,
+/* harmony export */   "faComment": () => /* binding */ faComment,
+/* harmony export */   "faCommentAlt": () => /* binding */ faCommentAlt,
+/* harmony export */   "faCommentDollar": () => /* binding */ faCommentDollar,
+/* harmony export */   "faCommentDots": () => /* binding */ faCommentDots,
+/* harmony export */   "faCommentMedical": () => /* binding */ faCommentMedical,
+/* harmony export */   "faCommentSlash": () => /* binding */ faCommentSlash,
+/* harmony export */   "faComments": () => /* binding */ faComments,
+/* harmony export */   "faCommentsDollar": () => /* binding */ faCommentsDollar,
+/* harmony export */   "faCompactDisc": () => /* binding */ faCompactDisc,
+/* harmony export */   "faCompass": () => /* binding */ faCompass,
+/* harmony export */   "faCompress": () => /* binding */ faCompress,
+/* harmony export */   "faCompressAlt": () => /* binding */ faCompressAlt,
+/* harmony export */   "faCompressArrowsAlt": () => /* binding */ faCompressArrowsAlt,
+/* harmony export */   "faConciergeBell": () => /* binding */ faConciergeBell,
+/* harmony export */   "faCookie": () => /* binding */ faCookie,
+/* harmony export */   "faCookieBite": () => /* binding */ faCookieBite,
+/* harmony export */   "faCopy": () => /* binding */ faCopy,
+/* harmony export */   "faCopyright": () => /* binding */ faCopyright,
+/* harmony export */   "faCouch": () => /* binding */ faCouch,
+/* harmony export */   "faCreditCard": () => /* binding */ faCreditCard,
+/* harmony export */   "faCrop": () => /* binding */ faCrop,
+/* harmony export */   "faCropAlt": () => /* binding */ faCropAlt,
+/* harmony export */   "faCross": () => /* binding */ faCross,
+/* harmony export */   "faCrosshairs": () => /* binding */ faCrosshairs,
+/* harmony export */   "faCrow": () => /* binding */ faCrow,
+/* harmony export */   "faCrown": () => /* binding */ faCrown,
+/* harmony export */   "faCrutch": () => /* binding */ faCrutch,
+/* harmony export */   "faCube": () => /* binding */ faCube,
+/* harmony export */   "faCubes": () => /* binding */ faCubes,
+/* harmony export */   "faCut": () => /* binding */ faCut,
+/* harmony export */   "faDatabase": () => /* binding */ faDatabase,
+/* harmony export */   "faDeaf": () => /* binding */ faDeaf,
+/* harmony export */   "faDemocrat": () => /* binding */ faDemocrat,
+/* harmony export */   "faDesktop": () => /* binding */ faDesktop,
+/* harmony export */   "faDharmachakra": () => /* binding */ faDharmachakra,
+/* harmony export */   "faDiagnoses": () => /* binding */ faDiagnoses,
+/* harmony export */   "faDice": () => /* binding */ faDice,
+/* harmony export */   "faDiceD20": () => /* binding */ faDiceD20,
+/* harmony export */   "faDiceD6": () => /* binding */ faDiceD6,
+/* harmony export */   "faDiceFive": () => /* binding */ faDiceFive,
+/* harmony export */   "faDiceFour": () => /* binding */ faDiceFour,
+/* harmony export */   "faDiceOne": () => /* binding */ faDiceOne,
+/* harmony export */   "faDiceSix": () => /* binding */ faDiceSix,
+/* harmony export */   "faDiceThree": () => /* binding */ faDiceThree,
+/* harmony export */   "faDiceTwo": () => /* binding */ faDiceTwo,
+/* harmony export */   "faDigitalTachograph": () => /* binding */ faDigitalTachograph,
+/* harmony export */   "faDirections": () => /* binding */ faDirections,
+/* harmony export */   "faDisease": () => /* binding */ faDisease,
+/* harmony export */   "faDivide": () => /* binding */ faDivide,
+/* harmony export */   "faDizzy": () => /* binding */ faDizzy,
+/* harmony export */   "faDna": () => /* binding */ faDna,
+/* harmony export */   "faDog": () => /* binding */ faDog,
+/* harmony export */   "faDollarSign": () => /* binding */ faDollarSign,
+/* harmony export */   "faDolly": () => /* binding */ faDolly,
+/* harmony export */   "faDollyFlatbed": () => /* binding */ faDollyFlatbed,
+/* harmony export */   "faDonate": () => /* binding */ faDonate,
+/* harmony export */   "faDoorClosed": () => /* binding */ faDoorClosed,
+/* harmony export */   "faDoorOpen": () => /* binding */ faDoorOpen,
+/* harmony export */   "faDotCircle": () => /* binding */ faDotCircle,
+/* harmony export */   "faDove": () => /* binding */ faDove,
+/* harmony export */   "faDownload": () => /* binding */ faDownload,
+/* harmony export */   "faDraftingCompass": () => /* binding */ faDraftingCompass,
+/* harmony export */   "faDragon": () => /* binding */ faDragon,
+/* harmony export */   "faDrawPolygon": () => /* binding */ faDrawPolygon,
+/* harmony export */   "faDrum": () => /* binding */ faDrum,
+/* harmony export */   "faDrumSteelpan": () => /* binding */ faDrumSteelpan,
+/* harmony export */   "faDrumstickBite": () => /* binding */ faDrumstickBite,
+/* harmony export */   "faDumbbell": () => /* binding */ faDumbbell,
+/* harmony export */   "faDumpster": () => /* binding */ faDumpster,
+/* harmony export */   "faDumpsterFire": () => /* binding */ faDumpsterFire,
+/* harmony export */   "faDungeon": () => /* binding */ faDungeon,
+/* harmony export */   "faEdit": () => /* binding */ faEdit,
+/* harmony export */   "faEgg": () => /* binding */ faEgg,
+/* harmony export */   "faEject": () => /* binding */ faEject,
+/* harmony export */   "faEllipsisH": () => /* binding */ faEllipsisH,
+/* harmony export */   "faEllipsisV": () => /* binding */ faEllipsisV,
+/* harmony export */   "faEnvelope": () => /* binding */ faEnvelope,
+/* harmony export */   "faEnvelopeOpen": () => /* binding */ faEnvelopeOpen,
+/* harmony export */   "faEnvelopeOpenText": () => /* binding */ faEnvelopeOpenText,
+/* harmony export */   "faEnvelopeSquare": () => /* binding */ faEnvelopeSquare,
+/* harmony export */   "faEquals": () => /* binding */ faEquals,
+/* harmony export */   "faEraser": () => /* binding */ faEraser,
+/* harmony export */   "faEthernet": () => /* binding */ faEthernet,
+/* harmony export */   "faEuroSign": () => /* binding */ faEuroSign,
+/* harmony export */   "faExchangeAlt": () => /* binding */ faExchangeAlt,
+/* harmony export */   "faExclamation": () => /* binding */ faExclamation,
+/* harmony export */   "faExclamationCircle": () => /* binding */ faExclamationCircle,
+/* harmony export */   "faExclamationTriangle": () => /* binding */ faExclamationTriangle,
+/* harmony export */   "faExpand": () => /* binding */ faExpand,
+/* harmony export */   "faExpandAlt": () => /* binding */ faExpandAlt,
+/* harmony export */   "faExpandArrowsAlt": () => /* binding */ faExpandArrowsAlt,
+/* harmony export */   "faExternalLinkAlt": () => /* binding */ faExternalLinkAlt,
+/* harmony export */   "faExternalLinkSquareAlt": () => /* binding */ faExternalLinkSquareAlt,
+/* harmony export */   "faEye": () => /* binding */ faEye,
+/* harmony export */   "faEyeDropper": () => /* binding */ faEyeDropper,
+/* harmony export */   "faEyeSlash": () => /* binding */ faEyeSlash,
+/* harmony export */   "faFan": () => /* binding */ faFan,
+/* harmony export */   "faFastBackward": () => /* binding */ faFastBackward,
+/* harmony export */   "faFastForward": () => /* binding */ faFastForward,
+/* harmony export */   "faFaucet": () => /* binding */ faFaucet,
+/* harmony export */   "faFax": () => /* binding */ faFax,
+/* harmony export */   "faFeather": () => /* binding */ faFeather,
+/* harmony export */   "faFeatherAlt": () => /* binding */ faFeatherAlt,
+/* harmony export */   "faFemale": () => /* binding */ faFemale,
+/* harmony export */   "faFighterJet": () => /* binding */ faFighterJet,
+/* harmony export */   "faFile": () => /* binding */ faFile,
+/* harmony export */   "faFileAlt": () => /* binding */ faFileAlt,
+/* harmony export */   "faFileArchive": () => /* binding */ faFileArchive,
+/* harmony export */   "faFileAudio": () => /* binding */ faFileAudio,
+/* harmony export */   "faFileCode": () => /* binding */ faFileCode,
+/* harmony export */   "faFileContract": () => /* binding */ faFileContract,
+/* harmony export */   "faFileCsv": () => /* binding */ faFileCsv,
+/* harmony export */   "faFileDownload": () => /* binding */ faFileDownload,
+/* harmony export */   "faFileExcel": () => /* binding */ faFileExcel,
+/* harmony export */   "faFileExport": () => /* binding */ faFileExport,
+/* harmony export */   "faFileImage": () => /* binding */ faFileImage,
+/* harmony export */   "faFileImport": () => /* binding */ faFileImport,
+/* harmony export */   "faFileInvoice": () => /* binding */ faFileInvoice,
+/* harmony export */   "faFileInvoiceDollar": () => /* binding */ faFileInvoiceDollar,
+/* harmony export */   "faFileMedical": () => /* binding */ faFileMedical,
+/* harmony export */   "faFileMedicalAlt": () => /* binding */ faFileMedicalAlt,
+/* harmony export */   "faFilePdf": () => /* binding */ faFilePdf,
+/* harmony export */   "faFilePowerpoint": () => /* binding */ faFilePowerpoint,
+/* harmony export */   "faFilePrescription": () => /* binding */ faFilePrescription,
+/* harmony export */   "faFileSignature": () => /* binding */ faFileSignature,
+/* harmony export */   "faFileUpload": () => /* binding */ faFileUpload,
+/* harmony export */   "faFileVideo": () => /* binding */ faFileVideo,
+/* harmony export */   "faFileWord": () => /* binding */ faFileWord,
+/* harmony export */   "faFill": () => /* binding */ faFill,
+/* harmony export */   "faFillDrip": () => /* binding */ faFillDrip,
+/* harmony export */   "faFilm": () => /* binding */ faFilm,
+/* harmony export */   "faFilter": () => /* binding */ faFilter,
+/* harmony export */   "faFingerprint": () => /* binding */ faFingerprint,
+/* harmony export */   "faFire": () => /* binding */ faFire,
+/* harmony export */   "faFireAlt": () => /* binding */ faFireAlt,
+/* harmony export */   "faFireExtinguisher": () => /* binding */ faFireExtinguisher,
+/* harmony export */   "faFirstAid": () => /* binding */ faFirstAid,
+/* harmony export */   "faFish": () => /* binding */ faFish,
+/* harmony export */   "faFistRaised": () => /* binding */ faFistRaised,
+/* harmony export */   "faFlag": () => /* binding */ faFlag,
+/* harmony export */   "faFlagCheckered": () => /* binding */ faFlagCheckered,
+/* harmony export */   "faFlagUsa": () => /* binding */ faFlagUsa,
+/* harmony export */   "faFlask": () => /* binding */ faFlask,
+/* harmony export */   "faFlushed": () => /* binding */ faFlushed,
+/* harmony export */   "faFolder": () => /* binding */ faFolder,
+/* harmony export */   "faFolderMinus": () => /* binding */ faFolderMinus,
+/* harmony export */   "faFolderOpen": () => /* binding */ faFolderOpen,
+/* harmony export */   "faFolderPlus": () => /* binding */ faFolderPlus,
+/* harmony export */   "faFont": () => /* binding */ faFont,
+/* harmony export */   "faFontAwesomeLogoFull": () => /* binding */ faFontAwesomeLogoFull,
+/* harmony export */   "faFootballBall": () => /* binding */ faFootballBall,
+/* harmony export */   "faForward": () => /* binding */ faForward,
+/* harmony export */   "faFrog": () => /* binding */ faFrog,
+/* harmony export */   "faFrown": () => /* binding */ faFrown,
+/* harmony export */   "faFrownOpen": () => /* binding */ faFrownOpen,
+/* harmony export */   "faFunnelDollar": () => /* binding */ faFunnelDollar,
+/* harmony export */   "faFutbol": () => /* binding */ faFutbol,
+/* harmony export */   "faGamepad": () => /* binding */ faGamepad,
+/* harmony export */   "faGasPump": () => /* binding */ faGasPump,
+/* harmony export */   "faGavel": () => /* binding */ faGavel,
+/* harmony export */   "faGem": () => /* binding */ faGem,
+/* harmony export */   "faGenderless": () => /* binding */ faGenderless,
+/* harmony export */   "faGhost": () => /* binding */ faGhost,
+/* harmony export */   "faGift": () => /* binding */ faGift,
+/* harmony export */   "faGifts": () => /* binding */ faGifts,
+/* harmony export */   "faGlassCheers": () => /* binding */ faGlassCheers,
+/* harmony export */   "faGlassMartini": () => /* binding */ faGlassMartini,
+/* harmony export */   "faGlassMartiniAlt": () => /* binding */ faGlassMartiniAlt,
+/* harmony export */   "faGlassWhiskey": () => /* binding */ faGlassWhiskey,
+/* harmony export */   "faGlasses": () => /* binding */ faGlasses,
+/* harmony export */   "faGlobe": () => /* binding */ faGlobe,
+/* harmony export */   "faGlobeAfrica": () => /* binding */ faGlobeAfrica,
+/* harmony export */   "faGlobeAmericas": () => /* binding */ faGlobeAmericas,
+/* harmony export */   "faGlobeAsia": () => /* binding */ faGlobeAsia,
+/* harmony export */   "faGlobeEurope": () => /* binding */ faGlobeEurope,
+/* harmony export */   "faGolfBall": () => /* binding */ faGolfBall,
+/* harmony export */   "faGopuram": () => /* binding */ faGopuram,
+/* harmony export */   "faGraduationCap": () => /* binding */ faGraduationCap,
+/* harmony export */   "faGreaterThan": () => /* binding */ faGreaterThan,
+/* harmony export */   "faGreaterThanEqual": () => /* binding */ faGreaterThanEqual,
+/* harmony export */   "faGrimace": () => /* binding */ faGrimace,
+/* harmony export */   "faGrin": () => /* binding */ faGrin,
+/* harmony export */   "faGrinAlt": () => /* binding */ faGrinAlt,
+/* harmony export */   "faGrinBeam": () => /* binding */ faGrinBeam,
+/* harmony export */   "faGrinBeamSweat": () => /* binding */ faGrinBeamSweat,
+/* harmony export */   "faGrinHearts": () => /* binding */ faGrinHearts,
+/* harmony export */   "faGrinSquint": () => /* binding */ faGrinSquint,
+/* harmony export */   "faGrinSquintTears": () => /* binding */ faGrinSquintTears,
+/* harmony export */   "faGrinStars": () => /* binding */ faGrinStars,
+/* harmony export */   "faGrinTears": () => /* binding */ faGrinTears,
+/* harmony export */   "faGrinTongue": () => /* binding */ faGrinTongue,
+/* harmony export */   "faGrinTongueSquint": () => /* binding */ faGrinTongueSquint,
+/* harmony export */   "faGrinTongueWink": () => /* binding */ faGrinTongueWink,
+/* harmony export */   "faGrinWink": () => /* binding */ faGrinWink,
+/* harmony export */   "faGripHorizontal": () => /* binding */ faGripHorizontal,
+/* harmony export */   "faGripLines": () => /* binding */ faGripLines,
+/* harmony export */   "faGripLinesVertical": () => /* binding */ faGripLinesVertical,
+/* harmony export */   "faGripVertical": () => /* binding */ faGripVertical,
+/* harmony export */   "faGuitar": () => /* binding */ faGuitar,
+/* harmony export */   "faHSquare": () => /* binding */ faHSquare,
+/* harmony export */   "faHamburger": () => /* binding */ faHamburger,
+/* harmony export */   "faHammer": () => /* binding */ faHammer,
+/* harmony export */   "faHamsa": () => /* binding */ faHamsa,
+/* harmony export */   "faHandHolding": () => /* binding */ faHandHolding,
+/* harmony export */   "faHandHoldingHeart": () => /* binding */ faHandHoldingHeart,
+/* harmony export */   "faHandHoldingMedical": () => /* binding */ faHandHoldingMedical,
+/* harmony export */   "faHandHoldingUsd": () => /* binding */ faHandHoldingUsd,
+/* harmony export */   "faHandHoldingWater": () => /* binding */ faHandHoldingWater,
+/* harmony export */   "faHandLizard": () => /* binding */ faHandLizard,
+/* harmony export */   "faHandMiddleFinger": () => /* binding */ faHandMiddleFinger,
+/* harmony export */   "faHandPaper": () => /* binding */ faHandPaper,
+/* harmony export */   "faHandPeace": () => /* binding */ faHandPeace,
+/* harmony export */   "faHandPointDown": () => /* binding */ faHandPointDown,
+/* harmony export */   "faHandPointLeft": () => /* binding */ faHandPointLeft,
+/* harmony export */   "faHandPointRight": () => /* binding */ faHandPointRight,
+/* harmony export */   "faHandPointUp": () => /* binding */ faHandPointUp,
+/* harmony export */   "faHandPointer": () => /* binding */ faHandPointer,
+/* harmony export */   "faHandRock": () => /* binding */ faHandRock,
+/* harmony export */   "faHandScissors": () => /* binding */ faHandScissors,
+/* harmony export */   "faHandSparkles": () => /* binding */ faHandSparkles,
+/* harmony export */   "faHandSpock": () => /* binding */ faHandSpock,
+/* harmony export */   "faHands": () => /* binding */ faHands,
+/* harmony export */   "faHandsHelping": () => /* binding */ faHandsHelping,
+/* harmony export */   "faHandsWash": () => /* binding */ faHandsWash,
+/* harmony export */   "faHandshake": () => /* binding */ faHandshake,
+/* harmony export */   "faHandshakeAltSlash": () => /* binding */ faHandshakeAltSlash,
+/* harmony export */   "faHandshakeSlash": () => /* binding */ faHandshakeSlash,
+/* harmony export */   "faHanukiah": () => /* binding */ faHanukiah,
+/* harmony export */   "faHardHat": () => /* binding */ faHardHat,
+/* harmony export */   "faHashtag": () => /* binding */ faHashtag,
+/* harmony export */   "faHatCowboy": () => /* binding */ faHatCowboy,
+/* harmony export */   "faHatCowboySide": () => /* binding */ faHatCowboySide,
+/* harmony export */   "faHatWizard": () => /* binding */ faHatWizard,
+/* harmony export */   "faHdd": () => /* binding */ faHdd,
+/* harmony export */   "faHeadSideCough": () => /* binding */ faHeadSideCough,
+/* harmony export */   "faHeadSideCoughSlash": () => /* binding */ faHeadSideCoughSlash,
+/* harmony export */   "faHeadSideMask": () => /* binding */ faHeadSideMask,
+/* harmony export */   "faHeadSideVirus": () => /* binding */ faHeadSideVirus,
+/* harmony export */   "faHeading": () => /* binding */ faHeading,
+/* harmony export */   "faHeadphones": () => /* binding */ faHeadphones,
+/* harmony export */   "faHeadphonesAlt": () => /* binding */ faHeadphonesAlt,
+/* harmony export */   "faHeadset": () => /* binding */ faHeadset,
+/* harmony export */   "faHeart": () => /* binding */ faHeart,
+/* harmony export */   "faHeartBroken": () => /* binding */ faHeartBroken,
+/* harmony export */   "faHeartbeat": () => /* binding */ faHeartbeat,
+/* harmony export */   "faHelicopter": () => /* binding */ faHelicopter,
+/* harmony export */   "faHighlighter": () => /* binding */ faHighlighter,
+/* harmony export */   "faHiking": () => /* binding */ faHiking,
+/* harmony export */   "faHippo": () => /* binding */ faHippo,
+/* harmony export */   "faHistory": () => /* binding */ faHistory,
+/* harmony export */   "faHockeyPuck": () => /* binding */ faHockeyPuck,
+/* harmony export */   "faHollyBerry": () => /* binding */ faHollyBerry,
+/* harmony export */   "faHome": () => /* binding */ faHome,
+/* harmony export */   "faHorse": () => /* binding */ faHorse,
+/* harmony export */   "faHorseHead": () => /* binding */ faHorseHead,
+/* harmony export */   "faHospital": () => /* binding */ faHospital,
+/* harmony export */   "faHospitalAlt": () => /* binding */ faHospitalAlt,
+/* harmony export */   "faHospitalSymbol": () => /* binding */ faHospitalSymbol,
+/* harmony export */   "faHospitalUser": () => /* binding */ faHospitalUser,
+/* harmony export */   "faHotTub": () => /* binding */ faHotTub,
+/* harmony export */   "faHotdog": () => /* binding */ faHotdog,
+/* harmony export */   "faHotel": () => /* binding */ faHotel,
+/* harmony export */   "faHourglass": () => /* binding */ faHourglass,
+/* harmony export */   "faHourglassEnd": () => /* binding */ faHourglassEnd,
+/* harmony export */   "faHourglassHalf": () => /* binding */ faHourglassHalf,
+/* harmony export */   "faHourglassStart": () => /* binding */ faHourglassStart,
+/* harmony export */   "faHouseDamage": () => /* binding */ faHouseDamage,
+/* harmony export */   "faHouseUser": () => /* binding */ faHouseUser,
+/* harmony export */   "faHryvnia": () => /* binding */ faHryvnia,
+/* harmony export */   "faICursor": () => /* binding */ faICursor,
+/* harmony export */   "faIceCream": () => /* binding */ faIceCream,
+/* harmony export */   "faIcicles": () => /* binding */ faIcicles,
+/* harmony export */   "faIcons": () => /* binding */ faIcons,
+/* harmony export */   "faIdBadge": () => /* binding */ faIdBadge,
+/* harmony export */   "faIdCard": () => /* binding */ faIdCard,
+/* harmony export */   "faIdCardAlt": () => /* binding */ faIdCardAlt,
+/* harmony export */   "faIgloo": () => /* binding */ faIgloo,
+/* harmony export */   "faImage": () => /* binding */ faImage,
+/* harmony export */   "faImages": () => /* binding */ faImages,
+/* harmony export */   "faInbox": () => /* binding */ faInbox,
+/* harmony export */   "faIndent": () => /* binding */ faIndent,
+/* harmony export */   "faIndustry": () => /* binding */ faIndustry,
+/* harmony export */   "faInfinity": () => /* binding */ faInfinity,
+/* harmony export */   "faInfo": () => /* binding */ faInfo,
+/* harmony export */   "faInfoCircle": () => /* binding */ faInfoCircle,
+/* harmony export */   "faItalic": () => /* binding */ faItalic,
+/* harmony export */   "faJedi": () => /* binding */ faJedi,
+/* harmony export */   "faJoint": () => /* binding */ faJoint,
+/* harmony export */   "faJournalWhills": () => /* binding */ faJournalWhills,
+/* harmony export */   "faKaaba": () => /* binding */ faKaaba,
+/* harmony export */   "faKey": () => /* binding */ faKey,
+/* harmony export */   "faKeyboard": () => /* binding */ faKeyboard,
+/* harmony export */   "faKhanda": () => /* binding */ faKhanda,
+/* harmony export */   "faKiss": () => /* binding */ faKiss,
+/* harmony export */   "faKissBeam": () => /* binding */ faKissBeam,
+/* harmony export */   "faKissWinkHeart": () => /* binding */ faKissWinkHeart,
+/* harmony export */   "faKiwiBird": () => /* binding */ faKiwiBird,
+/* harmony export */   "faLandmark": () => /* binding */ faLandmark,
+/* harmony export */   "faLanguage": () => /* binding */ faLanguage,
+/* harmony export */   "faLaptop": () => /* binding */ faLaptop,
+/* harmony export */   "faLaptopCode": () => /* binding */ faLaptopCode,
+/* harmony export */   "faLaptopHouse": () => /* binding */ faLaptopHouse,
+/* harmony export */   "faLaptopMedical": () => /* binding */ faLaptopMedical,
+/* harmony export */   "faLaugh": () => /* binding */ faLaugh,
+/* harmony export */   "faLaughBeam": () => /* binding */ faLaughBeam,
+/* harmony export */   "faLaughSquint": () => /* binding */ faLaughSquint,
+/* harmony export */   "faLaughWink": () => /* binding */ faLaughWink,
+/* harmony export */   "faLayerGroup": () => /* binding */ faLayerGroup,
+/* harmony export */   "faLeaf": () => /* binding */ faLeaf,
+/* harmony export */   "faLemon": () => /* binding */ faLemon,
+/* harmony export */   "faLessThan": () => /* binding */ faLessThan,
+/* harmony export */   "faLessThanEqual": () => /* binding */ faLessThanEqual,
+/* harmony export */   "faLevelDownAlt": () => /* binding */ faLevelDownAlt,
+/* harmony export */   "faLevelUpAlt": () => /* binding */ faLevelUpAlt,
+/* harmony export */   "faLifeRing": () => /* binding */ faLifeRing,
+/* harmony export */   "faLightbulb": () => /* binding */ faLightbulb,
+/* harmony export */   "faLink": () => /* binding */ faLink,
+/* harmony export */   "faLiraSign": () => /* binding */ faLiraSign,
+/* harmony export */   "faList": () => /* binding */ faList,
+/* harmony export */   "faListAlt": () => /* binding */ faListAlt,
+/* harmony export */   "faListOl": () => /* binding */ faListOl,
+/* harmony export */   "faListUl": () => /* binding */ faListUl,
+/* harmony export */   "faLocationArrow": () => /* binding */ faLocationArrow,
+/* harmony export */   "faLock": () => /* binding */ faLock,
+/* harmony export */   "faLockOpen": () => /* binding */ faLockOpen,
+/* harmony export */   "faLongArrowAltDown": () => /* binding */ faLongArrowAltDown,
+/* harmony export */   "faLongArrowAltLeft": () => /* binding */ faLongArrowAltLeft,
+/* harmony export */   "faLongArrowAltRight": () => /* binding */ faLongArrowAltRight,
+/* harmony export */   "faLongArrowAltUp": () => /* binding */ faLongArrowAltUp,
+/* harmony export */   "faLowVision": () => /* binding */ faLowVision,
+/* harmony export */   "faLuggageCart": () => /* binding */ faLuggageCart,
+/* harmony export */   "faLungs": () => /* binding */ faLungs,
+/* harmony export */   "faLungsVirus": () => /* binding */ faLungsVirus,
+/* harmony export */   "faMagic": () => /* binding */ faMagic,
+/* harmony export */   "faMagnet": () => /* binding */ faMagnet,
+/* harmony export */   "faMailBulk": () => /* binding */ faMailBulk,
+/* harmony export */   "faMale": () => /* binding */ faMale,
+/* harmony export */   "faMap": () => /* binding */ faMap,
+/* harmony export */   "faMapMarked": () => /* binding */ faMapMarked,
+/* harmony export */   "faMapMarkedAlt": () => /* binding */ faMapMarkedAlt,
+/* harmony export */   "faMapMarker": () => /* binding */ faMapMarker,
+/* harmony export */   "faMapMarkerAlt": () => /* binding */ faMapMarkerAlt,
+/* harmony export */   "faMapPin": () => /* binding */ faMapPin,
+/* harmony export */   "faMapSigns": () => /* binding */ faMapSigns,
+/* harmony export */   "faMarker": () => /* binding */ faMarker,
+/* harmony export */   "faMars": () => /* binding */ faMars,
+/* harmony export */   "faMarsDouble": () => /* binding */ faMarsDouble,
+/* harmony export */   "faMarsStroke": () => /* binding */ faMarsStroke,
+/* harmony export */   "faMarsStrokeH": () => /* binding */ faMarsStrokeH,
+/* harmony export */   "faMarsStrokeV": () => /* binding */ faMarsStrokeV,
+/* harmony export */   "faMask": () => /* binding */ faMask,
+/* harmony export */   "faMedal": () => /* binding */ faMedal,
+/* harmony export */   "faMedkit": () => /* binding */ faMedkit,
+/* harmony export */   "faMeh": () => /* binding */ faMeh,
+/* harmony export */   "faMehBlank": () => /* binding */ faMehBlank,
+/* harmony export */   "faMehRollingEyes": () => /* binding */ faMehRollingEyes,
+/* harmony export */   "faMemory": () => /* binding */ faMemory,
+/* harmony export */   "faMenorah": () => /* binding */ faMenorah,
+/* harmony export */   "faMercury": () => /* binding */ faMercury,
+/* harmony export */   "faMeteor": () => /* binding */ faMeteor,
+/* harmony export */   "faMicrochip": () => /* binding */ faMicrochip,
+/* harmony export */   "faMicrophone": () => /* binding */ faMicrophone,
+/* harmony export */   "faMicrophoneAlt": () => /* binding */ faMicrophoneAlt,
+/* harmony export */   "faMicrophoneAltSlash": () => /* binding */ faMicrophoneAltSlash,
+/* harmony export */   "faMicrophoneSlash": () => /* binding */ faMicrophoneSlash,
+/* harmony export */   "faMicroscope": () => /* binding */ faMicroscope,
+/* harmony export */   "faMinus": () => /* binding */ faMinus,
+/* harmony export */   "faMinusCircle": () => /* binding */ faMinusCircle,
+/* harmony export */   "faMinusSquare": () => /* binding */ faMinusSquare,
+/* harmony export */   "faMitten": () => /* binding */ faMitten,
+/* harmony export */   "faMobile": () => /* binding */ faMobile,
+/* harmony export */   "faMobileAlt": () => /* binding */ faMobileAlt,
+/* harmony export */   "faMoneyBill": () => /* binding */ faMoneyBill,
+/* harmony export */   "faMoneyBillAlt": () => /* binding */ faMoneyBillAlt,
+/* harmony export */   "faMoneyBillWave": () => /* binding */ faMoneyBillWave,
+/* harmony export */   "faMoneyBillWaveAlt": () => /* binding */ faMoneyBillWaveAlt,
+/* harmony export */   "faMoneyCheck": () => /* binding */ faMoneyCheck,
+/* harmony export */   "faMoneyCheckAlt": () => /* binding */ faMoneyCheckAlt,
+/* harmony export */   "faMonument": () => /* binding */ faMonument,
+/* harmony export */   "faMoon": () => /* binding */ faMoon,
+/* harmony export */   "faMortarPestle": () => /* binding */ faMortarPestle,
+/* harmony export */   "faMosque": () => /* binding */ faMosque,
+/* harmony export */   "faMotorcycle": () => /* binding */ faMotorcycle,
+/* harmony export */   "faMountain": () => /* binding */ faMountain,
+/* harmony export */   "faMouse": () => /* binding */ faMouse,
+/* harmony export */   "faMousePointer": () => /* binding */ faMousePointer,
+/* harmony export */   "faMugHot": () => /* binding */ faMugHot,
+/* harmony export */   "faMusic": () => /* binding */ faMusic,
+/* harmony export */   "faNetworkWired": () => /* binding */ faNetworkWired,
+/* harmony export */   "faNeuter": () => /* binding */ faNeuter,
+/* harmony export */   "faNewspaper": () => /* binding */ faNewspaper,
+/* harmony export */   "faNotEqual": () => /* binding */ faNotEqual,
+/* harmony export */   "faNotesMedical": () => /* binding */ faNotesMedical,
+/* harmony export */   "faObjectGroup": () => /* binding */ faObjectGroup,
+/* harmony export */   "faObjectUngroup": () => /* binding */ faObjectUngroup,
+/* harmony export */   "faOilCan": () => /* binding */ faOilCan,
+/* harmony export */   "faOm": () => /* binding */ faOm,
+/* harmony export */   "faOtter": () => /* binding */ faOtter,
+/* harmony export */   "faOutdent": () => /* binding */ faOutdent,
+/* harmony export */   "faPager": () => /* binding */ faPager,
+/* harmony export */   "faPaintBrush": () => /* binding */ faPaintBrush,
+/* harmony export */   "faPaintRoller": () => /* binding */ faPaintRoller,
+/* harmony export */   "faPalette": () => /* binding */ faPalette,
+/* harmony export */   "faPallet": () => /* binding */ faPallet,
+/* harmony export */   "faPaperPlane": () => /* binding */ faPaperPlane,
+/* harmony export */   "faPaperclip": () => /* binding */ faPaperclip,
+/* harmony export */   "faParachuteBox": () => /* binding */ faParachuteBox,
+/* harmony export */   "faParagraph": () => /* binding */ faParagraph,
+/* harmony export */   "faParking": () => /* binding */ faParking,
+/* harmony export */   "faPassport": () => /* binding */ faPassport,
+/* harmony export */   "faPastafarianism": () => /* binding */ faPastafarianism,
+/* harmony export */   "faPaste": () => /* binding */ faPaste,
+/* harmony export */   "faPause": () => /* binding */ faPause,
+/* harmony export */   "faPauseCircle": () => /* binding */ faPauseCircle,
+/* harmony export */   "faPaw": () => /* binding */ faPaw,
+/* harmony export */   "faPeace": () => /* binding */ faPeace,
+/* harmony export */   "faPen": () => /* binding */ faPen,
+/* harmony export */   "faPenAlt": () => /* binding */ faPenAlt,
+/* harmony export */   "faPenFancy": () => /* binding */ faPenFancy,
+/* harmony export */   "faPenNib": () => /* binding */ faPenNib,
+/* harmony export */   "faPenSquare": () => /* binding */ faPenSquare,
+/* harmony export */   "faPencilAlt": () => /* binding */ faPencilAlt,
+/* harmony export */   "faPencilRuler": () => /* binding */ faPencilRuler,
+/* harmony export */   "faPeopleArrows": () => /* binding */ faPeopleArrows,
+/* harmony export */   "faPeopleCarry": () => /* binding */ faPeopleCarry,
+/* harmony export */   "faPepperHot": () => /* binding */ faPepperHot,
+/* harmony export */   "faPercent": () => /* binding */ faPercent,
+/* harmony export */   "faPercentage": () => /* binding */ faPercentage,
+/* harmony export */   "faPersonBooth": () => /* binding */ faPersonBooth,
+/* harmony export */   "faPhone": () => /* binding */ faPhone,
+/* harmony export */   "faPhoneAlt": () => /* binding */ faPhoneAlt,
+/* harmony export */   "faPhoneSlash": () => /* binding */ faPhoneSlash,
+/* harmony export */   "faPhoneSquare": () => /* binding */ faPhoneSquare,
+/* harmony export */   "faPhoneSquareAlt": () => /* binding */ faPhoneSquareAlt,
+/* harmony export */   "faPhoneVolume": () => /* binding */ faPhoneVolume,
+/* harmony export */   "faPhotoVideo": () => /* binding */ faPhotoVideo,
+/* harmony export */   "faPiggyBank": () => /* binding */ faPiggyBank,
+/* harmony export */   "faPills": () => /* binding */ faPills,
+/* harmony export */   "faPizzaSlice": () => /* binding */ faPizzaSlice,
+/* harmony export */   "faPlaceOfWorship": () => /* binding */ faPlaceOfWorship,
+/* harmony export */   "faPlane": () => /* binding */ faPlane,
+/* harmony export */   "faPlaneArrival": () => /* binding */ faPlaneArrival,
+/* harmony export */   "faPlaneDeparture": () => /* binding */ faPlaneDeparture,
+/* harmony export */   "faPlaneSlash": () => /* binding */ faPlaneSlash,
+/* harmony export */   "faPlay": () => /* binding */ faPlay,
+/* harmony export */   "faPlayCircle": () => /* binding */ faPlayCircle,
+/* harmony export */   "faPlug": () => /* binding */ faPlug,
+/* harmony export */   "faPlus": () => /* binding */ faPlus,
+/* harmony export */   "faPlusCircle": () => /* binding */ faPlusCircle,
+/* harmony export */   "faPlusSquare": () => /* binding */ faPlusSquare,
+/* harmony export */   "faPodcast": () => /* binding */ faPodcast,
+/* harmony export */   "faPoll": () => /* binding */ faPoll,
+/* harmony export */   "faPollH": () => /* binding */ faPollH,
+/* harmony export */   "faPoo": () => /* binding */ faPoo,
+/* harmony export */   "faPooStorm": () => /* binding */ faPooStorm,
+/* harmony export */   "faPoop": () => /* binding */ faPoop,
+/* harmony export */   "faPortrait": () => /* binding */ faPortrait,
+/* harmony export */   "faPoundSign": () => /* binding */ faPoundSign,
+/* harmony export */   "faPowerOff": () => /* binding */ faPowerOff,
+/* harmony export */   "faPray": () => /* binding */ faPray,
+/* harmony export */   "faPrayingHands": () => /* binding */ faPrayingHands,
+/* harmony export */   "faPrescription": () => /* binding */ faPrescription,
+/* harmony export */   "faPrescriptionBottle": () => /* binding */ faPrescriptionBottle,
+/* harmony export */   "faPrescriptionBottleAlt": () => /* binding */ faPrescriptionBottleAlt,
+/* harmony export */   "faPrint": () => /* binding */ faPrint,
+/* harmony export */   "faProcedures": () => /* binding */ faProcedures,
+/* harmony export */   "faProjectDiagram": () => /* binding */ faProjectDiagram,
+/* harmony export */   "faPumpMedical": () => /* binding */ faPumpMedical,
+/* harmony export */   "faPumpSoap": () => /* binding */ faPumpSoap,
+/* harmony export */   "faPuzzlePiece": () => /* binding */ faPuzzlePiece,
+/* harmony export */   "faQrcode": () => /* binding */ faQrcode,
+/* harmony export */   "faQuestion": () => /* binding */ faQuestion,
+/* harmony export */   "faQuestionCircle": () => /* binding */ faQuestionCircle,
+/* harmony export */   "faQuidditch": () => /* binding */ faQuidditch,
+/* harmony export */   "faQuoteLeft": () => /* binding */ faQuoteLeft,
+/* harmony export */   "faQuoteRight": () => /* binding */ faQuoteRight,
+/* harmony export */   "faQuran": () => /* binding */ faQuran,
+/* harmony export */   "faRadiation": () => /* binding */ faRadiation,
+/* harmony export */   "faRadiationAlt": () => /* binding */ faRadiationAlt,
+/* harmony export */   "faRainbow": () => /* binding */ faRainbow,
+/* harmony export */   "faRandom": () => /* binding */ faRandom,
+/* harmony export */   "faReceipt": () => /* binding */ faReceipt,
+/* harmony export */   "faRecordVinyl": () => /* binding */ faRecordVinyl,
+/* harmony export */   "faRecycle": () => /* binding */ faRecycle,
+/* harmony export */   "faRedo": () => /* binding */ faRedo,
+/* harmony export */   "faRedoAlt": () => /* binding */ faRedoAlt,
+/* harmony export */   "faRegistered": () => /* binding */ faRegistered,
+/* harmony export */   "faRemoveFormat": () => /* binding */ faRemoveFormat,
+/* harmony export */   "faReply": () => /* binding */ faReply,
+/* harmony export */   "faReplyAll": () => /* binding */ faReplyAll,
+/* harmony export */   "faRepublican": () => /* binding */ faRepublican,
+/* harmony export */   "faRestroom": () => /* binding */ faRestroom,
+/* harmony export */   "faRetweet": () => /* binding */ faRetweet,
+/* harmony export */   "faRibbon": () => /* binding */ faRibbon,
+/* harmony export */   "faRing": () => /* binding */ faRing,
+/* harmony export */   "faRoad": () => /* binding */ faRoad,
+/* harmony export */   "faRobot": () => /* binding */ faRobot,
+/* harmony export */   "faRocket": () => /* binding */ faRocket,
+/* harmony export */   "faRoute": () => /* binding */ faRoute,
+/* harmony export */   "faRss": () => /* binding */ faRss,
+/* harmony export */   "faRssSquare": () => /* binding */ faRssSquare,
+/* harmony export */   "faRubleSign": () => /* binding */ faRubleSign,
+/* harmony export */   "faRuler": () => /* binding */ faRuler,
+/* harmony export */   "faRulerCombined": () => /* binding */ faRulerCombined,
+/* harmony export */   "faRulerHorizontal": () => /* binding */ faRulerHorizontal,
+/* harmony export */   "faRulerVertical": () => /* binding */ faRulerVertical,
+/* harmony export */   "faRunning": () => /* binding */ faRunning,
+/* harmony export */   "faRupeeSign": () => /* binding */ faRupeeSign,
+/* harmony export */   "faSadCry": () => /* binding */ faSadCry,
+/* harmony export */   "faSadTear": () => /* binding */ faSadTear,
+/* harmony export */   "faSatellite": () => /* binding */ faSatellite,
+/* harmony export */   "faSatelliteDish": () => /* binding */ faSatelliteDish,
+/* harmony export */   "faSave": () => /* binding */ faSave,
+/* harmony export */   "faSchool": () => /* binding */ faSchool,
+/* harmony export */   "faScrewdriver": () => /* binding */ faScrewdriver,
+/* harmony export */   "faScroll": () => /* binding */ faScroll,
+/* harmony export */   "faSdCard": () => /* binding */ faSdCard,
+/* harmony export */   "faSearch": () => /* binding */ faSearch,
+/* harmony export */   "faSearchDollar": () => /* binding */ faSearchDollar,
+/* harmony export */   "faSearchLocation": () => /* binding */ faSearchLocation,
+/* harmony export */   "faSearchMinus": () => /* binding */ faSearchMinus,
+/* harmony export */   "faSearchPlus": () => /* binding */ faSearchPlus,
+/* harmony export */   "faSeedling": () => /* binding */ faSeedling,
+/* harmony export */   "faServer": () => /* binding */ faServer,
+/* harmony export */   "faShapes": () => /* binding */ faShapes,
+/* harmony export */   "faShare": () => /* binding */ faShare,
+/* harmony export */   "faShareAlt": () => /* binding */ faShareAlt,
+/* harmony export */   "faShareAltSquare": () => /* binding */ faShareAltSquare,
+/* harmony export */   "faShareSquare": () => /* binding */ faShareSquare,
+/* harmony export */   "faShekelSign": () => /* binding */ faShekelSign,
+/* harmony export */   "faShieldAlt": () => /* binding */ faShieldAlt,
+/* harmony export */   "faShieldVirus": () => /* binding */ faShieldVirus,
+/* harmony export */   "faShip": () => /* binding */ faShip,
+/* harmony export */   "faShippingFast": () => /* binding */ faShippingFast,
+/* harmony export */   "faShoePrints": () => /* binding */ faShoePrints,
+/* harmony export */   "faShoppingBag": () => /* binding */ faShoppingBag,
+/* harmony export */   "faShoppingBasket": () => /* binding */ faShoppingBasket,
+/* harmony export */   "faShoppingCart": () => /* binding */ faShoppingCart,
+/* harmony export */   "faShower": () => /* binding */ faShower,
+/* harmony export */   "faShuttleVan": () => /* binding */ faShuttleVan,
+/* harmony export */   "faSign": () => /* binding */ faSign,
+/* harmony export */   "faSignInAlt": () => /* binding */ faSignInAlt,
+/* harmony export */   "faSignLanguage": () => /* binding */ faSignLanguage,
+/* harmony export */   "faSignOutAlt": () => /* binding */ faSignOutAlt,
+/* harmony export */   "faSignal": () => /* binding */ faSignal,
+/* harmony export */   "faSignature": () => /* binding */ faSignature,
+/* harmony export */   "faSimCard": () => /* binding */ faSimCard,
+/* harmony export */   "faSink": () => /* binding */ faSink,
+/* harmony export */   "faSitemap": () => /* binding */ faSitemap,
+/* harmony export */   "faSkating": () => /* binding */ faSkating,
+/* harmony export */   "faSkiing": () => /* binding */ faSkiing,
+/* harmony export */   "faSkiingNordic": () => /* binding */ faSkiingNordic,
+/* harmony export */   "faSkull": () => /* binding */ faSkull,
+/* harmony export */   "faSkullCrossbones": () => /* binding */ faSkullCrossbones,
+/* harmony export */   "faSlash": () => /* binding */ faSlash,
+/* harmony export */   "faSleigh": () => /* binding */ faSleigh,
+/* harmony export */   "faSlidersH": () => /* binding */ faSlidersH,
+/* harmony export */   "faSmile": () => /* binding */ faSmile,
+/* harmony export */   "faSmileBeam": () => /* binding */ faSmileBeam,
+/* harmony export */   "faSmileWink": () => /* binding */ faSmileWink,
+/* harmony export */   "faSmog": () => /* binding */ faSmog,
+/* harmony export */   "faSmoking": () => /* binding */ faSmoking,
+/* harmony export */   "faSmokingBan": () => /* binding */ faSmokingBan,
+/* harmony export */   "faSms": () => /* binding */ faSms,
+/* harmony export */   "faSnowboarding": () => /* binding */ faSnowboarding,
+/* harmony export */   "faSnowflake": () => /* binding */ faSnowflake,
+/* harmony export */   "faSnowman": () => /* binding */ faSnowman,
+/* harmony export */   "faSnowplow": () => /* binding */ faSnowplow,
+/* harmony export */   "faSoap": () => /* binding */ faSoap,
+/* harmony export */   "faSocks": () => /* binding */ faSocks,
+/* harmony export */   "faSolarPanel": () => /* binding */ faSolarPanel,
+/* harmony export */   "faSort": () => /* binding */ faSort,
+/* harmony export */   "faSortAlphaDown": () => /* binding */ faSortAlphaDown,
+/* harmony export */   "faSortAlphaDownAlt": () => /* binding */ faSortAlphaDownAlt,
+/* harmony export */   "faSortAlphaUp": () => /* binding */ faSortAlphaUp,
+/* harmony export */   "faSortAlphaUpAlt": () => /* binding */ faSortAlphaUpAlt,
+/* harmony export */   "faSortAmountDown": () => /* binding */ faSortAmountDown,
+/* harmony export */   "faSortAmountDownAlt": () => /* binding */ faSortAmountDownAlt,
+/* harmony export */   "faSortAmountUp": () => /* binding */ faSortAmountUp,
+/* harmony export */   "faSortAmountUpAlt": () => /* binding */ faSortAmountUpAlt,
+/* harmony export */   "faSortDown": () => /* binding */ faSortDown,
+/* harmony export */   "faSortNumericDown": () => /* binding */ faSortNumericDown,
+/* harmony export */   "faSortNumericDownAlt": () => /* binding */ faSortNumericDownAlt,
+/* harmony export */   "faSortNumericUp": () => /* binding */ faSortNumericUp,
+/* harmony export */   "faSortNumericUpAlt": () => /* binding */ faSortNumericUpAlt,
+/* harmony export */   "faSortUp": () => /* binding */ faSortUp,
+/* harmony export */   "faSpa": () => /* binding */ faSpa,
+/* harmony export */   "faSpaceShuttle": () => /* binding */ faSpaceShuttle,
+/* harmony export */   "faSpellCheck": () => /* binding */ faSpellCheck,
+/* harmony export */   "faSpider": () => /* binding */ faSpider,
+/* harmony export */   "faSpinner": () => /* binding */ faSpinner,
+/* harmony export */   "faSplotch": () => /* binding */ faSplotch,
+/* harmony export */   "faSprayCan": () => /* binding */ faSprayCan,
+/* harmony export */   "faSquare": () => /* binding */ faSquare,
+/* harmony export */   "faSquareFull": () => /* binding */ faSquareFull,
+/* harmony export */   "faSquareRootAlt": () => /* binding */ faSquareRootAlt,
+/* harmony export */   "faStamp": () => /* binding */ faStamp,
+/* harmony export */   "faStar": () => /* binding */ faStar,
+/* harmony export */   "faStarAndCrescent": () => /* binding */ faStarAndCrescent,
+/* harmony export */   "faStarHalf": () => /* binding */ faStarHalf,
+/* harmony export */   "faStarHalfAlt": () => /* binding */ faStarHalfAlt,
+/* harmony export */   "faStarOfDavid": () => /* binding */ faStarOfDavid,
+/* harmony export */   "faStarOfLife": () => /* binding */ faStarOfLife,
+/* harmony export */   "faStepBackward": () => /* binding */ faStepBackward,
+/* harmony export */   "faStepForward": () => /* binding */ faStepForward,
+/* harmony export */   "faStethoscope": () => /* binding */ faStethoscope,
+/* harmony export */   "faStickyNote": () => /* binding */ faStickyNote,
+/* harmony export */   "faStop": () => /* binding */ faStop,
+/* harmony export */   "faStopCircle": () => /* binding */ faStopCircle,
+/* harmony export */   "faStopwatch": () => /* binding */ faStopwatch,
+/* harmony export */   "faStopwatch20": () => /* binding */ faStopwatch20,
+/* harmony export */   "faStore": () => /* binding */ faStore,
+/* harmony export */   "faStoreAlt": () => /* binding */ faStoreAlt,
+/* harmony export */   "faStoreAltSlash": () => /* binding */ faStoreAltSlash,
+/* harmony export */   "faStoreSlash": () => /* binding */ faStoreSlash,
+/* harmony export */   "faStream": () => /* binding */ faStream,
+/* harmony export */   "faStreetView": () => /* binding */ faStreetView,
+/* harmony export */   "faStrikethrough": () => /* binding */ faStrikethrough,
+/* harmony export */   "faStroopwafel": () => /* binding */ faStroopwafel,
+/* harmony export */   "faSubscript": () => /* binding */ faSubscript,
+/* harmony export */   "faSubway": () => /* binding */ faSubway,
+/* harmony export */   "faSuitcase": () => /* binding */ faSuitcase,
+/* harmony export */   "faSuitcaseRolling": () => /* binding */ faSuitcaseRolling,
+/* harmony export */   "faSun": () => /* binding */ faSun,
+/* harmony export */   "faSuperscript": () => /* binding */ faSuperscript,
+/* harmony export */   "faSurprise": () => /* binding */ faSurprise,
+/* harmony export */   "faSwatchbook": () => /* binding */ faSwatchbook,
+/* harmony export */   "faSwimmer": () => /* binding */ faSwimmer,
+/* harmony export */   "faSwimmingPool": () => /* binding */ faSwimmingPool,
+/* harmony export */   "faSynagogue": () => /* binding */ faSynagogue,
+/* harmony export */   "faSync": () => /* binding */ faSync,
+/* harmony export */   "faSyncAlt": () => /* binding */ faSyncAlt,
+/* harmony export */   "faSyringe": () => /* binding */ faSyringe,
+/* harmony export */   "faTable": () => /* binding */ faTable,
+/* harmony export */   "faTableTennis": () => /* binding */ faTableTennis,
+/* harmony export */   "faTablet": () => /* binding */ faTablet,
+/* harmony export */   "faTabletAlt": () => /* binding */ faTabletAlt,
+/* harmony export */   "faTablets": () => /* binding */ faTablets,
+/* harmony export */   "faTachometerAlt": () => /* binding */ faTachometerAlt,
+/* harmony export */   "faTag": () => /* binding */ faTag,
+/* harmony export */   "faTags": () => /* binding */ faTags,
+/* harmony export */   "faTape": () => /* binding */ faTape,
+/* harmony export */   "faTasks": () => /* binding */ faTasks,
+/* harmony export */   "faTaxi": () => /* binding */ faTaxi,
+/* harmony export */   "faTeeth": () => /* binding */ faTeeth,
+/* harmony export */   "faTeethOpen": () => /* binding */ faTeethOpen,
+/* harmony export */   "faTemperatureHigh": () => /* binding */ faTemperatureHigh,
+/* harmony export */   "faTemperatureLow": () => /* binding */ faTemperatureLow,
+/* harmony export */   "faTenge": () => /* binding */ faTenge,
+/* harmony export */   "faTerminal": () => /* binding */ faTerminal,
+/* harmony export */   "faTextHeight": () => /* binding */ faTextHeight,
+/* harmony export */   "faTextWidth": () => /* binding */ faTextWidth,
+/* harmony export */   "faTh": () => /* binding */ faTh,
+/* harmony export */   "faThLarge": () => /* binding */ faThLarge,
+/* harmony export */   "faThList": () => /* binding */ faThList,
+/* harmony export */   "faTheaterMasks": () => /* binding */ faTheaterMasks,
+/* harmony export */   "faThermometer": () => /* binding */ faThermometer,
+/* harmony export */   "faThermometerEmpty": () => /* binding */ faThermometerEmpty,
+/* harmony export */   "faThermometerFull": () => /* binding */ faThermometerFull,
+/* harmony export */   "faThermometerHalf": () => /* binding */ faThermometerHalf,
+/* harmony export */   "faThermometerQuarter": () => /* binding */ faThermometerQuarter,
+/* harmony export */   "faThermometerThreeQuarters": () => /* binding */ faThermometerThreeQuarters,
+/* harmony export */   "faThumbsDown": () => /* binding */ faThumbsDown,
+/* harmony export */   "faThumbsUp": () => /* binding */ faThumbsUp,
+/* harmony export */   "faThumbtack": () => /* binding */ faThumbtack,
+/* harmony export */   "faTicketAlt": () => /* binding */ faTicketAlt,
+/* harmony export */   "faTimes": () => /* binding */ faTimes,
+/* harmony export */   "faTimesCircle": () => /* binding */ faTimesCircle,
+/* harmony export */   "faTint": () => /* binding */ faTint,
+/* harmony export */   "faTintSlash": () => /* binding */ faTintSlash,
+/* harmony export */   "faTired": () => /* binding */ faTired,
+/* harmony export */   "faToggleOff": () => /* binding */ faToggleOff,
+/* harmony export */   "faToggleOn": () => /* binding */ faToggleOn,
+/* harmony export */   "faToilet": () => /* binding */ faToilet,
+/* harmony export */   "faToiletPaper": () => /* binding */ faToiletPaper,
+/* harmony export */   "faToiletPaperSlash": () => /* binding */ faToiletPaperSlash,
+/* harmony export */   "faToolbox": () => /* binding */ faToolbox,
+/* harmony export */   "faTools": () => /* binding */ faTools,
+/* harmony export */   "faTooth": () => /* binding */ faTooth,
+/* harmony export */   "faTorah": () => /* binding */ faTorah,
+/* harmony export */   "faToriiGate": () => /* binding */ faToriiGate,
+/* harmony export */   "faTractor": () => /* binding */ faTractor,
+/* harmony export */   "faTrademark": () => /* binding */ faTrademark,
+/* harmony export */   "faTrafficLight": () => /* binding */ faTrafficLight,
+/* harmony export */   "faTrailer": () => /* binding */ faTrailer,
+/* harmony export */   "faTrain": () => /* binding */ faTrain,
+/* harmony export */   "faTram": () => /* binding */ faTram,
+/* harmony export */   "faTransgender": () => /* binding */ faTransgender,
+/* harmony export */   "faTransgenderAlt": () => /* binding */ faTransgenderAlt,
+/* harmony export */   "faTrash": () => /* binding */ faTrash,
+/* harmony export */   "faTrashAlt": () => /* binding */ faTrashAlt,
+/* harmony export */   "faTrashRestore": () => /* binding */ faTrashRestore,
+/* harmony export */   "faTrashRestoreAlt": () => /* binding */ faTrashRestoreAlt,
+/* harmony export */   "faTree": () => /* binding */ faTree,
+/* harmony export */   "faTrophy": () => /* binding */ faTrophy,
+/* harmony export */   "faTruck": () => /* binding */ faTruck,
+/* harmony export */   "faTruckLoading": () => /* binding */ faTruckLoading,
+/* harmony export */   "faTruckMonster": () => /* binding */ faTruckMonster,
+/* harmony export */   "faTruckMoving": () => /* binding */ faTruckMoving,
+/* harmony export */   "faTruckPickup": () => /* binding */ faTruckPickup,
+/* harmony export */   "faTshirt": () => /* binding */ faTshirt,
+/* harmony export */   "faTty": () => /* binding */ faTty,
+/* harmony export */   "faTv": () => /* binding */ faTv,
+/* harmony export */   "faUmbrella": () => /* binding */ faUmbrella,
+/* harmony export */   "faUmbrellaBeach": () => /* binding */ faUmbrellaBeach,
+/* harmony export */   "faUnderline": () => /* binding */ faUnderline,
+/* harmony export */   "faUndo": () => /* binding */ faUndo,
+/* harmony export */   "faUndoAlt": () => /* binding */ faUndoAlt,
+/* harmony export */   "faUniversalAccess": () => /* binding */ faUniversalAccess,
+/* harmony export */   "faUniversity": () => /* binding */ faUniversity,
+/* harmony export */   "faUnlink": () => /* binding */ faUnlink,
+/* harmony export */   "faUnlock": () => /* binding */ faUnlock,
+/* harmony export */   "faUnlockAlt": () => /* binding */ faUnlockAlt,
+/* harmony export */   "faUpload": () => /* binding */ faUpload,
+/* harmony export */   "faUser": () => /* binding */ faUser,
+/* harmony export */   "faUserAlt": () => /* binding */ faUserAlt,
+/* harmony export */   "faUserAltSlash": () => /* binding */ faUserAltSlash,
+/* harmony export */   "faUserAstronaut": () => /* binding */ faUserAstronaut,
+/* harmony export */   "faUserCheck": () => /* binding */ faUserCheck,
+/* harmony export */   "faUserCircle": () => /* binding */ faUserCircle,
+/* harmony export */   "faUserClock": () => /* binding */ faUserClock,
+/* harmony export */   "faUserCog": () => /* binding */ faUserCog,
+/* harmony export */   "faUserEdit": () => /* binding */ faUserEdit,
+/* harmony export */   "faUserFriends": () => /* binding */ faUserFriends,
+/* harmony export */   "faUserGraduate": () => /* binding */ faUserGraduate,
+/* harmony export */   "faUserInjured": () => /* binding */ faUserInjured,
+/* harmony export */   "faUserLock": () => /* binding */ faUserLock,
+/* harmony export */   "faUserMd": () => /* binding */ faUserMd,
+/* harmony export */   "faUserMinus": () => /* binding */ faUserMinus,
+/* harmony export */   "faUserNinja": () => /* binding */ faUserNinja,
+/* harmony export */   "faUserNurse": () => /* binding */ faUserNurse,
+/* harmony export */   "faUserPlus": () => /* binding */ faUserPlus,
+/* harmony export */   "faUserSecret": () => /* binding */ faUserSecret,
+/* harmony export */   "faUserShield": () => /* binding */ faUserShield,
+/* harmony export */   "faUserSlash": () => /* binding */ faUserSlash,
+/* harmony export */   "faUserTag": () => /* binding */ faUserTag,
+/* harmony export */   "faUserTie": () => /* binding */ faUserTie,
+/* harmony export */   "faUserTimes": () => /* binding */ faUserTimes,
+/* harmony export */   "faUsers": () => /* binding */ faUsers,
+/* harmony export */   "faUsersCog": () => /* binding */ faUsersCog,
+/* harmony export */   "faUsersSlash": () => /* binding */ faUsersSlash,
+/* harmony export */   "faUtensilSpoon": () => /* binding */ faUtensilSpoon,
+/* harmony export */   "faUtensils": () => /* binding */ faUtensils,
+/* harmony export */   "faVectorSquare": () => /* binding */ faVectorSquare,
+/* harmony export */   "faVenus": () => /* binding */ faVenus,
+/* harmony export */   "faVenusDouble": () => /* binding */ faVenusDouble,
+/* harmony export */   "faVenusMars": () => /* binding */ faVenusMars,
+/* harmony export */   "faVest": () => /* binding */ faVest,
+/* harmony export */   "faVestPatches": () => /* binding */ faVestPatches,
+/* harmony export */   "faVial": () => /* binding */ faVial,
+/* harmony export */   "faVials": () => /* binding */ faVials,
+/* harmony export */   "faVideo": () => /* binding */ faVideo,
+/* harmony export */   "faVideoSlash": () => /* binding */ faVideoSlash,
+/* harmony export */   "faVihara": () => /* binding */ faVihara,
+/* harmony export */   "faVirus": () => /* binding */ faVirus,
+/* harmony export */   "faVirusSlash": () => /* binding */ faVirusSlash,
+/* harmony export */   "faViruses": () => /* binding */ faViruses,
+/* harmony export */   "faVoicemail": () => /* binding */ faVoicemail,
+/* harmony export */   "faVolleyballBall": () => /* binding */ faVolleyballBall,
+/* harmony export */   "faVolumeDown": () => /* binding */ faVolumeDown,
+/* harmony export */   "faVolumeMute": () => /* binding */ faVolumeMute,
+/* harmony export */   "faVolumeOff": () => /* binding */ faVolumeOff,
+/* harmony export */   "faVolumeUp": () => /* binding */ faVolumeUp,
+/* harmony export */   "faVoteYea": () => /* binding */ faVoteYea,
+/* harmony export */   "faVrCardboard": () => /* binding */ faVrCardboard,
+/* harmony export */   "faWalking": () => /* binding */ faWalking,
+/* harmony export */   "faWallet": () => /* binding */ faWallet,
+/* harmony export */   "faWarehouse": () => /* binding */ faWarehouse,
+/* harmony export */   "faWater": () => /* binding */ faWater,
+/* harmony export */   "faWaveSquare": () => /* binding */ faWaveSquare,
+/* harmony export */   "faWeight": () => /* binding */ faWeight,
+/* harmony export */   "faWeightHanging": () => /* binding */ faWeightHanging,
+/* harmony export */   "faWheelchair": () => /* binding */ faWheelchair,
+/* harmony export */   "faWifi": () => /* binding */ faWifi,
+/* harmony export */   "faWind": () => /* binding */ faWind,
+/* harmony export */   "faWindowClose": () => /* binding */ faWindowClose,
+/* harmony export */   "faWindowMaximize": () => /* binding */ faWindowMaximize,
+/* harmony export */   "faWindowMinimize": () => /* binding */ faWindowMinimize,
+/* harmony export */   "faWindowRestore": () => /* binding */ faWindowRestore,
+/* harmony export */   "faWineBottle": () => /* binding */ faWineBottle,
+/* harmony export */   "faWineGlass": () => /* binding */ faWineGlass,
+/* harmony export */   "faWineGlassAlt": () => /* binding */ faWineGlassAlt,
+/* harmony export */   "faWonSign": () => /* binding */ faWonSign,
+/* harmony export */   "faWrench": () => /* binding */ faWrench,
+/* harmony export */   "faXRay": () => /* binding */ faXRay,
+/* harmony export */   "faYenSign": () => /* binding */ faYenSign,
+/* harmony export */   "faYinYang": () => /* binding */ faYinYang
 /* harmony export */ });
 /*!
  * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
@@ -9598,7 +9598,7 @@ var _iconsCache = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "FontAwesomeIcon": () => (/* binding */ FontAwesomeIcon)
+/* harmony export */   "FontAwesomeIcon": () => /* binding */ FontAwesomeIcon
 /* harmony export */ });
 /* harmony import */ var _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fortawesome/fontawesome-svg-core */ "./node_modules/@fortawesome/fontawesome-svg-core/index.es.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
@@ -10001,7 +10001,7 @@ var convertCurry = convert.bind(null, react__WEBPACK_IMPORTED_MODULE_2__.createE
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ useCallbackRef)
+/* harmony export */   "default": () => /* binding */ useCallbackRef
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
@@ -10045,7 +10045,7 @@ function useCallbackRef() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
@@ -10080,7 +10080,7 @@ function useCommittedRef(value) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ useEventCallback)
+/* harmony export */   "default": () => /* binding */ useEventCallback
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _useCommittedRef__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./useCommittedRef */ "./node_modules/@restart/hooks/esm/useCommittedRef.js");
@@ -10104,7 +10104,7 @@ function useEventCallback(fn) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ useForceUpdate)
+/* harmony export */   "default": () => /* binding */ useForceUpdate
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
@@ -10147,8 +10147,8 @@ function useForceUpdate() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "mergeRefs": () => (/* binding */ mergeRefs),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "mergeRefs": () => /* binding */ mergeRefs,
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
@@ -10203,7 +10203,7 @@ function useMergedRefs(refA, refB) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ useMounted)
+/* harmony export */   "default": () => /* binding */ useMounted
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
@@ -10252,7 +10252,7 @@ function useMounted() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ usePrevious)
+/* harmony export */   "default": () => /* binding */ usePrevious
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
@@ -10293,7 +10293,7 @@ function usePrevious(value) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ useUpdatedRef)
+/* harmony export */   "default": () => /* binding */ useUpdatedRef
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
@@ -10321,7 +10321,7 @@ function useUpdatedRef(value) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ useWillUnmount)
+/* harmony export */   "default": () => /* binding */ useWillUnmount
 /* harmony export */ });
 /* harmony import */ var _useUpdatedRef__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./useUpdatedRef */ "./node_modules/@restart/hooks/esm/useUpdatedRef.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -12270,7 +12270,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 var baseUrl = function baseUrl(path) {
   return "".concat(window.location.protocol, "/").concat(window.location.host).concat(path);
@@ -12289,7 +12289,7 @@ var baseUrl = function baseUrl(path) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -12338,11 +12338,11 @@ if (document.getElementById('example')) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Modal.js");
@@ -12376,11 +12376,11 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -12405,44 +12405,55 @@ function MyVerticallyCenteredModal(props) {
       errors = _useForm.formState.errors;
 
   var updateSupplierData = function updateSupplierData(data) {
-    axios__WEBPACK_IMPORTED_MODULE_7___default().patch("/supplier/1}", {
+    axios__WEBPACK_IMPORTED_MODULE_7___default().patch("/permission/1}", {
       data: data
     }).then(alert('Updated'));
   };
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, _objectSpread(_objectSpread({}, props), {}, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, _objectSpread(_objectSpread({}, props), {}, {
     size: "lg",
     "aria-labelledby": "contained-modal-title-vcenter",
     centered: true,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Header, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Header, {
       closeButton: true,
       className: "modal-color",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Title, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Title, {
         id: "contained-modal-title-vcenter",
         children: props.title
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Body, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Body, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
-            controlId: "description-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+            controlId: "permission-id",
+            hidden: true,
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
               children: "Permission"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
+              type: "text",
+              placeholder: "Enter Permission",
+              value: props.permissionId
+            }, register("permission-id")))]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+            as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+            controlId: "permission-edit",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+              children: "Permission"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
               type: "text",
               placeholder: "Permission",
-              value: props.description
-            }, register("description-edit")))]
-          })
+              value: props.permission
+            }, register("permission-edit")))]
+          })]
         })
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Footer, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Footer, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
         variant: "success",
         size: "sm",
         onClick: handleSubmit(updateSupplierData),
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faCheck,
           className: "icon-space"
         }), "Save Changes"]
@@ -12491,8 +12502,8 @@ function Permission() {
   };
 
   var fetchPermission = /*#__PURE__*/function () {
-    var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee() {
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee$(_context) {
+    var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
@@ -12532,7 +12543,7 @@ function Permission() {
       data: data
     }).then(function (response) {
       console.log(response);
-      setCustomAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)((react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_8___default()), {
+      setCustomAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)((react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_8___default()), {
         success: true,
         title: "Success!",
         onConfirm: function onConfirm() {
@@ -12552,7 +12563,7 @@ function Permission() {
   };
 
   var removeSupplierConfirmation = function removeSupplierConfirmation(id) {
-    setCustomAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)((react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_8___default()), {
+    setCustomAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)((react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_8___default()), {
       warning: true,
       showCancel: true,
       confirmBtnText: "Yes, delete it!",
@@ -12582,33 +12593,24 @@ function Permission() {
   var showModalSupplierData = function showModalSupplierData(id) {
     var supplierInfo = tableData[id];
     console.log(supplierInfo);
-    setModalShow( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MyVerticallyCenteredModal, {
+    setModalShow( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(MyVerticallyCenteredModal, {
       show: true,
-      title: supplierInfo.supplier,
-      supplierId: supplierInfo.supplier_id,
-      supplier: supplierInfo.supplier,
-      contactPerson: supplierInfo.contact_person,
-      address: supplierInfo.address,
-      email: supplierInfo.email,
-      number: supplierInfo.contact_no,
-      fax: supplierInfo.fax_no,
-      bank: supplierInfo.bankaccount_no,
-      date: supplierInfo.date_added,
-      encoded: supplierInfo.encoded_by,
-      description: supplierInfo.description,
+      title: supplierInfo.name,
+      permissionId: supplierInfo.id,
+      permission: supplierInfo.name,
       onHide: function onHide() {
         return setModalShow(null);
       }
     }));
   };
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-    children: [customAlert, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    children: [customAlert, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
       fluid: true,
       hidden: hideSupplierTable,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         style: buttonStyle,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
           variant: "success",
           size: "sm",
           style: {
@@ -12617,51 +12619,51 @@ function Permission() {
           onClick: function onClick() {
             return hideTableShowAddSupplier(true);
           },
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
             icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faPlusSquare,
             className: "icon-space"
           }), "Add Permission"]
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default, {
         striped: true,
         bordered: true,
         hover: true,
         size: "sm",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("thead", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("thead", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
               children: "Permission ID"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
               children: "Permission"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
               children: "Actions"
             })]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("tbody", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("tbody", {
           children: tableData.map(function (data, index) {
-            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                 children: data.id
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                 children: data.name
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("td", {
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
                   variant: "outline-info",
                   size: "sm",
                   onClick: function onClick() {
                     return showModalSupplierData(index);
                   },
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
                     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faEye,
                     className: "icon-space"
                   }), "View"]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
                   variant: "outline-danger",
                   size: "sm",
                   onClick: function onClick() {
                     return removeSupplierConfirmation(data.supplier_id);
                   },
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
                     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faTrashAlt,
                     className: "icon-space"
                   }), "Delete"]
@@ -12671,52 +12673,52 @@ function Permission() {
           })
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
       fluid: true,
       hidden: hideAddSupplier,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__.default, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__.default, {
         className: "border-wrapper",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__.default.Body, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("h4", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__.default.Body, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h4", {
             className: "mb-4",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
               icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faUserTag,
               className: "icon-space"
             }), "Add Permission"]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
                 as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
                 controlId: "supplier",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
                   children: "Permission"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
                   type: "text",
                   placeholder: "Permission"
                 }, register("supplier", {
                   required: true
                 })), {}, {
                   isInvalid: errors.supplier
-                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
+                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
                   type: "invalid",
                   children: "Supplier is required"
                 })]
               })
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
             style: buttonStyle,
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
               variant: "success",
               size: "sm",
               style: {
                 marginRight: "0.5rem"
               },
               onClick: handleSubmit(onSubmit),
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
                 icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faPlusCircle,
                 className: "icon-space"
               }), "Add"]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
               variant: "danger",
               size: "sm",
               style: {
@@ -12725,7 +12727,7 @@ function Permission() {
               onClick: function onClick() {
                 return hideTableShowAddSupplier(false);
               },
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
                 icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faBan,
                 className: "icon-space"
               }), "Cancel"]
@@ -12740,7 +12742,7 @@ function Permission() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Permission);
 
 if (document.getElementById('permission')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_3__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Permission, {}), document.getElementById('permission'));
+  react_dom__WEBPACK_IMPORTED_MODULE_3__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Permission, {}), document.getElementById('permission'));
 }
 
 /***/ }),
@@ -12754,7 +12756,7 @@ if (document.getElementById('permission')) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
@@ -12785,7 +12787,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
@@ -12984,7 +12986,7 @@ if (document.getElementById('poNumber')) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -13000,7 +13002,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -13014,7 +13016,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
@@ -13170,7 +13172,7 @@ function PoNumberModal(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -13211,7 +13213,7 @@ if (document.getElementById('create-po')) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -13252,7 +13254,7 @@ if (document.getElementById('purchase-order')) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
@@ -13272,13 +13274,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -13292,7 +13293,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
@@ -13701,7 +13702,7 @@ if (document.getElementById('view-po')) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
@@ -13724,13 +13725,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -13744,7 +13744,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
@@ -14237,7 +14237,7 @@ function CreatePurchaseOrder() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -14251,7 +14251,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -14265,7 +14265,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
@@ -14376,7 +14376,7 @@ function Items(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -14497,7 +14497,7 @@ function PurchaseOrderList(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
@@ -14528,7 +14528,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
@@ -14706,7 +14706,7 @@ function PurchaseOrderTabs(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -14718,7 +14718,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -14784,11 +14784,11 @@ function Terms(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Modal.js");
@@ -14822,11 +14822,11 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -14851,43 +14851,54 @@ function MyVerticallyCenteredModal(props) {
       errors = _useForm.formState.errors;
 
   var updateRoleData = function updateRoleData(data) {
-    axios__WEBPACK_IMPORTED_MODULE_7___default().patch("/supplier/1}", {
+    axios__WEBPACK_IMPORTED_MODULE_7___default().patch("/role/1}", {
       data: data
     }).then(alert('Updated'));
   };
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, _objectSpread(_objectSpread({}, props), {}, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, _objectSpread(_objectSpread({}, props), {}, {
     size: "lg",
     "aria-labelledby": "contained-modal-title-vcenter",
     centered: true,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Header, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Header, {
       closeButton: true,
       className: "modal-color",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Title, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Title, {
         id: "contained-modal-title-vcenter",
         children: props.title
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Body, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Body, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+            as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+            controlId: "supplier-edit",
+            hidden: true,
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+              children: "Supplier"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
+              type: "text",
+              placeholder: "Enter Supplier",
+              value: props.roleId
+            }, register("supplier-id")))]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
             controlId: "role-name-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
               children: "Role Name"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
               type: "text",
               placeholder: "Role Name",
-              value: props.contactPerson
+              value: props.role
             }, register("contact-person-edit")))]
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
             controlId: "role-name-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
               children: "Permission"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
               type: "text",
               placeholder: "Permission",
               value: props.contactPerson
@@ -14895,12 +14906,12 @@ function MyVerticallyCenteredModal(props) {
           })
         })]
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Footer, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Footer, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
         variant: "success",
         size: "sm",
         onClick: handleSubmit(updateRoleData),
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faCheck,
           className: "icon-space"
         }), "Save Changes"]
@@ -14949,8 +14960,8 @@ function Role() {
   };
 
   var fetchRole = /*#__PURE__*/function () {
-    var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee() {
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee$(_context) {
+    var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
@@ -14990,7 +15001,7 @@ function Role() {
       data: data
     }).then(function (response) {
       console.log(response);
-      setCustomAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)((react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_8___default()), {
+      setCustomAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)((react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_8___default()), {
         success: true,
         title: "Success!",
         onConfirm: function onConfirm() {
@@ -15010,7 +15021,7 @@ function Role() {
   };
 
   var removeRoleConfirmation = function removeRoleConfirmation(id) {
-    setCustomAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)((react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_8___default()), {
+    setCustomAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)((react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_8___default()), {
       warning: true,
       showCancel: true,
       confirmBtnText: "Yes, delete it!",
@@ -15040,24 +15051,24 @@ function Role() {
   var showModalRoleData = function showModalRoleData(id) {
     var roleInfo = tableData[id];
     console.log(roleInfo);
-    setModalShow( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MyVerticallyCenteredModal, {
+    setModalShow( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(MyVerticallyCenteredModal, {
       show: true,
-      title: roleInfo.role,
-      roleId: roleInfo.role_id,
-      role: roleInfo.role,
+      title: roleInfo.name,
+      roleId: roleInfo.id,
+      role: roleInfo.name,
       onHide: function onHide() {
         return setModalShow(null);
       }
     }));
   };
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-    children: [customAlert, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    children: [customAlert, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
       fluid: true,
       hidden: hideRoleTable,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         style: buttonStyle,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
           variant: "success",
           size: "sm",
           style: {
@@ -15066,51 +15077,51 @@ function Role() {
           onClick: function onClick() {
             return hideTableShowAddRole(true);
           },
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
             icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faPlusSquare,
             className: "icon-space"
           }), "Add Role"]
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default, {
         striped: true,
         bordered: true,
         hover: true,
         size: "sm",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("thead", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("thead", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
               children: "Role ID"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
               children: "Role"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
               children: "Actions"
             })]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("tbody", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("tbody", {
           children: tableData.map(function (data, index) {
-            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                 children: data.id
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                 children: data.name
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("td", {
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
                   variant: "outline-info",
                   size: "sm",
                   onClick: function onClick() {
                     return showModalRoleData(index);
                   },
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
                     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faEye,
                     className: "icon-space"
                   }), "View"]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
                   variant: "outline-danger",
                   size: "sm",
                   onClick: function onClick() {
-                    return removeRoleConfirmation(data.role_id);
+                    return removeRoleConfirmation(data.id);
                   },
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
                     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faTrashAlt,
                     className: "icon-space"
                   }), "Delete"]
@@ -15120,52 +15131,52 @@ function Role() {
           })
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
       fluid: true,
       hidden: hideAddRole,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__.default, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__.default, {
         className: "border-wrapper",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__.default.Body, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("h4", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__.default.Body, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h4", {
             className: "mb-4",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
               icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faUserTag,
               className: "icon-space"
             }), "Add Rolesss"]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
                 as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
                 controlId: "role",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
                   children: "Role"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
                   type: "text",
                   placeholder: "Enter Role"
                 }, register("role", {
                   required: true
                 })), {}, {
                   isInvalid: errors.supplier
-                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
+                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
                   type: "invalid",
                   children: "Role is required"
                 })]
               })
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
             style: buttonStyle,
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
               variant: "success",
               size: "sm",
               style: {
                 marginRight: "0.5rem"
               },
               onClick: handleSubmit(onSubmit),
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
                 icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faPlusCircle,
                 className: "icon-space"
               }), "Add"]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
               variant: "danger",
               size: "sm",
               style: {
@@ -15174,7 +15185,7 @@ function Role() {
               onClick: function onClick() {
                 return hideTableShowAddRole(false);
               },
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
                 icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faBan,
                 className: "icon-space"
               }), "Cancel"]
@@ -15189,7 +15200,7 @@ function Role() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Role);
 
 if (document.getElementById('role')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_3__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Role, {}), document.getElementById('role'));
+  react_dom__WEBPACK_IMPORTED_MODULE_3__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Role, {}), document.getElementById('role'));
 }
 
 /***/ }),
@@ -15203,11 +15214,11 @@ if (document.getElementById('role')) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Alert.js");
@@ -15234,7 +15245,7 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -15248,7 +15259,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
@@ -15273,7 +15284,7 @@ function MyVerticallyCenteredModal(props) {
   var updateSupplierData = function updateSupplierData(data) {
     axios__WEBPACK_IMPORTED_MODULE_7___default().patch("/supplier/1}", {
       data: data
-    }).then(setAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
+    }).then(setAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
       variant: "success",
       children: "Data Updated"
     })));
@@ -15284,127 +15295,127 @@ function MyVerticallyCenteredModal(props) {
       alert = _useState2[0],
       setAlert = _useState2[1];
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, _objectSpread(_objectSpread({}, props), {}, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, _objectSpread(_objectSpread({}, props), {}, {
     size: "lg",
     "aria-labelledby": "contained-modal-title-vcenter",
     centered: true,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Header, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Header, {
       closeButton: true,
       className: "modal-color",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Title, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Title, {
         id: "contained-modal-title-vcenter",
         children: props.title
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Body, {
-      children: [alert, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default, {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Body, {
+      children: [alert, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
             controlId: "supplier-edit",
             hidden: true,
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
               children: "Supplier"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
               type: "text",
               placeholder: "Enter Supplier",
               value: props.supplierId
             }, register("supplier-id")))]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
             controlId: "supplier-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
               children: "Supplier"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
               type: "text",
               placeholder: "Enter Supplier",
               value: props.supplier
             }, register("supplier-edit")))]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
             controlId: "contact-person-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
               children: "Contact Person"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
               type: "text",
               placeholder: "Enter Contact Person",
               value: props.contactPerson
             }, register("contact-person-edit")))]
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
             controlId: "address-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
               children: "Address"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
               type: "text",
               placeholder: "Enter Address",
               value: props.address
             }, register("address-edit")))]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
             controlId: "email-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
               children: "Email"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
               type: "text",
               placeholder: "Enter Email",
               value: props.email
             }, register("email-edit")))]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
             controlId: "number-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
               children: "Number"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
               type: "text",
               placeholder: "Enter Address",
               value: props.email
             }, register("number-edit")))]
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
             controlId: "fax-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
               children: "Fax"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
               type: "text",
               placeholder: "Enter Email",
               value: props.fax
             }, register("fax-edit")))]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
             controlId: "date-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
               children: "Date Added"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
               type: "text",
               value: props.date,
               readOnly: true
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
             controlId: "encoded-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
               children: "Encoded By"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
               type: "text",
               value: props.encoded,
               readOnly: true
             })]
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
             controlId: "description-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
               children: "Description"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
               type: "text",
               placeholder: "Optional",
               value: props.description
@@ -15412,12 +15423,12 @@ function MyVerticallyCenteredModal(props) {
           })
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Footer, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Footer, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default, {
         variant: "success",
         size: "sm",
         onClick: handleSubmit(updateSupplierData),
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_14__.faCheck,
           className: "icon-space"
         }), "Save Changes"]
@@ -15466,8 +15477,8 @@ function Supplier() {
   };
 
   var fetchSupplier = /*#__PURE__*/function () {
-    var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee() {
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee$(_context) {
+    var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
@@ -15507,7 +15518,7 @@ function Supplier() {
       data: data
     }).then(function (response) {
       console.log(response);
-      setCustomAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)((react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_8___default()), {
+      setCustomAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)((react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_8___default()), {
         success: true,
         title: "Success!",
         onConfirm: function onConfirm() {
@@ -15527,7 +15538,7 @@ function Supplier() {
   };
 
   var removeSupplierConfirmation = function removeSupplierConfirmation(id) {
-    setCustomAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)((react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_8___default()), {
+    setCustomAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)((react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_8___default()), {
       warning: true,
       showCancel: true,
       confirmBtnText: "Yes, delete it!",
@@ -15557,7 +15568,7 @@ function Supplier() {
   var showModalSupplierData = function showModalSupplierData(id) {
     var supplierInfo = tableData[id];
     console.log(supplierInfo);
-    setModalShow( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MyVerticallyCenteredModal, {
+    setModalShow( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(MyVerticallyCenteredModal, {
       show: true,
       title: supplierInfo.supplier,
       supplierId: supplierInfo.supplier_id,
@@ -15577,13 +15588,13 @@ function Supplier() {
     }));
   };
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-    children: [customAlert, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    children: [customAlert, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default, {
       fluid: true,
       hidden: hideSupplierTable,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         style: buttonStyle,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default, {
           variant: "success",
           size: "sm",
           style: {
@@ -15592,59 +15603,59 @@ function Supplier() {
           onClick: function onClick() {
             return hideTableShowAddSupplier(true);
           },
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
             icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_14__.faPlusSquare,
             className: "icon-space"
           }), "Add Supplier"]
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__.default, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__.default, {
         striped: true,
         bordered: true,
         hover: true,
         size: "sm",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("thead", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("thead", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
               children: "Supplier ID"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
               children: "Supplier"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
               children: "Contact Number"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
               children: "Email"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
               children: "Actions"
             })]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("tbody", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("tbody", {
           children: tableData.map(function (data, index) {
-            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                 children: data.supplier_id
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                 children: data.supplier
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                 children: data.contact_no
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                 children: data.email
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("td", {
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default, {
                   variant: "outline-info",
                   size: "sm",
                   onClick: function onClick() {
                     return showModalSupplierData(index);
                   },
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
                     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_14__.faEye,
                     className: "icon-space"
                   }), "View"]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default, {
                   variant: "outline-danger",
                   size: "sm",
                   onClick: function onClick() {
                     return removeSupplierConfirmation(data.supplier_id);
                   },
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
                     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_14__.faTrashAlt,
                     className: "icon-space"
                   }), "Delete"]
@@ -15654,118 +15665,118 @@ function Supplier() {
           })
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default, {
       fluid: true,
       hidden: hideAddSupplier,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_17__.default, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_17__.default, {
         className: "border-wrapper",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_17__.default.Body, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("h4", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_17__.default.Body, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h4", {
             className: "mb-4",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
               icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_14__.faUserTag,
               className: "icon-space"
             }), "Add Supplier"]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default, {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
                 as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                 controlId: "supplier",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
                   children: "Supplier"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread(_objectSpread({
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread(_objectSpread({
                   type: "text",
                   placeholder: "Enter Supplier"
                 }, register("supplier", {
                   required: true
                 })), {}, {
                   isInvalid: errors.supplier
-                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control.Feedback, {
+                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control.Feedback, {
                   type: "invalid",
                   children: "Supplier is required"
                 })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
                 as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                 controlId: "contact-person",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
                   children: "Contact Person"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread(_objectSpread({
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread(_objectSpread({
                   type: "text",
                   placeholder: "Enter Contact Person"
                 }, register("contactPerson", {
                   required: true
                 })), {}, {
                   isInvalid: errors.contactPerson
-                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control.Feedback, {
+                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control.Feedback, {
                   type: "invalid",
                   children: "Contact person is required"
                 })]
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
               controlId: "supplier-address",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
                 children: "Address"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread(_objectSpread({
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread(_objectSpread({
                 placeholder: "Supplier Address"
               }, register("address", {
                 required: true
               })), {}, {
                 isInvalid: errors.address
-              })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control.Feedback, {
+              })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control.Feedback, {
                 type: "invalid",
                 children: "Address is required"
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
                 as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                 controlId: "supplier-email",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
                   children: "Email"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
                   placeholder: "Supplier email"
                 }, register("email")))]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
                 as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                 controlId: "supplier-number",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
                   children: "Number"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
                   placeholder: "Supplier number"
                 }, register("number")))]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
                 as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                 controlId: "supplier-fax",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
                   children: "Fax No."
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
                   placeholder: "Supplier Fax"
                 }, register("fax")))]
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
                 as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                 controlId: "supplier-description",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
                   children: "Description"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
                   placeholder: "Optional"
                 }, register("description")))]
               })
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
             style: buttonStyle,
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default, {
               variant: "success",
               size: "sm",
               style: {
                 marginRight: "0.5rem"
               },
               onClick: handleSubmit(onSubmit),
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
                 icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_14__.faPlusCircle,
                 className: "icon-space"
               }), "Add"]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default, {
               variant: "danger",
               size: "sm",
               style: {
@@ -15774,7 +15785,7 @@ function Supplier() {
               onClick: function onClick() {
                 return hideTableShowAddSupplier(false);
               },
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
                 icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_14__.faBan,
                 className: "icon-space"
               }), "Cancel"]
@@ -15789,7 +15800,7 @@ function Supplier() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Supplier);
 
 if (document.getElementById('supplier')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_3__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Supplier, {}), document.getElementById('supplier'));
+  react_dom__WEBPACK_IMPORTED_MODULE_3__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Supplier, {}), document.getElementById('supplier'));
 }
 
 /***/ }),
@@ -15803,11 +15814,11 @@ if (document.getElementById('supplier')) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Modal.js");
@@ -15841,11 +15852,11 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -15869,78 +15880,100 @@ function MyVerticallyCenteredModal(props) {
       watch = _useForm.watch,
       errors = _useForm.formState.errors;
 
-  var updateSupplierData = function updateSupplierData(data) {
+  var updateUserData = function updateUserData(data) {
     axios__WEBPACK_IMPORTED_MODULE_7___default().patch("/supplier/1}", {
       data: data
     }).then(alert('Updated'));
   };
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, _objectSpread(_objectSpread({}, props), {}, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, _objectSpread(_objectSpread({}, props), {}, {
     size: "lg",
     "aria-labelledby": "contained-modal-title-vcenter",
     centered: true,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Header, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Header, {
       closeButton: true,
       className: "modal-color",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Title, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Title, {
         id: "contained-modal-title-vcenter",
         children: props.title
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Body, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Body, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
-            controlId: "supplier-edit",
+            controlId: "user-edit",
             hidden: true,
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
               children: "User"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
               type: "text",
               placeholder: "Enter User",
-              value: props.supplierId
-            }, register("supplier-id")))]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+              value: props.userId
+            }, register("user-id")))]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
-            controlId: "supplier-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+            controlId: "user-edit",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
               children: "User"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
               type: "text",
               placeholder: "Enter User",
-              value: props.supplier
-            }, register("supplier-edit")))]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+              value: props.userName
+            }, register("user-edit")))]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
-            controlId: "supplier-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+            controlId: "user-email-edit",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
               children: "Email"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
               type: "text",
               placeholder: "Enter Email",
-              value: props.supplier
-            }, register("supplier-edit")))]
+              value: props.userEmail
+            }, register("user-email-edit")))]
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
-            controlId: "description-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+            controlId: "user-password-edit",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+              children: "Password"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
+              type: "text",
+              placeholder: "Password",
+              value: props.userPassword
+            }, register("user-password-edit")))]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+            as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+            controlId: "user-password-edit",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+              children: "Password"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
+              type: "text",
+              placeholder: "Password",
+              value: props.userPassword
+            }, register("user-password-edit")))]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+            as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+            controlId: "role-edit",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
               children: "Role"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
               type: "text",
               placeholder: "Role",
               value: props.description
-            }, register("description-edit")))]
+            }, register("role-edit")))]
           })
         })]
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Footer, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Footer, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
         variant: "success",
         size: "sm",
-        onClick: handleSubmit(updateSupplierData),
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+        onClick: handleSubmit(updateUserData),
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
           icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faCheck,
           className: "icon-space"
         }), "Save Changes"]
@@ -15989,8 +16022,8 @@ function User() {
   };
 
   var fetchUser = /*#__PURE__*/function () {
-    var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee() {
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee$(_context) {
+    var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
@@ -16030,7 +16063,7 @@ function User() {
       data: data
     }).then(function (response) {
       console.log(response);
-      setCustomAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)((react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_8___default()), {
+      setCustomAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)((react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_8___default()), {
         success: true,
         title: "Success!",
         onConfirm: function onConfirm() {
@@ -16050,7 +16083,7 @@ function User() {
   };
 
   var removeSupplierConfirmation = function removeSupplierConfirmation(id) {
-    setCustomAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)((react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_8___default()), {
+    setCustomAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)((react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_8___default()), {
       warning: true,
       showCancel: true,
       confirmBtnText: "Yes, delete it!",
@@ -16078,35 +16111,28 @@ function User() {
   };
 
   var showModalSupplierData = function showModalSupplierData(id) {
-    var supplierInfo = tableData[id];
-    console.log(supplierInfo);
-    setModalShow( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MyVerticallyCenteredModal, {
+    var userInfo = tableData[id];
+    console.log(userInfo);
+    setModalShow( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(MyVerticallyCenteredModal, {
       show: true,
-      title: supplierInfo.supplier,
-      supplierId: supplierInfo.supplier_id,
-      supplier: supplierInfo.supplier,
-      contactPerson: supplierInfo.contact_person,
-      address: supplierInfo.address,
-      email: supplierInfo.email,
-      number: supplierInfo.contact_no,
-      fax: supplierInfo.fax_no,
-      bank: supplierInfo.bankaccount_no,
-      date: supplierInfo.date_added,
-      encoded: supplierInfo.encoded_by,
-      description: supplierInfo.description,
+      title: userInfo.name,
+      userId: userInfo.id,
+      userName: userInfo.name,
+      userEmail: userInfo.email,
+      userPassword: userInfo.password,
       onHide: function onHide() {
         return setModalShow(null);
       }
     }));
   };
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-    children: [customAlert, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    children: [customAlert, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
       fluid: true,
       hidden: hideSupplierTable,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         style: buttonStyle,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
           variant: "success",
           size: "sm",
           style: {
@@ -16115,59 +16141,59 @@ function User() {
           onClick: function onClick() {
             return hideTableShowAddSupplier(true);
           },
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
             icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faPlusSquare,
             className: "icon-space"
           }), "Add User"]
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default, {
         striped: true,
         bordered: true,
         hover: true,
         size: "sm",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("thead", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("thead", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
               children: "User ID"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
               children: "User"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
               children: "Email"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
               children: "Role"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
               children: "Actions"
             })]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("tbody", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("tbody", {
           children: tableData.map(function (data, index) {
-            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                 children: data.id
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                 children: data.name
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                 children: data.email
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                 children: data.email
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("td", {
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("td", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
                   variant: "outline-info",
                   size: "sm",
                   onClick: function onClick() {
                     return showModalSupplierData(index);
                   },
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
                     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faEye,
                     className: "icon-space"
                   }), "View"]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
                   variant: "outline-danger",
                   size: "sm",
                   onClick: function onClick() {
                     return removeSupplierConfirmation(data.supplier_id);
                   },
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
                     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faTrashAlt,
                     className: "icon-space"
                   }), "Delete"]
@@ -16177,82 +16203,116 @@ function User() {
           })
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
       fluid: true,
       hidden: hideAddSupplier,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__.default, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__.default, {
         className: "border-wrapper",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__.default.Body, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("h4", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__.default.Body, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h4", {
             className: "mb-4",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
               icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faUserTag,
               className: "icon-space"
             }), "Add User"]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
                 as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
                 controlId: "supplier",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
                   children: "User"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
                   type: "text",
                   placeholder: "Enter User"
                 }, register("supplier", {
                   required: true
                 })), {}, {
                   isInvalid: errors.supplier
-                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
+                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
                   type: "invalid",
                   children: "User's name is required"
                 })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
                 as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
                 controlId: "contact-person",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
                   children: "Email"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
-                  type: "text",
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
+                  type: "email",
                   placeholder: "Enter Email"
                 }, register("contactPerson", {
                   required: true
                 })), {}, {
                   isInvalid: errors.contactPerson
-                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
+                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
                   type: "invalid",
                   children: "Email is required"
                 })]
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                controlId: "supplier",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                  children: "Password"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
+                  type: "password",
+                  placeholder: "Password"
+                }, register("supplier", {
+                  required: true
+                })), {}, {
+                  isInvalid: errors.supplier
+                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
+                  type: "invalid",
+                  children: "User's name is required"
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                controlId: "contact-person",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                  children: "Confirm Password"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
+                  type: "text",
+                  placeholder: "Password"
+                }, register("contactPerson", {
+                  required: true
+                })), {}, {
+                  isInvalid: errors.contactPerson
+                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
+                  type: "invalid",
+                  children: "Email is required"
+                })]
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
               controlId: "supplier-address",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
                 children: "Role"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
                 placeholder: "Role"
               }, register("address", {
                 required: true
               })), {}, {
                 isInvalid: errors.address
-              })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
+              })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
                 type: "invalid",
                 children: "Role is required"
               })]
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
             style: buttonStyle,
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
               variant: "success",
               size: "sm",
               style: {
                 marginRight: "0.5rem"
               },
               onClick: handleSubmit(onSubmit),
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
                 icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faPlusCircle,
                 className: "icon-space"
               }), "Add"]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
               variant: "danger",
               size: "sm",
               style: {
@@ -16261,7 +16321,7 @@ function User() {
               onClick: function onClick() {
                 return hideTableShowAddSupplier(false);
               },
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
                 icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faBan,
                 className: "icon-space"
               }), "Cancel"]
@@ -16276,7 +16336,7 @@ function User() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (User);
 
 if (document.getElementById('user')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_3__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(User, {}), document.getElementById('user'));
+  react_dom__WEBPACK_IMPORTED_MODULE_3__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(User, {}), document.getElementById('user'));
 }
 
 /***/ }),
@@ -20792,7 +20852,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ activeElement)
+/* harmony export */   "default": () => /* binding */ activeElement
 /* harmony export */ });
 /* harmony import */ var _ownerDocument__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ownerDocument */ "./node_modules/dom-helpers/esm/ownerDocument.js");
 
@@ -20832,7 +20892,7 @@ function activeElement(doc) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ addClass)
+/* harmony export */   "default": () => /* binding */ addClass
 /* harmony export */ });
 /* harmony import */ var _hasClass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hasClass */ "./node_modules/dom-helpers/esm/hasClass.js");
 
@@ -20851,9 +20911,9 @@ function addClass(element, className) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "optionsSupported": () => (/* binding */ optionsSupported),
-/* harmony export */   "onceSupported": () => (/* binding */ onceSupported),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "optionsSupported": () => /* binding */ optionsSupported,
+/* harmony export */   "onceSupported": () => /* binding */ onceSupported,
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _canUseDOM__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./canUseDOM */ "./node_modules/dom-helpers/esm/canUseDOM.js");
 /* eslint-disable no-return-assign */
@@ -20919,7 +20979,7 @@ function addEventListener(node, eventName, handler, options) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ camelize)
+/* harmony export */   "default": () => /* binding */ camelize
 /* harmony export */ });
 var rHyphen = /-(.)/g;
 function camelize(string) {
@@ -20939,7 +20999,7 @@ function camelize(string) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (!!(typeof window !== 'undefined' && window.document && window.document.createElement));
 
@@ -20954,7 +21014,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ contains)
+/* harmony export */   "default": () => /* binding */ contains
 /* harmony export */ });
 /* eslint-disable no-bitwise, no-cond-assign */
 // HTML DOM and SVG DOM may have different support levels,
@@ -20975,7 +21035,7 @@ function contains(context, node) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _getComputedStyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getComputedStyle */ "./node_modules/dom-helpers/esm/getComputedStyle.js");
 /* harmony import */ var _hyphenateStyle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./hyphenateStyle */ "./node_modules/dom-helpers/esm/hyphenateStyle.js");
@@ -21024,7 +21084,7 @@ function style(node, property) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ getComputedStyle)
+/* harmony export */   "default": () => /* binding */ getComputedStyle
 /* harmony export */ });
 /* harmony import */ var _ownerWindow__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ownerWindow */ "./node_modules/dom-helpers/esm/ownerWindow.js");
 
@@ -21043,7 +21103,7 @@ function getComputedStyle(node, psuedoElement) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ hasClass)
+/* harmony export */   "default": () => /* binding */ hasClass
 /* harmony export */ });
 function hasClass(element, className) {
   if (element.classList) return !!className && element.classList.contains(className);
@@ -21061,7 +21121,7 @@ function hasClass(element, className) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ hyphenate)
+/* harmony export */   "default": () => /* binding */ hyphenate
 /* harmony export */ });
 var rUpper = /([A-Z])/g;
 function hyphenate(string) {
@@ -21079,7 +21139,7 @@ function hyphenate(string) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ hyphenateStyleName)
+/* harmony export */   "default": () => /* binding */ hyphenateStyleName
 /* harmony export */ });
 /* harmony import */ var _hyphenate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hyphenate */ "./node_modules/dom-helpers/esm/hyphenate.js");
 /**
@@ -21104,7 +21164,7 @@ function hyphenateStyleName(string) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ isDocument)
+/* harmony export */   "default": () => /* binding */ isDocument
 /* harmony export */ });
 function isDocument(element) {
   return 'nodeType' in element && element.nodeType === document.DOCUMENT_NODE;
@@ -21121,7 +21181,7 @@ function isDocument(element) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ isTransform)
+/* harmony export */   "default": () => /* binding */ isTransform
 /* harmony export */ });
 var supportedTransforms = /^((translate|rotate|scale)(X|Y|Z|3d)?|matrix(3d)?|perspective|skew(X|Y)?)$/i;
 function isTransform(value) {
@@ -21139,7 +21199,7 @@ function isTransform(value) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ isWindow)
+/* harmony export */   "default": () => /* binding */ isWindow
 /* harmony export */ });
 /* harmony import */ var _isDocument__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./isDocument */ "./node_modules/dom-helpers/esm/isDocument.js");
 
@@ -21160,7 +21220,7 @@ function isWindow(node) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _addEventListener__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./addEventListener */ "./node_modules/dom-helpers/esm/addEventListener.js");
 /* harmony import */ var _removeEventListener__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./removeEventListener */ "./node_modules/dom-helpers/esm/removeEventListener.js");
@@ -21187,7 +21247,7 @@ function listen(node, eventName, handler, options) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ ownerDocument)
+/* harmony export */   "default": () => /* binding */ ownerDocument
 /* harmony export */ });
 function ownerDocument(node) {
   return node && node.ownerDocument || document;
@@ -21204,7 +21264,7 @@ function ownerDocument(node) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ ownerWindow)
+/* harmony export */   "default": () => /* binding */ ownerWindow
 /* harmony export */ });
 /* harmony import */ var _ownerDocument__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ownerDocument */ "./node_modules/dom-helpers/esm/ownerDocument.js");
 
@@ -21224,7 +21284,7 @@ function ownerWindow(node) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ qsa)
+/* harmony export */   "default": () => /* binding */ qsa
 /* harmony export */ });
 var toArray = Function.prototype.bind.call(Function.prototype.call, [].slice);
 function qsa(element, selector) {
@@ -21242,7 +21302,7 @@ function qsa(element, selector) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ removeClass)
+/* harmony export */   "default": () => /* binding */ removeClass
 /* harmony export */ });
 function replaceClassName(origClass, classToRemove) {
   return origClass.replace(new RegExp("(^|\\s)" + classToRemove + "(?:\\s|$)", 'g'), '$1').replace(/\s+/g, ' ').replace(/^\s*|\s*$/g, '');
@@ -21270,7 +21330,7 @@ function removeClass(element, className) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 function removeEventListener(node, eventName, handler, options) {
   var capture = options && typeof options !== 'boolean' ? options.capture : options;
@@ -21294,7 +21354,7 @@ function removeEventListener(node, eventName, handler, options) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ scrollbarSize)
+/* harmony export */   "default": () => /* binding */ scrollbarSize
 /* harmony export */ });
 /* harmony import */ var _canUseDOM__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./canUseDOM */ "./node_modules/dom-helpers/esm/canUseDOM.js");
 
@@ -21328,7 +21388,7 @@ function scrollbarSize(recalc) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ transitionEnd)
+/* harmony export */   "default": () => /* binding */ transitionEnd
 /* harmony export */ });
 /* harmony import */ var _css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css */ "./node_modules/dom-helpers/esm/css.js");
 /* harmony import */ var _listen__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./listen */ "./node_modules/dom-helpers/esm/listen.js");
@@ -32343,15 +32403,14 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
   var undefined;
 
   /** Used as the semantic version number. */
-  var VERSION = '4.17.21';
+  var VERSION = '4.17.20';
 
   /** Used as the size to enable large array optimizations. */
   var LARGE_ARRAY_SIZE = 200;
 
   /** Error message constants. */
   var CORE_ERROR_TEXT = 'Unsupported core-js use. Try https://npms.io/search?q=ponyfill.',
-      FUNC_ERROR_TEXT = 'Expected a function',
-      INVALID_TEMPL_VAR_ERROR_TEXT = 'Invalid `variable` option passed into `_.template`';
+      FUNC_ERROR_TEXT = 'Expected a function';
 
   /** Used to stand-in for `undefined` hash values. */
   var HASH_UNDEFINED = '__lodash_hash_undefined__';
@@ -32484,11 +32543,10 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
   var reRegExpChar = /[\\^$.*+?()[\]{}|]/g,
       reHasRegExpChar = RegExp(reRegExpChar.source);
 
-  /** Used to match leading whitespace. */
-  var reTrimStart = /^\s+/;
-
-  /** Used to match a single whitespace character. */
-  var reWhitespace = /\s/;
+  /** Used to match leading and trailing whitespace. */
+  var reTrim = /^\s+|\s+$/g,
+      reTrimStart = /^\s+/,
+      reTrimEnd = /\s+$/;
 
   /** Used to match wrap detail comments. */
   var reWrapComment = /\{(?:\n\/\* \[wrapped with .+\] \*\/)?\n?/,
@@ -32497,18 +32555,6 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
   /** Used to match words composed of alphanumeric characters. */
   var reAsciiWord = /[^\x00-\x2f\x3a-\x40\x5b-\x60\x7b-\x7f]+/g;
-
-  /**
-   * Used to validate the `validate` option in `_.template` variable.
-   *
-   * Forbids characters which could potentially change the meaning of the function argument definition:
-   * - "()," (modification of function parameters)
-   * - "=" (default value)
-   * - "[]{}" (destructuring of function parameters)
-   * - "/" (beginning of a comment)
-   * - whitespace
-   */
-  var reForbiddenIdentifierChars = /[()=,{}\[\]\/\s]/;
 
   /** Used to match backslashes in property paths. */
   var reEscapeChar = /\\(\\)?/g;
@@ -33339,19 +33385,6 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
   }
 
   /**
-   * The base implementation of `_.trim`.
-   *
-   * @private
-   * @param {string} string The string to trim.
-   * @returns {string} Returns the trimmed string.
-   */
-  function baseTrim(string) {
-    return string
-      ? string.slice(0, trimmedEndIndex(string) + 1).replace(reTrimStart, '')
-      : string;
-  }
-
-  /**
    * The base implementation of `_.unary` without support for storing metadata.
    *
    * @private
@@ -33682,21 +33715,6 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     return hasUnicode(string)
       ? unicodeToArray(string)
       : asciiToArray(string);
-  }
-
-  /**
-   * Used by `_.trim` and `_.trimEnd` to get the index of the last non-whitespace
-   * character of `string`.
-   *
-   * @private
-   * @param {string} string The string to inspect.
-   * @returns {number} Returns the index of the last non-whitespace character.
-   */
-  function trimmedEndIndex(string) {
-    var index = string.length;
-
-    while (index-- && reWhitespace.test(string.charAt(index))) {}
-    return index;
   }
 
   /**
@@ -44867,7 +44885,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
       if (typeof value != 'string') {
         return value === 0 ? value : +value;
       }
-      value = baseTrim(value);
+      value = value.replace(reTrim, '');
       var isBinary = reIsBinary.test(value);
       return (isBinary || reIsOctal.test(value))
         ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
@@ -47239,12 +47257,6 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
       if (!variable) {
         source = 'with (obj) {\n' + source + '\n}\n';
       }
-      // Throw an error if a forbidden character was found in `variable`, to prevent
-      // potential command injection attacks.
-      else if (reForbiddenIdentifierChars.test(variable)) {
-        throw new Error(INVALID_TEMPL_VAR_ERROR_TEXT);
-      }
-
       // Cleanup code by stripping empty strings.
       source = (isEvaluating ? source.replace(reEmptyStringLeading, '') : source)
         .replace(reEmptyStringMiddle, '$1')
@@ -47358,7 +47370,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     function trim(string, chars, guard) {
       string = toString(string);
       if (string && (guard || chars === undefined)) {
-        return baseTrim(string);
+        return string.replace(reTrim, '');
       }
       if (!string || !(chars = baseToString(chars))) {
         return string;
@@ -47393,7 +47405,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     function trimEnd(string, chars, guard) {
       string = toString(string);
       if (string && (guard || chars === undefined)) {
-        return string.slice(0, trimmedEndIndex(string) + 1);
+        return string.replace(reTrimEnd, '');
       }
       if (!string || !(chars = baseToString(chars))) {
         return string;
@@ -49657,7 +49669,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
@@ -55025,7 +55037,7 @@ exports.closeButton = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -55159,7 +55171,7 @@ var AbstractNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.forwardRef(fun
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -55243,7 +55255,7 @@ AbstractNavItem.defaultProps = defaultProps;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -55339,7 +55351,7 @@ Alert.Heading = AlertHeading;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -55386,7 +55398,7 @@ Badge.defaultProps = defaultProps;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ BootstrapModalManager)
+/* harmony export */   "default": () => /* binding */ BootstrapModalManager
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
 /* harmony import */ var dom_helpers_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! dom-helpers/css */ "./node_modules/dom-helpers/esm/css.js");
@@ -55484,7 +55496,7 @@ var BootstrapModalManager = /*#__PURE__*/function (_ModalManager) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -55556,7 +55568,7 @@ Button.defaultProps = defaultProps;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -55651,7 +55663,7 @@ Card.ImgOverlay = CardImgOverlay;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
@@ -55670,7 +55682,7 @@ context.displayName = 'CardContext';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -55716,7 +55728,7 @@ CardImg.defaultProps = defaultProps;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -55770,7 +55782,7 @@ CloseButton.defaultProps = defaultProps;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -55840,7 +55852,7 @@ Col.displayName = 'Col';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -55887,8 +55899,8 @@ Container.defaultProps = defaultProps;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "map": () => (/* binding */ map),
-/* harmony export */   "forEach": () => (/* binding */ forEach)
+/* harmony export */   "map": () => /* binding */ map,
+/* harmony export */   "forEach": () => /* binding */ forEach
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
@@ -55935,7 +55947,7 @@ function forEach(children, func) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -55998,7 +56010,7 @@ Fade.displayName = 'Fade';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -56055,7 +56067,7 @@ Feedback.propTypes = propTypes;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -56126,7 +56138,7 @@ FormImpl.Text = _FormText__WEBPACK_IMPORTED_MODULE_12__.default;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -56233,7 +56245,7 @@ FormCheck.Label = _FormCheckLabel__WEBPACK_IMPORTED_MODULE_8__.default;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -56294,7 +56306,7 @@ FormCheckInput.displayName = 'FormCheckInput';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -56345,7 +56357,7 @@ FormCheckLabel.displayName = 'FormCheckLabel';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
  // TODO
@@ -56366,7 +56378,7 @@ var FormContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createContext(
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -56466,7 +56478,7 @@ FormControl.displayName = 'FormControl';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -56569,7 +56581,7 @@ FormFile.Label = _FormFileLabel__WEBPACK_IMPORTED_MODULE_8__.default;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -56629,7 +56641,7 @@ FormFileInput.displayName = 'FormFileInput';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -56681,7 +56693,7 @@ FormFileLabel.displayName = 'FormFileLabel';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -56732,7 +56744,7 @@ FormGroup.displayName = 'FormGroup';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -56805,7 +56817,7 @@ FormLabel.defaultProps = defaultProps;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -56847,7 +56859,7 @@ FormText.displayName = 'FormText';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -57197,7 +57209,7 @@ Modal.BACKDROP_TRANSITION_DURATION = 150;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _createWithBsPrefix__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createWithBsPrefix */ "./node_modules/react-bootstrap/esm/createWithBsPrefix.js");
 
@@ -57214,7 +57226,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
@@ -57235,7 +57247,7 @@ var ModalContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createContext
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -57281,7 +57293,7 @@ ModalDialog.displayName = 'ModalDialog';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _createWithBsPrefix__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createWithBsPrefix */ "./node_modules/react-bootstrap/esm/createWithBsPrefix.js");
 
@@ -57298,7 +57310,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -57360,7 +57372,7 @@ ModalHeader.defaultProps = defaultProps;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _createWithBsPrefix__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./createWithBsPrefix */ "./node_modules/react-bootstrap/esm/createWithBsPrefix.js");
 /* harmony import */ var _divWithClassName__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./divWithClassName */ "./node_modules/react-bootstrap/esm/divWithClassName.js");
@@ -57382,7 +57394,7 @@ var DivStyledAsH4 = (0,_divWithClassName__WEBPACK_IMPORTED_MODULE_0__.default)('
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -57470,7 +57482,7 @@ Nav.Link = _NavLink__WEBPACK_IMPORTED_MODULE_11__.default;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
  // TODO: check this
@@ -57490,7 +57502,7 @@ NavContext.displayName = 'NavContext';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -57532,7 +57544,7 @@ NavItem.displayName = 'NavItem';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -57589,7 +57601,7 @@ NavLink.defaultProps = defaultProps;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
  // TODO: check
@@ -57609,7 +57621,7 @@ context.displayName = 'NavbarContext';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -57697,8 +57709,8 @@ SafeAnchor.displayName = 'SafeAnchor';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "makeEventKey": () => (/* binding */ makeEventKey),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "makeEventKey": () => /* binding */ makeEventKey,
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
  // TODO (apparently this is a bare "onSelect"?)
@@ -57725,7 +57737,7 @@ var makeEventKey = function makeEventKey(eventKey, href) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -57755,7 +57767,7 @@ Switch.Label = _FormCheck__WEBPACK_IMPORTED_MODULE_2__.default.Label;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -57802,7 +57814,7 @@ Tab.Pane = _TabPane__WEBPACK_IMPORTED_MODULE_4__.default;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var uncontrollable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! uncontrollable */ "./node_modules/uncontrollable/lib/esm/index.js");
@@ -57866,7 +57878,7 @@ var TabContainer = function TabContainer(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -57906,7 +57918,7 @@ var TabContent = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.forwardRef(func
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
@@ -57924,7 +57936,7 @@ var TabContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createContext(n
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -58027,7 +58039,7 @@ TabPane.displayName = 'TabPane';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -58086,7 +58098,7 @@ var Table = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.forwardRef(function 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -58199,10 +58211,10 @@ Tabs.displayName = 'Tabs';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "useBootstrapPrefix": () => (/* binding */ useBootstrapPrefix),
-/* harmony export */   "createBootstrapComponent": () => (/* binding */ createBootstrapComponent),
-/* harmony export */   "ThemeConsumer": () => (/* binding */ Consumer),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "useBootstrapPrefix": () => /* binding */ useBootstrapPrefix,
+/* harmony export */   "createBootstrapComponent": () => /* binding */ createBootstrapComponent,
+/* harmony export */   "ThemeConsumer": () => /* binding */ Consumer,
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -58265,7 +58277,7 @@ function createBootstrapComponent(Component, opts) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /**
  * Safe chained function
@@ -58315,7 +58327,7 @@ function createChainedFunction() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ createWithBsPrefix)
+/* harmony export */   "default": () => /* binding */ createWithBsPrefix
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -58372,7 +58384,7 @@ function createWithBsPrefix(prefix, _temp) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -58401,7 +58413,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ transitionEndListener)
+/* harmony export */   "default": () => /* binding */ transitionEndListener
 /* harmony export */ });
 /* harmony import */ var dom_helpers_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! dom-helpers/css */ "./node_modules/dom-helpers/esm/css.js");
 /* harmony import */ var dom_helpers_transitionEnd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! dom-helpers/transitionEnd */ "./node_modules/dom-helpers/esm/transitionEnd.js");
@@ -58436,7 +58448,7 @@ function transitionEndListener(element, handler) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ triggerBrowserReflow)
+/* harmony export */   "default": () => /* binding */ triggerBrowserReflow
 /* harmony export */ });
 // reading a dimension prop will cause the browser to recalculate,
 // which will let our animations work
@@ -58456,7 +58468,7 @@ function triggerBrowserReflow(node) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _extends)
+/* harmony export */   "default": () => /* binding */ _extends
 /* harmony export */ });
 function _extends() {
   _extends = Object.assign || function (target) {
@@ -58487,7 +58499,7 @@ function _extends() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _inheritsLoose)
+/* harmony export */   "default": () => /* binding */ _inheritsLoose
 /* harmony export */ });
 /* harmony import */ var _setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./setPrototypeOf.js */ "./node_modules/react-bootstrap/node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js");
 
@@ -58508,7 +58520,7 @@ function _inheritsLoose(subClass, superClass) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _objectWithoutPropertiesLoose)
+/* harmony export */   "default": () => /* binding */ _objectWithoutPropertiesLoose
 /* harmony export */ });
 function _objectWithoutPropertiesLoose(source, excluded) {
   if (source == null) return {};
@@ -58536,7 +58548,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _setPrototypeOf)
+/* harmony export */   "default": () => /* binding */ _setPrototypeOf
 /* harmony export */ });
 function _setPrototypeOf(o, p) {
   _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
@@ -83625,17 +83637,17 @@ if (false) {} else {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Controller": () => (/* binding */ Controller),
-/* harmony export */   "FormProvider": () => (/* binding */ FormProvider),
-/* harmony export */   "appendErrors": () => (/* binding */ appendErrors),
-/* harmony export */   "get": () => (/* binding */ get),
-/* harmony export */   "set": () => (/* binding */ set),
-/* harmony export */   "useController": () => (/* binding */ useController),
-/* harmony export */   "useFieldArray": () => (/* binding */ useFieldArray),
-/* harmony export */   "useForm": () => (/* binding */ useForm),
-/* harmony export */   "useFormContext": () => (/* binding */ useFormContext),
-/* harmony export */   "useFormState": () => (/* binding */ useFormState),
-/* harmony export */   "useWatch": () => (/* binding */ useWatch)
+/* harmony export */   "Controller": () => /* binding */ Controller,
+/* harmony export */   "FormProvider": () => /* binding */ FormProvider,
+/* harmony export */   "appendErrors": () => /* binding */ appendErrors,
+/* harmony export */   "get": () => /* binding */ get,
+/* harmony export */   "set": () => /* binding */ set,
+/* harmony export */   "useController": () => /* binding */ useController,
+/* harmony export */   "useFieldArray": () => /* binding */ useFieldArray,
+/* harmony export */   "useForm": () => /* binding */ useForm,
+/* harmony export */   "useFormContext": () => /* binding */ useFormContext,
+/* harmony export */   "useFormState": () => /* binding */ useFormState,
+/* harmony export */   "useWatch": () => /* binding */ useWatch
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
@@ -85540,7 +85552,7 @@ if (false) {} else {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "polyfill": () => (/* binding */ polyfill)
+/* harmony export */   "polyfill": () => /* binding */ polyfill
 /* harmony export */ });
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -85713,7 +85725,7 @@ function polyfill(Component) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -86174,7 +86186,7 @@ Modal.propTypes = propTypes;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var dom_helpers_addClass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! dom-helpers/addClass */ "./node_modules/dom-helpers/esm/addClass.js");
 /* harmony import */ var dom_helpers_removeClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! dom-helpers/removeClass */ "./node_modules/dom-helpers/esm/removeClass.js");
@@ -86360,7 +86372,7 @@ var ModalManager = /*#__PURE__*/function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ isOverflowing)
+/* harmony export */   "default": () => /* binding */ isOverflowing
 /* harmony export */ });
 /* harmony import */ var dom_helpers_isWindow__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! dom-helpers/isWindow */ "./node_modules/dom-helpers/esm/isWindow.js");
 /* harmony import */ var dom_helpers_ownerDocument__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! dom-helpers/ownerDocument */ "./node_modules/dom-helpers/esm/ownerDocument.js");
@@ -86393,9 +86405,9 @@ function isOverflowing(container) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ariaHidden": () => (/* binding */ ariaHidden),
-/* harmony export */   "hideSiblings": () => (/* binding */ hideSiblings),
-/* harmony export */   "showSiblings": () => (/* binding */ showSiblings)
+/* harmony export */   "ariaHidden": () => /* binding */ ariaHidden,
+/* harmony export */   "hideSiblings": () => /* binding */ hideSiblings,
+/* harmony export */   "showSiblings": () => /* binding */ showSiblings
 /* harmony export */ });
 var BLACKLIST = ['template', 'script', 'style'];
 
@@ -86448,8 +86460,8 @@ function showSiblings(container, _ref3) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "resolveContainerRef": () => (/* binding */ resolveContainerRef),
-/* harmony export */   "default": () => (/* binding */ useWaitForDOMRef)
+/* harmony export */   "resolveContainerRef": () => /* binding */ resolveContainerRef,
+/* harmony export */   "default": () => /* binding */ useWaitForDOMRef
 /* harmony export */ });
 /* harmony import */ var dom_helpers_ownerDocument__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! dom-helpers/ownerDocument */ "./node_modules/dom-helpers/esm/ownerDocument.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -86503,12 +86515,12 @@ function useWaitForDOMRef(ref, onResolved) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "UNMOUNTED": () => (/* binding */ UNMOUNTED),
-/* harmony export */   "EXITED": () => (/* binding */ EXITED),
-/* harmony export */   "ENTERING": () => (/* binding */ ENTERING),
-/* harmony export */   "ENTERED": () => (/* binding */ ENTERED),
-/* harmony export */   "EXITING": () => (/* binding */ EXITING),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "UNMOUNTED": () => /* binding */ UNMOUNTED,
+/* harmony export */   "EXITED": () => /* binding */ EXITED,
+/* harmony export */   "ENTERING": () => /* binding */ ENTERING,
+/* harmony export */   "ENTERED": () => /* binding */ ENTERED,
+/* harmony export */   "EXITING": () => /* binding */ EXITING,
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
 /* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
@@ -87144,7 +87156,7 @@ Transition.EXITING = EXITING;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
@@ -87161,7 +87173,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   disabled: false
@@ -87178,8 +87190,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "timeoutsShape": () => (/* binding */ timeoutsShape),
-/* harmony export */   "classNamesShape": () => (/* binding */ classNamesShape)
+/* harmony export */   "timeoutsShape": () => /* binding */ timeoutsShape,
+/* harmony export */   "classNamesShape": () => /* binding */ classNamesShape
 /* harmony export */ });
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
@@ -92109,8 +92121,8 @@ if (false) {} else {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "useUncontrolledProp": () => (/* binding */ useUncontrolledProp),
-/* harmony export */   "default": () => (/* binding */ useUncontrolled)
+/* harmony export */   "useUncontrolledProp": () => /* binding */ useUncontrolledProp,
+/* harmony export */   "default": () => /* binding */ useUncontrolled
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
@@ -92186,9 +92198,9 @@ function useUncontrolled(props, config) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "useUncontrolled": () => (/* reexport safe */ _hook__WEBPACK_IMPORTED_MODULE_0__.default),
-/* harmony export */   "useUncontrolledProp": () => (/* reexport safe */ _hook__WEBPACK_IMPORTED_MODULE_0__.useUncontrolledProp),
-/* harmony export */   "uncontrollable": () => (/* reexport safe */ _uncontrollable__WEBPACK_IMPORTED_MODULE_1__.default)
+/* harmony export */   "useUncontrolled": () => /* reexport safe */ _hook__WEBPACK_IMPORTED_MODULE_0__.default,
+/* harmony export */   "useUncontrolledProp": () => /* reexport safe */ _hook__WEBPACK_IMPORTED_MODULE_0__.useUncontrolledProp,
+/* harmony export */   "uncontrollable": () => /* reexport safe */ _uncontrollable__WEBPACK_IMPORTED_MODULE_1__.default
 /* harmony export */ });
 /* harmony import */ var _hook__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hook */ "./node_modules/uncontrollable/lib/esm/hook.js");
 /* harmony import */ var _uncontrollable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./uncontrollable */ "./node_modules/uncontrollable/lib/esm/uncontrollable.js");
@@ -92206,7 +92218,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ uncontrollable)
+/* harmony export */   "default": () => /* binding */ uncontrollable
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
@@ -92404,10 +92416,10 @@ function uncontrollable(Component, controlledValues, methods) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "uncontrolledPropTypes": () => (/* binding */ uncontrolledPropTypes),
-/* harmony export */   "isProp": () => (/* binding */ isProp),
-/* harmony export */   "defaultKey": () => (/* binding */ defaultKey),
-/* harmony export */   "canAcceptRef": () => (/* binding */ canAcceptRef)
+/* harmony export */   "uncontrolledPropTypes": () => /* binding */ uncontrolledPropTypes,
+/* harmony export */   "isProp": () => /* binding */ isProp,
+/* harmony export */   "defaultKey": () => /* binding */ defaultKey,
+/* harmony export */   "canAcceptRef": () => /* binding */ canAcceptRef
 /* harmony export */ });
 /* harmony import */ var invariant__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! invariant */ "./node_modules/invariant/browser.js");
 /* harmony import */ var invariant__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(invariant__WEBPACK_IMPORTED_MODULE_0__);
@@ -92541,9 +92553,8 @@ module.exports = warning;
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
+/******/ 		if(__webpack_module_cache__[moduleId]) {
+/******/ 			return __webpack_module_cache__[moduleId].exports;
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
@@ -92565,45 +92576,17 @@ module.exports = warning;
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = __webpack_modules__;
 /******/ 	
+/******/ 	// the startup function
+/******/ 	// It's empty as some runtime module handles the default behavior
+/******/ 	__webpack_require__.x = x => {}
 /************************************************************************/
-/******/ 	/* webpack/runtime/chunk loaded */
-/******/ 	(() => {
-/******/ 		var deferred = [];
-/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
-/******/ 			if(chunkIds) {
-/******/ 				priority = priority || 0;
-/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
-/******/ 				deferred[i] = [chunkIds, fn, priority];
-/******/ 				return;
-/******/ 			}
-/******/ 			var notFulfilled = Infinity;
-/******/ 			for (var i = 0; i < deferred.length; i++) {
-/******/ 				var [chunkIds, fn, priority] = deferred[i];
-/******/ 				var fulfilled = true;
-/******/ 				for (var j = 0; j < chunkIds.length; j++) {
-/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
-/******/ 						chunkIds.splice(j--, 1);
-/******/ 					} else {
-/******/ 						fulfilled = false;
-/******/ 						if(priority < notFulfilled) notFulfilled = priority;
-/******/ 					}
-/******/ 				}
-/******/ 				if(fulfilled) {
-/******/ 					deferred.splice(i--, 1)
-/******/ 					result = fn();
-/******/ 				}
-/******/ 			}
-/******/ 			return result;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
 /******/ 		__webpack_require__.n = (module) => {
 /******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
+/******/ 				() => module['default'] :
+/******/ 				() => module;
 /******/ 			__webpack_require__.d(getter, { a: getter });
 /******/ 			return getter;
 /******/ 		};
@@ -92635,7 +92618,7 @@ module.exports = warning;
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 		__webpack_require__.o = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop)
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
@@ -92664,12 +92647,15 @@ module.exports = warning;
 /******/ 		
 /******/ 		// object to store loaded and loading chunks
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		// Promise = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"/js/app": 0,
-/******/ 			"css/app": 0
+/******/ 			"/js/app": 0
 /******/ 		};
 /******/ 		
+/******/ 		var deferredModules = [
+/******/ 			["./resources/js/app.js"],
+/******/ 			["./resources/sass/app.scss"]
+/******/ 		];
 /******/ 		// no chunk on demand loading
 /******/ 		
 /******/ 		// no prefetching
@@ -92680,44 +92666,73 @@ module.exports = warning;
 /******/ 		
 /******/ 		// no HMR manifest
 /******/ 		
-/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		var checkDeferredModules = x => {};
 /******/ 		
 /******/ 		// install a JSONP callback for chunk loading
 /******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
-/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			var [chunkIds, moreModules, runtime, executeModules] = data;
 /******/ 			// add "moreModules" to the modules object,
 /******/ 			// then flag all "chunkIds" as loaded and fire callback
-/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			var moduleId, chunkId, i = 0, resolves = [];
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					resolves.push(installedChunks[chunkId][0]);
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
 /******/ 			for(moduleId in moreModules) {
 /******/ 				if(__webpack_require__.o(moreModules, moduleId)) {
 /******/ 					__webpack_require__.m[moduleId] = moreModules[moduleId];
 /******/ 				}
 /******/ 			}
-/******/ 			if(runtime) var result = runtime(__webpack_require__);
+/******/ 			if(runtime) runtime(__webpack_require__);
 /******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
-/******/ 			for(;i < chunkIds.length; i++) {
-/******/ 				chunkId = chunkIds[i];
-/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
-/******/ 					installedChunks[chunkId][0]();
-/******/ 				}
-/******/ 				installedChunks[chunkIds[i]] = 0;
+/******/ 			while(resolves.length) {
+/******/ 				resolves.shift()();
 /******/ 			}
-/******/ 			return __webpack_require__.O(result);
+/******/ 		
+/******/ 			// add entry modules from loaded chunk to deferred list
+/******/ 			if(executeModules) deferredModules.push.apply(deferredModules, executeModules);
+/******/ 		
+/******/ 			// run deferred modules when all chunks ready
+/******/ 			return checkDeferredModules();
 /******/ 		}
 /******/ 		
 /******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 		
+/******/ 		function checkDeferredModulesImpl() {
+/******/ 			var result;
+/******/ 			for(var i = 0; i < deferredModules.length; i++) {
+/******/ 				var deferredModule = deferredModules[i];
+/******/ 				var fulfilled = true;
+/******/ 				for(var j = 1; j < deferredModule.length; j++) {
+/******/ 					var depId = deferredModule[j];
+/******/ 					if(installedChunks[depId] !== 0) fulfilled = false;
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferredModules.splice(i--, 1);
+/******/ 					result = __webpack_require__(__webpack_require__.s = deferredModule[0]);
+/******/ 				}
+/******/ 			}
+/******/ 			if(deferredModules.length === 0) {
+/******/ 				__webpack_require__.x();
+/******/ 				__webpack_require__.x = x => {};
+/******/ 			}
+/******/ 			return result;
+/******/ 		}
+/******/ 		var startup = __webpack_require__.x;
+/******/ 		__webpack_require__.x = () => {
+/******/ 			// reset startup function so it can be called again when more startup code is added
+/******/ 			__webpack_require__.x = startup || (x => {});
+/******/ 			return (checkDeferredModules = checkDeferredModulesImpl)();
+/******/ 		};
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
-/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
-/******/ 	
+/******/ 	// run startup
+/******/ 	return __webpack_require__.x();
 /******/ })()
 ;

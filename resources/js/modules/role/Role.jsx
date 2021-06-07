@@ -12,7 +12,7 @@ import SweetAlert from 'react-bootstrap-sweetalert';
 function MyVerticallyCenteredModal(props) {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const updateRoleData = (data) => {
-        axios.patch(`/supplier/1}`,{data}).then(
+        axios.patch(`/role/1}`,{data}).then(
             alert('Updated')
         );
     }
@@ -31,9 +31,13 @@ function MyVerticallyCenteredModal(props) {
         <Modal.Body>
         <Form>
             <Form.Row>
+                <Form.Group as={Col} controlId="supplier-edit" hidden>
+                    <Form.Label>Supplier</Form.Label>
+                    <Form.Control type="text" placeholder="Enter Supplier" value={props.roleId} {...register("supplier-id")} />
+                </Form.Group>
                 <Form.Group as={Col} controlId="role-name-edit">
                     <Form.Label>Role Name</Form.Label>
-                    <Form.Control type="text" placeholder="Role Name" value={props.contactPerson} {...register("contact-person-edit")} />
+                    <Form.Control type="text" placeholder="Role Name" value={props.role} {...register("contact-person-edit")} />
                 </Form.Group>
             </Form.Row> 
             <Form.Row>
@@ -157,9 +161,9 @@ function Role() {
         setModalShow(
             <MyVerticallyCenteredModal
                 show={true}
-                title={roleInfo.role}
-                roleId={roleInfo.role_id}
-                role={roleInfo.role}
+                title={roleInfo.name}
+                roleId={roleInfo.id}
+                role={roleInfo.name}
                 onHide={() => setModalShow(null)}
             />
         );
@@ -193,7 +197,7 @@ function Role() {
                         <td> 
                             <Button variant="outline-info" size="sm" onClick={() => showModalRoleData(index)}>
                             <FontAwesomeIcon icon={faEye} className="icon-space"/>View</Button>
-                            <Button variant="outline-danger" size="sm" onClick={() => removeRoleConfirmation(data.role_id)}>
+                            <Button variant="outline-danger" size="sm" onClick={() => removeRoleConfirmation(data.id)}>
                                 <FontAwesomeIcon icon={faTrashAlt}  className="icon-space" />Delete
                             </Button>
                         </td>
