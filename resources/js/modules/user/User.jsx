@@ -11,7 +11,7 @@ import SweetAlert from 'react-bootstrap-sweetalert';
 
 function MyVerticallyCenteredModal(props) {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const updateSupplierData = (data) => {
+    const updateUserData = (data) => {
         axios.patch(`/supplier/1}`,{data}).then(
             alert('Updated')
         );
@@ -31,30 +31,40 @@ function MyVerticallyCenteredModal(props) {
         <Modal.Body>
         <Form>
             <Form.Row>
-                <Form.Group as={Col} controlId="supplier-edit" hidden>
+                <Form.Group as={Col} controlId="user-edit" hidden>
                     <Form.Label>User</Form.Label>
-                    <Form.Control type="text" placeholder="Enter User" value={props.supplierId} {...register("supplier-id")} />
+                    <Form.Control type="text" placeholder="Enter User" value={props.userId} {...register("user-id")} />
                 </Form.Group>
-                <Form.Group as={Col} controlId="supplier-edit">
+                <Form.Group as={Col} controlId="user-edit">
                     <Form.Label>User</Form.Label>
-                    <Form.Control type="text" placeholder="Enter User" value={props.supplier} {...register("supplier-edit")} />
+                    <Form.Control type="text" placeholder="Enter User" value={props.userName} {...register("user-edit")} />
                 </Form.Group>
-                <Form.Group as={Col} controlId="supplier-edit">
+                <Form.Group as={Col} controlId="user-email-edit">
                     <Form.Label>Email</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Email" value={props.supplier} {...register("supplier-edit")} />
+                    <Form.Control type="text" placeholder="Enter Email" value={props.userEmail} {...register("user-email-edit")} />
                 </Form.Group>
             </Form.Row>
             <Form.Row>
-                <Form.Group as={Col} controlId="description-edit">
+                <Form.Group as={Col} controlId="user-password-edit">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control type="text" placeholder="Password" value={props.userPassword} {...register("user-password-edit")} />
+                </Form.Group>
+                <Form.Group as={Col} controlId="user-password-edit">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control type="text" placeholder="Password" value={props.userPassword} {...register("user-password-edit")} />
+                </Form.Group>
+            </Form.Row>
+            <Form.Row>
+                <Form.Group as={Col} controlId="role-edit">
                     <Form.Label>Role</Form.Label>
-                    <Form.Control type="text" placeholder="Role" value={props.description} {...register("description-edit")} />
+                    <Form.Control type="text" placeholder="Role" value={props.description} {...register("role-edit")} />
                 </Form.Group>
             </Form.Row>
         </Form>
         </Modal.Body>
         <Modal.Footer>
          
-          <Button variant="success" size="sm" onClick={handleSubmit(updateSupplierData)}>
+          <Button variant="success" size="sm" onClick={handleSubmit(updateUserData)}>
             <FontAwesomeIcon icon={faCheck} className="icon-space" />Save Changes
           </Button>
         </Modal.Footer>
@@ -160,23 +170,16 @@ function User() {
 
     
    const showModalSupplierData = (id) => {
-      let supplierInfo = tableData[id];
-      console.log(supplierInfo)
+      let userInfo = tableData[id];
+      console.log(userInfo)
         setModalShow(
             <MyVerticallyCenteredModal
                 show={true}
-                title={supplierInfo.supplier}
-                supplierId={supplierInfo.supplier_id}
-                supplier={supplierInfo.supplier}
-                contactPerson={supplierInfo.contact_person}
-                address={supplierInfo.address}
-                email={supplierInfo.email}
-                number={supplierInfo.contact_no}
-                fax={supplierInfo.fax_no}
-                bank={supplierInfo.bankaccount_no}
-                date={supplierInfo.date_added}
-                encoded={supplierInfo.encoded_by}
-                description={supplierInfo.description}
+                title={userInfo.name}
+                userId={userInfo.id}
+                userName={userInfo.name}
+                userEmail={userInfo.email}
+                userPassword={userInfo.password}
                 onHide={() => setModalShow(null)}
             />
         );
@@ -237,11 +240,22 @@ function User() {
                                 </Form.Group>
                                 <Form.Group as={Col} controlId="contact-person">
                                     <Form.Label>Email</Form.Label>
-                                    <Form.Control type="text" placeholder="Enter Email" {...register("contactPerson",{required:true})} isInvalid={errors.contactPerson} />
+                                    <Form.Control type="email" placeholder="Enter Email" {...register("contactPerson",{required:true})} isInvalid={errors.contactPerson} />
                                     <Form.Control.Feedback type="invalid">Email is required</Form.Control.Feedback>
                                 </Form.Group>
                             </Form.Row>
-                            
+                            <Form.Row>
+                                <Form.Group as={Col} controlId="supplier">
+                                    <Form.Label>Password</Form.Label>
+                                    <Form.Control type="password" placeholder="Password" {...register("supplier",{required:true})} isInvalid={errors.supplier} />
+                                    <Form.Control.Feedback type="invalid">User's name is required</Form.Control.Feedback>
+                                </Form.Group>
+                                <Form.Group as={Col} controlId="contact-person">
+                                    <Form.Label>Confirm Password</Form.Label>
+                                    <Form.Control type="text" placeholder="Password" {...register("contactPerson",{required:true})} isInvalid={errors.contactPerson} />
+                                    <Form.Control.Feedback type="invalid">Email is required</Form.Control.Feedback>
+                                </Form.Group>
+                            </Form.Row>
                             <Form.Group controlId="supplier-address">
                                 <Form.Label>Role</Form.Label>
                                 <Form.Control placeholder="Role" {...register("address",{required:true})} isInvalid={errors.address}/>
