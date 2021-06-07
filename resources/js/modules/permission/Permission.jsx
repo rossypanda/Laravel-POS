@@ -12,7 +12,7 @@ import SweetAlert from 'react-bootstrap-sweetalert';
 function MyVerticallyCenteredModal(props) {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const updateSupplierData = (data) => {
-        axios.patch(`/supplier/1}`,{data}).then(
+        axios.patch(`/permission/1}`,{data}).then(
             alert('Updated')
         );
     }
@@ -31,9 +31,13 @@ function MyVerticallyCenteredModal(props) {
         <Modal.Body>
         <Form> 
             <Form.Row>
-                <Form.Group as={Col} controlId="description-edit">
+                <Form.Group as={Col} controlId="permission-id" hidden>
                     <Form.Label>Permission</Form.Label>
-                    <Form.Control type="text" placeholder="Permission" value={props.description} {...register("description-edit")} />
+                    <Form.Control type="text" placeholder="Enter Permission" value={props.permissionId} {...register("permission-id")} />
+                </Form.Group>
+                <Form.Group as={Col} controlId="permission-edit">
+                    <Form.Label>Permission</Form.Label>
+                    <Form.Control type="text" placeholder="Permission" value={props.permission} {...register("permission-edit")} />
                 </Form.Group>
             </Form.Row>
         </Form>
@@ -151,18 +155,9 @@ function Permission() {
         setModalShow(
             <MyVerticallyCenteredModal
                 show={true}
-                title={supplierInfo.supplier}
-                supplierId={supplierInfo.supplier_id}
-                supplier={supplierInfo.supplier}
-                contactPerson={supplierInfo.contact_person}
-                address={supplierInfo.address}
-                email={supplierInfo.email}
-                number={supplierInfo.contact_no}
-                fax={supplierInfo.fax_no}
-                bank={supplierInfo.bankaccount_no}
-                date={supplierInfo.date_added}
-                encoded={supplierInfo.encoded_by}
-                description={supplierInfo.description}
+                title={supplierInfo.name}
+                permissionId={supplierInfo.id}
+                permission={supplierInfo.name}
                 onHide={() => setModalShow(null)}
             />
         );
