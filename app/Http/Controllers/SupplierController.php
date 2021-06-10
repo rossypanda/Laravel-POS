@@ -49,7 +49,6 @@ class SupplierController extends Controller
              'email' => $field_data['email'],
              'contact_no' => $field_data['number'],
              'fax_no' => $field_data['fax'],
-             'bankaccount_no' => $field_data['bank'],
              'description' => $field_data['description'],
          ]);
     }

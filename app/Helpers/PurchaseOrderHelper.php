@@ -4,6 +4,7 @@ namespace App\Helpers;
  
 use Illuminate\Support\Facades\DB;
 use App\Models\PODetail;
+use App\Models\Supplier;
 use Illuminate\Support\Facades\Auth;
 
 class PurchaseOrderHelper
@@ -95,5 +96,25 @@ class PurchaseOrderHelper
             $totalAmount =  $totalAmount + ($item['quantity'] * $item['per_unit']);
        }
        return $totalAmount;
+   }
+
+   
+      /**
+     * Generate Supplier Data with Supplier Id as key
+     *
+     * 
+     * @return Array 
+     */
+    public static function getSupplierDataIdAsKey(){
+        
+        $data = Supplier::all()->toArray();
+        $supplier_array = [];
+        foreach($data as $supplier){
+            $supplier_array[$supplier['supplier_id']] = [
+            'supplier' => $supplier['supplier'],
+            'address' => $supplier['address'],
+            ];
+        }
+        return $supplier_array;
    }
 }

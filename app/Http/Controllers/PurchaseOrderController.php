@@ -190,8 +190,17 @@ class PurchaseOrderController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function generatePdf($id){
-        // $pdf = \PDF::loadView('pdf.po-pdf');
-        // return $pdf->download('invoice.pdf');
-        return view('pdf.po-pdf');
+        $po =  PurchaseOrder::where('po_header_id',$id)->get()->toArray();
+            $data = [
+                'po_header' =>  PurchaseOrder::where('po_header_id',$id)->get()->toArray()[0],
+                'po_detail' =>  PODetail::where('po_header_id',$id)->get()->toArray(),
+                'supplier' =>  PurchaseOrderHelper::getSupplierDataIdAsKey(),
+                'terms' =>   json_decode($po[0]['terms']),
+                'users' =>  User::pluck('name','id')->toArray()
+            ];
+            //dd($data);
+        $pdf = \PDF::loadView('pdf.po-pdf',$data);
+        return $pdf->download($po[0]['po_reference'].'.pdf');
+       // return view('pdf.po-pdf',$data);
     }
 }
