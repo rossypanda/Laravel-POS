@@ -14872,15 +14872,15 @@ function MyVerticallyCenteredModal(props) {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
-            controlId: "supplier-edit",
+            controlId: "role-edit",
             hidden: true,
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
-              children: "Supplier"
+              children: "Role"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
               type: "text",
-              placeholder: "Enter Supplier",
+              placeholder: "Enter Role",
               value: props.roleId
-            }, register("supplier-id")))]
+            }, register("role-id")))]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
             controlId: "role-name-edit",
@@ -14967,7 +14967,7 @@ function Role() {
             case 0:
               _context.next = 2;
               return axios__WEBPACK_IMPORTED_MODULE_7___default().get('/fetch/role', {}).then(function (response) {
-                //get the object of supplier data to load to a table
+                //get the object of role data to load to a table
                 console.log(response.data);
                 setTableData(response.data);
               })["catch"](function (err) {
@@ -15156,7 +15156,7 @@ function Role() {
                 }, register("role", {
                   required: true
                 })), {}, {
-                  isInvalid: errors.supplier
+                  isInvalid: errors.role
                 })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
                   type: "invalid",
                   children: "Role is required"
@@ -15881,7 +15881,7 @@ function MyVerticallyCenteredModal(props) {
       errors = _useForm.formState.errors;
 
   var updateUserData = function updateUserData(data) {
-    axios__WEBPACK_IMPORTED_MODULE_7___default().patch("/supplier/1}", {
+    axios__WEBPACK_IMPORTED_MODULE_7___default().patch("/user/1}", {
       data: data
     }).then(alert('Updated'));
   };
@@ -15990,8 +15990,8 @@ function User() {
 
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(true),
       _useState4 = _slicedToArray(_useState3, 2),
-      hideAddSupplier = _useState4[0],
-      setHideAddSupplier = _useState4[1];
+      hideAddUser = _useState4[0],
+      setHideAddUser = _useState4[1];
 
   var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
       _useState6 = _slicedToArray(_useState5, 2),
@@ -16000,8 +16000,8 @@ function User() {
 
   var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
       _useState8 = _slicedToArray(_useState7, 2),
-      hideSupplierTable = _useState8[0],
-      setHideAddSupplierTable = _useState8[1];
+      hideUserTable = _useState8[0],
+      setHideAddUserTable = _useState8[1];
 
   var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null),
       _useState10 = _slicedToArray(_useState9, 2),
@@ -16029,7 +16029,7 @@ function User() {
             case 0:
               _context.next = 2;
               return axios__WEBPACK_IMPORTED_MODULE_7___default().get('/fetch/user', {}).then(function (response) {
-                //get the object of supplier data to load to a table
+                //get the object of user data to load to a table
                 console.log(response.data);
                 setTableData(response.data);
               })["catch"](function (err) {
@@ -16055,11 +16055,11 @@ function User() {
 
   var hideAlert = function hideAlert() {
     setCustomAlert(null);
-    hideTableShowAddSupplier(false);
+    hideTableShowAddUser(false);
   };
 
   var onSubmit = function onSubmit(data) {
-    axios__WEBPACK_IMPORTED_MODULE_7___default().post('/supplier', {
+    axios__WEBPACK_IMPORTED_MODULE_7___default().post('/user', {
       data: data
     }).then(function (response) {
       console.log(response);
@@ -16069,20 +16069,20 @@ function User() {
         onConfirm: function onConfirm() {
           return hideAlert();
         },
-        children: "New Supplier Added"
+        children: "New User Added"
       }));
     })["catch"](function (err) {
       console.log(err);
     });
   };
 
-  var deleteSupplier = function deleteSupplier(id) {
-    axios__WEBPACK_IMPORTED_MODULE_7___default().delete("/supplier/".concat(id), {
+  var deleteUser = function deleteUser(id) {
+    axios__WEBPACK_IMPORTED_MODULE_7___default().delete("/user/".concat(id), {
       data: id
     }).then(setCustomAlert(null));
   };
 
-  var removeSupplierConfirmation = function removeSupplierConfirmation(id) {
+  var removeUserConfirmation = function removeUserConfirmation(id) {
     setCustomAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)((react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_8___default()), {
       warning: true,
       showCancel: true,
@@ -16090,27 +16090,27 @@ function User() {
       confirmBtnBsStyle: "danger",
       title: "Are you sure?",
       onConfirm: function onConfirm() {
-        return deleteSupplier(id);
+        return deleteUser(id);
       },
       onCancel: function onCancel() {
         return setCustomAlert(null);
       },
       focusCancelBtn: true,
-      children: "This Supplier data will be deleted"
+      children: "This User data will be deleted"
     }));
   };
 
-  var hideTableShowAddSupplier = function hideTableShowAddSupplier(isCurrentlyHidden) {
+  var hideTableShowAddUser = function hideTableShowAddUser(isCurrentlyHidden) {
     if (isCurrentlyHidden) {
-      setHideAddSupplier(false);
-      setHideAddSupplierTable(true);
+      setHideAddUser(false);
+      setHideAddUserTable(true);
     } else {
-      setHideAddSupplier(true);
-      setHideAddSupplierTable(false);
+      setHideAddUser(true);
+      setHideAddUserTable(false);
     }
   };
 
-  var showModalSupplierData = function showModalSupplierData(id) {
+  var showModalUserData = function showModalUserData(id) {
     var userInfo = tableData[id];
     console.log(userInfo);
     setModalShow( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(MyVerticallyCenteredModal, {
@@ -16129,7 +16129,7 @@ function User() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
     children: [customAlert, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
       fluid: true,
-      hidden: hideSupplierTable,
+      hidden: hideUserTable,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         style: buttonStyle,
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
@@ -16139,7 +16139,7 @@ function User() {
             marginRight: "0.5rem"
           },
           onClick: function onClick() {
-            return hideTableShowAddSupplier(true);
+            return hideTableShowAddUser(true);
           },
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
             icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faPlusSquare,
@@ -16181,7 +16181,7 @@ function User() {
                   variant: "outline-info",
                   size: "sm",
                   onClick: function onClick() {
-                    return showModalSupplierData(index);
+                    return showModalUserData(index);
                   },
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
                     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faEye,
@@ -16191,7 +16191,7 @@ function User() {
                   variant: "outline-danger",
                   size: "sm",
                   onClick: function onClick() {
-                    return removeSupplierConfirmation(data.supplier_id);
+                    return removeUserConfirmation(data.id);
                   },
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
                     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faTrashAlt,
@@ -16205,7 +16205,7 @@ function User() {
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
       fluid: true,
-      hidden: hideAddSupplier,
+      hidden: hideAddUser,
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__.default, {
         className: "border-wrapper",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__.default.Body, {
@@ -16219,32 +16219,32 @@ function User() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
                 as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
-                controlId: "supplier",
+                controlId: "user",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
                   children: "User"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
                   type: "text",
                   placeholder: "Enter User"
-                }, register("supplier", {
+                }, register("user", {
                   required: true
                 })), {}, {
-                  isInvalid: errors.supplier
+                  isInvalid: errors.user
                 })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
                   type: "invalid",
                   children: "User's name is required"
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
                 as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
-                controlId: "contact-person",
+                controlId: "user-email",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
                   children: "Email"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
                   type: "email",
                   placeholder: "Enter Email"
-                }, register("contactPerson", {
+                }, register("userEmail", {
                   required: true
                 })), {}, {
-                  isInvalid: errors.contactPerson
+                  isInvalid: errors.userEmail
                 })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
                   type: "invalid",
                   children: "Email is required"
@@ -16253,47 +16253,47 @@ function User() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
                 as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
-                controlId: "supplier",
+                controlId: "user-password",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
                   children: "Password"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
                   type: "password",
                   placeholder: "Password"
-                }, register("supplier", {
+                }, register("userPassword", {
                   required: true
                 })), {}, {
-                  isInvalid: errors.supplier
+                  isInvalid: errors.userPassword
                 })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
                   type: "invalid",
                   children: "User's name is required"
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
                 as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
-                controlId: "contact-person",
+                controlId: "confirm-password",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
                   children: "Confirm Password"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
                   type: "text",
                   placeholder: "Password"
-                }, register("contactPerson", {
+                }, register("confirmPassword", {
                   required: true
                 })), {}, {
-                  isInvalid: errors.contactPerson
+                  isInvalid: errors.confirmPassword
                 })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
                   type: "invalid",
                   children: "Email is required"
                 })]
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-              controlId: "supplier-address",
+              controlId: "user-role",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
                 children: "Role"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
                 placeholder: "Role"
-              }, register("address", {
+              }, register("userRole", {
                 required: true
               })), {}, {
-                isInvalid: errors.address
+                isInvalid: errors.userRole
               })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
                 type: "invalid",
                 children: "Role is required"
@@ -16319,7 +16319,7 @@ function User() {
                 marginRight: "0.5rem"
               },
               onClick: function onClick() {
-                return hideTableShowAddSupplier(false);
+                return hideTableShowAddUser(false);
               },
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
                 icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faBan,
