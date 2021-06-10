@@ -11,7 +11,7 @@ import SweetAlert from 'react-bootstrap-sweetalert';
 
 function MyVerticallyCenteredModal(props) {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const updateSupplierData = (data) => {
+    const updatePermissionData = (data) => {
         axios.patch(`/permission/1}`,{data}).then(
             alert('Updated')
         );
@@ -44,7 +44,7 @@ function MyVerticallyCenteredModal(props) {
         </Modal.Body>
         <Modal.Footer>
          
-          <Button variant="success" size="sm" onClick={handleSubmit(updateSupplierData)}>
+          <Button variant="success" size="sm" onClick={handleSubmit(updatePermissionData)}>
             <FontAwesomeIcon icon={faCheck} className="icon-space" />Save Changes
           </Button>
         </Modal.Footer>
@@ -55,9 +55,9 @@ function MyVerticallyCenteredModal(props) {
 
 function Permission() {
     const [modalShow, setModalShow] = useState(false);
-    const [hideAddSupplier, setHideAddSupplier] = useState(true);
+    const [hideAddPermission, setHideAddPermission] = useState(true);
     const [tableData, setTableData] = useState([]);
-    const [hideSupplierTable, setHideAddSupplierTable] = useState(false);
+    const [hidePermissionTable, setHideAddPermissionTable] = useState(false);
     const [customAlert, setCustomAlert] = useState(null);
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
    
@@ -89,12 +89,12 @@ function Permission() {
     
     const hideAlert = () => {
         setCustomAlert(null)
-        hideTableShowAddSupplier(false)
+        hideTableShowAddPermission(false)
     }
     
     const onSubmit = (data) => {
         axios
-        .post('/supplier', {
+        .post('/permission', {
            data
         })
         .then((response) => {
@@ -104,7 +104,7 @@ function Permission() {
                 title="Success!"
                 onConfirm={() =>hideAlert()}
                 >
-                New Supplier Added
+                New Permission Added
                 </SweetAlert>);
         })
         .catch((err) => {
@@ -112,13 +112,13 @@ function Permission() {
         });
     }
 
-    const deleteSupplier = (id) => {
-        axios.delete(`/supplier/${id}`, { data: id }).then(
+    const deletePermission = (id) => {
+        axios.delete(`/permission/${id}`, { data: id }).then(
            setCustomAlert(null)
         );
     }
     
-    const removeSupplierConfirmation = (id) => {
+    const removePermissionConfirmation = (id) => {
         setCustomAlert(
         <SweetAlert
             warning
@@ -126,38 +126,38 @@ function Permission() {
             confirmBtnText="Yes, delete it!"
             confirmBtnBsStyle="danger"
             title="Are you sure?"
-            onConfirm={() =>deleteSupplier(id)}
+            onConfirm={() =>deletePermission(id)}
             onCancel={() => setCustomAlert(null)}
             focusCancelBtn
           >
-            This Supplier data will be deleted
+            This Permission data will be deleted
           </SweetAlert>
           )
        
     }
 
-   const hideTableShowAddSupplier = (isCurrentlyHidden) => {
+   const hideTableShowAddPermission = (isCurrentlyHidden) => {
         if(isCurrentlyHidden){
-            setHideAddSupplier(false);
-            setHideAddSupplierTable(true);
+            setHideAddPermission(false);
+            setHideAddPermissionTable(true);
         }
         else{
-            setHideAddSupplier(true);
-            setHideAddSupplierTable(false);
+            setHideAddPermission(true);
+            setHideAddPermissionTable(false);
         }
         
     }
 
     
-   const showModalSupplierData = (id) => {
-      let supplierInfo = tableData[id];
-      console.log(supplierInfo)
+   const showModalPermissionData = (id) => {
+      let permissionInfo = tableData[id];
+      console.log(permissionInfo)
         setModalShow(
             <MyVerticallyCenteredModal
                 show={true}
-                title={supplierInfo.name}
-                permissionId={supplierInfo.id}
-                permission={supplierInfo.name}
+                title={permissionInfo.name}
+                permissionId={permissionInfo.id}
+                permission={permissionInfo.name}
                 onHide={() => setModalShow(null)}
             />
         );
@@ -168,9 +168,9 @@ function Permission() {
         
         <div>
             {customAlert}
-            <Container fluid hidden={hideSupplierTable}>
+            <Container fluid hidden={hidePermissionTable}>
                 <div style={buttonStyle}>
-                    <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} onClick={() =>hideTableShowAddSupplier(true)}>
+                    <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} onClick={() =>hideTableShowAddPermission(true)}>
                         <FontAwesomeIcon icon={faPlusSquare} className="icon-space" />
                         Add Permission   
                     </Button>
@@ -189,9 +189,9 @@ function Permission() {
                         <td>{data.id}</td>
                         <td>{data.name}</td>
                         <td> 
-                            <Button variant="outline-info" size="sm" onClick={() => showModalSupplierData(index)}>
+                            <Button variant="outline-info" size="sm" onClick={() => showModalPermissionData(index)}>
                             <FontAwesomeIcon icon={faEye} className="icon-space"/>View</Button>
-                            <Button variant="outline-danger" size="sm" onClick={() => removeSupplierConfirmation(data.supplier_id)}>
+                            <Button variant="outline-danger" size="sm" onClick={() => removePermissionConfirmation(data.id)}>
                                 <FontAwesomeIcon icon={faTrashAlt}  className="icon-space" />Delete
                             </Button>
                         </td>
@@ -201,16 +201,16 @@ function Permission() {
                 </Table>
             </Container>
 
-            <Container fluid hidden={hideAddSupplier}>
+            <Container fluid hidden={hideAddPermission}>
                 <Card className="border-wrapper">
                     <Card.Body>
                         <h4 className="mb-4"><FontAwesomeIcon icon={faUserTag} className="icon-space"/>Add Permission</h4>
                         <Form>
                             <Form.Row>
-                                <Form.Group as={Col} controlId="supplier">
+                                <Form.Group as={Col} controlId="permission">
                                     <Form.Label>Permission</Form.Label>
-                                    <Form.Control type="text" placeholder="Permission" {...register("supplier",{required:true})} isInvalid={errors.supplier} />
-                                    <Form.Control.Feedback type="invalid">Supplier is required</Form.Control.Feedback>
+                                    <Form.Control type="text" placeholder="Permission" {...register("permission",{required:true})} isInvalid={errors.permission} />
+                                    <Form.Control.Feedback type="invalid">Permission is required</Form.Control.Feedback>
                                 </Form.Group>
                                 
                             </Form.Row>
@@ -221,7 +221,7 @@ function Permission() {
                             <FontAwesomeIcon icon={faPlusCircle} className="icon-space" />
                              Add    
                             </Button>
-                            <Button variant="danger" size="sm" style={{marginRight:"0.5rem"}} onClick={() =>hideTableShowAddSupplier(false)} >
+                            <Button variant="danger" size="sm" style={{marginRight:"0.5rem"}} onClick={() =>hideTableShowAddPermission(false)} >
                             <FontAwesomeIcon icon={faBan} className="icon-space"/>
                                 Cancel
                             </Button>
