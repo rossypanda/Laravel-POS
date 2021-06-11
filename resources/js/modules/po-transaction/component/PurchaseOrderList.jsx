@@ -41,7 +41,7 @@ function PurchaseOrderList(props) {
                             <Button variant="outline-secondary" size="sm" style={{marginRight:"0.5rem"}} href={`purchaseOrder/${props.poHeaderId}`} target="_blank">
                                 <FontAwesomeIcon icon={faExternalLinkAlt} size="lg" className="icon-space" />
                              </Button>
-                            <Button variant="outline-secondary" size="sm" style={{marginRight:"0.5rem"}}>
+                            <Button variant="outline-secondary" size="sm" style={{marginRight:"0.5rem"}} href={`fetch/pdf/${props.poHeaderId}`} target="_blank">
                                 <FontAwesomeIcon icon={faPrint} size="lg" className="icon-space" />
                              </Button>
                           

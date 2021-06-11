@@ -14462,6 +14462,8 @@ function PurchaseOrderList(props) {
               style: {
                 marginRight: "0.5rem"
               },
+              href: "fetch/pdf/".concat(props.poHeaderId),
+              target: "_blank",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
                 icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faPrint,
                 size: "lg",
