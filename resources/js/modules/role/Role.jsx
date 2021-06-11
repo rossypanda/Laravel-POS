@@ -31,9 +31,9 @@ function MyVerticallyCenteredModal(props) {
         <Modal.Body>
         <Form>
             <Form.Row>
-                <Form.Group as={Col} controlId="supplier-edit" hidden>
-                    <Form.Label>Supplier</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Supplier" value={props.roleId} {...register("supplier-id")} />
+                <Form.Group as={Col} controlId="role-edit" hidden>
+                    <Form.Label>Role</Form.Label>
+                    <Form.Control type="text" placeholder="Enter Role" value={props.roleId} {...register("role-id")} />
                 </Form.Group>
                 <Form.Group as={Col} controlId="role-name-edit">
                     <Form.Label>Role Name</Form.Label>
@@ -80,7 +80,7 @@ function Role() {
     
         })
         .then((response) => {
-            //get the object of supplier data to load to a table
+            //get the object of role data to load to a table
             console.log(response.data);
             setTableData(response.data);
         })
@@ -215,7 +215,7 @@ function Role() {
                             <Form.Row>
                                 <Form.Group as={Col} controlId="role">
                                     <Form.Label>Role</Form.Label>
-                                    <Form.Control type="text" placeholder="Enter Role" {...register("role",{required:true})} isInvalid={errors.supplier} />
+                                    <Form.Control type="text" placeholder="Enter Role" {...register("role",{required:true})} isInvalid={errors.role} />
                                     <Form.Control.Feedback type="invalid">Role is required</Form.Control.Feedback>
                                 </Form.Group>
                                 

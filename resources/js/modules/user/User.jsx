@@ -12,7 +12,7 @@ import SweetAlert from 'react-bootstrap-sweetalert';
 function MyVerticallyCenteredModal(props) {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const updateUserData = (data) => {
-        axios.patch(`/supplier/1}`,{data}).then(
+        axios.patch(`/user/1}`,{data}).then(
             alert('Updated')
         );
     }
@@ -75,9 +75,9 @@ function MyVerticallyCenteredModal(props) {
 
 function User() {
     const [modalShow, setModalShow] = useState(false);
-    const [hideAddSupplier, setHideAddSupplier] = useState(true);
+    const [hideAddUser, setHideAddUser] = useState(true);
     const [tableData, setTableData] = useState([]);
-    const [hideSupplierTable, setHideAddSupplierTable] = useState(false);
+    const [hideUserTable, setHideAddUserTable] = useState(false);
     const [customAlert, setCustomAlert] = useState(null);
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
    
@@ -94,7 +94,7 @@ function User() {
     
         })
         .then((response) => {
-            //get the object of supplier data to load to a table
+            //get the object of user data to load to a table
             console.log(response.data);
             setTableData(response.data);
         })
@@ -109,12 +109,12 @@ function User() {
     
     const hideAlert = () => {
         setCustomAlert(null)
-        hideTableShowAddSupplier(false)
+        hideTableShowAddUser(false)
     }
     
     const onSubmit = (data) => {
         axios
-        .post('/supplier', {
+        .post('/user', {
            data
         })
         .then((response) => {
@@ -124,7 +124,7 @@ function User() {
                 title="Success!"
                 onConfirm={() =>hideAlert()}
                 >
-                New Supplier Added
+                New User Added
                 </SweetAlert>);
         })
         .catch((err) => {
@@ -132,13 +132,13 @@ function User() {
         });
     }
 
-    const deleteSupplier = (id) => {
-        axios.delete(`/supplier/${id}`, { data: id }).then(
+    const deleteUser = (id) => {
+        axios.delete(`/user/${id}`, { data: id }).then(
            setCustomAlert(null)
         );
     }
     
-    const removeSupplierConfirmation = (id) => {
+    const removeUserConfirmation = (id) => {
         setCustomAlert(
         <SweetAlert
             warning
@@ -146,30 +146,30 @@ function User() {
             confirmBtnText="Yes, delete it!"
             confirmBtnBsStyle="danger"
             title="Are you sure?"
-            onConfirm={() =>deleteSupplier(id)}
+            onConfirm={() =>deleteUser(id)}
             onCancel={() => setCustomAlert(null)}
             focusCancelBtn
           >
-            This Supplier data will be deleted
+            This User data will be deleted
           </SweetAlert>
           )
        
     }
 
-   const hideTableShowAddSupplier = (isCurrentlyHidden) => {
+   const hideTableShowAddUser = (isCurrentlyHidden) => {
         if(isCurrentlyHidden){
-            setHideAddSupplier(false);
-            setHideAddSupplierTable(true);
+            setHideAddUser(false);
+            setHideAddUserTable(true);
         }
         else{
-            setHideAddSupplier(true);
-            setHideAddSupplierTable(false);
+            setHideAddUser(true);
+            setHideAddUserTable(false);
         }
         
     }
 
     
-   const showModalSupplierData = (id) => {
+   const showModalUserData = (id) => {
       let userInfo = tableData[id];
       console.log(userInfo)
         setModalShow(
@@ -190,9 +190,9 @@ function User() {
         
         <div>
             {customAlert}
-            <Container fluid hidden={hideSupplierTable}>
+            <Container fluid hidden={hideUserTable}>
                 <div style={buttonStyle}>
-                    <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} onClick={() =>hideTableShowAddSupplier(true)}>
+                    <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} onClick={() =>hideTableShowAddUser(true)}>
                         <FontAwesomeIcon icon={faPlusSquare} className="icon-space" />
                         Add User   
                     </Button>
@@ -215,9 +215,9 @@ function User() {
                         <td>{data.email}</td>
                         <td>{data.email}</td>
                         <td> 
-                            <Button variant="outline-info" size="sm" onClick={() => showModalSupplierData(index)}>
+                            <Button variant="outline-info" size="sm" onClick={() => showModalUserData(index)}>
                             <FontAwesomeIcon icon={faEye} className="icon-space"/>View</Button>
-                            <Button variant="outline-danger" size="sm" onClick={() => removeSupplierConfirmation(data.supplier_id)}>
+                            <Button variant="outline-danger" size="sm" onClick={() => removeUserConfirmation(data.id)}>
                                 <FontAwesomeIcon icon={faTrashAlt}  className="icon-space" />Delete
                             </Button>
                         </td>
@@ -227,38 +227,38 @@ function User() {
                 </Table>
             </Container>
 
-            <Container fluid hidden={hideAddSupplier}>
+            <Container fluid hidden={hideAddUser}>
                 <Card className="border-wrapper">
                     <Card.Body>
                         <h4 className="mb-4"><FontAwesomeIcon icon={faUserTag} className="icon-space"/>Add User</h4>
                         <Form>
                             <Form.Row>
-                                <Form.Group as={Col} controlId="supplier">
+                                <Form.Group as={Col} controlId="user">
                                     <Form.Label>User</Form.Label>
-                                    <Form.Control type="text" placeholder="Enter User" {...register("supplier",{required:true})} isInvalid={errors.supplier} />
+                                    <Form.Control type="text" placeholder="Enter User" {...register("user",{required:true})} isInvalid={errors.user} />
                                     <Form.Control.Feedback type="invalid">User's name is required</Form.Control.Feedback>
                                 </Form.Group>
-                                <Form.Group as={Col} controlId="contact-person">
+                                <Form.Group as={Col} controlId="user-email">
                                     <Form.Label>Email</Form.Label>
-                                    <Form.Control type="email" placeholder="Enter Email" {...register("contactPerson",{required:true})} isInvalid={errors.contactPerson} />
+                                    <Form.Control type="email" placeholder="Enter Email" {...register("userEmail",{required:true})} isInvalid={errors.userEmail} />
                                     <Form.Control.Feedback type="invalid">Email is required</Form.Control.Feedback>
                                 </Form.Group>
                             </Form.Row>
                             <Form.Row>
-                                <Form.Group as={Col} controlId="supplier">
+                                <Form.Group as={Col} controlId="user-password">
                                     <Form.Label>Password</Form.Label>
-                                    <Form.Control type="password" placeholder="Password" {...register("supplier",{required:true})} isInvalid={errors.supplier} />
+                                    <Form.Control type="password" placeholder="Password" {...register("userPassword",{required:true})} isInvalid={errors.userPassword} />
                                     <Form.Control.Feedback type="invalid">User's name is required</Form.Control.Feedback>
                                 </Form.Group>
-                                <Form.Group as={Col} controlId="contact-person">
+                                <Form.Group as={Col} controlId="confirm-password">
                                     <Form.Label>Confirm Password</Form.Label>
-                                    <Form.Control type="text" placeholder="Password" {...register("contactPerson",{required:true})} isInvalid={errors.contactPerson} />
+                                    <Form.Control type="text" placeholder="Password" {...register("confirmPassword",{required:true})} isInvalid={errors.confirmPassword} />
                                     <Form.Control.Feedback type="invalid">Email is required</Form.Control.Feedback>
                                 </Form.Group>
                             </Form.Row>
-                            <Form.Group controlId="supplier-address">
+                            <Form.Group controlId="user-role">
                                 <Form.Label>Role</Form.Label>
-                                <Form.Control placeholder="Role" {...register("address",{required:true})} isInvalid={errors.address}/>
+                                <Form.Control placeholder="Role" {...register("userRole",{required:true})} isInvalid={errors.userRole}/>
                                 <Form.Control.Feedback type="invalid">Role is required</Form.Control.Feedback>
                             </Form.Group>
 
@@ -268,7 +268,7 @@ function User() {
                             <FontAwesomeIcon icon={faPlusCircle} className="icon-space" />
                              Add    
                             </Button>
-                            <Button variant="danger" size="sm" style={{marginRight:"0.5rem"}} onClick={() =>hideTableShowAddSupplier(false)} >
+                            <Button variant="danger" size="sm" style={{marginRight:"0.5rem"}} onClick={() =>hideTableShowAddUser(false)} >
                             <FontAwesomeIcon icon={faBan} className="icon-space"/>
                                 Cancel
                             </Button>
