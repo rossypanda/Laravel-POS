@@ -5,12 +5,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusSquare,faTrashAlt,faEye,faCheck,faUserTag,faPlusCircle,faBan} from '@fortawesome/free-solid-svg-icons';
 import { faLastfmSquare } from '@fortawesome/free-brands-svg-icons';
 import { useForm } from "react-hook-form";
-import baseUrl from '../../helpers/BaseUrl';
 import axios from 'axios';
 import SweetAlert from 'react-bootstrap-sweetalert';
+import TagsInput from './components/TagsInput';
+import Tags from './components/Tags';
 
 function MyVerticallyCenteredModal(props) {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const [tags,setTags] = useState([]);
+    const selected = tags => setTags(tags);
     const updateSupplierData = (data) => {
         axios.patch(`/supplier/1}`,{data}).then(
             setAlert(  <Alert  variant="success">
@@ -41,50 +44,48 @@ function MyVerticallyCenteredModal(props) {
                 </Form.Group>
                 <Form.Group as={Col} controlId="supplier-edit">
                     <Form.Label>Supplier</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Supplier" value={props.supplier} {...register("supplier-edit")} />
+                    <Form.Control type="text" placeholder="Enter Supplier" defaultValue={props.supplier} {...register("supplier-edit")} />
                 </Form.Group>
                 <Form.Group as={Col} controlId="contact-person-edit">
                     <Form.Label>Contact Person</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Contact Person" value={props.contactPerson} {...register("contact-person-edit")} />
+                    <Form.Control type="text" placeholder="Enter Contact Person" defaultValue={props.contactPerson} {...register("contact-person-edit")} />
                 </Form.Group>
             </Form.Row> 
             <Form.Row>
                 <Form.Group as={Col} controlId="address-edit">
                     <Form.Label>Address</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Address" value={props.address} {...register("address-edit")} />
+                    <Form.Control type="text" placeholder="Enter Address" defaultValue={props.address} {...register("address-edit")} />
                 </Form.Group>
             </Form.Row>
             <Form.Row>
                 <Form.Group as={Col} controlId="email-edit">
                     <Form.Label>Email</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Email" value={props.email} {...register("email-edit")} />
+                    <Form.Control type="text" placeholder="Enter Email" defaultValue={props.email} {...register("email-edit")} />
                 </Form.Group>
                 <Form.Group as={Col} controlId="number-edit">
                     <Form.Label>Number</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Address" value={props.email} {...register("number-edit")} />
+                    <Form.Control type="text" placeholder="Enter Address" defaultValue={props.number} {...register("number-edit")} />
                 </Form.Group>
             </Form.Row>  
             <Form.Row>
                 <Form.Group as={Col} controlId="fax-edit">
                     <Form.Label>Fax</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Email" value={props.fax} {...register("fax-edit")} />
+                    <Form.Control type="text" placeholder="Enter Email" defaultValue={props.fax} {...register("fax-edit")} />
                 </Form.Group>
             </Form.Row>
             <Form.Row>
                 <Form.Group as={Col} controlId="date-edit">
                     <Form.Label>Date Added</Form.Label>
-                    <Form.Control type="text" value={props.date} readOnly/>
+                    <Form.Control type="text" defaultValue={props.date} readOnly/>
                 </Form.Group>
                 <Form.Group as={Col} controlId="encoded-edit">
                     <Form.Label>Encoded By</Form.Label>
-                    <Form.Control type="text" value={props.encoded} readOnly/>
+                    <Form.Control type="text" defaultValue={props.encoded} readOnly/>
                 </Form.Group>
             </Form.Row>  
             <Form.Row>
-                <Form.Group as={Col} controlId="description-edit">
-                    <Form.Label>Description</Form.Label>
-                    <Form.Control type="text" placeholder="Optional" value={props.description} {...register("description-edit")} />
-                </Form.Group>
+                    <Form.Label>Material Tags</Form.Label>
+                    <TagsInput selected={selected} tags={props.tags ? props.tags.split(',') : []}/>
             </Form.Row>
         </Form>
         </Modal.Body>
@@ -105,9 +106,9 @@ function Supplier() {
     const [tableData, setTableData] = useState([]);
     const [hideSupplierTable, setHideAddSupplierTable] = useState(false);
     const [customAlert, setCustomAlert] = useState(null);
+    const [tags,setTags] = useState([]);
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-   
-    let test;
+    const selected = tags => setTags(tags);
     const buttonStyle ={
         display:"flex",
         justifyContent:"flex-end",
@@ -131,7 +132,7 @@ function Supplier() {
 
     useEffect(() => {
         fetchSupplier();
-    });
+    },[]);
     
     const hideAlert = () => {
         setCustomAlert(null)
@@ -141,7 +142,8 @@ function Supplier() {
     const onSubmit = (data) => {
         axios
         .post('/supplier', {
-           data
+           data:data,
+           tags:tags.join()
         })
         .then((response) => {
             console.log(response);
@@ -212,11 +214,15 @@ function Supplier() {
                 bank={supplierInfo.bankaccount_no}
                 date={supplierInfo.date_added}
                 encoded={supplierInfo.encoded_by}
-                description={supplierInfo.description}
+                tags={supplierInfo.tags}
                 onHide={() => setModalShow(null)}
             />
         );
     }
+
+    //  const explodeTagsString = (tags) => {
+    //         <tags className="spli"></tags>
+    //   }
     
     
     return (
@@ -233,20 +239,22 @@ function Supplier() {
                 <Table striped bordered hover size="sm">
                     <thead>
                         <tr>
-                        <th>Supplier ID</th>
                         <th>Supplier</th>
+                        <th>Contact Person</th>
                         <th>Contact Number</th>
                         <th>Email</th>
+                        <th>Tags</th>
                         <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                     {tableData.map((data,index) => (
                         <tr>
-                        <td>{data.supplier_id}</td>
                         <td>{data.supplier}</td>
+                        <td>{data.contact_person}</td>
                         <td>{data.contact_no}</td>
                         <td>{data.email}</td>
+                        <td><Tags tags={data.tags   ? data.tags.split(',') : [] }/></td>
                         <td> 
                             <Button variant="outline-info" size="sm" onClick={() => showModalSupplierData(index)}>
                             <FontAwesomeIcon icon={faEye} className="icon-space"/>View</Button>
@@ -267,19 +275,19 @@ function Supplier() {
                         <Form>
                             <Form.Row>
                                 <Form.Group as={Col} controlId="supplier">
-                                    <Form.Label>Supplier</Form.Label>
+                                    <Form.Label>Supplier *</Form.Label>
                                     <Form.Control type="text" placeholder="Enter Supplier" {...register("supplier",{required:true})} isInvalid={errors.supplier} />
                                     <Form.Control.Feedback type="invalid">Supplier is required</Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group as={Col} controlId="contact-person">
-                                    <Form.Label>Contact Person</Form.Label>
+                                    <Form.Label>Contact Person *</Form.Label>
                                     <Form.Control type="text" placeholder="Enter Contact Person" {...register("contactPerson",{required:true})} isInvalid={errors.contactPerson} />
                                     <Form.Control.Feedback type="invalid">Contact person is required</Form.Control.Feedback>
                                 </Form.Group>
                             </Form.Row>
                             
                             <Form.Group controlId="supplier-address">
-                                <Form.Label>Address</Form.Label>
+                                <Form.Label>Address *</Form.Label>
                                 <Form.Control placeholder="Supplier Address" {...register("address",{required:true})} isInvalid={errors.address}/>
                                 <Form.Control.Feedback type="invalid">Address is required</Form.Control.Feedback>
                             </Form.Group>
@@ -300,11 +308,9 @@ function Supplier() {
 
                             </Form.Row>
 
-                            <Form.Row>
-                                <Form.Group as={Col} controlId="supplier-description">
-                                    <Form.Label>Description</Form.Label>
-                                    <Form.Control placeholder="Optional" {...register("description")}/>
-                                </Form.Group>
+                            <Form.Row style={{marginBottom:"0.5rem"}}>
+                              <Form.Label>Material Tags *</Form.Label>
+                              <TagsInput selected={selected} tags={[]}/>
                             </Form.Row>
 
                         </Form>

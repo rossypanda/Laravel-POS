@@ -40,7 +40,8 @@ class SupplierController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
+    
          $field_data = $request->data;
          Supplier::create([
              'supplier' => $field_data['supplier'],
@@ -49,7 +50,8 @@ class SupplierController extends Controller
              'email' => $field_data['email'],
              'contact_no' => $field_data['number'],
              'fax_no' => $field_data['fax'],
-             'description' => $field_data['description'],
+             'tags' => $request->tags,
+              'encoded_by' => \Auth::id()
          ]);
     }
 
@@ -84,7 +86,7 @@ class SupplierController extends Controller
      */
     public function update(Request $request, $id)
     {   
-        
+      
         $field_data = $request->data;
         $supplier = Supplier::find($field_data['supplier-id']);
         $supplier->supplier = $field_data['supplier-edit'];
