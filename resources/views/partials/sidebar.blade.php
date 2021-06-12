@@ -55,7 +55,7 @@
                 </ul>
             </li>
 
-            @role('admin') 
+            @role('admin')
             <li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
                 <a href="javascript:void(0)">
                     <span class="pcoded-micon"><i class="feather icon-unlock"></i></span>
@@ -63,16 +63,11 @@
                 </a>
                 <ul class="pcoded-submenu">
                     <li class="">
-                        <a href="/permission" >
+                        <a href="/permissions" target="_blank">
                             <span class="pcoded-mtext">Permission</span>
                         </a>
                     </li>
                     
-                    <li class="">
-                        <a href="/role" >
-                            <span class="pcoded-mtext">Role</span>
-                        </a>
-                    </li>
                     <li class="">
                         <a href="user" >
                             <span class="pcoded-mtext">User</span>
@@ -82,6 +77,7 @@
                 </ul>
             </li>
             @endrole
+     
 
             
 

@@ -18,7 +18,6 @@ class CreateTblPoInvoice extends Migration
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_unicode_ci';        
             $table->increments('po_invoice_id');
-            $table->foreignId('company_id');
             $table->integer('start_range')->nullable();
             $table->integer('end_range')->nullable();
             $table->integer('current_range')->default(0);
