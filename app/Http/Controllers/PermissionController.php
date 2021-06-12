@@ -41,11 +41,10 @@ class PermissionController extends Controller
      */
     public function store(Request $request)
     {
-        // $field_data = $request->data;
-        // Permission::create([
-        //     'supplier' => $field_data['supplier'],
-        //     'contact_person' => $field_data['contactPerson']
-        // ]);
+        $field_data = $request->data;
+        Permission::create([
+            'name' => $field_data['permission']
+        ]);
     }
 
     /**
