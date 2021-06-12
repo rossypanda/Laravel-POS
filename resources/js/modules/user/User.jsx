@@ -16,6 +16,7 @@ function MyVerticallyCenteredModal(props) {
             alert('Updated')
         );
     }
+    // const updateUserData = data => console.log(data);
     return (
       <Modal
         {...props}
@@ -31,35 +32,37 @@ function MyVerticallyCenteredModal(props) {
         <Modal.Body>
         <Form>
             <Form.Row>
-                <Form.Group as={Col} controlId="user-edit" hidden>
+                <Form.Group as={Col} controlId="user-id" hidden>
                     <Form.Label>User</Form.Label>
-                    <Form.Control type="text" placeholder="Enter User" value={props.userId} {...register("user-id")} />
+                    <Form.Control type="text" placeholder="Enter User" value={props.userid} {...register("user-id")} />
                 </Form.Group>
+            </Form.Row>
+            <Form.Row>
                 <Form.Group as={Col} controlId="user-edit">
-                    <Form.Label>User</Form.Label>
-                    <Form.Control type="text" placeholder="Enter User" value={props.userName} {...register("user-edit")} />
+                    <Form.Label>User's Complete Name</Form.Label>
+                    <Form.Control type="text" placeholder="Enter User" defaultValue={props.user} {...register("user-edit")} />
                 </Form.Group>
                 <Form.Group as={Col} controlId="user-email-edit">
                     <Form.Label>Email</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Email" value={props.userEmail} {...register("user-email-edit")} />
+                    <Form.Control type="text" placeholder="Enter Email" defaultValue={props.useremail} {...register("user-email-edit")} />
                 </Form.Group>
             </Form.Row>
             <Form.Row>
-                <Form.Group as={Col} controlId="user-password-edit">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="text" placeholder="Password" value={props.userPassword} {...register("user-password-edit")} />
+                <Form.Group as={Col} controlId="username-edit">
+                    <Form.Label>Username</Form.Label>
+                    <Form.Control type="text" placeholder="Username" defaultValue={props.username} {...register("username-edit")} />
                 </Form.Group>
-                <Form.Group as={Col} controlId="user-password-edit">
+                {/* <Form.Group as={Col} controlId="user-password-edit">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="text" placeholder="Password" value={props.userPassword} {...register("user-password-edit")} />
-                </Form.Group>
+                    <Form.Control type="password" placeholder="Password" defaultValue={props.userpassword} {...register("user-password-edit")} />
+                </Form.Group> */}
             </Form.Row>
-            <Form.Row>
+            {/* <Form.Row>
                 <Form.Group as={Col} controlId="role-edit">
                     <Form.Label>Role</Form.Label>
-                    <Form.Control type="text" placeholder="Role" value={props.description} {...register("role-edit")} />
+                    <Form.Control type="text" placeholder="Role" defaultValue={props.description} {...register("role-edit")} />
                 </Form.Group>
-            </Form.Row>
+            </Form.Row> */}
         </Form>
         </Modal.Body>
         <Modal.Footer>
@@ -73,7 +76,7 @@ function MyVerticallyCenteredModal(props) {
 }
 
 
-function User() {
+function UserProfile() {
     const [modalShow, setModalShow] = useState(false);
     const [hideAddUser, setHideAddUser] = useState(true);
     const [tableData, setTableData] = useState([]);
@@ -176,10 +179,11 @@ function User() {
             <MyVerticallyCenteredModal
                 show={true}
                 title={userInfo.name}
-                userId={userInfo.id}
-                userName={userInfo.name}
-                userEmail={userInfo.email}
-                userPassword={userInfo.password}
+                userid={userInfo.id}
+                user={userInfo.name}
+                username={userInfo.username}
+                useremail={userInfo.email}
+                userpassword={userInfo.password}
                 onHide={() => setModalShow(null)}
             />
         );
@@ -230,12 +234,17 @@ function User() {
             <Container fluid hidden={hideAddUser}>
                 <Card className="border-wrapper">
                     <Card.Body>
-                        <h4 className="mb-4"><FontAwesomeIcon icon={faUserTag} className="icon-space"/>Add User</h4>
+                        <h4 className="mb-4"><FontAwesomeIcon icon={faUserTag} className="icon-space"/>Add Userrr</h4>
                         <Form>
                             <Form.Row>
                                 <Form.Group as={Col} controlId="user">
-                                    <Form.Label>User</Form.Label>
+                                    <Form.Label>User Complete Name</Form.Label>
                                     <Form.Control type="text" placeholder="Enter User" {...register("user",{required:true})} isInvalid={errors.user} />
+                                    <Form.Control.Feedback type="invalid">User's name is required</Form.Control.Feedback>
+                                </Form.Group>
+                                <Form.Group as={Col} controlId="user">
+                                    <Form.Label>Username</Form.Label>
+                                    <Form.Control type="text" placeholder="Enter Username" {...register("username",{required:true})} isInvalid={errors.username} />
                                     <Form.Control.Feedback type="invalid">User's name is required</Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group as={Col} controlId="user-email">
@@ -247,7 +256,7 @@ function User() {
                             <Form.Row>
                                 <Form.Group as={Col} controlId="user-password">
                                     <Form.Label>Password</Form.Label>
-                                    <Form.Control type="password" placeholder="Password" {...register("userPassword",{required:true})} isInvalid={errors.userPassword} />
+                                    <Form.Control type="password" placeholder="Password" {...register("password",{required:true})} isInvalid={errors.password} />
                                     <Form.Control.Feedback type="invalid">User's name is required</Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group as={Col} controlId="confirm-password">
@@ -282,8 +291,8 @@ function User() {
     );
 }
 
-export default User;
+export default UserProfile;
 
-if (document.getElementById('user')) {
-    ReactDOM.render(<User />, document.getElementById('user'));
+if (document.getElementById('userprofile')) {
+    ReactDOM.render(<UserProfile />, document.getElementById('userprofile'));
 }

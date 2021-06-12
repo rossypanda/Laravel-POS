@@ -9,7 +9,7 @@
                     <div class="page-body">
                         <br><br><br><br><br>
                         <div class="container-fluid">
-                            <h3>WELCOME TO CONSYS BETCHESS</h3>
+                            <h2>WELCOME TO CONSYS</h2>
 
                             {{-- <div >
                                 <a  href="{{ route('logout') }}"
