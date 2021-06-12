@@ -107,6 +107,7 @@ function Supplier() {
     const [hideSupplierTable, setHideAddSupplierTable] = useState(false);
     const [customAlert, setCustomAlert] = useState(null);
     const [tags,setTags] = useState([]);
+    const [filter,setFilter] = useState('');
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const selected = tags => setTags(tags);
     const buttonStyle ={
@@ -196,6 +197,18 @@ function Supplier() {
         
     }
 
+    const search = (rows) => {
+       const columns = rows[0] && Object.keys(rows[0]);
+       return rows.filter((row) => 
+            columns.some(
+                (column) =>
+                row[column].toString().toLowerCase().indexOf(filter.toLowerCase()) > -1
+            )
+       );
+        
+    }
+
+
     
    const showModalSupplierData = (id) => {
       let supplierInfo = tableData[id];
@@ -236,6 +249,7 @@ function Supplier() {
                         Add Supplier   
                     </Button>
                 </div>
+                <Form.Control type="text" placeholder="Search" style={{width:"15%"}} value={filter} onChange={(e) => setFilter(e.target.value)} />
                 <Table striped bordered hover size="sm">
                     <thead>
                         <tr>
@@ -243,18 +257,18 @@ function Supplier() {
                         <th>Contact Person</th>
                         <th>Contact Number</th>
                         <th>Email</th>
-                        <th>Tags</th>
+                        <th >Tags</th>
                         <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                    {tableData.map((data,index) => (
+                    {search(tableData).map((data,index) => (
                         <tr>
                         <td>{data.supplier}</td>
                         <td>{data.contact_person}</td>
                         <td>{data.contact_no}</td>
                         <td>{data.email}</td>
-                        <td><Tags tags={data.tags   ? data.tags.split(',') : [] }/></td>
+                        <td ><Tags tags={data.tags   ? data.tags.split(',') : [] }/></td>
                         <td> 
                             <Button variant="outline-info" size="sm" onClick={() => showModalSupplierData(index)}>
                             <FontAwesomeIcon icon={faEye} className="icon-space"/>View</Button>

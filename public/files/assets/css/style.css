@@ -25368,7 +25368,7 @@ body.dark #styleSelector .form-control {
 
 .tag {
 	width: auto;
-	height: 32px;
+	/* height: 32px; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
