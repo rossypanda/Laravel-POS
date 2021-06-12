@@ -42,6 +42,7 @@ Route::resource('supplier', 'SupplierController');
 Route::resource('permission', 'PermissionController');
 Route::resource('role', 'RoleController');
 Route::resource('user', 'UserController');
+// Route::resource('user_register', 'UserController');
 Route::get('fetch/supplier','SupplierController@fetchSupplierData');
 Route::get('fetch/poNumber','PONumberController@fetchPONumberData');
 Route::get('fetch/purchaseOrder','PurchaseOrderController@fetchPurchaseOrderData');
@@ -56,4 +57,6 @@ Route::get('fetch/permission','PermissionController@fetchPermissionData');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::view('/user_register', 'user.create-user');
 
