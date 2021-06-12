@@ -16071,7 +16071,8 @@ function MyVerticallyCenteredModal(props) {
     axios__WEBPACK_IMPORTED_MODULE_7___default().patch("/user/1}", {
       data: data
     }).then(alert('Updated'));
-  };
+  }; // const updateUserData = data => console.log(data);
+
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, _objectSpread(_objectSpread({}, props), {}, {
     size: "lg",
@@ -16086,27 +16087,29 @@ function MyVerticallyCenteredModal(props) {
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Body, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
-            controlId: "user-edit",
+            controlId: "user-id",
             hidden: true,
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
               children: "User"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
               type: "text",
               placeholder: "Enter User",
-              value: props.userId
+              value: props.userid
             }, register("user-id")))]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
             controlId: "user-edit",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
-              children: "User"
+              children: "User's Complete Name"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
               type: "text",
               placeholder: "Enter User",
-              value: props.userName
+              defaultValue: props.user
             }, register("user-edit")))]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
@@ -16116,42 +16119,20 @@ function MyVerticallyCenteredModal(props) {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
               type: "text",
               placeholder: "Enter Email",
-              value: props.userEmail
+              defaultValue: props.useremail
             }, register("user-email-edit")))]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-            as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
-            controlId: "user-password-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
-              children: "Password"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
-              type: "text",
-              placeholder: "Password",
-              value: props.userPassword
-            }, register("user-password-edit")))]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-            as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
-            controlId: "user-password-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
-              children: "Password"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
-              type: "text",
-              placeholder: "Password",
-              value: props.userPassword
-            }, register("user-password-edit")))]
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
-            controlId: "role-edit",
+            controlId: "username-edit",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
-              children: "Role"
+              children: "Username"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
               type: "text",
-              placeholder: "Role",
-              value: props.description
-            }, register("role-edit")))]
+              placeholder: "Username",
+              defaultValue: props.username
+            }, register("username-edit")))]
           })
         })]
       })
@@ -16169,7 +16150,7 @@ function MyVerticallyCenteredModal(props) {
   }));
 }
 
-function User() {
+function UserProfile() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
       modalShow = _useState2[0],
@@ -16303,10 +16284,11 @@ function User() {
     setModalShow( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(MyVerticallyCenteredModal, {
       show: true,
       title: userInfo.name,
-      userId: userInfo.id,
-      userName: userInfo.name,
-      userEmail: userInfo.email,
-      userPassword: userInfo.password,
+      userid: userInfo.id,
+      user: userInfo.name,
+      username: userInfo.username,
+      useremail: userInfo.email,
+      userpassword: userInfo.password,
       onHide: function onHide() {
         return setModalShow(null);
       }
@@ -16401,14 +16383,14 @@ function User() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
               icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faUserTag,
               className: "icon-space"
-            }), "Add User"]
+            }), "Add Userrr"]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
                 as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
                 controlId: "user",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
-                  children: "User"
+                  children: "User Complete Name"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
                   type: "text",
                   placeholder: "Enter User"
@@ -16416,6 +16398,22 @@ function User() {
                   required: true
                 })), {}, {
                   isInvalid: errors.user
+                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
+                  type: "invalid",
+                  children: "User's name is required"
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                controlId: "user",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                  children: "Username"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
+                  type: "text",
+                  placeholder: "Enter Username"
+                }, register("username", {
+                  required: true
+                })), {}, {
+                  isInvalid: errors.username
                 })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
                   type: "invalid",
                   children: "User's name is required"
@@ -16446,10 +16444,10 @@ function User() {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
                   type: "password",
                   placeholder: "Password"
-                }, register("userPassword", {
+                }, register("password", {
                   required: true
                 })), {}, {
-                  isInvalid: errors.userPassword
+                  isInvalid: errors.password
                 })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
                   type: "invalid",
                   children: "User's name is required"
@@ -16520,10 +16518,10 @@ function User() {
   });
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (User);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (UserProfile);
 
-if (document.getElementById('user')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_3__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(User, {}), document.getElementById('user'));
+if (document.getElementById('userprofile')) {
+  react_dom__WEBPACK_IMPORTED_MODULE_3__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(UserProfile, {}), document.getElementById('userprofile'));
 }
 
 /***/ }),
