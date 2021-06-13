@@ -86,7 +86,6 @@ class SupplierController extends Controller
      */
     public function update(Request $request, $id)
     {   
-      
         $field_data = $request->data;
         $supplier = Supplier::find($field_data['supplier-id']);
         $supplier->supplier = $field_data['supplier-edit'];
@@ -95,9 +94,7 @@ class SupplierController extends Controller
         $supplier->email = $field_data['email-edit'];
         $supplier->contact_no = $field_data['number-edit'];
         $supplier->fax_no = $field_data['fax-edit'];
-        // $supplier->bankaccount_no = $field_data['bank-edit'];
-        $supplier->description = $field_data['description-edit'];
-
+        $supplier->tags = $request->tags;
         $supplier->save();
     }
 

@@ -20,9 +20,7 @@ class PurchaseOrderHelper
     public static function checkAvailablePOInvoice($payment_type){
        
          $data = DB::table('tbl_po_invoice')
-            ->where('invoice_type',$payment_type)
             ->whereColumn('current_range','<','end_range')
-            ->orderBy('date_added','asc')
             ->limit(1)
             ->get();
         //Check if current_range is zero
@@ -31,9 +29,6 @@ class PurchaseOrderHelper
             return  $data[0]->current_range == 0  ?  [ 'po_number' => $data[0]->start_range, 'po_invoice_id' =>$data[0]->po_invoice_id ] :  [ 'po_number' => $data[0]->current_range + 1, 'po_invoice_id' =>$data[0]->po_invoice_id ];  
         }
         return false;
-
-    
-
     } 
     /**
      * Generate PO Reference

@@ -18,12 +18,10 @@ class POInvoiceSeeder extends Seeder
     public function run()
     {
         DB::table('tbl_po_invoice')->insert([
-            'start_range' => random_int(100,500),
-            'end_range' => random_int(100,500),
-            'invoice_type' => 'C',
-            'invoice_usage' => 0,
-            'date_added' => date("Y/m/d"),
-            'encoded_by' => 1
+            'start_range' => 1,
+            'end_range' => 50,
+            'current_range' => 0,
+            'current_year' => date("Y"),
         ]);
     }
 }

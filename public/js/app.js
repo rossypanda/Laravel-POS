@@ -12280,6 +12280,80 @@ var baseUrl = function baseUrl(path) {
 
 /***/ }),
 
+/***/ "./resources/js/helpers/PermissionComponent.jsx":
+/*!******************************************************!*\
+  !*** ./resources/js/helpers/PermissionComponent.jsx ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _PermissionContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./PermissionContext */ "./resources/js/helpers/PermissionContext.jsx");
+
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+var Permission = function Permission(props) {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('test'),
+      _useState2 = _slicedToArray(_useState, 2),
+      permissions = _useState2[0],
+      setPermissions = _useState2[1];
+
+  var children = props.children;
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    axios__WEBPACK_IMPORTED_MODULE_2___default().get('/fetch/permission').then(function (response) {
+      setPermissions(response.data);
+    });
+  }, []);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_PermissionContext__WEBPACK_IMPORTED_MODULE_3__.default.Provider, {
+    value: permissions,
+    children: children
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Permission);
+
+/***/ }),
+
+/***/ "./resources/js/helpers/PermissionContext.jsx":
+/*!****************************************************!*\
+  !*** ./resources/js/helpers/PermissionContext.jsx ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var PermissionContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)([]);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PermissionContext);
+
+/***/ }),
+
 /***/ "./resources/js/modules/Example.js":
 /*!*****************************************!*\
   !*** ./resources/js/modules/Example.js ***!
@@ -12816,10 +12890,6 @@ function PONumber() {
       customAlert = _useState6[0],
       setCustomAlert = _useState6[1];
 
-  var PO_TYPE = {
-    'C': 'Cash',
-    'H': 'Check'
-  };
   var buttonStyle = {
     display: "flex",
     justifyContent: "flex-end",
@@ -12918,17 +12988,13 @@ function PONumber() {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("thead", {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
-              children: "Invoice ID"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
-              children: "Invoice Type"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
               children: "Start Range"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
               children: "End Range"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
               children: "Usage"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
-              children: "Encoded By"
+              children: "Year"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
               children: "Actions"
             })]
@@ -12937,17 +13003,13 @@ function PONumber() {
           children: tableData.map(function (data, index) {
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
-                children: data.po_invoice_id
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
-                children: PO_TYPE[data.invoice_type]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
                 children: data.start_range
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
                 children: data.end_range
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
-                children: data.invoice_usage
+                children: data.current_range
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
-                children: data.encoded_by
+                children: data.current_year
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default, {
                   variant: "outline-danger",
@@ -13221,6 +13283,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
 /* harmony import */ var _component_CreatePurchaseOrder__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./component/CreatePurchaseOrder */ "./resources/js/modules/po-transaction/component/CreatePurchaseOrder.jsx");
 /* harmony import */ var _component_PurchaseOrderTabs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./component/PurchaseOrderTabs */ "./resources/js/modules/po-transaction/component/PurchaseOrderTabs.jsx");
+/* harmony import */ var _helpers_PermissionComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../helpers/PermissionComponent */ "./resources/js/helpers/PermissionComponent.jsx");
+
 
 
 
@@ -13233,7 +13297,9 @@ __webpack_require__.r(__webpack_exports__);
 
 function PurchaseOrder() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_PurchaseOrderTabs__WEBPACK_IMPORTED_MODULE_5__.default, {})
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_helpers_PermissionComponent__WEBPACK_IMPORTED_MODULE_6__.default, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_component_PurchaseOrderTabs__WEBPACK_IMPORTED_MODULE_5__.default, {})
+    })
   });
 }
 
@@ -13263,9 +13329,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Card.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Form.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Col.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Badge.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Badge.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Form.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Col.js");
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
 /* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
 /* harmony import */ var react_hook_form__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-hook-form */ "./node_modules/react-hook-form/dist/index.esm.js");
@@ -13333,6 +13399,21 @@ function PurchaseOrderView(props) {
       users = _useState10[0],
       setUsers = _useState10[1];
 
+  var PO_STATUS = {
+    'F': 'Pending',
+    'A': 'Approved',
+    'C': 'Cancelled'
+  };
+  var VARIANT = {
+    'F': 'warning',
+    'A': 'success',
+    'C': 'danger'
+  };
+  var PAYMENT_TYPE = {
+    'C': 'Cash',
+    'H': 'Check'
+  };
+
   var fetchPoData = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee() {
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee$(_context) {
@@ -13375,18 +13456,28 @@ function PurchaseOrderView(props) {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default.Body, {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("h4", {
             className: "mb-4",
+            style: {
+              display: 'inline-block'
+            },
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
               icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_9__.faMoneyCheck,
               className: "icon-space"
             }), "PO# ", header.po_number]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
+            variant: VARIANT[header.status],
+            className: "badge-wrapper",
+            style: {
+              marginLeft: "1rem"
+            },
+            children: PO_STATUS[header.status]
+          }), ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                 controlId: "supplier",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
                   children: "Supplier"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
                   size: "sm",
                   as: "select",
                   value: header.supplier_id,
@@ -13401,12 +13492,12 @@ function PurchaseOrderView(props) {
                     }, index);
                   })]
                 })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                 controlId: "payment_type",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
                   children: "Payment Type"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
                   size: "sm",
                   as: "select",
                   value: header.payment_type,
@@ -13423,11 +13514,11 @@ function PurchaseOrderView(props) {
                   })]
                 })]
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
               controlId: "supplier_address",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
                 children: "Address"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
                 placeholder: "Supplier Address",
                 value: header.supplier_address,
                 readOnly: true
@@ -13443,61 +13534,61 @@ function PurchaseOrderView(props) {
                 className: "item-wrapper",
                 fluid: true,
                 children: [detail.map(function (data, index) {
-                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                       xs: 1,
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
                         type: "number",
                         placeholder: "QTY",
                         value: data.quantity,
                         readOnly: true
                       })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                       xs: 1,
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
                         placeholder: "Unit",
                         value: data.unit,
                         readOnly: true
                       })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                       xs: 3,
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
                         placeholder: "Item Desc",
                         value: data.item,
                         readOnly: true
                       })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                       xs: 2,
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
                         placeholder: "Brand",
                         value: data.brand,
                         readOnly: true
                       })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                       xs: 2,
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
                         placeholder: "Model",
                         value: data.model,
                         readOnly: true
                       })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                       xs: 1,
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
                         type: "number",
                         placeholder: "Per Unit",
                         value: data.per_unit,
                         readOnly: true
                       })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                       xs: 1,
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
                         type: "number",
                         placeholder: "Price",
                         value: data.quantity * data.per_unit,
@@ -13505,7 +13596,7 @@ function PurchaseOrderView(props) {
                       })
                     })]
                   }, index);
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
                   xs: 1,
                   className: "flex-row-reverse",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
@@ -13513,7 +13604,7 @@ function PurchaseOrderView(props) {
                       marginRight: '8rem'
                     },
                     id: "amount-span",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
                       style: {
                         borderRadius: '0',
                         padding: '0.5rem',
@@ -13533,46 +13624,46 @@ function PurchaseOrderView(props) {
                   children: "Terms"
                 })
               }), terms.map(function (data, index) {
-                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                    as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                    as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
                       placeholder: "Terms",
                       value: data.terms,
                       readOnly: true
                     })
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                    as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                    as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                     xs: 3,
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
                       placeholder: "Description",
                       value: data.terms_description,
                       readOnly: true
                     })
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                    as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                    as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
                       placeholder: "Due",
                       value: data.terms_due,
                       readOnly: true
                     })
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                    as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                    as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
                       placeholder: "Type of Bank",
                       value: data.terms_bank,
                       readOnly: true
                     })
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                    as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                    as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
                       placeholder: "%",
                       value: data.terms_percent,
                       readOnly: true
                     })
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                    as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                    as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
                       placeholder: "Amount",
                       value: data.terms_amount,
                       readOnly: true
@@ -13580,25 +13671,25 @@ function PurchaseOrderView(props) {
                   })]
                 }, index);
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                 controlId: "project_name",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
                   children: "Project Name"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
                   placeholder: "Project Name",
                   value: header.project_name,
                   readOnly: true
                 })]
               })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                 controlId: "requested_by",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
                   children: "Requested By"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
                   size: "sm",
                   as: "select",
                   value: header.requested_by,
@@ -13613,12 +13704,12 @@ function PurchaseOrderView(props) {
                     }, index);
                   })]
                 })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                 controlId: "canvassed_by",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
                   children: "Canvassed By"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
                   size: "sm",
                   as: "select",
                   value: header.canvassed_by,
@@ -13634,13 +13725,13 @@ function PurchaseOrderView(props) {
                   })]
                 })]
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                 controlId: "encoded_by",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
                   children: "Encoded By"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
                   size: "sm",
                   as: "select",
                   value: header.encoded_by,
@@ -13655,12 +13746,12 @@ function PurchaseOrderView(props) {
                     }, index);
                   })]
                 })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                 controlId: "approved_by",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
                   children: "Approved By"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
                   size: "sm",
                   as: "select",
                   value: header.approved_by,
@@ -13954,9 +14045,16 @@ function CreatePurchaseOrder() {
                 controlId: "supplier",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
                   children: "Supplier"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
                   size: "sm",
-                  as: "select",
+                  as: "select"
+                }, register("supplier", {
+                  required: true
+                })), {}, {
+                  isInvalid: errors.payment_type,
+                  onChange: function onChange(e) {
+                    return handleChange(e.target.value);
+                  },
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
                     value: "",
                     children: "Select Supplier"
@@ -13966,6 +14064,9 @@ function CreatePurchaseOrder() {
                       children: data.supplier
                     }, index);
                   })]
+                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
+                  type: "invalid",
+                  children: "Supplier is required"
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
                 as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
@@ -14383,12 +14484,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Card.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Badge.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Button.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Card.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Badge.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Button.js");
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
 /* harmony import */ var react_hook_form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-hook-form */ "./node_modules/react-hook-form/dist/index.esm.js");
+/* harmony import */ var _helpers_PermissionContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../helpers/PermissionContext */ "./resources/js/helpers/PermissionContext.jsx");
+
 
 
 
@@ -14399,11 +14502,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function PurchaseOrderList(props) {
+  var permission = (0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(_helpers_PermissionContext__WEBPACK_IMPORTED_MODULE_5__.default);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default, {
       className: "mt-3",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default.Body, {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default.Title, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default.Body, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default.Title, {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
             icon: props.icon,
             className: "icon-space"
@@ -14413,14 +14517,14 @@ function PurchaseOrderList(props) {
             },
             className: "float-right",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-              icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faCalendar,
+              icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__.faCalendar,
               className: "icon-space"
             }), props.date, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-              icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faUserCircle,
+              icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__.faUserCircle,
               className: "icon-space ml-3 "
             }), props.requestedBy]
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default.Subtitle, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default.Subtitle, {
           className: "mb-2 mt-3",
           style: {
             color: '#3490dc'
@@ -14428,22 +14532,22 @@ function PurchaseOrderList(props) {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h5", {
             children: props.projectName
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default.Text, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default.Text, {
           className: "text-wrapper",
           children: ["Supplier: ", props.supplier, "   Total Amount: ", props.totalAmount]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default.Footer, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default.Footer, {
           className: "footer-wrapper",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default, {
             variant: props.variant,
             className: "badge-wrapper",
             children: props.status
-          }), ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
+          }), ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default, {
             variant: "info",
             className: "badge-wrapper",
             children: props.paymentType
           }), ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", {
             className: "float-right",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
               variant: "outline-secondary",
               size: "sm",
               style: {
@@ -14452,11 +14556,11 @@ function PurchaseOrderList(props) {
               href: "purchaseOrder/".concat(props.poHeaderId),
               target: "_blank",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faExternalLinkAlt,
+                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__.faExternalLinkAlt,
                 size: "lg",
                 className: "icon-space"
               })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
               variant: "outline-secondary",
               size: "sm",
               style: {
@@ -14465,22 +14569,22 @@ function PurchaseOrderList(props) {
               href: "fetch/pdf/".concat(props.poHeaderId),
               target: "_blank",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faPrint,
+                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__.faPrint,
                 size: "lg",
                 className: "icon-space"
               })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default, {
+            }), permission.indexOf('po.delete') !== -1 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
               variant: "outline-secondary",
               size: "sm",
               style: {
                 marginRight: "0.5rem"
               },
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__.FontAwesomeIcon, {
-                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faTrashAlt,
+                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__.faTrashAlt,
                 size: "lg",
                 className: "icon-space"
               })
-            })]
+            }) : null]
           })]
         })]
       })
@@ -14512,8 +14616,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Tabs.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Tab.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Card.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Form.js");
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
 /* harmony import */ var react_hook_form__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-hook-form */ "./node_modules/react-hook-form/dist/index.esm.js");
 /* harmony import */ var _PurchaseOrderList__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./PurchaseOrderList */ "./resources/js/modules/po-transaction/component/PurchaseOrderList.jsx");
 
@@ -14571,6 +14676,21 @@ function PurchaseOrderTabs(props) {
       supplier = _useState10[0],
       setSupplier = _useState10[1];
 
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(''),
+      _useState12 = _slicedToArray(_useState11, 2),
+      cancelledFilter = _useState12[0],
+      setCancelledFilter = _useState12[1];
+
+  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(''),
+      _useState14 = _slicedToArray(_useState13, 2),
+      pendingFilter = _useState14[0],
+      setPendingFilter = _useState14[1];
+
+  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(''),
+      _useState16 = _slicedToArray(_useState15, 2),
+      approvedFilter = _useState16[0],
+      setApprovedFilter = _useState16[1];
+
   var PO_STATUS = {
     'F': 'Pending',
     'A': 'Approved',
@@ -14579,6 +14699,37 @@ function PurchaseOrderTabs(props) {
   var PAYMENT_TYPE = {
     'C': 'Cash',
     'H': 'Check'
+  };
+  var headerStyle = {
+    display: "flex",
+    justifyContent: "space-between"
+  };
+
+  var pendingSearch = function pendingSearch(rows) {
+    var columns = rows[0] && Object.keys(rows[0]);
+    return rows.filter(function (row) {
+      return columns.some(function (column) {
+        return (row[column] ? row[column] : '').toString().toLowerCase().indexOf(pendingFilter.toLowerCase()) > -1;
+      });
+    });
+  };
+
+  var approvedSearch = function approvedSearch(rows) {
+    var columns = rows[0] && Object.keys(rows[0]);
+    return rows.filter(function (row) {
+      return columns.some(function (column) {
+        return (row[column] ? row[column] : '').toString().toLowerCase().indexOf(approvedFilter.toLowerCase()) > -1;
+      });
+    });
+  };
+
+  var cancelledSearch = function cancelledSearch(rows) {
+    var columns = rows[0] && Object.keys(rows[0]);
+    return rows.filter(function (row) {
+      return columns.some(function (column) {
+        return (row[column] ? row[column] : '').toString().toLowerCase().indexOf(cancelledFilter.toLowerCase()) > -1;
+      });
+    });
   };
 
   var fethPurchaseOrderData = /*#__PURE__*/function () {
@@ -14628,14 +14779,26 @@ function PurchaseOrderTabs(props) {
           title: "Pending",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
             className: "mt-3 card-wrapper",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Header, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Header, {
               className: "header-wrapper",
-              children: "Pending"
-            }), pendingPO.map(function (data, index) {
+              style: headerStyle,
+              children: ["Pending", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
+                type: "text",
+                placeholder: "Search",
+                style: {
+                  width: "15%",
+                  borderRadius: "0.5rem"
+                },
+                value: pendingFilter,
+                onChange: function onChange(e) {
+                  return setPendingFilter(e.target.value);
+                }
+              })]
+            }), pendingSearch(pendingPO).map(function (data, index) {
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_PurchaseOrderList__WEBPACK_IMPORTED_MODULE_6__.default, {
                 poHeaderId: data.po_header_id,
                 poNumber: data.po_number,
-                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_11__.faClock,
+                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_12__.faClock,
                 projectName: data.project_name,
                 date: data.date,
                 requestedBy: users[data.requested_by],
@@ -14652,13 +14815,25 @@ function PurchaseOrderTabs(props) {
           title: "Approved",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
             className: "mt-3 card-wrapper",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Header, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Header, {
               className: "header-wrapper",
-              children: "Approved"
-            }), approvedPO.map(function (data, index) {
+              style: headerStyle,
+              children: ["Approved", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
+                type: "text",
+                placeholder: "Search",
+                style: {
+                  width: "15%",
+                  borderRadius: "0.5rem"
+                },
+                value: approvedFilter,
+                onChange: function onChange(e) {
+                  return setApprovedFilter(e.target.value);
+                }
+              })]
+            }), approvedSearch(approvedPO).map(function (data, index) {
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_PurchaseOrderList__WEBPACK_IMPORTED_MODULE_6__.default, {
                 poNumber: data.po_number,
-                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_11__.faClipboardCheck,
+                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_12__.faClipboardCheck,
                 date: data.date,
                 requestedBy: users[data.requested_by],
                 supplier: supplier[data.supplier_id],
@@ -14674,13 +14849,25 @@ function PurchaseOrderTabs(props) {
           title: "Cancelled",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
             className: "mt-3 card-wrapper",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Header, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Header, {
               className: "header-wrapper",
-              children: "Cancelled"
-            }), cancelledPO.map(function (data, index) {
+              style: headerStyle,
+              children: ["Cancelled", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
+                type: "text",
+                placeholder: "Search",
+                style: {
+                  width: "15%",
+                  borderRadius: "0.5rem"
+                },
+                value: cancelledFilter,
+                onChange: function onChange(e) {
+                  return setCancelledFilter(e.target.value);
+                }
+              })]
+            }), cancelledSearch(cancelledPO).map(function (data, index) {
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_PurchaseOrderList__WEBPACK_IMPORTED_MODULE_6__.default, {
                 poNumber: data.po_number,
-                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_11__.faBan,
+                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_12__.faBan,
                 date: data.date,
                 requestedBy: users[data.requested_by],
                 supplier: supplier[data.supplier_id],
@@ -15298,7 +15485,8 @@ function MyVerticallyCenteredModal(props) {
 
   var updateSupplierData = function updateSupplierData(data) {
     axios__WEBPACK_IMPORTED_MODULE_6___default().patch("/supplier/1}", {
-      data: data
+      data: data,
+      tags: tags.join()
     }).then(setAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
       variant: "success",
       children: "Data Updated"
@@ -15495,7 +15683,7 @@ function Supplier() {
 
   var buttonStyle = {
     display: "flex",
-    justifyContent: "flex-end",
+    justifyContent: "space-between",
     marginBottom: "1rem"
   };
 
@@ -15508,7 +15696,6 @@ function Supplier() {
               _context.next = 2;
               return axios__WEBPACK_IMPORTED_MODULE_6___default().get('/fetch/supplier', {}).then(function (response) {
                 //get the object of supplier data to load to a table
-                console.log(response.data);
                 setTableData(response.data);
               })["catch"](function (err) {
                 console.log(err);
@@ -15541,7 +15728,6 @@ function Supplier() {
       data: data,
       tags: tags.join()
     }).then(function (response) {
-      console.log(response);
       setCustomAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)((react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_7___default()), {
         success: true,
         title: "Success!",
@@ -15593,14 +15779,13 @@ function Supplier() {
     var columns = rows[0] && Object.keys(rows[0]);
     return rows.filter(function (row) {
       return columns.some(function (column) {
-        return row[column].toString().toLowerCase().indexOf(filter.toLowerCase()) > -1;
+        return (row[column] ? row[column] : '').toString().toLowerCase().indexOf(filter.toLowerCase()) > -1;
       });
     });
   };
 
   var showModalSupplierData = function showModalSupplierData(id) {
     var supplierInfo = tableData[id];
-    console.log(supplierInfo);
     setModalShow( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MyVerticallyCenteredModal, {
       show: true,
       title: supplierInfo.supplier,
@@ -15628,9 +15813,20 @@ function Supplier() {
     children: [customAlert, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__.default, {
       fluid: true,
       hidden: hideSupplierTable,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
         style: buttonStyle,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default.Control, {
+          type: "text",
+          placeholder: "Search",
+          style: {
+            width: "15%",
+            borderRadius: "0.5rem"
+          },
+          value: filter,
+          onChange: function onChange(e) {
+            return setFilter(e.target.value);
+          }
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
           variant: "success",
           size: "sm",
           style: {
@@ -15643,17 +15839,7 @@ function Supplier() {
             icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_15__.faPlusSquare,
             className: "icon-space"
           }), "Add Supplier"]
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default.Control, {
-        type: "text",
-        placeholder: "Search",
-        style: {
-          width: "15%"
-        },
-        value: filter,
-        onChange: function onChange(e) {
-          return setFilter(e.target.value);
-        }
+        })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_17__.default, {
         striped: true,
         bordered: true,
@@ -27460,10 +27646,7 @@ jQuery.Event = function( src, props ) {
 		jQuery.extend( this, props );
 	}
 
-	// Create a timestamp if 
-  
-  
-  event doesn't have one
+	// Create a timestamp if incoming event doesn't have one
 	this.timeStamp = src && src.timeStamp || Date.now();
 
 	// Mark it as fixed

@@ -138,12 +138,13 @@ function CreatePurchaseOrder() {
                             <Form.Row>
                                 <Form.Group as={Col} controlId="supplier">
                                     <Form.Label>Supplier</Form.Label>
-                                    <Form.Control size="sm" as="select" >
+                                    <Form.Control size="sm" as="select"  {...register("supplier",{required:true})} isInvalid={errors.payment_type} onChange={(e) =>handleChange(e.target.value)}>
                                         <option value=''>Select Supplier</option>
                                         {supplier.map((data,index) => (
                                              <option key={index} value={data.supplier_id}>{data.supplier}</option>
                                         ))}
                                     </Form.Control>
+                                    <Form.Control.Feedback type="invalid">Supplier is required</Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group as={Col} controlId="payment_type">
                                     <Form.Label>Payment Type</Form.Label>

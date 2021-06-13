@@ -96,6 +96,6 @@ class PermissionController extends Controller
 
     public function fetchPermissionData()
     {
-         return Permission::all()->toJson();
+     return  \Auth::user()->getPermissions()->pluck('slug')->toArray();    
     }
 }

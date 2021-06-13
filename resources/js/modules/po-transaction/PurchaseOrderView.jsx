@@ -14,6 +14,9 @@ function PurchaseOrderView(props) {
     const [supplier,setSupplier] = useState([]);
     const [terms,setTerms] = useState([]);
     const [users,setUsers] = useState([]);
+    const PO_STATUS = {'F' :'Pending','A':'Approved','C': 'Cancelled'};
+    const VARIANT = {'F' :'warning','A':'success','C': 'danger'};
+    const PAYMENT_TYPE = {'C' :'Cash','H':'Check'};
     const fetchPoData =  async () => {
         await axios
          .get(`/fetch/purchase_order/${props.tsid}}`, {
@@ -42,7 +45,8 @@ function PurchaseOrderView(props) {
              {<Container fluid>
                 <Card className="border-wrapper">
                     <Card.Body>
-                        <h4 className="mb-4"><FontAwesomeIcon icon={faMoneyCheck} className="icon-space"/>PO# {header.po_number}</h4>
+                        <h4 className="mb-4" style={{display:'inline-block'}}><FontAwesomeIcon icon={faMoneyCheck} className="icon-space"/>PO# {header.po_number}</h4>
+                        <Badge variant={VARIANT[header.status]} className="badge-wrapper" style={{marginLeft:"1rem"}}>{PO_STATUS[header.status]}</Badge>{' '}
                         <Form>
                             <Form.Row>
                                 <Form.Group as={Col} controlId="supplier">

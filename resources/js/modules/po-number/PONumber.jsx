@@ -13,7 +13,6 @@ function PONumber() {
  const [tableData,setTableData] = useState([]);
  const [modal,setModal] = useState(null);
  const [customAlert, setCustomAlert] = useState(null);
- const PO_TYPE = {'C' :'Cash','H' : 'Check'}
 
     const buttonStyle ={
         display:"flex",
@@ -91,24 +90,20 @@ function PONumber() {
                 <Table striped bordered hover size="sm">
                     <thead>
                         <tr>
-                        <th>Invoice ID</th>
-                        <th>Invoice Type</th>
                         <th>Start Range</th>
                         <th>End Range</th>
                         <th>Usage</th>
-                        <th>Encoded By</th>
+                        <th>Year</th>
                         <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                     {tableData.map((data,index) => (
                         <tr>
-                            <td>{data.po_invoice_id}</td>
-                            <td>{PO_TYPE[data.invoice_type]}</td>
                             <td>{data.start_range}</td>
                             <td>{data.end_range}</td>
-                            <td>{data.invoice_usage}</td>
-                            <td>{data.encoded_by}</td>
+                            <td>{data.current_range}</td>
+                            <td>{data.current_year}</td>
                             <td> 
                                 {/* <Button variant="outline-info" size="sm" >
                                 <FontAwesomeIcon icon={faEye} className="icon-space"/>View</Button> */}

@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
         $this->call([
-          //  PODetailSeeder::class,
+            //PODetailSeeder::class,
             //POHeaderSeeder::class,
             POInvoiceSeeder::class,
             SupplierSeeder::class,

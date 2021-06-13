@@ -1,21 +1,20 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState,useEffect,useContext } from 'react';
 import ReactDOM from 'react-dom';
 import {Tabs,Tab,Container,Card,Button,Badge} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClipboardCheck,faClock,faBan,faCalendar,faUserCircle,faPrint,faExternalLinkAlt,faTrashAlt,faFileExcel,faEdit} from '@fortawesome/free-solid-svg-icons';
 import { useForm,useFieldArray } from "react-hook-form";
-
+import PermissionContext from '../../../helpers/PermissionContext';
 
 
 
 function PurchaseOrderList(props) {
 
-
+const permission = useContext(PermissionContext);
 
     return (
         <div>
             
-           
                     <Card className="mt-3">
                         <Card.Body>
                             <Card.Title>
@@ -48,9 +47,13 @@ function PurchaseOrderList(props) {
                              {/* <Button variant="outline-secondary" size="sm" style={{marginRight:"0.5rem"}}>
                                 <FontAwesomeIcon icon={faEdit} size="lg" className="icon-space" />
                              </Button> */}
-                             <Button variant="outline-secondary" size="sm" style={{marginRight:"0.5rem"}}>
-                                <FontAwesomeIcon icon={faTrashAlt} size="lg" className="icon-space" />
-                             </Button>
+                             { permission.indexOf('po.delete') !== -1 ? 
+                                <Button variant="outline-secondary" size="sm" style={{marginRight:"0.5rem"}}>
+                                    <FontAwesomeIcon icon={faTrashAlt} size="lg" className="icon-space" />
+                                </Button>
+                                :
+                                null
+                             }
                             </span>
                             
                         </Card.Footer>

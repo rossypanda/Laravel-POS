@@ -18,13 +18,10 @@ class CreateTblPoInvoice extends Migration
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_unicode_ci';        
             $table->increments('po_invoice_id');
-            $table->integer('start_range')->nullable();
-            $table->integer('end_range')->nullable();
+            $table->integer('start_range')->default(1);
+            $table->integer('end_range')->default(50);
             $table->integer('current_range')->default(0);
-            $table->string('invoice_type', 1);
-            $table->smallInteger('invoice_usage');
-            $table->timestamp('date_added')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->integer('encoded_by')->nullable();
+            $table->year('current_year')->default(DB::raw("DATE_FORMAT(CURDATE(),'%Y')"));
         });
     }
 

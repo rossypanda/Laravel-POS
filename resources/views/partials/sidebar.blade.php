@@ -73,6 +73,12 @@
                             <span class="pcoded-mtext">User</span>
                         </a>
                     </li>
+
+                    <li class="">
+                        <a href="reset" >
+                            <span class="pcoded-mtext">Reset</span>
+                        </a>
+                    </li>
                     
                 </ul>
             </li>
