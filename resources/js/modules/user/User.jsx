@@ -234,11 +234,11 @@ function UserProfile() {
             <Container fluid hidden={hideAddUser}>
                 <Card className="border-wrapper">
                     <Card.Body>
-                        <h4 className="mb-4"><FontAwesomeIcon icon={faUserTag} className="icon-space"/>Add Userrr</h4>
+                        <h4 className="mb-4"><FontAwesomeIcon icon={faUserTag} className="icon-space"/>Add User</h4>
                         <Form>
                             <Form.Row>
                                 <Form.Group as={Col} controlId="user">
-                                    <Form.Label>User Complete Name</Form.Label>
+                                    <Form.Label>User's Complete Name</Form.Label>
                                     <Form.Control type="text" placeholder="Enter User" {...register("user",{required:true})} isInvalid={errors.user} />
                                     <Form.Control.Feedback type="invalid">User's name is required</Form.Control.Feedback>
                                 </Form.Group>
@@ -247,29 +247,29 @@ function UserProfile() {
                                     <Form.Control type="text" placeholder="Enter Username" {...register("username",{required:true})} isInvalid={errors.username} />
                                     <Form.Control.Feedback type="invalid">User's name is required</Form.Control.Feedback>
                                 </Form.Group>
+                            </Form.Row>
+                            <Form.Row>
                                 <Form.Group as={Col} controlId="user-email">
                                     <Form.Label>Email</Form.Label>
                                     <Form.Control type="email" placeholder="Enter Email" {...register("userEmail",{required:true})} isInvalid={errors.userEmail} />
                                     <Form.Control.Feedback type="invalid">Email is required</Form.Control.Feedback>
                                 </Form.Group>
-                            </Form.Row>
-                            <Form.Row>
                                 <Form.Group as={Col} controlId="user-password">
                                     <Form.Label>Password</Form.Label>
                                     <Form.Control type="password" placeholder="Password" {...register("password",{required:true})} isInvalid={errors.password} />
                                     <Form.Control.Feedback type="invalid">User's name is required</Form.Control.Feedback>
                                 </Form.Group>
-                                <Form.Group as={Col} controlId="confirm-password">
+                                {/* <Form.Group as={Col} controlId="confirm-password">
                                     <Form.Label>Confirm Password</Form.Label>
                                     <Form.Control type="text" placeholder="Password" {...register("confirmPassword",{required:true})} isInvalid={errors.confirmPassword} />
                                     <Form.Control.Feedback type="invalid">Email is required</Form.Control.Feedback>
-                                </Form.Group>
+                                </Form.Group> */}
                             </Form.Row>
-                            <Form.Group controlId="user-role">
+                            {/* <Form.Group controlId="user-role">
                                 <Form.Label>Role</Form.Label>
                                 <Form.Control placeholder="Role" {...register("userRole",{required:true})} isInvalid={errors.userRole}/>
                                 <Form.Control.Feedback type="invalid">Role is required</Form.Control.Feedback>
-                            </Form.Group>
+                            </Form.Group> */}
 
                         </Form>
                         <div style={buttonStyle}>

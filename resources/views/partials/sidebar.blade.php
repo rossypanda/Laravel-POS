@@ -69,13 +69,13 @@
                     </li>
                     
                     <li class="">
-                        <a href="user" >
+                        <a href="/user" >
                             <span class="pcoded-mtext">User</span>
                         </a>
                     </li>
 
                     <li class="">
-                        <a href="reset" >
+                        <a href="/reset" >
                             <span class="pcoded-mtext">Reset</span>
                         </a>
                     </li>
