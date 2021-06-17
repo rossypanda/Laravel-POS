@@ -16,13 +16,14 @@ function MyVerticallyCenteredModal(props) {
     const [tags,setTags] = useState([]);
     const selected = tags => setTags(tags);
     const updateSupplierData = (data) => {
-        axios.patch(`/supplier/1}`,{data:data,tags:tags.join()}).then(
+        axios.patch(`/supplier/1}`,{data:data,tags:tags.join()}).then(() => {
             setAlert(  <Alert  variant="success">
             Data Updated
            </Alert>)
-        );
+           props.method();
+        })
     }
-    const [alert,setAlert] = useState(null);
+    const [alert,setAlert] = useState(null); 
     return (
       <Modal
         {...props}
@@ -154,6 +155,7 @@ function Supplier() {
                 >
                 New Supplier Added
                 </SweetAlert>);
+                fetchSupplier();
         })
         .catch((err) => {
             console.log(err);
@@ -161,9 +163,10 @@ function Supplier() {
     }
 
     const deleteSupplier = (id) => {
-        axios.delete(`/supplier/${id}`, { data: id }).then(
-           setCustomAlert(null)
-        );
+        axios.delete(`/supplier/${id}`, { data: id }).then((response) => {
+            setCustomAlert(null);
+            fetchSupplier();
+        });
     }
     
     const removeSupplierConfirmation = (id) => {
@@ -226,6 +229,7 @@ function Supplier() {
                 date={supplierInfo.date_added}
                 encoded={supplierInfo.encoded_by}
                 tags={supplierInfo.tags}
+                method={fetchSupplier}
                 onHide={() => setModalShow(null)}
             />
         );
