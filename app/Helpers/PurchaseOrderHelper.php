@@ -5,6 +5,7 @@ namespace App\Helpers;
 use Illuminate\Support\Facades\DB;
 use App\Models\PODetail;
 use App\Models\Supplier;
+use App\Models\PODetailHist;
 use Illuminate\Support\Facades\Auth;
 
 class PurchaseOrderHelper
@@ -62,18 +63,30 @@ class PurchaseOrderHelper
      */
    public static function insertPODetail($po_header_id,$items){
        foreach ($items as $item) {
-           PODetail::create([
-            "po_header_id" => $po_header_id,
-            "unit" => $item['unit'],
-            "quantity" => $item['quantity'],
-            //"description" => $item['description'],
-            "item" => $item['description'],
-            "per_unit" => $item['per_unit'],
-            "price" => $item['quantity'] * $item['per_unit'] ,
-            "brand" => $item['brand'],
-            "model" => $item['model'],
-            'encoded_by' => Auth::id()
-       ]);
+            PODetail::create([
+                "po_header_id" => $po_header_id,
+                "unit" => $item['unit'],
+                "quantity" => $item['quantity'],
+                //"description" => $item['description'],
+                "item" => $item['description'],
+                "per_unit" => $item['per_unit'],
+                "price" => $item['quantity'] * $item['per_unit'] ,
+                "brand" => $item['brand'],
+                "model" => $item['model'],
+                'encoded_by' => Auth::id()
+            ]);
+            PODetailHist::create([
+                "po_header_id" => $po_header_id,
+                "unit" => $item['unit'],
+                "quantity" => $item['quantity'],
+                //"description" => $item['description'],
+                "item" => $item['description'],
+                "per_unit" => $item['per_unit'],
+                "price" => $item['quantity'] * $item['per_unit'] ,
+                "brand" => $item['brand'],
+                "model" => $item['model'],
+                'encoded_by' => Auth::id()
+            ]);
        }
    }
 
