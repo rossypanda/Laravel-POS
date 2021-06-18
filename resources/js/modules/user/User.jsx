@@ -8,14 +8,35 @@ import { useForm } from "react-hook-form";
 import baseUrl from '../../helpers/BaseUrl';
 import axios from 'axios';
 import SweetAlert from 'react-bootstrap-sweetalert';
+import Select from 'react-select';
 
 function MyVerticallyCenteredModal(props) {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const [role,setRole] = useState([]);
     const updateUserData = (data) => {
         axios.patch(`/user/1}`,{data}).then(
             alert('Updated')
         );
     }
+
+    const fetchRoleOption =  async () => {
+        await axios
+         .get('/fetch/role_option', {
+     
+         })
+         .then((response) => {
+            console.log(response.data);
+            setRole(response.data.role);
+           
+         })
+         .catch((err) => {
+             console.log(err);
+         });
+     }
+
+    useEffect(() => {
+        fetchRoleOption();
+    },[]);
     // const updateUserData = data => console.log(data);
     return (
       <Modal
@@ -57,12 +78,17 @@ function MyVerticallyCenteredModal(props) {
                     <Form.Control type="password" placeholder="Password" defaultValue={props.userpassword} {...register("user-password-edit")} />
                 </Form.Group> */}
             </Form.Row>
-            {/* <Form.Row>
+            <Form.Row>
                 <Form.Group as={Col} controlId="role-edit">
                     <Form.Label>Role</Form.Label>
-                    <Form.Control type="text" placeholder="Role" defaultValue={props.description} {...register("role-edit")} />
+                    <Form.Control size="sm"  as="select" multiple defaultValue={props.description} {...register("role-edit")}>
+                        {/* <option value=''>Select Role</option> */}
+                        {role.map((data,index) => (
+                            <option key={index} value={data.id}>{data.name}</option>
+                        ))}
+                    </Form.Control>
                 </Form.Group>
-            </Form.Row> */}
+            </Form.Row>
         </Form>
         </Modal.Body>
         <Modal.Footer>
@@ -83,6 +109,7 @@ function UserProfile() {
     const [hideUserTable, setHideAddUserTable] = useState(false);
     const [customAlert, setCustomAlert] = useState(null);
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const [role,setRole] = useState([]);
    
     let test;
     const buttonStyle ={
@@ -105,9 +132,25 @@ function UserProfile() {
             console.log(err);
         });
     }
+    
+    const fetchRoleOption =  async () => {
+        await axios
+         .get('/fetch/role_option', {
+     
+         })
+         .then((response) => {
+            console.log(response.data);
+            setRole(response.data.role);
+           
+         })
+         .catch((err) => {
+             console.log(err);
+         });
+     }
 
     useEffect(() => {
         fetchUser();
+        fetchRoleOption();
     },[]);
     
     const hideAlert = () => {
@@ -265,11 +308,16 @@ function UserProfile() {
                                     <Form.Control.Feedback type="invalid">Email is required</Form.Control.Feedback>
                                 </Form.Group> */}
                             </Form.Row>
-                            {/* <Form.Group controlId="user-role">
+                            <Form.Group as={Col} controlId="user-role">
                                 <Form.Label>Role</Form.Label>
-                                <Form.Control placeholder="Role" {...register("userRole",{required:true})} isInvalid={errors.userRole}/>
+                                <Form.Control size="sm"  as="select" multiple {...register("userRole",{required:false})} isInvalid={errors.userRole}>
+                                    {/* <option value=''>Select Role</option> */}
+                                        {role.map((data,index) => (
+                                             <option key={index} value={data.id}>{data.name}</option>
+                                        ))}
+                                </Form.Control>
                                 <Form.Control.Feedback type="invalid">Role is required</Form.Control.Feedback>
-                            </Form.Group> */}
+                            </Form.Group>
 
                         </Form>
                         <div style={buttonStyle}>
