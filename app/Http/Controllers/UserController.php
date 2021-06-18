@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Role;
 
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -125,6 +126,18 @@ class UserController extends Controller
         $user = User::find($id);
 
         $user->delete();
+    }
+
+    public function fetchRoleOptions(){
+  
+        return response()->json(
+            array(
+                'id' =>  Role::all(),
+                'role' =>  Role::all(),
+            )
+        );
+      
+   
     }
 
     public function fetchUserData()

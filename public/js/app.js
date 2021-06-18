@@ -16201,6 +16201,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -16218,11 +16225,6 @@ function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "und
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
@@ -16242,12 +16244,47 @@ function MyVerticallyCenteredModal(props) {
       watch = _useForm.watch,
       errors = _useForm.formState.errors;
 
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      role = _useState2[0],
+      setRole = _useState2[1];
+
   var updateUserData = function updateUserData(data) {
     axios__WEBPACK_IMPORTED_MODULE_7___default().patch("/user/1}", {
       data: data
     }).then(alert('Updated'));
-  }; // const updateUserData = data => console.log(data);
+  };
 
+  var fetchRoleOption = /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return axios__WEBPACK_IMPORTED_MODULE_7___default().get('/fetch/role_option', {}).then(function (response) {
+                console.log(response.data);
+                setRole(response.data.role);
+              })["catch"](function (err) {
+                console.log(err);
+              });
+
+            case 2:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function fetchRoleOption() {
+      return _ref.apply(this, arguments);
+    };
+  }();
+
+  (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
+    fetchRoleOption();
+  }, []); // const updateUserData = data => console.log(data);
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, _objectSpread(_objectSpread({}, props), {}, {
     size: "lg",
@@ -16309,6 +16346,26 @@ function MyVerticallyCenteredModal(props) {
               defaultValue: props.username
             }, register("username-edit")))]
           })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+            as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+            controlId: "role-edit",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+              children: "Role"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
+              size: "sm",
+              as: "select",
+              multiple: true,
+              defaultValue: props.description
+            }, register("role-edit")), {}, {
+              children: role.map(function (data, index) {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                  value: data.id,
+                  children: data.name
+                }, index);
+              })
+            }))]
+          })
         })]
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Footer, {
@@ -16326,36 +16383,41 @@ function MyVerticallyCenteredModal(props) {
 }
 
 function UserProfile() {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      modalShow = _useState2[0],
-      setModalShow = _useState2[1];
-
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(true),
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
       _useState4 = _slicedToArray(_useState3, 2),
-      hideAddUser = _useState4[0],
-      setHideAddUser = _useState4[1];
+      modalShow = _useState4[0],
+      setModalShow = _useState4[1];
 
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(true),
       _useState6 = _slicedToArray(_useState5, 2),
-      tableData = _useState6[0],
-      setTableData = _useState6[1];
+      hideAddUser = _useState6[0],
+      setHideAddUser = _useState6[1];
 
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
       _useState8 = _slicedToArray(_useState7, 2),
-      hideUserTable = _useState8[0],
-      setHideAddUserTable = _useState8[1];
+      tableData = _useState8[0],
+      setTableData = _useState8[1];
 
-  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null),
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
       _useState10 = _slicedToArray(_useState9, 2),
-      customAlert = _useState10[0],
-      setCustomAlert = _useState10[1];
+      hideUserTable = _useState10[0],
+      setHideAddUserTable = _useState10[1];
+
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null),
+      _useState12 = _slicedToArray(_useState11, 2),
+      customAlert = _useState12[0],
+      setCustomAlert = _useState12[1];
 
   var _useForm2 = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_5__.useForm)(),
       register = _useForm2.register,
       handleSubmit = _useForm2.handleSubmit,
       watch = _useForm2.watch,
       errors = _useForm2.formState.errors;
+
+  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
+      _useState14 = _slicedToArray(_useState13, 2),
+      role = _useState14[0],
+      setRole = _useState14[1];
 
   var test;
   var buttonStyle = {
@@ -16365,12 +16427,12 @@ function UserProfile() {
   };
 
   var fetchUser = /*#__PURE__*/function () {
-    var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee() {
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee$(_context) {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee2() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee2$(_context2) {
         while (1) {
-          switch (_context.prev = _context.next) {
+          switch (_context2.prev = _context2.next) {
             case 0:
-              _context.next = 2;
+              _context2.next = 2;
               return axios__WEBPACK_IMPORTED_MODULE_7___default().get('/fetch/user', {}).then(function (response) {
                 //get the object of user data to load to a table
                 console.log(response.data);
@@ -16381,19 +16443,47 @@ function UserProfile() {
 
             case 2:
             case "end":
-              return _context.stop();
+              return _context2.stop();
           }
         }
-      }, _callee);
+      }, _callee2);
     }));
 
     return function fetchUser() {
-      return _ref.apply(this, arguments);
+      return _ref2.apply(this, arguments);
+    };
+  }();
+
+  var fetchRoleOption = /*#__PURE__*/function () {
+    var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee3() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee3$(_context3) {
+        while (1) {
+          switch (_context3.prev = _context3.next) {
+            case 0:
+              _context3.next = 2;
+              return axios__WEBPACK_IMPORTED_MODULE_7___default().get('/fetch/role_option', {}).then(function (response) {
+                console.log(response.data);
+                setRole(response.data.role);
+              })["catch"](function (err) {
+                console.log(err);
+              });
+
+            case 2:
+            case "end":
+              return _context3.stop();
+          }
+        }
+      }, _callee3);
+    }));
+
+    return function fetchRoleOption() {
+      return _ref3.apply(this, arguments);
     };
   }();
 
   (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
     fetchUser();
+    fetchRoleOption();
   }, []);
 
   var hideAlert = function hideAlert() {
@@ -16627,6 +16717,29 @@ function UserProfile() {
                   type: "invalid",
                   children: "User's name is required"
                 })]
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+              as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+              controlId: "user-role",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                children: "Role"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
+                size: "sm",
+                as: "select",
+                multiple: true
+              }, register("userRole", {
+                required: false
+              })), {}, {
+                isInvalid: errors.userRole,
+                children: role.map(function (data, index) {
+                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                    value: data.id,
+                    children: data.name
+                  }, index);
+                })
+              })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
+                type: "invalid",
+                children: "Role is required"
               })]
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
