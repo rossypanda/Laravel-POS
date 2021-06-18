@@ -53,7 +53,8 @@ Route::get('fetch/pdf/{id}','PurchaseOrderController@generatePdf');
 Route::get('fetch/user','UserController@fetchUserData');
 Route::get('fetch/role','RoleController@fetchRoleData');
 Route::get('fetch/permission','PermissionController@fetchPermissionData');
-
+Route::get('generatPoReport','PoReportController@generatePoReport');
+// Route::get('poReport', [PoReportController::class,'index']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

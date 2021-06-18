@@ -16,7 +16,12 @@
     <link href="{{ asset('files\assets\icon\icofont\css\icofont.css') }}" rel="stylesheet"> 
     <link href="{{ asset('files\assets\css\style.css') }}" rel="stylesheet"> 
     <link href="{{ asset('files\assets\css\jquery.mCustomScrollbar.css') }}" rel="stylesheet"> 
-
+    <!-- Data Table Css -->
+    <link href="{{ asset('files\bower_components\datatables.net-bs4\css\dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('files\assets\pages\data-table\css\buttons.dataTables.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('files\bower_components\datatables.net-responsive-bs4\css\responsive.bootstrap4.min.css') }}" rel="stylesheet">
+    
+    @yield('styles')
 </head>
 
 <body>
@@ -112,6 +117,18 @@
     <script src="{{ asset('files\assets\js\script.min.js') }}" defer></script>
     <script src="{{asset('js/app.js')}}" ></script>
 
+    <!-- data-table js -->
+    <script src="{{ asset('files\bower_components\datatables.net\js\jquery.dataTables.min.js') }}" ></script>
+    <script src="{{ asset('files\bower_components\datatables.net-buttons\js\dataTables.buttons.min.js') }}" ></script>
+    <script src="{{ asset('files\assets\pages\data-table\js\jszip.min.js') }}" ></script>
+    <script src="{{ asset('files\assets\pages\data-table\js\pdfmake.min.js') }}" ></script>
+    <script src="{{ asset('files\assets\pages\data-table\js\vfs_fonts.js') }}" ></script>
+    <script src="{{ asset('files\bower_components\datatables.net-buttons\js\buttons.print.min.js') }}" ></script>
+    <script src="{{ asset('files\bower_components\datatables.net-buttons\js\buttons.html5.min.js') }}" ></script>
+    <script src="{{ asset('files\bower_components\datatables.net-bs4\js\dataTables.bootstrap4.min.js') }}" ></script>
+    <script src="{{ asset('files\bower_components\datatables.net-responsive\js\dataTables.responsive.min.js') }}" ></script>
+    <script src="{{ asset('files\bower_components\datatables.net-responsive-bs4\js\responsive.bootstrap4.min.js') }}" ></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -120,5 +137,5 @@
   gtag('config', 'UA-23581568-13');
 </script>
 </body>
-
+@yield('javascript')
 </html>

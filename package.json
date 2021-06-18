@@ -36,6 +36,7 @@
         "react-bootstrap-sweetalert": "^5.2.0",
         "react-dropdown-select": "^4.7.4",
         "react-hook-form": "^7.3.5",
+        "react-laravel-datatable": "^0.1.9",
         "react-select": "^4.3.1"
     }
 }
