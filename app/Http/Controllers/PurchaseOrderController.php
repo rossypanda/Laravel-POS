@@ -75,8 +75,11 @@ class PurchaseOrderController extends Controller
                     'terms' => json_encode($formData['terms']),
                     'status' => 'F',
                     'encoded_by' => Auth::id()
-                ])->po_header_id;
-                PurchaseOrderHelper::insertPODetail($po_header_id,$formData['items']);
+                ]);
+                $po_header_hist = $po_header_id->replicate();
+                $po_header_hist->setTable('tbl_po_header_hist');
+                $po_header_hist->save();
+                PurchaseOrderHelper::insertPODetail($po_header_id->po_header_id,$formData['items']);
                 //Update Current Range
                 PurchaseOrderHelper::updateCurrentRange($poNumber['po_invoice_id'],$poNumber['po_number']);
             });

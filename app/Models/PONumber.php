@@ -26,13 +26,10 @@ class PONumber extends Model
      * @var array
      */
     protected $fillable = [
-        'company_id',
-        'start_range',
-        'end_range',
-        'current_range',
-        'invoice_type',
-        'invoice_usage',
-        'date_added',
-        'encoded_by'
+      'start_range',
+      'end_range',
+      'current_range',
+      'current_year',
+       
     ];
 }
