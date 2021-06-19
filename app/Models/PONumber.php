@@ -30,6 +30,7 @@ class PONumber extends Model
       'end_range',
       'current_range',
       'current_year',
-       
+      'status',
+      'added_at'
     ];
 }

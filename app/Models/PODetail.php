@@ -32,9 +32,9 @@ class PODetail extends Model
         'description', 
         'quantity', 
         'per_unit', 
-        'price', 
         'brand', 
         'model', 
+        'status',
         'encoded_by'
     ];
 }

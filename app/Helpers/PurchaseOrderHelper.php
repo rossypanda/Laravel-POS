@@ -18,7 +18,7 @@ class PurchaseOrderHelper
      * @param  mixed $payment_type
      * @return void
      */
-    public static function checkAvailablePOInvoice($payment_type){
+    public static function checkAvailablePOInvoice(){
        
          $data = DB::table('tbl_po_invoice')
             ->whereColumn('current_range','<','end_range')
@@ -70,7 +70,6 @@ class PurchaseOrderHelper
                 //"description" => $item['description'],
                 "item" => $item['description'],
                 "per_unit" => $item['per_unit'],
-                "price" => $item['quantity'] * $item['per_unit'] ,
                 "brand" => $item['brand'],
                 "model" => $item['model'],
                 'encoded_by' => Auth::id()
@@ -117,4 +116,22 @@ class PurchaseOrderHelper
         }
         return $supplier_array;
    }
+
+   /**
+     * Get the latest range
+     *
+     * 
+     * @return Array 
+     */
+    public static function getLastEndRange(){
+        $range = DB::table('tbl_po_invoice')
+        ->select('end_range')
+        ->orderBy('po_invoice_id','desc')
+        ->limit(1)
+        ->get()
+        ->toArray();
+
+        return $range < 0 ? 1 : $range[0]->end_range;
+   }
+
 }

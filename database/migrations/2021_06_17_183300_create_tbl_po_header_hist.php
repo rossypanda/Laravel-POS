@@ -33,8 +33,9 @@ class CreateTblPoHeaderHist extends Migration
             $table->string('bank',50)->nullable();
             $table->string('contact_person',50)->nullable();
             $table->json('terms')->nullable();
-            $table->decimal('total_amount', 8, 2);
             $table->string('status',1)->default('F');
+            $table->string('description',100)->nullable();
+            $table->string('remarks',100)->nullable();
             $table->integer('encoded_by')->nullable();
         });
     }

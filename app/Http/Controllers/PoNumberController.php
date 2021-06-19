@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\PONumber;
+use App\Helpers\PurchaseOrderHelper;
 
 class PoNumberController extends Controller
 {
@@ -41,12 +42,16 @@ class PoNumberController extends Controller
      */
     public function store(Request $request)
     {
-        $field_data = $request->data;
-         PONumber::create([
-             'start_range' => $field_data['startRange'],
-             'end_range' => $field_data['endRange'],
-             'invoice_type' => $field_data['invoiceType']
-         ]);
+        $currently_open = PurchaseOrderHelper::checkAvailablePOInvoice();
+        if(!$currently_open){
+            $field_data = $request->data;
+            PONumber::create([
+                'start_range' => $field_data['startRange'],
+                'end_range' => $field_data['endRange'],
+            ]);
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -107,6 +112,9 @@ class PoNumberController extends Controller
      */
     public function fetchPONumberData()
     {
-        return PONumber::all()->toJson();
+        return [
+          'rows' => PONumber::all()->toJson(),
+          'range' => PurchaseOrderHelper::getLastEndRange()
+        ];
     }
 }

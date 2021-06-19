@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusSquare,faTrashAlt,faEye,faCheck,faUserTag,faPlusCircle,faBan,faThList} from '@fortawesome/free-solid-svg-icons';
 import { faLastfmSquare } from '@fortawesome/free-brands-svg-icons';
 import PoNumberEdit from './components/PoNumberEdit';
+import PoNumberModal from './components/PoNumberModal';
 import SweetAlert from 'react-bootstrap-sweetalert';
 
 
@@ -12,6 +13,7 @@ import SweetAlert from 'react-bootstrap-sweetalert';
 function PONumber() {
  const [tableData,setTableData] = useState([]);
  const [modal,setModal] = useState(null);
+ const [range,setRange] = useState(null);
  const [customAlert, setCustomAlert] = useState(null);
 
     const buttonStyle ={
@@ -28,8 +30,8 @@ function PONumber() {
          .then((response) => {
              //get the object of supplier data to load to a table
              console.log(response.data);
-             setTableData(response.data);
-             
+             setTableData(JSON.parse(response.data.rows));
+             setRange(response.data.range);
          })
          .catch((err) => {
              console.log(err);
@@ -48,6 +50,17 @@ function PONumber() {
               show={true}
               onHide={() => setModal(null)}
               range={tableData[0].end_range}
+            />
+        )
+    }
+
+    const showAddPONumber = () => {
+        setModal(
+            <PoNumberModal
+              show={true}
+              range={range}
+              onHide={() => setModal(null)}
+              fetchData={fetchPoNumber}
             />
         )
     }
@@ -83,6 +96,12 @@ function PONumber() {
         <div>
             <Container fluid>
                 {customAlert}
+                <div style={buttonStyle}>
+                        <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} onClick={() =>showAddPONumber()}>
+                            <FontAwesomeIcon icon={faPlusSquare} className="icon-space" />
+                            Add PO Number   
+                        </Button>
+                </div>
                 <Table striped bordered hover size="sm">
                     <thead>
                         <tr>
@@ -95,7 +114,7 @@ function PONumber() {
                     </thead>
                     <tbody>
                     {tableData.map((data,index) => (
-                        <tr>
+                        <tr key={index}>
                             <td>{data.start_range}</td>
                             <td>{data.end_range}</td>
                             <td>{data.current_range}</td>

@@ -61,9 +61,13 @@ td, th {
 
 @php
 $supplier = $supplier[$po_header['supplier_id']]['supplier'];
-$requested_by = $users[$po_header['requested_by']];
-$canvassed_by = $users[$po_header['canvassed_by']];
+$requested_by = $po_header['requested_by'];
+$canvassed_by = $po_header['canvassed_by'];
 $approved_by = $po_header['approved_by'] ? $users[$po_header['approved_by']] : '' ;
+$total_amount = 0;
+foreach($po_detail as $detail){
+    $total_amount = $total_amount + ($detail['quantity'] * $detail['per_unit']);
+}
 @endphp
 
 <body>
@@ -98,7 +102,7 @@ $approved_by = $po_header['approved_by'] ? $users[$po_header['approved_by']] : '
                     <td>{{$detail['brand']}}</td>
                     <td>{{$detail['model']}}</td>
                     <td>{{$detail['per_unit']}}</td>
-                    <td>{{$detail['price']}}</td>
+                    <td>{{$detail['quantity'] * $detail['per_unit']}}</td>
                 </tr>
                 @endforeach
                 <tr>
@@ -117,7 +121,7 @@ $approved_by = $po_header['approved_by'] ? $users[$po_header['approved_by']] : '
                     <td></td>
                     <td></td>
                     <td  style="text-align: right !important"><b>Grand Total:</b></td>
-                    <td>{{$po_header['total_amount']}}</td>
+                    <td>{{$total_amount}}</td>
                 </tr>
                 @if($po_header['payment_type'] == 'H')
                     <tr>

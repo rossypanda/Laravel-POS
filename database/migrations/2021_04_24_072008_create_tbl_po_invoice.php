@@ -21,7 +21,9 @@ class CreateTblPoInvoice extends Migration
             $table->integer('start_range')->default(1);
             $table->integer('end_range')->default(50);
             $table->integer('current_range')->default(0);
+            $table->integer('status')->default(1);
             $table->year('current_year')->default(DB::raw("DATE_FORMAT(CURDATE(),'%Y')"));
+            $table->timestamp('added_at');
         });
     }
 
