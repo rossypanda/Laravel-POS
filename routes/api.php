@@ -34,11 +34,11 @@ Route::post('authenticate/user', function(Request $request)
 {
     if(Auth::attempt(['username' => $request->input('username'),'password' => $request->input('password')])){
         return  response()->json([
+            'response' => 1,
            'id' => Auth::user()->id,
            'name' => Auth::user()->name,
            'email' => Auth::user()->email,
-
         ]);
     }
-    return  response()->json(0);
+    return  response()->json(['response' => 0]);
 });
