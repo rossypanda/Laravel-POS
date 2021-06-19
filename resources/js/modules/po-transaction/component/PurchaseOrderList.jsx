@@ -1,26 +1,25 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState,useEffect,useContext } from 'react';
 import ReactDOM from 'react-dom';
 import {Tabs,Tab,Container,Card,Button,Badge} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClipboardCheck,faClock,faBan,faCalendar,faUserCircle,faPrint,faExternalLinkAlt,faTrashAlt,faFileExcel,faEdit} from '@fortawesome/free-solid-svg-icons';
 import { useForm,useFieldArray } from "react-hook-form";
-
+import PermissionContext from '../../../helpers/PermissionContext';
 
 
 
 function PurchaseOrderList(props) {
 
-
+const permission = useContext(PermissionContext);
 
     return (
         <div>
             
-           
                     <Card className="mt-3">
                         <Card.Body>
                             <Card.Title>
-                                <FontAwesomeIcon icon={props.icon} className="icon-space" />
-                                PO# {props.poNumber}
+                                <FontAwesomeIcon icon={props.icon} className="icon-space"  />
+                                    PO# {props.poNumber}
                                 <span style={{fontSize: "0.8rem"}} className="float-right">
                                 <FontAwesomeIcon icon={faCalendar} className="icon-space" />
                                     {props.date}
@@ -38,18 +37,23 @@ function PurchaseOrderList(props) {
                             <Badge variant="info" className="badge-wrapper">{props.paymentType}</Badge>{' '}
 
                             <span className="float-right">
-                            <Button variant="outline-secondary" size="sm" style={{marginRight:"0.5rem"}}>
-                                <FontAwesomeIcon icon={faPrint} size="lg" className="icon-space" />
-                             </Button>
-                            <Button variant="outline-secondary" size="sm" style={{marginRight:"0.5rem"}}>
+                            <Button variant="outline-secondary" size="sm" style={{marginRight:"0.5rem"}} href={`purchaseOrder/${props.poHeaderId}`} target="_blank">
                                 <FontAwesomeIcon icon={faExternalLinkAlt} size="lg" className="icon-space" />
                              </Button>
+                            <Button variant="outline-secondary" size="sm" style={{marginRight:"0.5rem"}} href={`fetch/pdf/${props.poHeaderId}`} target="_blank">
+                                <FontAwesomeIcon icon={faPrint} size="lg" className="icon-space" />
+                             </Button>
+                          
                              {/* <Button variant="outline-secondary" size="sm" style={{marginRight:"0.5rem"}}>
                                 <FontAwesomeIcon icon={faEdit} size="lg" className="icon-space" />
                              </Button> */}
-                             <Button variant="outline-secondary" size="sm" style={{marginRight:"0.5rem"}}>
-                                <FontAwesomeIcon icon={faTrashAlt} size="lg" className="icon-space" />
-                             </Button>
+                             { permission.indexOf('po.delete') !== -1 ? 
+                                <Button variant="outline-secondary" size="sm" style={{marginRight:"0.5rem"}}>
+                                    <FontAwesomeIcon icon={faTrashAlt} size="lg" className="icon-space" />
+                                </Button>
+                                :
+                                null
+                             }
                             </span>
                             
                         </Card.Footer>

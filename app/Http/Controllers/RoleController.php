@@ -40,7 +40,11 @@ class RoleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $field_data = $request->data;
+        Role::create([
+            'role' => $field_data['role'],
+            'contact_person' => $field_data['contactPerson']
+         ]);
     }
 
     /**
@@ -85,7 +89,9 @@ class RoleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $role = Role::find($id);
+
+        $role->delete();
     }
 
     public function fetchRoleData()

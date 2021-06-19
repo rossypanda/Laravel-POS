@@ -89,7 +89,7 @@
                         <div class="dropdown-toggle" data-toggle="dropdown">
                             {{-- <img src="files\assets\images\avatar-4.jpg" class="img-radius" alt="User-Profile-Image"> --}}
                             {{-- <img src="{{ asset('')}}" class="img-radius" alt="User-Profile-Image"> --}}
-                            <img src="{{ asset('')}}" class="img-radius" >
+                            {{-- <img src="{{ asset('')}}" class="img-radius" > --}}
                             <span>{{ Auth::user()->name }}</span>
                             {{-- <i class="feather icon-chevron-down"></i> --}}
                         </div>

@@ -8,6 +8,11 @@ use App\Models\PurchaseOrder;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use App\Models\Supplier;
+use App\Models\PODetail;
+use Illuminate\Support\Facades\Auth;
+
+
+
 
 class PurchaseOrderController extends Controller
 {
@@ -51,7 +56,7 @@ class PurchaseOrderController extends Controller
             DB::transaction(function () use ($poNumber,$formData) {
                 //Insert and return PO header id
                 $po_header_id = PurchaseOrder::create([
-                    'po_reference' => PurchaseOrderHelper::generatePOReference(),
+                    'po_reference' => PurchaseOrderHelper::generatePOReference($poNumber['po_number']),
                     'po_number' => $poNumber['po_number'],
                     'date' => date('Y-m-d'),
                     'supplier_id' => $formData['supplier'],
@@ -66,10 +71,15 @@ class PurchaseOrderController extends Controller
                     //'manager' => $formData['project_name'],
                     // 'bank' => $formData['project_name'],
                     // 'contact_person' => $formData['project_name'],
+                    'total_amount' => PurchaseOrderHelper::calculateItemsTotalAmount($formData['items']),
                     'terms' => json_encode($formData['terms']),
-                    'status' => 'F'
-                ])->po_header_id;
-                PurchaseOrderHelper::insertPODetail($po_header_id,$formData['items']);
+                    'status' => 'F',
+                    'encoded_by' => Auth::id()
+                ]);
+                $po_header_hist = $po_header_id->replicate();
+                $po_header_hist->setTable('tbl_po_header_hist');
+                $po_header_hist->save();
+                PurchaseOrderHelper::insertPODetail($po_header_id->po_header_id,$formData['items']);
                 //Update Current Range
                 PurchaseOrderHelper::updateCurrentRange($poNumber['po_invoice_id'],$poNumber['po_number']);
             });
@@ -86,9 +96,9 @@ class PurchaseOrderController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('purchaseOrder.view-po')
+            ->with('id', $id);
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -157,5 +167,43 @@ class PurchaseOrderController extends Controller
     public function createPO()
     {
         return view('purchaseOrder.create-po');
+    }
+
+    /**
+     * Display the full detail of individal Purchase Order
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function fetchPOFullDetail($id){
+        $po =  PurchaseOrder::where('po_header_id',$id)->get()->toArray();
+        return response()->json(
+            array(
+                'po_header' =>  PurchaseOrder::where('po_header_id',$id)->get(),
+                'po_detail' =>  PODetail::where('po_header_id',$id)->get(),
+                'supplier' =>  Supplier::all(),
+                'terms' =>   json_decode($po[0]['terms']),
+                'users' =>  User::all()
+            )
+        );
+    }
+
+       /**
+     * Display the full detail of individal Purchase Order
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function generatePdf($id){
+        $po =  PurchaseOrder::where('po_header_id',$id)->get()->toArray();
+            $data = [
+                'po_header' =>  PurchaseOrder::where('po_header_id',$id)->get()->toArray()[0],
+                'po_detail' =>  PODetail::where('po_header_id',$id)->get()->toArray(),
+                'supplier' =>  PurchaseOrderHelper::getSupplierDataIdAsKey(),
+                'terms' =>   json_decode($po[0]['terms']),
+                'users' =>  User::pluck('name','id')->toArray()
+            ];
+            //dd($data);
+        $pdf = \PDF::loadView('pdf.po-pdf',$data);
+        return $pdf->download($po[0]['po_reference'].'.pdf');
+       // return view('pdf.po-pdf',$data);
     }
 }

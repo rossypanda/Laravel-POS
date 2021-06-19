@@ -8,104 +8,108 @@ import { useForm } from "react-hook-form";
 import baseUrl from '../../helpers/BaseUrl';
 import axios from 'axios';
 import SweetAlert from 'react-bootstrap-sweetalert';
+import Select from 'react-select';
 
-// function MyVerticallyCenteredModal(props) {
-//     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-//     const updateSupplierData = (data) => {
-//         axios.patch(`/supplier/1}`,{data}).then(
-//             alert('Updated')
-//         );
-//     }
-//     return (
-//       <Modal
-//         {...props}
-//         size="lg"
-//         aria-labelledby="contained-modal-title-vcenter"
-//         centered
-//       >
-//         <Modal.Header closeButton className="modal-color">
-//           <Modal.Title id="contained-modal-title-vcenter">
-//             {props.title}
-//           </Modal.Title>
-//         </Modal.Header>
-//         <Modal.Body>
-//         <Form>
-//             <Form.Row>
-//                 <Form.Group as={Col} controlId="supplier-edit" hidden>
-//                     <Form.Label>Supplier</Form.Label>
-//                     <Form.Control type="text" placeholder="Enter Supplier" value={props.supplierId} {...register("supplier-id")} />
-//                 </Form.Group>
-//                 <Form.Group as={Col} controlId="supplier-edit">
-//                     <Form.Label>Supplier</Form.Label>
-//                     <Form.Control type="text" placeholder="Enter Supplier" value={props.supplier} {...register("supplier-edit")} />
-//                 </Form.Group>
-//                 <Form.Group as={Col} controlId="contact-person-edit">
-//                     <Form.Label>Contact Person</Form.Label>
-//                     <Form.Control type="text" placeholder="Enter Contact Person" value={props.contactPerson} {...register("contact-person-edit")} />
-//                 </Form.Group>
-//             </Form.Row> 
-//             <Form.Row>
-//                 <Form.Group as={Col} controlId="address-edit">
-//                     <Form.Label>Address</Form.Label>
-//                     <Form.Control type="text" placeholder="Enter Address" value={props.address} {...register("address-edit")} />
-//                 </Form.Group>
-//             </Form.Row>
-//             <Form.Row>
-//                 <Form.Group as={Col} controlId="email-edit">
-//                     <Form.Label>Email</Form.Label>
-//                     <Form.Control type="text" placeholder="Enter Email" value={props.email} {...register("email-edit")} />
-//                 </Form.Group>
-//                 <Form.Group as={Col} controlId="number-edit">
-//                     <Form.Label>Number</Form.Label>
-//                     <Form.Control type="text" placeholder="Enter Address" value={props.email} {...register("number-edit")} />
-//                 </Form.Group>
-//             </Form.Row>  
-//             <Form.Row>
-//                 <Form.Group as={Col} controlId="fax-edit">
-//                     <Form.Label>Fax</Form.Label>
-//                     <Form.Control type="text" placeholder="Enter Email" value={props.fax} {...register("fax-edit")} />
-//                 </Form.Group>
-//                 <Form.Group as={Col} controlId="bank-edit">
-//                     <Form.Label>Bank Account</Form.Label>
-//                     <Form.Control type="text" placeholder="Enter Address" value={props.bank} {...register("bank-edit")} />
-//                 </Form.Group>
-//             </Form.Row>
-//             <Form.Row>
-//                 <Form.Group as={Col} controlId="date-edit">
-//                     <Form.Label>Date Added</Form.Label>
-//                     <Form.Control type="text" value={props.date} readOnly/>
-//                 </Form.Group>
-//                 <Form.Group as={Col} controlId="encoded-edit">
-//                     <Form.Label>Encoded By</Form.Label>
-//                     <Form.Control type="text" value={props.encoded} readOnly/>
-//                 </Form.Group>
-//             </Form.Row>  
-//             <Form.Row>
-//                 <Form.Group as={Col} controlId="description-edit">
-//                     <Form.Label>Description</Form.Label>
-//                     <Form.Control type="text" placeholder="Optional" value={props.description} {...register("description-edit")} />
-//                 </Form.Group>
-//             </Form.Row>
-//         </Form>
-//         </Modal.Body>
-//         <Modal.Footer>
+function MyVerticallyCenteredModal(props) {
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const [role,setRole] = useState([]);
+    const updateUserData = (data) => {
+        axios.patch(`/user/1}`,{data}).then(
+            alert('Updated')
+        );
+    }
+
+    const fetchRoleOption =  async () => {
+        await axios
+         .get('/fetch/role_option', {
+     
+         })
+         .then((response) => {
+            console.log(response.data);
+            setRole(response.data.role);
+           
+         })
+         .catch((err) => {
+             console.log(err);
+         });
+     }
+
+    useEffect(() => {
+        fetchRoleOption();
+    },[]);
+    // const updateUserData = data => console.log(data);
+    return (
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton className="modal-color">
+          <Modal.Title id="contained-modal-title-vcenter">
+            {props.title}
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <Form>
+            <Form.Row>
+                <Form.Group as={Col} controlId="user-id" hidden>
+                    <Form.Label>User</Form.Label>
+                    <Form.Control type="text" placeholder="Enter User" value={props.userid} {...register("user-id")} />
+                </Form.Group>
+            </Form.Row>
+            <Form.Row>
+                <Form.Group as={Col} controlId="user-edit">
+                    <Form.Label>User's Complete Name</Form.Label>
+                    <Form.Control type="text" placeholder="Enter User" defaultValue={props.user} {...register("user-edit")} />
+                </Form.Group>
+                <Form.Group as={Col} controlId="user-email-edit">
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control type="text" placeholder="Enter Email" defaultValue={props.useremail} {...register("user-email-edit")} />
+                </Form.Group>
+            </Form.Row>
+            <Form.Row>
+                <Form.Group as={Col} controlId="username-edit">
+                    <Form.Label>Username</Form.Label>
+                    <Form.Control type="text" placeholder="Username" defaultValue={props.username} {...register("username-edit")} />
+                </Form.Group>
+                {/* <Form.Group as={Col} controlId="user-password-edit">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control type="password" placeholder="Password" defaultValue={props.userpassword} {...register("user-password-edit")} />
+                </Form.Group> */}
+            </Form.Row>
+            <Form.Row>
+                <Form.Group as={Col} controlId="role-edit">
+                    <Form.Label>Role</Form.Label>
+                    <Form.Control size="sm"  as="select" multiple defaultValue={props.description} {...register("role-edit")}>
+                        {/* <option value=''>Select Role</option> */}
+                        {role.map((data,index) => (
+                            <option key={index} value={data.id}>{data.name}</option>
+                        ))}
+                    </Form.Control>
+                </Form.Group>
+            </Form.Row>
+        </Form>
+        </Modal.Body>
+        <Modal.Footer>
          
-//           <Button variant="success" size="sm" onClick={handleSubmit(updateSupplierData)}>
-//             <FontAwesomeIcon icon={faCheck} className="icon-space" />Save Changes
-//           </Button>
-//         </Modal.Footer>
-//       </Modal>
-//     );
-// }
+          <Button variant="success" size="sm" onClick={handleSubmit(updateUserData)}>
+            <FontAwesomeIcon icon={faCheck} className="icon-space" />Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    );
+}
 
 
-function User() {
+function UserProfile() {
     const [modalShow, setModalShow] = useState(false);
-    const [hideAddSupplier, setHideAddSupplier] = useState(true);
+    const [hideAddUser, setHideAddUser] = useState(true);
     const [tableData, setTableData] = useState([]);
-    const [hideSupplierTable, setHideAddSupplierTable] = useState(false);
+    const [hideUserTable, setHideAddUserTable] = useState(false);
     const [customAlert, setCustomAlert] = useState(null);
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const [role,setRole] = useState([]);
    
     let test;
     const buttonStyle ={
@@ -120,7 +124,7 @@ function User() {
     
         })
         .then((response) => {
-            //get the object of supplier data to load to a table
+            //get the object of user data to load to a table
             console.log(response.data);
             setTableData(response.data);
         })
@@ -128,19 +132,35 @@ function User() {
             console.log(err);
         });
     }
+    
+    const fetchRoleOption =  async () => {
+        await axios
+         .get('/fetch/role_option', {
+     
+         })
+         .then((response) => {
+            console.log(response.data);
+            setRole(response.data.role);
+           
+         })
+         .catch((err) => {
+             console.log(err);
+         });
+     }
 
     useEffect(() => {
         fetchUser();
+        fetchRoleOption();
     },[]);
     
     const hideAlert = () => {
         setCustomAlert(null)
-        hideTableShowAddSupplier(false)
+        hideTableShowAddUser(false)
     }
     
     const onSubmit = (data) => {
         axios
-        .post('/supplier', {
+        .post('/user', {
            data
         })
         .then((response) => {
@@ -150,7 +170,7 @@ function User() {
                 title="Success!"
                 onConfirm={() =>hideAlert()}
                 >
-                New Supplier Added
+                New User Added
                 </SweetAlert>);
         })
         .catch((err) => {
@@ -158,13 +178,13 @@ function User() {
         });
     }
 
-    const deleteSupplier = (id) => {
-        axios.delete(`/supplier/${id}`, { data: id }).then(
+    const deleteUser = (id) => {
+        axios.delete(`/user/${id}`, { data: id }).then(
            setCustomAlert(null)
         );
     }
     
-    const removeSupplierConfirmation = (id) => {
+    const removeUserConfirmation = (id) => {
         setCustomAlert(
         <SweetAlert
             warning
@@ -172,47 +192,41 @@ function User() {
             confirmBtnText="Yes, delete it!"
             confirmBtnBsStyle="danger"
             title="Are you sure?"
-            onConfirm={() =>deleteSupplier(id)}
+            onConfirm={() =>deleteUser(id)}
             onCancel={() => setCustomAlert(null)}
             focusCancelBtn
           >
-            This Supplier data will be deleted
+            This User data will be deleted
           </SweetAlert>
           )
        
     }
 
-   const hideTableShowAddSupplier = (isCurrentlyHidden) => {
+   const hideTableShowAddUser = (isCurrentlyHidden) => {
         if(isCurrentlyHidden){
-            setHideAddSupplier(false);
-            setHideAddSupplierTable(true);
+            setHideAddUser(false);
+            setHideAddUserTable(true);
         }
         else{
-            setHideAddSupplier(true);
-            setHideAddSupplierTable(false);
+            setHideAddUser(true);
+            setHideAddUserTable(false);
         }
         
     }
 
     
-   const showModalSupplierData = (id) => {
-      let supplierInfo = tableData[id];
-      console.log(supplierInfo)
+   const showModalUserData = (id) => {
+      let userInfo = tableData[id];
+      console.log(userInfo)
         setModalShow(
             <MyVerticallyCenteredModal
                 show={true}
-                title={supplierInfo.supplier}
-                supplierId={supplierInfo.supplier_id}
-                supplier={supplierInfo.supplier}
-                contactPerson={supplierInfo.contact_person}
-                address={supplierInfo.address}
-                email={supplierInfo.email}
-                number={supplierInfo.contact_no}
-                fax={supplierInfo.fax_no}
-                bank={supplierInfo.bankaccount_no}
-                date={supplierInfo.date_added}
-                encoded={supplierInfo.encoded_by}
-                description={supplierInfo.description}
+                title={userInfo.name}
+                userid={userInfo.id}
+                user={userInfo.name}
+                username={userInfo.username}
+                useremail={userInfo.email}
+                userpassword={userInfo.password}
                 onHide={() => setModalShow(null)}
             />
         );
@@ -223,9 +237,9 @@ function User() {
         
         <div>
             {customAlert}
-            <Container fluid hidden={hideSupplierTable}>
+            <Container fluid hidden={hideUserTable}>
                 <div style={buttonStyle}>
-                    <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} onClick={() =>hideTableShowAddSupplier(true)}>
+                    <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} onClick={() =>hideTableShowAddUser(true)}>
                         <FontAwesomeIcon icon={faPlusSquare} className="icon-space" />
                         Add User   
                     </Button>
@@ -248,9 +262,9 @@ function User() {
                         <td>{data.email}</td>
                         <td>{data.email}</td>
                         <td> 
-                            <Button variant="outline-info" size="sm" onClick={() => showModalSupplierData(index)}>
+                            <Button variant="outline-info" size="sm" onClick={() => showModalUserData(index)}>
                             <FontAwesomeIcon icon={faEye} className="icon-space"/>View</Button>
-                            <Button variant="outline-danger" size="sm" onClick={() => removeSupplierConfirmation(data.supplier_id)}>
+                            <Button variant="outline-danger" size="sm" onClick={() => removeUserConfirmation(data.id)}>
                                 <FontAwesomeIcon icon={faTrashAlt}  className="icon-space" />Delete
                             </Button>
                         </td>
@@ -260,56 +274,50 @@ function User() {
                 </Table>
             </Container>
 
-            <Container fluid hidden={hideAddSupplier}>
+            <Container fluid hidden={hideAddUser}>
                 <Card className="border-wrapper">
                     <Card.Body>
-                        <h4 className="mb-4"><FontAwesomeIcon icon={faUserTag} className="icon-space"/>Add Supplier</h4>
+                        <h4 className="mb-4"><FontAwesomeIcon icon={faUserTag} className="icon-space"/>Add User</h4>
                         <Form>
                             <Form.Row>
-                                <Form.Group as={Col} controlId="supplier">
-                                    <Form.Label>Supplier</Form.Label>
-                                    <Form.Control type="text" placeholder="Enter Supplier" {...register("supplier",{required:true})} isInvalid={errors.supplier} />
-                                    <Form.Control.Feedback type="invalid">Supplier is required</Form.Control.Feedback>
+                                <Form.Group as={Col} controlId="user">
+                                    <Form.Label>User's Complete Name</Form.Label>
+                                    <Form.Control type="text" placeholder="Enter User" {...register("user",{required:true})} isInvalid={errors.user} />
+                                    <Form.Control.Feedback type="invalid">User's name is required</Form.Control.Feedback>
                                 </Form.Group>
-                                <Form.Group as={Col} controlId="contact-person">
-                                    <Form.Label>Contact Person</Form.Label>
-                                    <Form.Control type="text" placeholder="Enter Contact Person" {...register("contactPerson",{required:true})} isInvalid={errors.contactPerson} />
-                                    <Form.Control.Feedback type="invalid">Contact person is required</Form.Control.Feedback>
+                                <Form.Group as={Col} controlId="user">
+                                    <Form.Label>Username</Form.Label>
+                                    <Form.Control type="text" placeholder="Enter Username" {...register("username",{required:true})} isInvalid={errors.username} />
+                                    <Form.Control.Feedback type="invalid">User's name is required</Form.Control.Feedback>
                                 </Form.Group>
                             </Form.Row>
-                            
-                            <Form.Group controlId="supplier-address">
-                                <Form.Label>Address</Form.Label>
-                                <Form.Control placeholder="Supplier Address" {...register("address",{required:true})} isInvalid={errors.address}/>
-                                <Form.Control.Feedback type="invalid">Address is required</Form.Control.Feedback>
-                            </Form.Group>
-
                             <Form.Row>
-                                <Form.Group as={Col} controlId="supplier-email">
+                                <Form.Group as={Col} controlId="user-email">
                                     <Form.Label>Email</Form.Label>
-                                    <Form.Control  placeholder="Supplier email" {...register("email")} />
+                                    <Form.Control type="email" placeholder="Enter Email" {...register("userEmail",{required:true})} isInvalid={errors.userEmail} />
+                                    <Form.Control.Feedback type="invalid">Email is required</Form.Control.Feedback>
                                 </Form.Group>
-                                <Form.Group as={Col} controlId="supplier-number">
-                                    <Form.Label>Number</Form.Label>
-                                    <Form.Control placeholder="Supplier number" {...register("number")} />
+                                <Form.Group as={Col} controlId="user-password">
+                                    <Form.Label>Password</Form.Label>
+                                    <Form.Control type="password" placeholder="Password" {...register("password",{required:true})} isInvalid={errors.password} />
+                                    <Form.Control.Feedback type="invalid">User's name is required</Form.Control.Feedback>
                                 </Form.Group>
-                                <Form.Group as={Col} controlId="supplier-fax">
-                                    <Form.Label>Fax No.</Form.Label>
-                                    <Form.Control placeholder="Supplier Fax" {...register("fax")}/>
-                                </Form.Group>
-
+                                {/* <Form.Group as={Col} controlId="confirm-password">
+                                    <Form.Label>Confirm Password</Form.Label>
+                                    <Form.Control type="text" placeholder="Password" {...register("confirmPassword",{required:true})} isInvalid={errors.confirmPassword} />
+                                    <Form.Control.Feedback type="invalid">Email is required</Form.Control.Feedback>
+                                </Form.Group> */}
                             </Form.Row>
-
-                            <Form.Row>
-                                <Form.Group as={Col} controlId="supplier-bank">
-                                    <Form.Label>Bank Account</Form.Label>
-                                    <Form.Control placeholder="Supplier bank account" {...register("bank")}/>
-                                </Form.Group>
-                                <Form.Group as={Col} controlId="supplier-description">
-                                    <Form.Label>Description</Form.Label>
-                                    <Form.Control placeholder="Optional" {...register("description")}/>
-                                </Form.Group>
-                            </Form.Row>
+                            <Form.Group as={Col} controlId="user-role">
+                                <Form.Label>Role</Form.Label>
+                                <Form.Control size="sm"  as="select" multiple {...register("userRole",{required:false})} isInvalid={errors.userRole}>
+                                    {/* <option value=''>Select Role</option> */}
+                                        {role.map((data,index) => (
+                                             <option key={index} value={data.id}>{data.name}</option>
+                                        ))}
+                                </Form.Control>
+                                <Form.Control.Feedback type="invalid">Role is required</Form.Control.Feedback>
+                            </Form.Group>
 
                         </Form>
                         <div style={buttonStyle}>
@@ -317,7 +325,7 @@ function User() {
                             <FontAwesomeIcon icon={faPlusCircle} className="icon-space" />
                              Add    
                             </Button>
-                            <Button variant="danger" size="sm" style={{marginRight:"0.5rem"}} onClick={() =>hideTableShowAddSupplier(false)} >
+                            <Button variant="danger" size="sm" style={{marginRight:"0.5rem"}} onClick={() =>hideTableShowAddUser(false)} >
                             <FontAwesomeIcon icon={faBan} className="icon-space"/>
                                 Cancel
                             </Button>
@@ -331,8 +339,8 @@ function User() {
     );
 }
 
-export default User;
+export default UserProfile;
 
-if (document.getElementById('user')) {
-    ReactDOM.render(<User />, document.getElementById('user'));
+if (document.getElementById('userprofile')) {
+    ReactDOM.render(<UserProfile />, document.getElementById('userprofile'));
 }

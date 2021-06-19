@@ -19,6 +19,8 @@ db:
     ports:
         - 8081:3306
     container_name: db
+    volumes:
+        - sql-data:/var/lib/mysql
     environment:
         # with mysql
         MYSQL_ROOT_PASSWORD: root

@@ -36,6 +36,7 @@ class Supplier extends Model
        'company_id',
        'date_added',
        'description',
+       'tags',
        'encoded_by',
    ];
 }

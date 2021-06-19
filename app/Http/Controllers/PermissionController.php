@@ -41,7 +41,10 @@ class PermissionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $field_data = $request->data;
+        Permission::create([
+            'name' => $field_data['permission']
+        ]);
     }
 
     /**
@@ -86,11 +89,13 @@ class PermissionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $permission = Permission::find($id);
+
+        $permission->delete();
     }
 
     public function fetchPermissionData()
     {
-         return Permission::all()->toJson();
+     return  \Auth::user()->getPermissions()->pluck('slug')->toArray();    
     }
 }

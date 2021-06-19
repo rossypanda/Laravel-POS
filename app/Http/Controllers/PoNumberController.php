@@ -80,7 +80,9 @@ class PoNumberController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        $po = PONumber::findOrFail($id);
+        $po->end_range = $request->end_range;
+        $po->save();
     }
 
     /**

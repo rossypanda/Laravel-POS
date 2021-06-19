@@ -6,13 +6,16 @@ import { faPlusSquare,faTrashAlt,faEye,faCheck,faUserTag,faPlusCircle,faBan,faTh
 import { faLastfmSquare } from '@fortawesome/free-brands-svg-icons';
 import CreatePurchaseOrder from './component/CreatePurchaseOrder';
 import PurchaseOrderTabs from './component/PurchaseOrderTabs';
+import Permission from '../../helpers/PermissionComponent';
 
 
 function PurchaseOrder() {
 
     return (
     <div>
-        <PurchaseOrderTabs />
+        <Permission>
+            <PurchaseOrderTabs />
+        </Permission>
     </div>
     );
 }

@@ -4,7 +4,7 @@ import {Button,Container,Row,Table,Modal,ModalTitle,ModalDialog,ModalBody,ModalD
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusSquare,faTrashAlt,faEye,faCheck,faUserTag,faPlusCircle,faBan,faThList} from '@fortawesome/free-solid-svg-icons';
 import { faLastfmSquare } from '@fortawesome/free-brands-svg-icons';
-import PoNumberModal from './components/PoNumberModal';
+import PoNumberEdit from './components/PoNumberEdit';
 import SweetAlert from 'react-bootstrap-sweetalert';
 
 
@@ -13,7 +13,6 @@ function PONumber() {
  const [tableData,setTableData] = useState([]);
  const [modal,setModal] = useState(null);
  const [customAlert, setCustomAlert] = useState(null);
- const PO_TYPE = {'C' :'Cash','H' : 'Check'}
 
     const buttonStyle ={
         display:"flex",
@@ -40,13 +39,15 @@ function PONumber() {
      
     useEffect(() => {
         fetchPoNumber();
-    });
+    },[]);
 
-    const showModal = () => {
+    const showModal = (id) => {
         setModal(
-            <PoNumberModal 
+            <PoNumberEdit
+              id={id}
               show={true}
               onHide={() => setModal(null)}
+              range={tableData[0].end_range}
             />
         )
     }
@@ -82,39 +83,26 @@ function PONumber() {
         <div>
             <Container fluid>
                 {customAlert}
-                <div style={buttonStyle}>
-                    <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} onClick={() => showModal()}>
-                        <FontAwesomeIcon icon={faPlusSquare} className="icon-space" />
-                        Add Po Number  
-                    </Button>
-                </div>
                 <Table striped bordered hover size="sm">
                     <thead>
                         <tr>
-                        <th>Invoice ID</th>
-                        <th>Invoice Type</th>
                         <th>Start Range</th>
                         <th>End Range</th>
                         <th>Usage</th>
-                        <th>Encoded By</th>
+                        <th>Year</th>
                         <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                     {tableData.map((data,index) => (
                         <tr>
-                            <td>{data.po_invoice_id}</td>
-                            <td>{PO_TYPE[data.invoice_type]}</td>
                             <td>{data.start_range}</td>
                             <td>{data.end_range}</td>
-                            <td>{data.invoice_usage}</td>
-                            <td>{data.encoded_by}</td>
+                            <td>{data.current_range}</td>
+                            <td>{data.current_year}</td>
                             <td> 
-                                {/* <Button variant="outline-info" size="sm" >
-                                <FontAwesomeIcon icon={faEye} className="icon-space"/>View</Button> */}
-                                <Button variant="outline-danger" size="sm" onClick={() => deleteConfirmation(data.po_invoice_id)}>
-                                    <FontAwesomeIcon icon={faTrashAlt}  className="icon-space" />Delete
-                                </Button>
+                                <Button variant="outline-info" size="sm" onClick={() => showModal(data.po_invoice_id)}>
+                                <FontAwesomeIcon icon={faEye} className="icon-space"/>Edit</Button>
                             </td>
                         </tr>
                    ))}
