@@ -30,7 +30,7 @@ Route::get('username/{username}/password/{password}', function($username,$passwo
 });
 
 
-Route::get('authenticate/user', function(Request $request)
+Route::post('authenticate/user', function(Request $request)
 {
     if(Auth::attempt(['username' => $request->input('username'),'password' => $request->input('password')])){
         return  response()->json([
