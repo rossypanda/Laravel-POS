@@ -63,7 +63,7 @@ td, th {
 $supplier = $supplier[$po_header['supplier_id']]['supplier'];
 $requested_by = $users[$po_header['requested_by']];
 $canvassed_by = $users[$po_header['canvassed_by']];
-$approved_by = $users[$po_header['approved_by']];
+$approved_by = $po_header['approved_by'] ? $users[$po_header['approved_by']] : '' ;
 @endphp
 
 <body>

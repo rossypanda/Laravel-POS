@@ -65,7 +65,7 @@ class PurchaseOrderController extends Controller
                     'project_name' => $formData['project_name'],
                     'requested_by' => $formData['requested_by'],
                     'canvassed_by' => $formData['canvassed_by'],
-                    'approved_by' => $formData['approved_by'],
+                    // 'approved_by' => $formData['approved_by'],
                     //'project_in_charge' => $formData['project_name'],
                     //'purchaser' => $formData['project_name'],
                     //'manager' => $formData['project_name'],
