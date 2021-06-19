@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,10 +30,15 @@ Route::get('username/{username}/password/{password}', function($username,$passwo
 });
 
 
-Route::post('authenticate/user', function(Request $request)
+Route::get('authenticate/user', function(Request $request)
 {
     if(Auth::attempt(['username' => $request->input('username'),'password' => $request->input('password')])){
-        return  response()->json(true);
+        return  response(1)->json([
+           'id' => Auth::user()->id,
+           'name' => Auth::user()->name,
+           'email' => Auth::user()->email,
+
+        ]);
     }
-    return  response()->json(false);
+    return  response(0);
 });
