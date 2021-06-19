@@ -249,15 +249,12 @@ function CreatePurchaseOrder() {
                                     </Form.Control>
                                     <Form.Control.Feedback type="invalid">Canvassed By is required</Form.Control.Feedback>
                                 </Form.Group>
-                                <Form.Group as={Col} controlId="approved_by">
-                                    <Form.Label>Approved By</Form.Label>
-                                    <Form.Control size="sm" as="select" {...register("approved_by",{required:true})} isInvalid={errors.approved_by} >
-                                        <option value=''> -- Approved By --</option>
-                                        {users.map((data,index) => (
-                                             <option key={index} value={data.id}>{data.name}</option>
-                                        ))}
-                                    </Form.Control>
-                                    <Form.Control.Feedback type="invalid">Approved By is required</Form.Control.Feedback>
+                            </Form.Row>
+                            <Form.Row>
+                                <Form.Group as={Col} controlId="project_name">
+                                    <Form.Label>Description</Form.Label>
+                                    <Form.Control  placeholder="Description" {...register("description",{required:true})} isInvalid={errors.description}/>
+                                    <Form.Control.Feedback type="invalid">Description is required</Form.Control.Feedback>
                                 </Form.Group>
                             </Form.Row>
                         </Form>

@@ -25,6 +25,7 @@ class CreateTblPoDetail extends Migration
             $table->string('model',50)->nullable();
             $table->decimal('per_unit', 8, 2);
             $table->decimal('price', 8, 2);
+            $table->integer('status',1)->default(0);
             $table->integer('encoded_by')->nullable();
         });
     }
