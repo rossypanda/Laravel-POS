@@ -21,6 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('username/{username}/password/{password}', function($username,$password)
 {
+  
     if(Auth::attempt(['username' => $username,'password' => $password ])){
       return  response()->json(true);
     }
@@ -30,7 +31,7 @@ Route::get('username/{username}/password/{password}', function($username,$passwo
 
 Route::get('authenticate/user', function(Request $request)
 {
-    if(Auth::attempt(['username' => $request->username,'password' => $request->password ])){
+    if(Auth::attempt(['username' => $request->input('username'),'password' => $request->input('password')])){
         return  response()->json(true);
     }
     return  response()->json(false);
