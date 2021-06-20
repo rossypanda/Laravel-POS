@@ -47,7 +47,7 @@ Route::middleware(['web'])->group(function () {
     Route::resource('reset','ResetController');
     // Route::resource('user_register', 'UserController');
     Route::get('fetch/supplier','SupplierController@fetchSupplierData');
-    Route::get('fetch/poNumber','PONumberController@fetchPONumberData');
+    Route::get('fetch/poNumber','PoNumberController@fetchPONumberData');
     Route::get('fetch/purchaseOrder','PurchaseOrderController@fetchPurchaseOrderData');
     Route::get('fetch/purchase_order/{id}','PurchaseOrderController@fetchPOFullDetail');
     Route::get('fetch/po_dropdown','PurchaseOrderController@fetchPurchaseOrderDropdownOptions');
