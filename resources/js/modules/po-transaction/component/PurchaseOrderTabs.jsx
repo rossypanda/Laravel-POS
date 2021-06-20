@@ -96,10 +96,11 @@ const pendingSearch = (rows) => {
                                     icon={faClock}
                                     projectName={data.project_name}
                                     date={data.date}
-                                    requestedBy={users[data.requested_by]}
-                                    supplier={supplier[data.supplier_id]}
+                                    requestedBy={data.requested_by}
+                                    supplier={data.supplier}
                                     totalAMount={data.total_amount}
                                     variant={"warning"}
+                                    description={data.description}
                                     status={PO_STATUS[data.status]}
                                     paymentType={PAYMENT_TYPE[data.payment_type]}
                                     key={index}
@@ -113,13 +114,15 @@ const pendingSearch = (rows) => {
                         <Form.Control type="text" placeholder="Search" style={{width:"15%",borderRadius:"0.5rem"}} value={approvedFilter} onChange={(e) => setApprovedFilter(e.target.value)}/></Card.Header>
                            {approvedSearch(approvedPO).map((data,index) => (
                                <PurchaseOrderList 
+                               poHeaderId = {data.po_header_id}
                                poNumber={data.po_number}
                                icon={faClipboardCheck}
                                date={data.date}
-                               requestedBy={users[data.requested_by]}
-                               supplier={supplier[data.supplier_id]}
+                               requestedBy={data.requested_by}
+                               supplier={data.supplier}
                                totalAMount={data.total_amount}
                                variant={"success"}
+                               description={data.description}
                                status={PO_STATUS[data.status]}
                                paymentType={PAYMENT_TYPE[data.payment_type]}
                                key={index}
@@ -133,13 +136,15 @@ const pendingSearch = (rows) => {
                         <Form.Control type="text" placeholder="Search" style={{width:"15%",borderRadius:"0.5rem"}} value={cancelledFilter} onChange={(e) => setCancelledFilter(e.target.value)}/></Card.Header>
                             {cancelledSearch(cancelledPO).map((data,index) => (
                                 <PurchaseOrderList 
+                                poHeaderId = {data.po_header_id}
                                 poNumber={data.po_number}
                                 icon={faBan}
                                 date={data.date}
-                                requestedBy={users[data.requested_by]}
-                                supplier={supplier[data.supplier_id]}
+                                requestedBy={data.requested_by}
+                                supplier={data.supplier}
                                 totalAMount={data.total_amount}
                                 variant={"danger"}
+                                remarks={data.remarks}
                                 status={PO_STATUS[data.status]}
                                 paymentType={PAYMENT_TYPE[data.payment_type]}
                                 key={index}

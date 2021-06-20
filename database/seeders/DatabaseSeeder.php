@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             //PODetailSeeder::class,
             //POHeaderSeeder::class,
-            POInvoiceSeeder::class,
+            //POInvoiceSeeder::class,
             SupplierSeeder::class,
             PermissionsTableSeeder::class,
             RolesTableSeeder::class,

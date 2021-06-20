@@ -29,7 +29,7 @@ const permission = useContext(PermissionContext);
                             </Card.Title>
                             <Card.Subtitle className="mb-2 mt-3" style={{color:'#3490dc'}}><h5>{props.projectName}</h5></Card.Subtitle>
                             <Card.Text className="text-wrapper">
-                               Supplier: {props.supplier}
+                               Supplier: {props.supplier} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {props.status == 'Cancelled' ? `Remarks: ${props.remarks} ` : `Description: ${props.description}  `}
                             </Card.Text>
                         <Card.Footer className="footer-wrapper">
                             

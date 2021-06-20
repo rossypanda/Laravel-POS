@@ -14657,7 +14657,7 @@ function PurchaseOrderList(props) {
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default.Text, {
           className: "text-wrapper",
-          children: ["Supplier: ", props.supplier]
+          children: ["Supplier: ", props.supplier, " \xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0 ", props.status == 'Cancelled' ? "Remarks: ".concat(props.remarks, " ") : "Description: ".concat(props.description, "  ")]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default.Footer, {
           className: "footer-wrapper",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default, {
@@ -14924,10 +14924,11 @@ function PurchaseOrderTabs(props) {
                 icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_12__.faClock,
                 projectName: data.project_name,
                 date: data.date,
-                requestedBy: users[data.requested_by],
-                supplier: supplier[data.supplier_id],
+                requestedBy: data.requested_by,
+                supplier: data.supplier,
                 totalAMount: data.total_amount,
                 variant: "warning",
+                description: data.description,
                 status: PO_STATUS[data.status],
                 paymentType: PAYMENT_TYPE[data.payment_type]
               }, index);
@@ -14955,13 +14956,15 @@ function PurchaseOrderTabs(props) {
               })]
             }), approvedSearch(approvedPO).map(function (data, index) {
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_PurchaseOrderList__WEBPACK_IMPORTED_MODULE_6__.default, {
+                poHeaderId: data.po_header_id,
                 poNumber: data.po_number,
                 icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_12__.faClipboardCheck,
                 date: data.date,
-                requestedBy: users[data.requested_by],
-                supplier: supplier[data.supplier_id],
+                requestedBy: data.requested_by,
+                supplier: data.supplier,
                 totalAMount: data.total_amount,
                 variant: "success",
+                description: data.description,
                 status: PO_STATUS[data.status],
                 paymentType: PAYMENT_TYPE[data.payment_type]
               }, index);
@@ -14989,13 +14992,15 @@ function PurchaseOrderTabs(props) {
               })]
             }), cancelledSearch(cancelledPO).map(function (data, index) {
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_PurchaseOrderList__WEBPACK_IMPORTED_MODULE_6__.default, {
+                poHeaderId: data.po_header_id,
                 poNumber: data.po_number,
                 icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_12__.faBan,
                 date: data.date,
-                requestedBy: users[data.requested_by],
-                supplier: supplier[data.supplier_id],
+                requestedBy: data.requested_by,
+                supplier: data.supplier,
                 totalAMount: data.total_amount,
                 variant: "danger",
+                remarks: data.remarks,
                 status: PO_STATUS[data.status],
                 paymentType: PAYMENT_TYPE[data.payment_type]
               }, index);

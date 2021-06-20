@@ -134,4 +134,25 @@ class PurchaseOrderHelper
         return $range < 0 ? 1 : $range[0]->end_range;
    }
 
+   
+   /**
+     * Get Purchase Orders
+     *
+     * 
+     * @return Array 
+     */
+   public static function getPurchaseOrders($status){
+      return DB::table('tbl_po_header AS a')
+       ->selectRaw("a.*,IF(a.payment_type = 'C','Cash','Check') AS `type` ,b.supplier,c.name AS approver,d.name AS encoder")
+       ->leftJoin('tbl_supplier AS b','a.supplier_id','=','b.supplier_id')
+       ->leftJoin('users AS c','a.approved_by','=','c.id')
+       ->leftJoin('users AS d','a.encoded_by','=','d.id')
+       ->where('a.status',$status)
+      // ->groupBy('a.po_number')
+       ->orderBy('a.po_header_id','asc')
+       ->get()
+       ->toArray();
+
+   }
+
 }

@@ -135,11 +135,13 @@ class PurchaseOrderController extends Controller
     }
 
     public function fetchPurchaseOrderData(){
+
+    
        
         return response(([
-            'pending' => PurchaseOrder::where('status','F')->get(),
-            'approved' => PurchaseOrder::where('status','A')->get(),
-            'cancelled' => PurchaseOrder::where('status','C')->get(),
+            'pending' => PurchaseOrderHelper::getPurchaseOrders('F'),
+            'approved' => PurchaseOrderHelper::getPurchaseOrders('A'),
+            'cancelled' => PurchaseOrderHelper::getPurchaseOrders('C'),
             'supplier' => [Supplier::all()->pluck('address','supplier_id')],
             'users' => [User::all()->pluck('name','id')]
         ])
@@ -203,8 +205,8 @@ class PurchaseOrderController extends Controller
                 'users' =>  User::pluck('name','id')->toArray()
             ];
             //dd($data);
-        $pdf = \PDF::loadView('pdf.po-pdf',$data);
-        return $pdf->download($po[0]['po_reference'].'.pdf');
-       // return view('pdf.po-pdf',$data);
+         $pdf = \PDF::loadView('pdf.po-pdf',$data);
+         return $pdf->download($po[0]['po_reference'].'.pdf');
+      return view('pdf.po-pdf',$data);
     }
 }

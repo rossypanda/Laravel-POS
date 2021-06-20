@@ -7,6 +7,11 @@
     <title>Document</title>
 </head>
 <style>
+
+    body{
+        margin: 0;
+        padding: 0;
+    }
   .center {
   margin: auto;
   /* width: 50%; */
@@ -56,6 +61,45 @@ td, th {
     padding-bottom: 0;
     margin:0;
 }
+
+.watermark {
+    position: absolute;
+    opacity: 0.25;
+    font-size: 7rem;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+    left:0;
+    right:-150px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: rotate(-12deg);
+}
+
+
+p#address{
+    position: absolute;
+    padding-right: 23rem;
+    /* border-bottom: 1px solid black; */
+}
+
+p#supplier {
+    position: absolute;
+    padding-right: 20rem;
+    /* border-bottom: 1px solid black; */
+}
+
+b#po-field {
+    padding-left: 30rem;
+      border-bottom: 1px solid black; 
+}
+
+
+
+b#date-field {
+    padding-left: 30rem;
+      border-bottom: 1px solid black; 
+}
 </style>
 
 
@@ -76,13 +120,15 @@ foreach($po_detail as $detail){
         <p class="text-wrapper text-small">Deka Bldg. Blk. 2 lot 20 Greenplains, Alijis, Bacolod City, Negros Occidental</p>
         <h3 class="text-wrapper">Purchased Order</h3 >
         <div id="info-one" >
-            <b>Supplier:</b>&nbsp;&nbsp;<p id="supplier" class="pad-right underline unpad" style="display:inline-block">{{$supplier}}</p>
-            <b>P.O.#:</b>&nbsp;&nbsp;<p id="po-number" class="underline unpad" style="display:inline-block">{{$po_header['po_number']}}</p>
+            <b id="supplier-field">Supplier:</b>&nbsp;&nbsp;<p id="supplier" class="unpad" style="display:inline-block">{{$supplier}}</p>
+            <b id="po-field">P.O.#:</b>&nbsp;&nbsp;<p id="po-number" class="underline unpad" style="display:inline-block">{{$po_header['po_number']}}</p>
         </div>
         <div id="info-two" >
-            <b>Address:</b>&nbsp;&nbsp;<p id="supplier" class="pad-right underline unpad" style="display:inline-block">{{$po_header['supplier_address']}}</p>
-            <b>Date:</b>&nbsp;&nbsp;<p id="po-number" class="underline unpad" style="display:inline-block">{{$po_header['date']}}</p>
+            <b id="address-field">Address:</b>&nbsp;&nbsp;<p id="address" class="unpad" style="display:inline-block">{{$po_header['supplier_address']}}</p>
+            <b id="date-field">Date:</b>&nbsp;&nbsp;<p id="date" class="underline unpad" style="display:inline-block">{{$po_header['date']}}</p>
         </div>
+        <div class="watermark">APPROVED</div>
+        
         <div id="asdasd" style="clear: both; margin-top:1rem;">
             <table>
                 <tr>
@@ -163,6 +209,7 @@ foreach($po_detail as $detail){
                     <th colspan="2"> Manager/Authorized Representative </td>
                 </tr>
             </table>
+       
               
         </div>
     </div>
