@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState,useEffect,useContext} from 'react';
 import ReactDOM from 'react-dom';
 import {Button,Container,Row,Table,Modal,ModalTitle,ModalDialog,ModalBody,ModalDialogProps,ModalFooter,Card,InputGroup,FormControl,InputGroupProps,Col,Form,Alert} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -9,6 +9,9 @@ import axios from 'axios';
 import SweetAlert from 'react-bootstrap-sweetalert';
 import TagsInput from './components/TagsInput';
 import Tags from './components/Tags';
+import Permission from '../../helpers/PermissionComponent';
+import PermissionContext from '../../helpers/PermissionContext';
+
 
 
 function MyVerticallyCenteredModal(props) {
@@ -112,6 +115,7 @@ function Supplier() {
     const [filter,setFilter] = useState('');
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const selected = tags => setTags(tags);
+    const permission = useContext(PermissionContext);
     const buttonStyle ={
         display:"flex",
         justifyContent:"space-between",
@@ -241,112 +245,118 @@ function Supplier() {
     
     
     return (
-     
-        <div>
-                {customAlert}
-                <Container fluid hidden={hideSupplierTable}>
-                    <div style={buttonStyle}>
-                    <Form.Control type="text" placeholder="Search" style={{width:"15%",borderRadius:"0.5rem"}} value={filter} onChange={(e) => setFilter(e.target.value)} />
-                        <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} onClick={() =>hideTableShowAddSupplier(true)}>
-                            <FontAwesomeIcon icon={faPlusSquare} className="icon-space" />
-                            Add Supplier   
-                        </Button>
+
+        <Permission>
+            <div>
+                    {customAlert}
+                    <Container fluid hidden={hideSupplierTable}>
+                        <div style={buttonStyle}>
+                        <Form.Control type="text" placeholder="Search" style={{width:"15%",borderRadius:"0.5rem"}} value={filter} onChange={(e) => setFilter(e.target.value)} />
+                            <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} onClick={() =>hideTableShowAddSupplier(true)}>
+                                <FontAwesomeIcon icon={faPlusSquare} className="icon-space" />
+                                Add Supplier   
+                            </Button>
+                        
+                        </div>
                     
-                    </div>
-                
-                    <Table striped bordered hover size="sm">
-                        <thead>
-                            <tr>
-                            <th>Supplier</th>
-                            <th>Contact Person</th>
-                            <th>Contact Number</th>
-                            <th>Email</th>
-                            <th >Tags</th>
-                            <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        {search(tableData).map((data,index) => (
-                            <tr>
-                            <td>{data.supplier}</td>
-                            <td>{data.contact_person}</td>
-                            <td>{data.contact_no}</td>
-                            <td>{data.email}</td>
-                            <td ><Tags tags={data.tags   ? data.tags.split(',') : [] }/></td>
-                            <td> 
-                                <Button variant="outline-info" size="sm" onClick={() => showModalSupplierData(index)}>
-                                <FontAwesomeIcon icon={faEye} className="icon-space"/>View</Button>
-                                <Button variant="outline-danger" size="sm" onClick={() => removeSupplierConfirmation(data.supplier_id)}>
-                                    <FontAwesomeIcon icon={faTrashAlt}  className="icon-space" />Delete
-                                </Button>
-                            </td>
-                            </tr>
-                    ))}
-                        </tbody>
-                    </Table>
-                </Container>
+                        <Table striped bordered hover size="sm">
+                            <thead>
+                                <tr>
+                                <th>Supplier</th>
+                                <th>Contact Person</th>
+                                <th>Contact Number</th>
+                                <th>Email</th>
+                                <th >Tags</th>
+                                <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {search(tableData).map((data,index) => (
+                                <tr key={index}>
+                                <td>{data.supplier}</td>
+                                <td>{data.contact_person}</td>
+                                <td>{data.contact_no}</td>
+                                <td>{data.email}</td>
+                                <td ><Tags tags={data.tags   ? data.tags.split(',') : [] }/></td>
+                                <td> 
+                                    <Button variant="outline-info" size="sm" onClick={() => showModalSupplierData(index)}>
+                                    <FontAwesomeIcon icon={faEye} className="icon-space"/>View</Button>
+                                    { permission.indexOf('delete.supplier') !== -1 ? 
+                                        <Button variant="outline-danger" size="sm" onClick={() => removeSupplierConfirmation(data.supplier_id)}>
+                                            <FontAwesomeIcon icon={faTrashAlt}  className="icon-space" />Delete
+                                        </Button>
+                                        :
+                                        null
+                                    }
+                                </td>
+                                </tr>
+                        ))}
+                            </tbody>
+                        </Table>
+                    </Container>
 
-                <Container fluid hidden={hideAddSupplier}>
-                    <Card className="border-wrapper">
-                        <Card.Body>
-                            <h4 className="mb-4"><FontAwesomeIcon icon={faUserTag} className="icon-space"/>Add Supplier</h4>
-                            <Form>
-                                <Form.Row>
-                                    <Form.Group as={Col} controlId="supplier">
-                                        <Form.Label>Supplier *</Form.Label>
-                                        <Form.Control type="text" placeholder="Enter Supplier" {...register("supplier",{required:true})} isInvalid={errors.supplier} />
-                                        <Form.Control.Feedback type="invalid">Supplier is required</Form.Control.Feedback>
-                                    </Form.Group>
-                                    <Form.Group as={Col} controlId="contact-person">
-                                        <Form.Label>Contact Person *</Form.Label>
-                                        <Form.Control type="text" placeholder="Enter Contact Person" {...register("contactPerson",{required:true})} isInvalid={errors.contactPerson} />
-                                        <Form.Control.Feedback type="invalid">Contact person is required</Form.Control.Feedback>
-                                    </Form.Group>
-                                </Form.Row>
-                                
-                                <Form.Group controlId="supplier-address">
-                                    <Form.Label>Address *</Form.Label>
-                                    <Form.Control placeholder="Supplier Address" {...register("address",{required:true})} isInvalid={errors.address}/>
-                                    <Form.Control.Feedback type="invalid">Address is required</Form.Control.Feedback>
-                                </Form.Group>
-
-                                <Form.Row>
-                                    <Form.Group as={Col} controlId="supplier-email">
-                                        <Form.Label>Email</Form.Label>
-                                        <Form.Control  placeholder="Supplier email" {...register("email")} />
-                                    </Form.Group>
-                                    <Form.Group as={Col} controlId="supplier-number">
-                                        <Form.Label>Number</Form.Label>
-                                        <Form.Control placeholder="Supplier number" {...register("number")} />
-                                    </Form.Group>
-                                    <Form.Group as={Col} controlId="supplier-fax">
-                                        <Form.Label>Fax No.</Form.Label>
-                                        <Form.Control placeholder="Supplier Fax" {...register("fax")}/>
+                    <Container fluid hidden={hideAddSupplier}>
+                        <Card className="border-wrapper">
+                            <Card.Body>
+                                <h4 className="mb-4"><FontAwesomeIcon icon={faUserTag} className="icon-space"/>Add Supplier</h4>
+                                <Form>
+                                    <Form.Row>
+                                        <Form.Group as={Col} controlId="supplier">
+                                            <Form.Label>Supplier *</Form.Label>
+                                            <Form.Control type="text" placeholder="Enter Supplier" {...register("supplier",{required:true})} isInvalid={errors.supplier} />
+                                            <Form.Control.Feedback type="invalid">Supplier is required</Form.Control.Feedback>
+                                        </Form.Group>
+                                        <Form.Group as={Col} controlId="contact-person">
+                                            <Form.Label>Contact Person *</Form.Label>
+                                            <Form.Control type="text" placeholder="Enter Contact Person" {...register("contactPerson",{required:true})} isInvalid={errors.contactPerson} />
+                                            <Form.Control.Feedback type="invalid">Contact person is required</Form.Control.Feedback>
+                                        </Form.Group>
+                                    </Form.Row>
+                                    
+                                    <Form.Group controlId="supplier-address">
+                                        <Form.Label>Address *</Form.Label>
+                                        <Form.Control placeholder="Supplier Address" {...register("address",{required:true})} isInvalid={errors.address}/>
+                                        <Form.Control.Feedback type="invalid">Address is required</Form.Control.Feedback>
                                     </Form.Group>
 
-                                </Form.Row>
+                                    <Form.Row>
+                                        <Form.Group as={Col} controlId="supplier-email">
+                                            <Form.Label>Email</Form.Label>
+                                            <Form.Control  placeholder="Supplier email" {...register("email")} />
+                                        </Form.Group>
+                                        <Form.Group as={Col} controlId="supplier-number">
+                                            <Form.Label>Number</Form.Label>
+                                            <Form.Control placeholder="Supplier number" {...register("number")} />
+                                        </Form.Group>
+                                        <Form.Group as={Col} controlId="supplier-fax">
+                                            <Form.Label>Fax No.</Form.Label>
+                                            <Form.Control placeholder="Supplier Fax" {...register("fax")}/>
+                                        </Form.Group>
 
-                                <Form.Row style={{marginBottom:"0.5rem"}}>
-                                <Form.Label>Material Tags *</Form.Label>
-                                <TagsInput selected={selected} tags={[]}/>
-                                </Form.Row>
+                                    </Form.Row>
 
-                            </Form>
-                            <div style={buttonStyle}>
-                                <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} onClick={handleSubmit(onSubmit)} >
-                                <FontAwesomeIcon icon={faPlusCircle} className="icon-space" />
-                                Add    
-                                </Button>
-                                <Button variant="danger" size="sm" style={{marginRight:"0.5rem"}} onClick={() =>hideTableShowAddSupplier(false)} >
-                                <FontAwesomeIcon icon={faBan} className="icon-space"/>
-                                    Cancel
-                                </Button>
-                            </div>
-                        </Card.Body>
-                    </Card>
-                </Container>
-                {modalShow}
-        </div>
+                                    <Form.Row style={{marginBottom:"0.5rem"}}>
+                                    <Form.Label>Material Tags *</Form.Label>
+                                    <TagsInput selected={selected} tags={[]}/>
+                                    </Form.Row>
+
+                                </Form>
+                                <div style={buttonStyle}>
+                                    <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} onClick={handleSubmit(onSubmit)} >
+                                    <FontAwesomeIcon icon={faPlusCircle} className="icon-space" />
+                                    Add    
+                                    </Button>
+                                    <Button variant="danger" size="sm" style={{marginRight:"0.5rem"}} onClick={() =>hideTableShowAddSupplier(false)} >
+                                    <FontAwesomeIcon icon={faBan} className="icon-space"/>
+                                        Cancel
+                                    </Button>
+                                </div>
+                            </Card.Body>
+                        </Card>
+                    </Container>
+                    {modalShow}
+            </div>
+        </Permission>
     
        
     );

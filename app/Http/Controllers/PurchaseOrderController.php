@@ -65,13 +65,14 @@ class PurchaseOrderController extends Controller
                     'project_name' => $formData['project_name'],
                     'requested_by' => $formData['requested_by'],
                     'canvassed_by' => $formData['canvassed_by'],
+                    'description' => $formData['description'],
                     // 'approved_by' => $formData['approved_by'],
                     //'project_in_charge' => $formData['project_name'],
                     //'purchaser' => $formData['project_name'],
                     //'manager' => $formData['project_name'],
                     // 'bank' => $formData['project_name'],
                     // 'contact_person' => $formData['project_name'],
-                    'total_amount' => PurchaseOrderHelper::calculateItemsTotalAmount($formData['items']),
+                    //'total_amount' => PurchaseOrderHelper::calculateItemsTotalAmount($formData['items']),
                     'terms' => json_encode($formData['terms']),
                     'status' => 'F',
                     'encoded_by' => Auth::id()
@@ -134,11 +135,13 @@ class PurchaseOrderController extends Controller
     }
 
     public function fetchPurchaseOrderData(){
+
+    
        
         return response(([
-            'pending' => PurchaseOrder::where('status','F')->get(),
-            'approved' => PurchaseOrder::where('status','A')->get(),
-            'cancelled' => PurchaseOrder::where('status','C')->get(),
+            'pending' => PurchaseOrderHelper::getPurchaseOrders('F'),
+            'approved' => PurchaseOrderHelper::getPurchaseOrders('A'),
+            'cancelled' => PurchaseOrderHelper::getPurchaseOrders('C'),
             'supplier' => [Supplier::all()->pluck('address','supplier_id')],
             'users' => [User::all()->pluck('name','id')]
         ])
@@ -202,8 +205,8 @@ class PurchaseOrderController extends Controller
                 'users' =>  User::pluck('name','id')->toArray()
             ];
             //dd($data);
-        $pdf = \PDF::loadView('pdf.po-pdf',$data);
-        return $pdf->download($po[0]['po_reference'].'.pdf');
-       // return view('pdf.po-pdf',$data);
+         $pdf = \PDF::loadView('pdf.po-pdf',$data);
+         return $pdf->download($po[0]['po_reference'].'.pdf');
+      return view('pdf.po-pdf',$data);
     }
 }

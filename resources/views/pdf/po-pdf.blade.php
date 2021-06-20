@@ -7,6 +7,11 @@
     <title>Document</title>
 </head>
 <style>
+
+    body{
+        margin: 0;
+        padding: 0;
+    }
   .center {
   margin: auto;
   /* width: 50%; */
@@ -56,14 +61,57 @@ td, th {
     padding-bottom: 0;
     margin:0;
 }
+
+.watermark {
+    position: absolute;
+    opacity: 0.25;
+    font-size: 7rem;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+    left:0;
+    right:-150px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: rotate(-12deg);
+}
+
+
+p#address{
+    position: absolute;
+    padding-right: 23rem;
+    /* border-bottom: 1px solid black; */
+}
+
+p#supplier {
+    position: absolute;
+    padding-right: 20rem;
+    /* border-bottom: 1px solid black; */
+}
+
+b#po-field {
+    padding-left: 30rem;
+      border-bottom: 1px solid black; 
+}
+
+
+
+b#date-field {
+    padding-left: 30rem;
+      border-bottom: 1px solid black; 
+}
 </style>
 
 
 @php
 $supplier = $supplier[$po_header['supplier_id']]['supplier'];
-$requested_by = $users[$po_header['requested_by']];
-$canvassed_by = $users[$po_header['canvassed_by']];
+$requested_by = $po_header['requested_by'];
+$canvassed_by = $po_header['canvassed_by'];
 $approved_by = $po_header['approved_by'] ? $users[$po_header['approved_by']] : '' ;
+$total_amount = 0;
+foreach($po_detail as $detail){
+    $total_amount = $total_amount + ($detail['quantity'] * $detail['per_unit']);
+}
 @endphp
 
 <body>
@@ -72,13 +120,18 @@ $approved_by = $po_header['approved_by'] ? $users[$po_header['approved_by']] : '
         <p class="text-wrapper text-small">Deka Bldg. Blk. 2 lot 20 Greenplains, Alijis, Bacolod City, Negros Occidental</p>
         <h3 class="text-wrapper">Purchased Order</h3 >
         <div id="info-one" >
-            <b>Supplier:</b>&nbsp;&nbsp;<p id="supplier" class="pad-right underline unpad" style="display:inline-block">{{$supplier}}</p>
-            <b>P.O.#:</b>&nbsp;&nbsp;<p id="po-number" class="underline unpad" style="display:inline-block">{{$po_header['po_number']}}</p>
+            <b id="supplier-field">Supplier:</b>&nbsp;&nbsp;<p id="supplier" class="unpad" style="display:inline-block">{{$supplier}}</p>
+            <b id="po-field">P.O.#:</b>&nbsp;&nbsp;<p id="po-number" class="underline unpad" style="display:inline-block">{{$po_header['po_number']}}</p>
         </div>
         <div id="info-two" >
-            <b>Address:</b>&nbsp;&nbsp;<p id="supplier" class="pad-right underline unpad" style="display:inline-block">{{$po_header['supplier_address']}}</p>
-            <b>Date:</b>&nbsp;&nbsp;<p id="po-number" class="underline unpad" style="display:inline-block">{{$po_header['date']}}</p>
+            <b id="address-field">Address:</b>&nbsp;&nbsp;<p id="address" class="unpad" style="display:inline-block">{{$po_header['supplier_address']}}</p>
+            <b id="date-field">Date:</b>&nbsp;&nbsp;<p id="date" class="underline unpad" style="display:inline-block">{{$po_header['date']}}</p>
         </div>
+        @if($po_header['status'] == 'A')
+        <div class="watermark">APPROVED</div>
+        @elseif($po_header['status'] == 'C')
+        <div class="watermark" style="color:red;">CANCELLED</div>
+        @endif
         <div id="asdasd" style="clear: both; margin-top:1rem;">
             <table>
                 <tr>
@@ -98,7 +151,7 @@ $approved_by = $po_header['approved_by'] ? $users[$po_header['approved_by']] : '
                     <td>{{$detail['brand']}}</td>
                     <td>{{$detail['model']}}</td>
                     <td>{{$detail['per_unit']}}</td>
-                    <td>{{$detail['price']}}</td>
+                    <td>{{$detail['quantity'] * $detail['per_unit']}}</td>
                 </tr>
                 @endforeach
                 <tr>
@@ -117,7 +170,7 @@ $approved_by = $po_header['approved_by'] ? $users[$po_header['approved_by']] : '
                     <td></td>
                     <td></td>
                     <td  style="text-align: right !important"><b>Grand Total:</b></td>
-                    <td>{{$po_header['total_amount']}}</td>
+                    <td>{{$total_amount}}</td>
                 </tr>
                 @if($po_header['payment_type'] == 'H')
                     <tr>
@@ -159,6 +212,7 @@ $approved_by = $po_header['approved_by'] ? $users[$po_header['approved_by']] : '
                     <th colspan="2"> Manager/Authorized Representative </td>
                 </tr>
             </table>
+       
               
         </div>
     </div>

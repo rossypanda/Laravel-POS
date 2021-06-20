@@ -34,35 +34,40 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 //     return view('home');
 // });
 
-// Route::get('/welcome', [WelcomeController::class, 'index']);
-Route::resource('poNumber', 'PoNumberController');
-Route::resource('purchaseOrder', 'PurchaseOrderController');
-Route::resource('poReport', 'PoReportController');
-Route::resource('supplier', 'SupplierController');
-Route::resource('permission', 'PermissionController');
-Route::resource('role', 'RoleController');
-Route::resource('user', 'UserController');
-Route::resource('reset','ResetController');
-// Route::resource('user_register', 'UserController');
-Route::get('fetch/supplier','SupplierController@fetchSupplierData');
-Route::get('fetch/poNumber','PONumberController@fetchPONumberData');
-Route::get('fetch/purchaseOrder','PurchaseOrderController@fetchPurchaseOrderData');
-Route::get('fetch/purchase_order/{id}','PurchaseOrderController@fetchPOFullDetail');
-Route::get('fetch/po_dropdown','PurchaseOrderController@fetchPurchaseOrderDropdownOptions');
-Route::get('fetch/role_option','UserController@fetchRoleOptions');
-Route::get('create/purchase_order','PurchaseOrderController@createPO');
-Route::get('fetch/pdf/{id}','PurchaseOrderController@generatePdf');
-Route::get('fetch/user','UserController@fetchUserData');
-Route::get('fetch/role','RoleController@fetchRoleData');
-Route::get('fetch/permission','PermissionController@fetchPermissionData');
-
 Auth::routes();
+Route::middleware(['web'])->group(function () {
+        // Route::get('/welcome', [WelcomeController::class, 'index']);
+    Route::resource('poNumber', 'PoNumberController');
+    Route::resource('purchaseOrder', 'PurchaseOrderController');
+    Route::resource('poReport', 'PoReportController');
+    Route::resource('supplier', 'SupplierController');
+    Route::resource('permission', 'PermissionController');
+    Route::resource('role', 'RoleController');
+    Route::resource('user', 'UserController');
+    Route::resource('reset','ResetController');
+    // Route::resource('user_register', 'UserController');
+    Route::get('fetch/supplier','SupplierController@fetchSupplierData');
+    Route::get('fetch/poNumber','PONumberController@fetchPONumberData');
+    Route::get('fetch/purchaseOrder','PurchaseOrderController@fetchPurchaseOrderData');
+    Route::get('fetch/purchase_order/{id}','PurchaseOrderController@fetchPOFullDetail');
+    Route::get('fetch/po_dropdown','PurchaseOrderController@fetchPurchaseOrderDropdownOptions');
+    Route::get('fetch/role_option','UserController@fetchRoleOptions');
+    Route::get('create/purchase_order','PurchaseOrderController@createPO');
+    Route::get('fetch/pdf/{id}','PurchaseOrderController@generatePdf');
+    Route::get('fetch/user','UserController@fetchUserData');
+    Route::get('fetch/role','RoleController@fetchRoleData');
+    Route::get('fetch/permission','PermissionController@fetchPermissionData');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::view('/user_register', 'user.create-user');
 
 
-Route::get('call/reset','ResetController@reset');
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+    Route::view('/user_register', 'user.create-user');
+
+
+    Route::get('call/reset','ResetController@reset');
+
+    //
+});
 
 

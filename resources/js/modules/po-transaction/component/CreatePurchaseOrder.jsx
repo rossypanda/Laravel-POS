@@ -231,22 +231,12 @@ function CreatePurchaseOrder() {
                             <Form.Row>
                                 <Form.Group as={Col} controlId="requested_by">
                                     <Form.Label>Requested By</Form.Label>
-                                    <Form.Control size="sm" as="select" {...register("requested_by",{required:true})} isInvalid={errors.requested_by} >
-                                        <option value=''> -- Requested By --</option>
-                                        {users.map((data,index) => (
-                                             <option key={index} value={data.id}>{data.name}</option>
-                                        ))}
-                                    </Form.Control>
+                                    <Form.Control size="sm" placeholder="Requested By" {...register("requested_by",{required:true})} isInvalid={errors.requested_by} />
                                     <Form.Control.Feedback type="invalid">Requested By is required</Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group as={Col} controlId="canvassed_by">
                                     <Form.Label>Canvassed By</Form.Label>
-                                    <Form.Control size="sm" as="select" {...register("canvassed_by",{required:true})} isInvalid={errors.canvassed_by} >
-                                        <option value=''> --  Canvassed By --</option>
-                                        {users.map((data,index) => (
-                                             <option key={index} value={data.id}>{data.name}</option>
-                                        ))}
-                                    </Form.Control>
+                                    <Form.Control size="sm" placeholder="Canvassed By" {...register("canvassed_by",{required:true})} isInvalid={errors.canvassed_by} />
                                     <Form.Control.Feedback type="invalid">Canvassed By is required</Form.Control.Feedback>
                                 </Form.Group>
                             </Form.Row>

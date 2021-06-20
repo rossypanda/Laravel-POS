@@ -16,10 +16,16 @@ function PoNumberModal(props) {
            data
         })
         .then((response) => {
-            console.log(response);
+            if(response.data){
             setAlert(  <Alert  variant="success">
              Succesfully Added
             </Alert>);
+            props.fetchData();
+            }else{
+              setAlert(  <Alert  variant="danger">
+              There is a current open PO
+             </Alert>);
+            }
         })
         .catch((err) => {
             console.log(err);
@@ -41,26 +47,15 @@ function PoNumberModal(props) {
           {alert}
         <Form>
             <Form.Row>
-                <Form.Group as={Col} controlId="invoice-type">
-                    <Form.Label>Invoice Type</Form.Label>
-                    <Form.Control size="sm" as="select" {...register("invoiceType",{required:true})} isInvalid={errors.invoiceType} >
-                        <option value=''>Select Type</option>
-                        <option value='C'>Cash</option>
-                        <option value='H'>Check</option>
-                    </Form.Control>
-                    <Form.Control.Feedback type="invalid">Invoice type is required</Form.Control.Feedback>
-                </Form.Group>
-            </Form.Row> 
-            <Form.Row>
                 <Form.Group as={Col} controlId="start-range">
                     <Form.Label>Start Range</Form.Label>
-                    <Form.Control type="number" {...register("startRange",{required:true})} isInvalid={errors.startRange}/>
+                    <Form.Control type="number" {...register("startRange",{required:true})} isInvalid={errors.startRange} value={props.range}/>
                     <Form.Control.Feedback type="invalid">Start range is required</Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group as={Col} controlId="end-range">
                     <Form.Label>End Range</Form.Label>
-                    <Form.Control type="number" {...register("endRange",{required:true})} isInvalid={errors.endRange}/>
-                    <Form.Control.Feedback type="invalid">End range is required</Form.Control.Feedback>
+                    <Form.Control type="number" {...register("endRange",{required:true,min:Number(props.range) + 1})} isInvalid={errors.endRange}/>
+                    <Form.Control.Feedback type="invalid">End range is required / Should be greater than start range</Form.Control.Feedback>
                 </Form.Group>
             </Form.Row> 
         </Form>

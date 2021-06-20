@@ -39,7 +39,8 @@ class PurchaseOrder extends Model
         'bank',
         'contact_person',
         'terms',
-        'total_amount',
+        'description',
+        'remarks',
         'status',
         'encoded_by'
      ];

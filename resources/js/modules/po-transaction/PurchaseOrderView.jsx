@@ -33,7 +33,15 @@ function PurchaseOrderView(props) {
          .catch((err) => {
              alert(err);
          });
-     }
+    }
+
+    const calculateTotalAmount = () => {
+        let total = 0;
+        {detail.map((data,index) => (
+           total= total + (data.quantity * data.per_unit)
+        ))}
+        return total;
+    }
 
      useEffect(() => {
         fetchPoData();
@@ -102,7 +110,7 @@ function PurchaseOrderView(props) {
                                 ))}
                                 <Form.Row xs={1} className="flex-row-reverse">
                                     <div style={{marginRight:'8rem'}} id="amount-span">
-                                        <Badge style={{borderRadius:'0',padding:'0.5rem',fontSize:'0.9em'}} variant="info">Total: {header.total_amount}</Badge>
+                                        <Badge style={{borderRadius:'0',padding:'0.5rem',fontSize:'0.9em'}} variant="info">Total: {calculateTotalAmount()} </Badge>
                                     </div>
                                 </Form.Row>
                              </Container>
@@ -148,20 +156,12 @@ function PurchaseOrderView(props) {
                             <Form.Row>
                                 <Form.Group as={Col} controlId="requested_by">
                                     <Form.Label>Requested By</Form.Label>
-                                    <Form.Control size="sm" as="select" value={header.requested_by} readOnly >
-                                        <option value=''> -- Requested By --</option>
-                                        {users.map((data,index) => (
-                                             <option key={index} value={data.id}>{data.name}</option>
-                                        ))}
+                                    <Form.Control size="sm" value={header.requested_by} readOnly >
                                     </Form.Control>
                                 </Form.Group>
                                 <Form.Group as={Col} controlId="canvassed_by">
                                     <Form.Label>Canvassed By</Form.Label>
-                                    <Form.Control size="sm" as="select" value={header.canvassed_by} readOnly >
-                                        <option value=''> --  Canvassed By --</option>
-                                        {users.map((data,index) => (
-                                             <option key={index} value={data.id}>{data.name}</option>
-                                        ))}
+                                    <Form.Control size="sm" value={header.canvassed_by} readOnly >
                                     </Form.Control>
                                 </Form.Group>
                             </Form.Row>

@@ -18,7 +18,7 @@ class PurchaseOrderHelper
      * @param  mixed $payment_type
      * @return void
      */
-    public static function checkAvailablePOInvoice($payment_type){
+    public static function checkAvailablePOInvoice(){
        
          $data = DB::table('tbl_po_invoice')
             ->whereColumn('current_range','<','end_range')
@@ -70,7 +70,6 @@ class PurchaseOrderHelper
                 //"description" => $item['description'],
                 "item" => $item['description'],
                 "per_unit" => $item['per_unit'],
-                "price" => $item['quantity'] * $item['per_unit'] ,
                 "brand" => $item['brand'],
                 "model" => $item['model'],
                 'encoded_by' => Auth::id()
@@ -117,4 +116,43 @@ class PurchaseOrderHelper
         }
         return $supplier_array;
    }
+
+   /**
+     * Get the latest range
+     *
+     * 
+     * @return Array 
+     */
+    public static function getLastEndRange(){
+        $range = DB::table('tbl_po_invoice')
+        ->select('end_range')
+        ->orderBy('po_invoice_id','desc')
+        ->limit(1)
+        ->get()
+        ->toArray();
+
+        return $range < 0 ? 1 : $range[0]->end_range;
+   }
+
+   
+   /**
+     * Get Purchase Orders
+     *
+     * 
+     * @return Array 
+     */
+   public static function getPurchaseOrders($status){
+      return DB::table('tbl_po_header AS a')
+       ->selectRaw("a.*,IF(a.payment_type = 'C','Cash','Check') AS `type` ,b.supplier,c.name AS approver,d.name AS encoder")
+       ->leftJoin('tbl_supplier AS b','a.supplier_id','=','b.supplier_id')
+       ->leftJoin('users AS c','a.approved_by','=','c.id')
+       ->leftJoin('users AS d','a.encoded_by','=','d.id')
+       ->where('a.status',$status)
+      // ->groupBy('a.po_number')
+       ->orderBy('a.po_header_id','asc')
+       ->get()
+       ->toArray();
+
+   }
+
 }

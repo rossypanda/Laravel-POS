@@ -24,7 +24,7 @@ class CreateTblPoDetailHist extends Migration
             $table->string('brand',50)->nullable();
             $table->string('model',50)->nullable();
             $table->decimal('per_unit', 8, 2);
-            $table->decimal('price', 8, 2);
+            $table->integer('status')->default(0);
             $table->integer('encoded_by')->nullable();
         });
     }
