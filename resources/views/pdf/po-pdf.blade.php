@@ -127,8 +127,11 @@ foreach($po_detail as $detail){
             <b id="address-field">Address:</b>&nbsp;&nbsp;<p id="address" class="unpad" style="display:inline-block">{{$po_header['supplier_address']}}</p>
             <b id="date-field">Date:</b>&nbsp;&nbsp;<p id="date" class="underline unpad" style="display:inline-block">{{$po_header['date']}}</p>
         </div>
+        @if($po_header['status'] == 'A')
         <div class="watermark">APPROVED</div>
-        
+        @elseif($po_header['status'] == 'C')
+        <div class="watermark" style="color:red;">CANCELLED</div>
+        @endif
         <div id="asdasd" style="clear: both; margin-top:1rem;">
             <table>
                 <tr>
