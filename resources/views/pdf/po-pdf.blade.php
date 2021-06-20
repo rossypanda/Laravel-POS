@@ -110,7 +110,9 @@ $canvassed_by = $po_header['canvassed_by'];
 $approved_by = $po_header['approved_by'] ? $users[$po_header['approved_by']] : '' ;
 $total_amount = 0;
 foreach($po_detail as $detail){
-    $total_amount = $total_amount + ($detail['quantity'] * $detail['per_unit']);
+    if($detail['status'] == 0){
+        $total_amount = $total_amount + ($detail['quantity'] * $detail['per_unit']);
+    }
 }
 @endphp
 
@@ -145,13 +147,13 @@ foreach($po_detail as $detail){
                 </tr>
                 @foreach ($po_detail as $detail)
                 <tr>
-                    <td>{{$detail['quantity']}}</td>
-                    <td>{{$detail['unit']}}</td>
-                    <td>{{$detail['item']}}</td>
-                    <td>{{$detail['brand']}}</td>
-                    <td>{{$detail['model']}}</td>
-                    <td>{{$detail['per_unit']}}</td>
-                    <td>{{$detail['quantity'] * $detail['per_unit']}}</td>
+                    <td style={{$detail['status'] != 0 ? 'color:red' : 'color:black'}}>{{$detail['quantity']}}</td>
+                    <td style={{$detail['status'] != 0 ? 'color:red' : 'color:black'}}>{{$detail['unit']}}</td>
+                    <td style={{$detail['status'] != 0 ? 'color:red' : 'color:black'}}>{{$detail['item']}}</td>
+                    <td style={{$detail['status'] != 0 ? 'color:red' : 'color:black'}}>{{$detail['brand']}}</td>
+                    <td style={{$detail['status'] != 0 ? 'color:red' : 'color:black'}}>{{$detail['model']}}</td>
+                    <td style={{$detail['status'] != 0 ? 'color:red' : 'color:black'}}>{{$detail['per_unit']}}</td>
+                    <td style={{$detail['status'] != 0 ? 'color:red' : 'color:black'}}>{{$detail['quantity'] * $detail['per_unit']}}</td>
                 </tr>
                 @endforeach
                 <tr>
