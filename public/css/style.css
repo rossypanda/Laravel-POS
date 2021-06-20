@@ -25241,4 +25241,8 @@ body.dark #styleSelector .form-control {
 .legend-wrapper {
    width: auto !important;
 }
+
+.cancelled {
+    border-color: red !important;
+}
 /*# sourceMappingURL=style.css.map */

@@ -13616,11 +13616,11 @@ function PurchaseOrderView(props) {
 
   var calculateTotalAmount = function calculateTotalAmount() {
     var total = 0;
-    {
-      detail.map(function (data, index) {
-        return total = total + data.quantity * data.per_unit;
-      });
-    }
+    detail.map(function (data, index) {
+      if (data.status == 0) {
+        total = total + data.quantity * data.per_unit;
+      }
+    });
     return total;
   };
 
@@ -13718,6 +13718,9 @@ function PurchaseOrderView(props) {
                       as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                       xs: 1,
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
+                        style: {
+                          borderColor: data.status != 0 ? "red" : "e9ecef"
+                        },
                         type: "number",
                         placeholder: "QTY",
                         value: data.quantity,
@@ -13727,6 +13730,9 @@ function PurchaseOrderView(props) {
                       as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                       xs: 1,
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
+                        style: {
+                          borderColor: data.status != 0 ? "red" : "e9ecef"
+                        },
                         placeholder: "Unit",
                         value: data.unit,
                         readOnly: true
@@ -13735,6 +13741,9 @@ function PurchaseOrderView(props) {
                       as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                       xs: 3,
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
+                        style: {
+                          borderColor: data.status != 0 ? "red" : "e9ecef"
+                        },
                         placeholder: "Item Desc",
                         value: data.item,
                         readOnly: true
@@ -13743,6 +13752,9 @@ function PurchaseOrderView(props) {
                       as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                       xs: 2,
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
+                        style: {
+                          borderColor: data.status != 0 ? "red" : "e9ecef"
+                        },
                         placeholder: "Brand",
                         value: data.brand,
                         readOnly: true
@@ -13751,6 +13763,9 @@ function PurchaseOrderView(props) {
                       as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                       xs: 2,
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
+                        style: {
+                          borderColor: data.status != 0 ? "red" : "e9ecef"
+                        },
                         placeholder: "Model",
                         value: data.model,
                         readOnly: true
@@ -13759,6 +13774,9 @@ function PurchaseOrderView(props) {
                       as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                       xs: 1,
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
+                        style: {
+                          borderColor: data.status != 0 ? "red" : "e9ecef"
+                        },
                         type: "number",
                         placeholder: "Per Unit",
                         value: data.per_unit,
@@ -13768,6 +13786,9 @@ function PurchaseOrderView(props) {
                       as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                       xs: 1,
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
+                        style: {
+                          borderColor: data.status != 0 ? "red" : "e9ecef"
+                        },
                         type: "number",
                         placeholder: "Price",
                         value: data.quantity * data.per_unit,

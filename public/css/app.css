@@ -10005,3 +10005,7 @@ h3 {
 .icon-space {
   margin-right: 0.3em;
 }
+
+.cancelled {
+  border-color: red;
+}

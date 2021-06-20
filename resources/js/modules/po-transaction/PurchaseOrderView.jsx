@@ -37,9 +37,11 @@ function PurchaseOrderView(props) {
 
     const calculateTotalAmount = () => {
         let total = 0;
-        {detail.map((data,index) => (
-           total= total + (data.quantity * data.per_unit)
-        ))}
+        detail.map((data,index) => {
+            if(data.status == 0){
+                total= total + (data.quantity * data.per_unit)
+            }
+        })
         return total;
     }
 
@@ -86,25 +88,25 @@ function PurchaseOrderView(props) {
                                 {detail.map((data,index) => (
                                     <Form.Row key={index}>
                                         <Form.Group as={Col} xs={1} >
-                                            <Form.Control type="number"  placeholder="QTY" value={data.quantity} readOnly/>
+                                            <Form.Control style={{borderColor: data.status != 0 ? "red" : "e9ecef"}} type="number"  placeholder="QTY" value={data.quantity} readOnly/>
                                         </Form.Group>
                                         <Form.Group as={Col} xs={1} >
-                                            <Form.Control  placeholder="Unit" value={data.unit} readOnly/>
+                                            <Form.Control  style={{borderColor: data.status != 0 ? "red" : "e9ecef"}} placeholder="Unit" value={data.unit} readOnly/>
                                         </Form.Group>
                                         <Form.Group as={Col} xs={3}>
-                                            <Form.Control placeholder="Item Desc" value={data.item} readOnly/>
+                                            <Form.Control  style={{borderColor: data.status != 0 ? "red" : "e9ecef"}} placeholder="Item Desc" value={data.item} readOnly/>
                                         </Form.Group>
                                         <Form.Group as={Col} xs={2} >
-                                            <Form.Control   placeholder="Brand" value={data.brand} readOnly/>
+                                            <Form.Control  style={{borderColor: data.status != 0 ? "red" : "e9ecef"}}   placeholder="Brand" value={data.brand} readOnly/>
                                         </Form.Group>
                                         <Form.Group as={Col} xs={2} >
-                                             <Form.Control   placeholder="Model" value={data.model} readOnly/>
+                                             <Form.Control  style={{borderColor: data.status != 0 ? "red" : "e9ecef"}}   placeholder="Model" value={data.model} readOnly/>
                                         </Form.Group >
                                         <Form.Group as={Col} xs={1} >
-                                            <Form.Control type="number"  placeholder="Per Unit"  value={data.per_unit} readOnly/>
+                                            <Form.Control  style={{borderColor: data.status != 0 ? "red" : "e9ecef"}} type="number"  placeholder="Per Unit"  value={data.per_unit} readOnly/>
                                         </Form.Group>
                                         <Form.Group as={Col} xs={1} >
-                                            <Form.Control type="number"  placeholder="Price"  value={data.quantity * data.per_unit} readOnly/>
+                                            <Form.Control  style={{borderColor: data.status != 0 ? "red" : "e9ecef"}} type="number"  placeholder="Price"  value={data.quantity * data.per_unit} readOnly/>
                                         </Form.Group>
                                     </Form.Row>
                                 ))}
