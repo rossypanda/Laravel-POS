@@ -13,11 +13,13 @@
                             <span class="pcoded-mtext">Supplier</span>
                         </a>
                     </li>
+                    @role('admin')
                     <li class="">
                         <a href="/poNumber">
                             <span class="pcoded-mtext">PO Number</span>
                         </a>
                     </li>
+                    @endrole
                 </ul>
             </li>
             <li class="pcoded-hasmenu">

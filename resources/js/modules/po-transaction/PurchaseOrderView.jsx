@@ -16,7 +16,7 @@ function PurchaseOrderView(props) {
     const [users,setUsers] = useState([]);
     const PO_STATUS = {'F' :'Pending','A':'Approved','C': 'Cancelled'};
     const VARIANT = {'F' :'warning','A':'success','C': 'danger'};
-    const PAYMENT_TYPE = {'C' :'Cash','H':'Check'};
+    const PAYMENT_TYPE = {'C' :'Cash','H':'Check','A' : 'Cash/Check'};
     const fetchPoData =  async () => {
         await axios
          .get(`/fetch/purchase_order/${props.tsid}}`, {
@@ -74,6 +74,7 @@ function PurchaseOrderView(props) {
                                         <option value=''>Select Payment Type</option>
                                         <option value='C'>Cash</option>
                                         <option  value='H'>Check</option>
+                                        <option  value='A'>Cash/Check</option>
                                     </Form.Control>
                                 </Form.Group>
                             </Form.Row>
@@ -146,6 +147,44 @@ function PurchaseOrderView(props) {
                                         </Form.Row>
                                     ))}
                                 </fieldset>
+                               )
+                            }
+
+                            { 
+                               header.payment_type === 'A' && (
+                                <div>
+                                    <Form.Row>
+                                    <Form.Group as={Col} controlId="project_name">
+                                        <Form.Label>Money Received</Form.Label>
+                                        <Form.Control  placeholder="Money Received" value={header.money_received} readOnly />
+                                    </Form.Group>
+                                    </Form.Row>
+                                    <fieldset className="fieldset-wrapper" >
+                                        <legend className="legend-wrapper"><h6>Terms</h6></legend>
+                                        {terms.map((data,index) => (
+                                            <Form.Row key={index}>
+                                                <Form.Group as={Col} >
+                                                    <Form.Control  placeholder="Terms" value={data.terms} readOnly />
+                                                </Form.Group>
+                                                <Form.Group as={Col} xs={3} >
+                                                    <Form.Control  placeholder="Description" value={data.terms_description} readOnly />
+                                                </Form.Group>
+                                                <Form.Group as={Col} >
+                                                    <Form.Control   placeholder="Due" value={data.terms_due} readOnly />
+                                                </Form.Group>
+                                                <Form.Group as={Col} >
+                                                    <Form.Control  placeholder="Type of Bank"  value={data.terms_bank} readOnly />
+                                                </Form.Group>
+                                                <Form.Group as={Col} >
+                                                    <Form.Control  placeholder="%" value={data.terms_percent} readOnly />
+                                                </Form.Group>
+                                                <Form.Group as={Col} >
+                                                    <Form.Control  placeholder="Amount" value={data.terms_amount} readOnly />
+                                                </Form.Group>
+                                            </Form.Row>
+                                        ))}
+                                    </fieldset>
+                                </div>
                                )
                             }
  

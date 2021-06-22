@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Supplier;
+use App\Models\User;
 
 class SupplierController extends Controller
 {
@@ -122,6 +123,9 @@ class SupplierController extends Controller
      */
     public function fetchSupplierData()
     {
-         return Supplier::all()->toJson();
+         return [
+             'supplier' => Supplier::orderBy('supplier')->get()->toArray(),
+             'users' => User::all()->pluck('name','id')
+         ];
     }
 }

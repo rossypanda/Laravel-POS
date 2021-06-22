@@ -42,6 +42,7 @@ class PurchaseOrderHist extends Model
          'description',
          'remarks',
          'status',
+         'money_received',
          'encoded_by'
      ];
 }

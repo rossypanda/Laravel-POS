@@ -13580,7 +13580,8 @@ function PurchaseOrderView(props) {
   };
   var PAYMENT_TYPE = {
     'C': 'Cash',
-    'H': 'Check'
+    'H': 'Check',
+    'A': 'Cash/Check'
   };
 
   var fetchPoData = /*#__PURE__*/function () {
@@ -13690,6 +13691,9 @@ function PurchaseOrderView(props) {
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
                     value: "H",
                     children: "Check"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                    value: "A",
+                    children: "Cash/Check"
                   })]
                 })]
               })]
@@ -13870,6 +13874,75 @@ function PurchaseOrderView(props) {
                     })
                   })]
                 }, index);
+              })]
+            }), header.payment_type === 'A' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                  as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
+                  controlId: "project_name",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
+                    children: "Money Received"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
+                    placeholder: "Money Received",
+                    value: header.money_received,
+                    readOnly: true
+                  })]
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("fieldset", {
+                className: "fieldset-wrapper",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("legend", {
+                  className: "legend-wrapper",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h6", {
+                    children: "Terms"
+                  })
+                }), terms.map(function (data, index) {
+                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
+                        placeholder: "Terms",
+                        value: data.terms,
+                        readOnly: true
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
+                      xs: 3,
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
+                        placeholder: "Description",
+                        value: data.terms_description,
+                        readOnly: true
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
+                        placeholder: "Due",
+                        value: data.terms_due,
+                        readOnly: true
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
+                        placeholder: "Type of Bank",
+                        value: data.terms_bank,
+                        readOnly: true
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
+                        placeholder: "%",
+                        value: data.terms_percent,
+                        readOnly: true
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                      as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
+                        placeholder: "Amount",
+                        value: data.terms_amount,
+                        readOnly: true
+                      })
+                    })]
+                  }, index);
+                })]
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
@@ -14119,7 +14192,7 @@ function CreatePurchaseOrder() {
     fetchPODropdown();
   }, []);
 
-  var onSubmit = function onSubmit(data) {
+  var onSubmit = function onSubmit(data, e) {
     axios.post('/purchaseOrder', {
       data: data
     }).then(function (response) {
@@ -14135,6 +14208,8 @@ function CreatePurchaseOrder() {
           children: "There are currently no open PO number"
         }));
       } else {
+        reset({});
+        appendItem({});
         setCustomAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)((react_bootstrap_sweetalert__WEBPACK_IMPORTED_MODULE_8___default()), {
           success: true,
           title: "PO# " + response.data,
@@ -14158,8 +14233,10 @@ function CreatePurchaseOrder() {
       defaultValue: 0
     });
 
-    for (var x = 0; x < value.length; x++) {
-      totalPrice = totalPrice + Number(value[x].quantity) * Number(value[x].per_unit);
+    if (typeof value !== 'undefined') {
+      for (var x = 0; x < value.length; x++) {
+        totalPrice = totalPrice + Number(value[x].quantity) * Number(value[x].per_unit);
+      }
     }
 
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
@@ -14189,7 +14266,11 @@ function CreatePurchaseOrder() {
       name: "items[".concat(index, "]"),
       defaultValue: 0
     });
-    unitPrice = Number(value.quantity) * Number(value.per_unit);
+
+    if (typeof value !== 'undefined') {
+      unitPrice = Number(value.quantity) * Number(value.per_unit);
+    }
+
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
       as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
       xs: 1,
@@ -14224,7 +14305,7 @@ function CreatePurchaseOrder() {
                 as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
                 controlId: "supplier",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
-                  children: "Supplier"
+                  children: "Supplier*"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
                   size: "sm",
                   as: "select"
@@ -14252,7 +14333,7 @@ function CreatePurchaseOrder() {
                 as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
                 controlId: "payment_type",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
-                  children: "Payment Type"
+                  children: "Payment Type*"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
                   size: "sm",
                   as: "select"
@@ -14269,6 +14350,9 @@ function CreatePurchaseOrder() {
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
                     value: "H",
                     children: "Check"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                    value: "A",
+                    children: "Cash/Check"
                   })]
                 })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
                   type: "invalid",
@@ -14278,7 +14362,7 @@ function CreatePurchaseOrder() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
               controlId: "supplier_address",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
-                children: "Address"
+                children: "Address*"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
                 placeholder: "Supplier Address"
               }, register("address", {
@@ -14394,12 +14478,50 @@ function CreatePurchaseOrder() {
                   termsAmount: _objectSpread({}, register("terms[".concat(index, "].terms_amount")))
                 }, id);
               })]
+            }), watchPaymentType === 'A' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+                  as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+                  controlId: "money_received",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                    children: "Money Received*"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
+                    type: "number",
+                    placeholder: "Money Received"
+                  }, register("money_received", {
+                    required: true
+                  })), {}, {
+                    isInvalid: errors.money_received
+                  })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
+                    type: "invalid",
+                    children: "Money received is required"
+                  })]
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("fieldset", {
+                className: "fieldset-wrapper",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("legend", {
+                  className: "legend-wrapper",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h6", {
+                    children: "Terms"
+                  })
+                }), termFields.map(function (_ref6, index) {
+                  var id = _ref6.id;
+                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_Terms__WEBPACK_IMPORTED_MODULE_7__.default, {
+                    terms: _objectSpread({}, register("terms[".concat(index, "].terms"))),
+                    termsDescription: _objectSpread({}, register("terms[".concat(index, "].terms_description"))),
+                    termsDue: _objectSpread({}, register("terms[".concat(index, "].terms_due"))),
+                    termsBank: _objectSpread({}, register("terms[".concat(index, "].terms_bank"))),
+                    termsPercent: _objectSpread({}, register("terms[".concat(index, "].terms_percent"))),
+                    termsAmount: _objectSpread({}, register("terms[".concat(index, "].terms_amount")))
+                  }, id);
+                })]
+              })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
                 as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
                 controlId: "project_name",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
-                  children: "Project Name"
+                  children: "Project Name*"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
                   placeholder: "Project Name"
                 }, register("project_name", {
@@ -14416,7 +14538,7 @@ function CreatePurchaseOrder() {
                 as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
                 controlId: "requested_by",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
-                  children: "Requested By"
+                  children: "Requested By*"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
                   size: "sm",
                   placeholder: "Requested By"
@@ -14432,7 +14554,7 @@ function CreatePurchaseOrder() {
                 as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
                 controlId: "canvassed_by",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
-                  children: "Canvassed By"
+                  children: "Canvassed By*"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
                   size: "sm",
                   placeholder: "Canvassed By"
@@ -14450,7 +14572,7 @@ function CreatePurchaseOrder() {
                 as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
                 controlId: "project_name",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
-                  children: "Description"
+                  children: "Description*"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
                   placeholder: "Description"
                 }, register("description", {
@@ -14852,7 +14974,8 @@ function PurchaseOrderTabs(props) {
   };
   var PAYMENT_TYPE = {
     'C': 'Cash',
-    'H': 'Check'
+    'H': 'Check',
+    'A': 'Cash/Check'
   };
   var headerStyle = {
     display: "flex",
@@ -15099,7 +15222,7 @@ function Terms(props) {
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default.Group, {
         as: react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default,
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default.Control, _objectSpread(_objectSpread({}, props.termsDue), {}, {
-          placeholder: "Due"
+          placeholder: "Due Date"
         }))
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default.Group, {
         as: react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default,
@@ -15734,218 +15857,53 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-function MyVerticallyCenteredModal(props) {
+function Supplier() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      modalShow = _useState2[0],
+      setModalShow = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(true),
+      _useState4 = _slicedToArray(_useState3, 2),
+      hideAddSupplier = _useState4[0],
+      setHideAddSupplier = _useState4[1];
+
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
+      _useState6 = _slicedToArray(_useState5, 2),
+      tableData = _useState6[0],
+      setTableData = _useState6[1];
+
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
+      _useState8 = _slicedToArray(_useState7, 2),
+      hideSupplierTable = _useState8[0],
+      setHideAddSupplierTable = _useState8[1];
+
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null),
+      _useState10 = _slicedToArray(_useState9, 2),
+      customAlert = _useState10[0],
+      setCustomAlert = _useState10[1];
+
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
+      _useState12 = _slicedToArray(_useState11, 2),
+      tags = _useState12[0],
+      setTags = _useState12[1];
+
+  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(''),
+      _useState14 = _slicedToArray(_useState13, 2),
+      filter = _useState14[0],
+      setFilter = _useState14[1];
+
+  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
+      _useState16 = _slicedToArray(_useState15, 2),
+      users = _useState16[0],
+      setUsers = _useState16[1];
+
   var _useForm = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_5__.useForm)(),
       register = _useForm.register,
       handleSubmit = _useForm.handleSubmit,
       watch = _useForm.watch,
+      reset = _useForm.reset,
       errors = _useForm.formState.errors;
-
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
-      _useState2 = _slicedToArray(_useState, 2),
-      tags = _useState2[0],
-      setTags = _useState2[1];
-
-  var selected = function selected(tags) {
-    return setTags(tags);
-  };
-
-  var updateSupplierData = function updateSupplierData(data) {
-    axios__WEBPACK_IMPORTED_MODULE_6___default().patch("/supplier/1}", {
-      data: data,
-      tags: tags.join()
-    }).then(function () {
-      setAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
-        variant: "success",
-        children: "Data Updated"
-      }));
-      props.method();
-    });
-  };
-
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null),
-      _useState4 = _slicedToArray(_useState3, 2),
-      alert = _useState4[0],
-      setAlert = _useState4[1];
-
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default, _objectSpread(_objectSpread({}, props), {}, {
-    size: "lg",
-    "aria-labelledby": "contained-modal-title-vcenter",
-    centered: true,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default.Header, {
-      closeButton: true,
-      className: "modal-color",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default.Title, {
-        id: "contained-modal-title-vcenter",
-        children: props.title
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default.Body, {
-      children: [alert, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Row, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
-            as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
-            controlId: "supplier-edit",
-            hidden: true,
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
-              children: "Supplier"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread({
-              type: "text",
-              placeholder: "Enter Supplier",
-              value: props.supplierId
-            }, register("supplier-id")))]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
-            as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
-            controlId: "supplier-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
-              children: "Supplier"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread({
-              type: "text",
-              placeholder: "Enter Supplier",
-              defaultValue: props.supplier
-            }, register("supplier-edit")))]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
-            as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
-            controlId: "contact-person-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
-              children: "Contact Person"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread({
-              type: "text",
-              placeholder: "Enter Contact Person",
-              defaultValue: props.contactPerson
-            }, register("contact-person-edit")))]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Row, {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
-            as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
-            controlId: "address-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
-              children: "Address"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread({
-              type: "text",
-              placeholder: "Enter Address",
-              defaultValue: props.address
-            }, register("address-edit")))]
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Row, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
-            as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
-            controlId: "email-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
-              children: "Email"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread({
-              type: "text",
-              placeholder: "Enter Email",
-              defaultValue: props.email
-            }, register("email-edit")))]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
-            as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
-            controlId: "number-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
-              children: "Number"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread({
-              type: "text",
-              placeholder: "Enter Address",
-              defaultValue: props.number
-            }, register("number-edit")))]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Row, {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
-            as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
-            controlId: "fax-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
-              children: "Fax"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread({
-              type: "text",
-              placeholder: "Enter Email",
-              defaultValue: props.fax
-            }, register("fax-edit")))]
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Row, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
-            as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
-            controlId: "date-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
-              children: "Date Added"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, {
-              type: "text",
-              defaultValue: props.date,
-              readOnly: true
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
-            as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
-            controlId: "encoded-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
-              children: "Encoded By"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, {
-              type: "text",
-              defaultValue: props.encoded,
-              readOnly: true
-            })]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Row, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
-            children: "Material Tags"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_TagsInput__WEBPACK_IMPORTED_MODULE_8__.default, {
-            selected: selected,
-            tags: props.tags ? props.tags.split(',') : []
-          })]
-        })]
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default.Footer, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__.default, {
-        variant: "success",
-        size: "sm",
-        onClick: handleSubmit(updateSupplierData),
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_17__.faCheck,
-          className: "icon-space"
-        }), "Save Changes"]
-      })
-    })]
-  }));
-}
-
-function Supplier() {
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
-      _useState6 = _slicedToArray(_useState5, 2),
-      modalShow = _useState6[0],
-      setModalShow = _useState6[1];
-
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(true),
-      _useState8 = _slicedToArray(_useState7, 2),
-      hideAddSupplier = _useState8[0],
-      setHideAddSupplier = _useState8[1];
-
-  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
-      _useState10 = _slicedToArray(_useState9, 2),
-      tableData = _useState10[0],
-      setTableData = _useState10[1];
-
-  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
-      _useState12 = _slicedToArray(_useState11, 2),
-      hideSupplierTable = _useState12[0],
-      setHideAddSupplierTable = _useState12[1];
-
-  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null),
-      _useState14 = _slicedToArray(_useState13, 2),
-      customAlert = _useState14[0],
-      setCustomAlert = _useState14[1];
-
-  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
-      _useState16 = _slicedToArray(_useState15, 2),
-      tags = _useState16[0],
-      setTags = _useState16[1];
-
-  var _useState17 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(''),
-      _useState18 = _slicedToArray(_useState17, 2),
-      filter = _useState18[0],
-      setFilter = _useState18[1];
-
-  var _useForm2 = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_5__.useForm)(),
-      register = _useForm2.register,
-      handleSubmit = _useForm2.handleSubmit,
-      watch = _useForm2.watch,
-      errors = _useForm2.formState.errors;
 
   var selected = function selected(tags) {
     return setTags(tags);
@@ -15958,6 +15916,178 @@ function Supplier() {
     marginBottom: "1rem"
   };
 
+  var MyVerticallyCenteredModal = function MyVerticallyCenteredModal(props) {
+    var _useForm2 = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_5__.useForm)(),
+        register = _useForm2.register,
+        handleSubmit = _useForm2.handleSubmit,
+        watch = _useForm2.watch,
+        errors = _useForm2.formState.errors;
+
+    var _useState17 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
+        _useState18 = _slicedToArray(_useState17, 2),
+        tags = _useState18[0],
+        setTags = _useState18[1];
+
+    var selected = function selected(tags) {
+      return setTags(tags);
+    };
+
+    var updateSupplierData = function updateSupplierData(data) {
+      axios__WEBPACK_IMPORTED_MODULE_6___default().patch("/supplier/1}", {
+        data: data,
+        tags: tags.join()
+      }).then(function () {
+        setAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+          variant: "success",
+          children: "Data Updated"
+        }));
+        fetchSupplier();
+        console.log('refetch');
+      });
+    };
+
+    var _useState19 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null),
+        _useState20 = _slicedToArray(_useState19, 2),
+        alert = _useState20[0],
+        setAlert = _useState20[1];
+
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default, _objectSpread(_objectSpread({}, props), {}, {
+      size: "lg",
+      "aria-labelledby": "contained-modal-title-vcenter",
+      centered: true,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default.Header, {
+        closeButton: true,
+        className: "modal-color",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default.Title, {
+          id: "contained-modal-title-vcenter",
+          children: props.title
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default.Body, {
+        children: [alert, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Row, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
+              as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
+              controlId: "supplier-edit",
+              hidden: true,
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
+                children: "Supplier"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread({
+                type: "text",
+                placeholder: "Enter Supplier",
+                value: props.supplierid
+              }, register("supplier-id")))]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
+              as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
+              controlId: "supplier-edit",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
+                children: "Supplier"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread({
+                type: "text",
+                placeholder: "Enter Supplier",
+                defaultValue: props.supplier
+              }, register("supplier-edit")))]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
+              as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
+              controlId: "contact-person-edit",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
+                children: "Contact Person"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread({
+                type: "text",
+                placeholder: "Enter Contact Person",
+                defaultValue: props.contactperson
+              }, register("contact-person-edit")))]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Row, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
+              as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
+              controlId: "address-edit",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
+                children: "Address"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread({
+                type: "text",
+                placeholder: "Enter Address",
+                defaultValue: props.address
+              }, register("address-edit")))]
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Row, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
+              as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
+              controlId: "email-edit",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
+                children: "Email"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread({
+                type: "text",
+                placeholder: "Enter Email",
+                defaultValue: props.email
+              }, register("email-edit")))]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
+              as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
+              controlId: "number-edit",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
+                children: "Number"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread({
+                type: "text",
+                placeholder: "Enter Address",
+                defaultValue: props.number
+              }, register("number-edit")))]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Row, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
+              as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
+              controlId: "fax-edit",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
+                children: "Fax"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, _objectSpread({
+                type: "text",
+                placeholder: "Enter Email",
+                defaultValue: props.fax
+              }, register("fax-edit")))]
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Row, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
+              as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
+              controlId: "date-edit",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
+                children: "Date Added"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, {
+                type: "text",
+                defaultValue: props.date,
+                readOnly: true
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Group, {
+              as: react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default,
+              controlId: "encoded-edit",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
+                children: "Encoded By"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Control, {
+                type: "text",
+                defaultValue: props.encoded,
+                readOnly: true
+              })]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Row, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default.Label, {
+              children: "Material Tags"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_TagsInput__WEBPACK_IMPORTED_MODULE_8__.default, {
+              selected: selected,
+              tags: props.tags ? props.tags.split(',') : []
+            })]
+          })]
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default.Footer, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__.default, {
+          variant: "success",
+          size: "sm",
+          onClick: handleSubmit(updateSupplierData),
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+            icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_17__.faCheck,
+            className: "icon-space"
+          }), "Save Changes"]
+        })
+      })]
+    }));
+  };
+
   var fetchSupplier = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee() {
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee$(_context) {
@@ -15967,7 +16097,9 @@ function Supplier() {
               _context.next = 2;
               return axios__WEBPACK_IMPORTED_MODULE_6___default().get('/fetch/supplier', {}).then(function (response) {
                 //get the object of supplier data to load to a table
-                setTableData(response.data);
+                console.log(response.data);
+                setTableData(response.data.supplier);
+                setUsers(response.data.users);
               })["catch"](function (err) {
                 console.log(err);
               });
@@ -16007,6 +16139,7 @@ function Supplier() {
         },
         children: "New Supplier Added"
       }));
+      reset();
       fetchSupplier();
     })["catch"](function (err) {
       console.log(err);
@@ -16061,21 +16194,21 @@ function Supplier() {
 
   var showModalSupplierData = function showModalSupplierData(id) {
     var supplierInfo = tableData[id];
+    console.log(supplierInfo);
     setModalShow( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MyVerticallyCenteredModal, {
       show: true,
       title: supplierInfo.supplier,
-      supplierId: supplierInfo.supplier_id,
+      supplierid: supplierInfo.supplier_id,
       supplier: supplierInfo.supplier,
-      contactPerson: supplierInfo.contact_person,
+      contactperson: supplierInfo.contact_person,
       address: supplierInfo.address,
       email: supplierInfo.email,
       number: supplierInfo.contact_no,
       fax: supplierInfo.fax_no,
       bank: supplierInfo.bankaccount_no,
       date: supplierInfo.date_added,
-      encoded: supplierInfo.encoded_by,
+      encoded: users[supplierInfo.encoded_by],
       tags: supplierInfo.tags,
-      method: fetchSupplier,
       onHide: function onHide() {
         return setModalShow(null);
       }
@@ -16085,8 +16218,8 @@ function Supplier() {
   //   }
 
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_helpers_PermissionComponent__WEBPACK_IMPORTED_MODULE_10__.default, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_helpers_PermissionComponent__WEBPACK_IMPORTED_MODULE_10__.default, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
       children: [customAlert, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_18__.default, {
         fluid: true,
         hidden: hideSupplierTable,
@@ -16308,8 +16441,8 @@ function Supplier() {
             })]
           })
         })
-      }), modalShow]
-    })
+      })]
+    }), modalShow]
   });
 }
 

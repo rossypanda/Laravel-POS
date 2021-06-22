@@ -91,14 +91,12 @@ p#supplier {
 
 b#po-field {
     padding-left: 30rem;
-      border-bottom: 1px solid black; 
 }
 
 
 
 b#date-field {
     padding-left: 30rem;
-      border-bottom: 1px solid black; 
 }
 </style>
 
@@ -123,11 +121,11 @@ foreach($po_detail as $detail){
         <h3 class="text-wrapper">Purchased Order</h3 >
         <div id="info-one" >
             <b id="supplier-field">Supplier:</b>&nbsp;&nbsp;<p id="supplier" class="unpad" style="display:inline-block">{{$supplier}}</p>
-            <b id="po-field">P.O.#:</b>&nbsp;&nbsp;<p id="po-number" class="underline unpad" style="display:inline-block">{{$po_header['po_number']}}</p>
+            <b id="po-field">P.O.#:</b>&nbsp;&nbsp;<p id="po-number" class="unpad" style="display:inline-block">{{$po_header['po_number']}}</p>
         </div>
         <div id="info-two" >
             <b id="address-field">Address:</b>&nbsp;&nbsp;<p id="address" class="unpad" style="display:inline-block">{{$po_header['supplier_address']}}</p>
-            <b id="date-field">Date:</b>&nbsp;&nbsp;<p id="date" class="underline unpad" style="display:inline-block">{{$po_header['date']}}</p>
+            <b id="date-field">Date:</b>&nbsp;&nbsp;<p id="date" class="unpad" style="display:inline-block">{{$po_header['date']}}</p>
         </div>
         @if($po_header['status'] == 'A')
         <div class="watermark">APPROVED</div>
@@ -174,7 +172,7 @@ foreach($po_detail as $detail){
                     <td  style="text-align: right !important"><b>Grand Total:</b></td>
                     <td>{{$total_amount}}</td>
                 </tr>
-                @if($po_header['payment_type'] == 'H')
+                @if($po_header['payment_type'] == 'H' || $po_header['payment_type'] == 'A' )
                     <tr>
                         <th>Terms</th>
                         <th colspan="2">Description</th>

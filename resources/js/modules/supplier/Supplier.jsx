@@ -14,7 +14,27 @@ import PermissionContext from '../../helpers/PermissionContext';
 
 
 
-function MyVerticallyCenteredModal(props) {
+
+
+function Supplier() {
+    const [modalShow, setModalShow] = useState(false);
+    const [hideAddSupplier, setHideAddSupplier] = useState(true);
+    const [tableData, setTableData] = useState([]);
+    const [hideSupplierTable, setHideAddSupplierTable] = useState(false);
+    const [customAlert, setCustomAlert] = useState(null);
+    const [tags,setTags] = useState([]);
+    const [filter,setFilter] = useState('');
+    const [users,setUsers] = useState([]);
+    const { register, handleSubmit, watch,reset, formState: { errors } } = useForm();
+    const selected = tags => setTags(tags);
+    const permission = useContext(PermissionContext);
+    const buttonStyle ={
+        display:"flex",
+        justifyContent:"space-between",
+        marginBottom:"1rem"
+    };
+   
+const MyVerticallyCenteredModal = (props) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [tags,setTags] = useState([]);
     const selected = tags => setTags(tags);
@@ -23,9 +43,12 @@ function MyVerticallyCenteredModal(props) {
             setAlert(  <Alert  variant="success">
             Data Updated
            </Alert>)
-           props.method();
+          fetchSupplier();
+           console.log('refetch');
         })
     }
+    
+ 
     const [alert,setAlert] = useState(null); 
     return (
       <Modal
@@ -45,7 +68,7 @@ function MyVerticallyCenteredModal(props) {
             <Form.Row>
                 <Form.Group as={Col} controlId="supplier-edit" hidden>
                     <Form.Label>Supplier</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Supplier" value={props.supplierId} {...register("supplier-id")} />
+                    <Form.Control type="text" placeholder="Enter Supplier" value={props.supplierid} {...register("supplier-id")} />
                 </Form.Group>
                 <Form.Group as={Col} controlId="supplier-edit">
                     <Form.Label>Supplier</Form.Label>
@@ -53,7 +76,7 @@ function MyVerticallyCenteredModal(props) {
                 </Form.Group>
                 <Form.Group as={Col} controlId="contact-person-edit">
                     <Form.Label>Contact Person</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Contact Person" defaultValue={props.contactPerson} {...register("contact-person-edit")} />
+                    <Form.Control type="text" placeholder="Enter Contact Person" defaultValue={props.contactperson} {...register("contact-person-edit")} />
                 </Form.Group>
             </Form.Row> 
             <Form.Row>
@@ -103,25 +126,6 @@ function MyVerticallyCenteredModal(props) {
       </Modal>
     );
 }
-
-
-function Supplier() {
-    const [modalShow, setModalShow] = useState(false);
-    const [hideAddSupplier, setHideAddSupplier] = useState(true);
-    const [tableData, setTableData] = useState([]);
-    const [hideSupplierTable, setHideAddSupplierTable] = useState(false);
-    const [customAlert, setCustomAlert] = useState(null);
-    const [tags,setTags] = useState([]);
-    const [filter,setFilter] = useState('');
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const selected = tags => setTags(tags);
-    const permission = useContext(PermissionContext);
-    const buttonStyle ={
-        display:"flex",
-        justifyContent:"space-between",
-        marginBottom:"1rem"
-    };
-   
     const fetchSupplier =  async () => {
        await axios
         .get('/fetch/supplier', {
@@ -129,7 +133,9 @@ function Supplier() {
         })
         .then((response) => {
             //get the object of supplier data to load to a table
-            setTableData(response.data);
+            console.log(response.data);
+            setTableData(response.data.supplier);
+            setUsers(response.data.users);
         })
         .catch((err) => {
             console.log(err);
@@ -159,6 +165,7 @@ function Supplier() {
                 >
                 New Supplier Added
                 </SweetAlert>);
+                reset();
                 fetchSupplier();
         })
         .catch((err) => {
@@ -218,22 +225,22 @@ function Supplier() {
     
    const showModalSupplierData = (id) => {
       let supplierInfo = tableData[id];
+      console.log(supplierInfo);
         setModalShow(
             <MyVerticallyCenteredModal
                 show={true}
                 title={supplierInfo.supplier}
-                supplierId={supplierInfo.supplier_id}
+                supplierid={supplierInfo.supplier_id}
                 supplier={supplierInfo.supplier}
-                contactPerson={supplierInfo.contact_person}
+                contactperson={supplierInfo.contact_person}
                 address={supplierInfo.address}
                 email={supplierInfo.email}
                 number={supplierInfo.contact_no}
                 fax={supplierInfo.fax_no}
                 bank={supplierInfo.bankaccount_no}
                 date={supplierInfo.date_added}
-                encoded={supplierInfo.encoded_by}
+                encoded={users[supplierInfo.encoded_by]}
                 tags={supplierInfo.tags}
-                method={fetchSupplier}
                 onHide={() => setModalShow(null)}
             />
         );
@@ -354,8 +361,9 @@ function Supplier() {
                             </Card.Body>
                         </Card>
                     </Container>
-                    {modalShow}
+                   
             </div>
+            {modalShow}
         </Permission>
     
        

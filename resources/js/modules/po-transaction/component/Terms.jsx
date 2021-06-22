@@ -22,7 +22,7 @@ function Terms(props) {
                     <Form.Control  {...props.termsDescription} placeholder="Description"  />
                 </Form.Group>
                 <Form.Group as={Col} >
-                    <Form.Control {...props.termsDue}  placeholder="Due" />
+                    <Form.Control {...props.termsDue}  placeholder="Due Date" />
                 </Form.Group>
                 <Form.Group as={Col} >
                     <Form.Control {...props.termsBank} placeholder="Type of Bank" />
