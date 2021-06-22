@@ -75,7 +75,7 @@ class PurchaseOrderController extends Controller
                     //'total_amount' => PurchaseOrderHelper::calculateItemsTotalAmount($formData['items']),
                     'terms' => json_encode($formData['terms']),
                     'status' => 'F',
-                    'money_received' => $formData['money_received'],
+                    'money_received' => array_key_exists('money_received',$formData) ? $formData['money_received'] : null,
                     'encoded_by' => Auth::id()
                 ]);
                 $po_header_hist = $po_header_id->replicate();
