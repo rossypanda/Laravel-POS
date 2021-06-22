@@ -75,6 +75,7 @@ class PurchaseOrderController extends Controller
                     //'total_amount' => PurchaseOrderHelper::calculateItemsTotalAmount($formData['items']),
                     'terms' => json_encode($formData['terms']),
                     'status' => 'F',
+                    'money_received' => $formData['money_received'],
                     'encoded_by' => Auth::id()
                 ]);
                 $po_header_hist = $po_header_id->replicate();
@@ -207,6 +208,6 @@ class PurchaseOrderController extends Controller
             //dd($data);
          $pdf = \PDF::loadView('pdf.po-pdf',$data);
          return $pdf->download($po[0]['po_reference'].'.pdf');
-      return view('pdf.po-pdf',$data);
+    //   return view('pdf.po-pdf',$data);
     }
 }

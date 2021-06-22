@@ -56,7 +56,7 @@ function CreatePurchaseOrder() {
     },[]);
 
       
-    const onSubmit = (data) => {
+    const onSubmit = (data,e) => {
         axios
         .post('/purchaseOrder', {
            data
@@ -70,6 +70,8 @@ function CreatePurchaseOrder() {
                 </SweetAlert>
             );
            }else{
+          reset({});
+          appendItem({});
             setCustomAlert(
                 <SweetAlert
                 success
@@ -93,9 +95,10 @@ function CreatePurchaseOrder() {
             name:`items`,
             defaultValue:0 
         })
-      
-        for(let x=0; x < value.length; x++){
-            totalPrice = totalPrice + (Number(value[x].quantity) * Number(value[x].per_unit));
+        if(typeof value !== 'undefined'){
+            for(let x=0; x < value.length; x++){
+                totalPrice = totalPrice + (Number(value[x].quantity) * Number(value[x].per_unit));
+            }
         }
         
         return (
@@ -112,8 +115,9 @@ function CreatePurchaseOrder() {
             name:`items[${index}]`,
             defaultValue:0
         })
-
-       unitPrice = Number(value.quantity) * Number(value.per_unit);
+        if(typeof value !== 'undefined'){
+            unitPrice = Number(value.quantity) * Number(value.per_unit);
+        }
         return (
             <Form.Group as={Col} xs={1} >
                 <Form.Control  placeholder="Amount"  value={isNaN(unitPrice) ? 0 : unitPrice} {...register} readOnly  />
@@ -137,7 +141,7 @@ function CreatePurchaseOrder() {
                         <Form>
                             <Form.Row>
                                 <Form.Group as={Col} controlId="supplier">
-                                    <Form.Label>Supplier</Form.Label>
+                                    <Form.Label>Supplier*</Form.Label>
                                     <Form.Control size="sm" as="select"  {...register("supplier",{required:true})} isInvalid={errors.payment_type} onChange={(e) =>handleChange(e.target.value)}>
                                         <option value=''>Select Supplier</option>
                                         {supplier.map((data,index) => (
@@ -147,18 +151,19 @@ function CreatePurchaseOrder() {
                                     <Form.Control.Feedback type="invalid">Supplier is required</Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group as={Col} controlId="payment_type">
-                                    <Form.Label>Payment Type</Form.Label>
+                                    <Form.Label>Payment Type*</Form.Label>
                                     <Form.Control size="sm" as="select" {...register("payment_type",{required:true})} isInvalid={errors.payment_type} >
                                         <option value=''>Select Payment Type</option>
                                         <option value='C'>Cash</option>
                                         <option value='H'>Check</option>
+                                        <option value='A'>Cash/Check</option>
                                     </Form.Control>
                                     <Form.Control.Feedback type="invalid">Payment type is required</Form.Control.Feedback>
                                 </Form.Group>
                             </Form.Row>
                             
                             <Form.Group controlId="supplier_address">
-                                <Form.Label>Address</Form.Label>
+                                <Form.Label>Address*</Form.Label>
                                 <Form.Control placeholder="Supplier Address"  {...register("address",{required:true})} isInvalid={errors.address}/>
                                 <Form.Control.Feedback type="invalid">Address is required</Form.Control.Feedback>
                             </Form.Group>
@@ -202,7 +207,7 @@ function CreatePurchaseOrder() {
                             </Form.Row>
                              </Container>
 
-                             { 
+                             {
                                watchPaymentType === 'H' && (
         
                                 <fieldset className="fieldset-wrapper" >
@@ -220,29 +225,56 @@ function CreatePurchaseOrder() {
                                 </fieldset>
                                )
                             }
+                            {
+                               watchPaymentType === 'A' && (
+                                <div>
+                                     <Form.Row>
+                                        <Form.Group as={Col} controlId="money_received">
+                                            <Form.Label>Money Received*</Form.Label>
+                                            <Form.Control type="number" placeholder="Money Received" {...register("money_received",{required:true})} isInvalid={errors.money_received}/>
+                                            <Form.Control.Feedback type="invalid">Money received is required</Form.Control.Feedback>
+                                        </Form.Group>
+                                    </Form.Row>
+                                    <fieldset className="fieldset-wrapper" >
+                                        <legend className="legend-wrapper"><h6>Terms</h6></legend>
+                                        {termFields.map(({id},index) => (
+                                            <Terms key={id} 
+                                                terms={{...register(`terms[${index}].terms`)}}
+                                                termsDescription={{...register(`terms[${index}].terms_description`)}}
+                                                termsDue={{...register(`terms[${index}].terms_due`)}}
+                                                termsBank={{...register(`terms[${index}].terms_bank`)}}
+                                                termsPercent={{...register(`terms[${index}].terms_percent`)}}
+                                                termsAmount={{...register(`terms[${index}].terms_amount`)}}
+                                            />
+                                        ))}
+                                    </fieldset>
+                                   
+                                </div>
+                               )
+                            }
 
                              <Form.Row>
                                 <Form.Group as={Col} controlId="project_name">
-                                    <Form.Label>Project Name</Form.Label>
+                                    <Form.Label>Project Name*</Form.Label>
                                     <Form.Control  placeholder="Project Name" {...register("project_name",{required:true})} isInvalid={errors.project_name}/>
                                     <Form.Control.Feedback type="invalid">Project name is required</Form.Control.Feedback>
                                 </Form.Group>
                             </Form.Row>
                             <Form.Row>
                                 <Form.Group as={Col} controlId="requested_by">
-                                    <Form.Label>Requested By</Form.Label>
+                                    <Form.Label>Requested By*</Form.Label>
                                     <Form.Control size="sm" placeholder="Requested By" {...register("requested_by",{required:true})} isInvalid={errors.requested_by} />
                                     <Form.Control.Feedback type="invalid">Requested By is required</Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group as={Col} controlId="canvassed_by">
-                                    <Form.Label>Canvassed By</Form.Label>
+                                    <Form.Label>Canvassed By*</Form.Label>
                                     <Form.Control size="sm" placeholder="Canvassed By" {...register("canvassed_by",{required:true})} isInvalid={errors.canvassed_by} />
                                     <Form.Control.Feedback type="invalid">Canvassed By is required</Form.Control.Feedback>
                                 </Form.Group>
                             </Form.Row>
                             <Form.Row>
                                 <Form.Group as={Col} controlId="project_name">
-                                    <Form.Label>Description</Form.Label>
+                                    <Form.Label>Description*</Form.Label>
                                     <Form.Control  placeholder="Description" {...register("description",{required:true})} isInvalid={errors.description}/>
                                     <Form.Control.Feedback type="invalid">Description is required</Form.Control.Feedback>
                                 </Form.Group>

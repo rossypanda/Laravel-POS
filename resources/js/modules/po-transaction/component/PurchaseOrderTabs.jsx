@@ -20,7 +20,7 @@ const [cancelledFilter, setCancelledFilter] = useState('');
 const [pendingFilter, setPendingFilter] = useState('');
 const [approvedFilter,setApprovedFilter] = useState('');
 const PO_STATUS = {'F' :'Pending','A':'Approved','C': 'Cancelled'};
-const PAYMENT_TYPE = {'C' :'Cash','H':'Check'};
+const PAYMENT_TYPE = {'C' :'Cash','H':'Check','A' : 'Cash/Check'};
 const headerStyle ={
     display:"flex",
     justifyContent:"space-between",

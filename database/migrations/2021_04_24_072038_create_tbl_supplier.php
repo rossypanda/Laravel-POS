@@ -18,7 +18,7 @@ class CreateTblSupplier extends Migration
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_unicode_ci';        
             $table->increments('supplier_id');
-            $table->string('supplier', 50);
+            $table->string('supplier', 100);
             $table->string('address',100);
             $table->integer('zip_code')->nullable();
             $table->string('contact_no',50)->nullable();
