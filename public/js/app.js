@@ -16564,6 +16564,11 @@ function MyVerticallyCenteredModal(props) {
       role = _useState2[0],
       setRole = _useState2[1];
 
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
+      _useState4 = _slicedToArray(_useState3, 2),
+      userStatus = _useState4[0],
+      setUserStatus = _useState4[1];
+
   var updateUserData = function updateUserData(data) {
     axios__WEBPACK_IMPORTED_MODULE_7___default().patch("/user/1}", {
       data: data
@@ -16597,8 +16602,36 @@ function MyVerticallyCenteredModal(props) {
     };
   }();
 
+  var fetchUserStatus = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee2() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              _context2.next = 2;
+              return axios__WEBPACK_IMPORTED_MODULE_7___default().get('/fetch/user_status', {}).then(function (response) {
+                console.log(response.data);
+                setUserStatus(response.data.status);
+              })["catch"](function (err) {
+                console.log(err);
+              });
+
+            case 2:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+
+    return function fetchUserStatus() {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+
   (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
     fetchRoleOption();
+    fetchUserStatus();
   }, []); // const updateUserData = data => console.log(data);
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, _objectSpread(_objectSpread({}, props), {}, {
@@ -16649,8 +16682,8 @@ function MyVerticallyCenteredModal(props) {
               defaultValue: props.useremail
             }, register("user-email-edit")))]
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
             controlId: "username-edit",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
@@ -16660,7 +16693,27 @@ function MyVerticallyCenteredModal(props) {
               placeholder: "Username",
               defaultValue: props.username
             }, register("username-edit")))]
-          })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
+            as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+            controlId: "user-status-edit",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+              children: "Status"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
+              size: "sm",
+              as: "select",
+              defaultValue: props.status
+            }, register("user-status-edit")), {}, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                value: "",
+                children: "Select Supplier"
+              }), userStatus.map(function (data, index) {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                  value: data.status,
+                  children: data.status
+                }, index);
+              })]
+            }))]
+          })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
             as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
@@ -16698,30 +16751,30 @@ function MyVerticallyCenteredModal(props) {
 }
 
 function UserProfile() {
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
-      _useState4 = _slicedToArray(_useState3, 2),
-      modalShow = _useState4[0],
-      setModalShow = _useState4[1];
-
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(true),
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
       _useState6 = _slicedToArray(_useState5, 2),
-      hideAddUser = _useState6[0],
-      setHideAddUser = _useState6[1];
+      modalShow = _useState6[0],
+      setModalShow = _useState6[1];
 
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(true),
       _useState8 = _slicedToArray(_useState7, 2),
-      tableData = _useState8[0],
-      setTableData = _useState8[1];
+      hideAddUser = _useState8[0],
+      setHideAddUser = _useState8[1];
 
-  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
       _useState10 = _slicedToArray(_useState9, 2),
-      hideUserTable = _useState10[0],
-      setHideAddUserTable = _useState10[1];
+      tableData = _useState10[0],
+      setTableData = _useState10[1];
 
-  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null),
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
       _useState12 = _slicedToArray(_useState11, 2),
-      customAlert = _useState12[0],
-      setCustomAlert = _useState12[1];
+      hideUserTable = _useState12[0],
+      setHideAddUserTable = _useState12[1];
+
+  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null),
+      _useState14 = _slicedToArray(_useState13, 2),
+      customAlert = _useState14[0],
+      setCustomAlert = _useState14[1];
 
   var _useForm2 = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_5__.useForm)(),
       register = _useForm2.register,
@@ -16729,10 +16782,10 @@ function UserProfile() {
       watch = _useForm2.watch,
       errors = _useForm2.formState.errors;
 
-  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
-      _useState14 = _slicedToArray(_useState13, 2),
-      role = _useState14[0],
-      setRole = _useState14[1];
+  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
+      _useState16 = _slicedToArray(_useState15, 2),
+      role = _useState16[0],
+      setRole = _useState16[1];
 
   var test;
   var buttonStyle = {
@@ -16742,43 +16795,16 @@ function UserProfile() {
   };
 
   var fetchUser = /*#__PURE__*/function () {
-    var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee2() {
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee2$(_context2) {
-        while (1) {
-          switch (_context2.prev = _context2.next) {
-            case 0:
-              _context2.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_7___default().get('/fetch/user', {}).then(function (response) {
-                //get the object of user data to load to a table
-                console.log(response.data);
-                setTableData(response.data);
-              })["catch"](function (err) {
-                console.log(err);
-              });
-
-            case 2:
-            case "end":
-              return _context2.stop();
-          }
-        }
-      }, _callee2);
-    }));
-
-    return function fetchUser() {
-      return _ref2.apply(this, arguments);
-    };
-  }();
-
-  var fetchRoleOption = /*#__PURE__*/function () {
     var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee3() {
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee3$(_context3) {
         while (1) {
           switch (_context3.prev = _context3.next) {
             case 0:
               _context3.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_7___default().get('/fetch/role_option', {}).then(function (response) {
+              return axios__WEBPACK_IMPORTED_MODULE_7___default().get('/fetch/user', {}).then(function (response) {
+                //get the object of user data to load to a table
                 console.log(response.data);
-                setRole(response.data.role);
+                setTableData(response.data);
               })["catch"](function (err) {
                 console.log(err);
               });
@@ -16791,8 +16817,35 @@ function UserProfile() {
       }, _callee3);
     }));
 
-    return function fetchRoleOption() {
+    return function fetchUser() {
       return _ref3.apply(this, arguments);
+    };
+  }();
+
+  var fetchRoleOption = /*#__PURE__*/function () {
+    var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee4() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee4$(_context4) {
+        while (1) {
+          switch (_context4.prev = _context4.next) {
+            case 0:
+              _context4.next = 2;
+              return axios__WEBPACK_IMPORTED_MODULE_7___default().get('/fetch/role_option', {}).then(function (response) {
+                console.log(response.data);
+                setRole(response.data.role);
+              })["catch"](function (err) {
+                console.log(err);
+              });
+
+            case 2:
+            case "end":
+              return _context4.stop();
+          }
+        }
+      }, _callee4);
+    }));
+
+    return function fetchRoleOption() {
+      return _ref4.apply(this, arguments);
     };
   }();
 
@@ -16925,8 +16978,8 @@ function UserProfile() {
                 children: data.email
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
                 children: data.email
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("td", {
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
                   variant: "outline-info",
                   size: "sm",
                   onClick: function onClick() {
@@ -16936,17 +16989,7 @@ function UserProfile() {
                     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faEye,
                     className: "icon-space"
                   }), "View"]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
-                  variant: "outline-danger",
-                  size: "sm",
-                  onClick: function onClick() {
-                    return removeUserConfirmation(data.id);
-                  },
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
-                    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faTrashAlt,
-                    className: "icon-space"
-                  }), "Delete"]
-                })]
+                })
               })]
             });
           })

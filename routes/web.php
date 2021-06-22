@@ -55,6 +55,7 @@ Route::middleware(['web'])->group(function () {
     Route::get('create/purchase_order','PurchaseOrderController@createPO');
     Route::get('fetch/pdf/{id}','PurchaseOrderController@generatePdf');
     Route::get('fetch/user','UserController@fetchUserData');
+    Route::get('fetch/user_status','UserController@fetchUserStatusOptions');
     Route::get('fetch/role','RoleController@fetchRoleData');
     Route::get('fetch/permission','PermissionController@fetchPermissionData');
 

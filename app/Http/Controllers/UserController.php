@@ -140,6 +140,17 @@ class UserController extends Controller
    
     }
 
+    public function fetchUserStatusOptions(){
+  
+        return response()->json(
+            array(
+                'status' =>  User::all(),
+            )
+        );
+      
+   
+    }
+
     public function fetchUserData()
     {
          return User::all()->toJson();
