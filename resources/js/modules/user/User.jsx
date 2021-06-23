@@ -13,6 +13,7 @@ import Select from 'react-select';
 function MyVerticallyCenteredModal(props) {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [role,setRole] = useState([]);
+    const [userStatus,setUserStatus] = useState([]);
     const updateUserData = (data) => {
         axios.patch(`/user/1}`,{data}).then(
             alert('Updated')
@@ -34,8 +35,24 @@ function MyVerticallyCenteredModal(props) {
          });
      }
 
+     const fetchUserStatus =  async () => {
+        await axios
+         .get('/fetch/user_status', {
+     
+         })
+         .then((response) => {
+            console.log(response.data);
+            setUserStatus(response.data.status);
+           
+         })
+         .catch((err) => {
+             console.log(err);
+         });
+     }
+
     useEffect(() => {
         fetchRoleOption();
+        fetchUserStatus();
     },[]);
     // const updateUserData = data => console.log(data);
     return (
@@ -73,10 +90,15 @@ function MyVerticallyCenteredModal(props) {
                     <Form.Label>Username</Form.Label>
                     <Form.Control type="text" placeholder="Username" defaultValue={props.username} {...register("username-edit")} />
                 </Form.Group>
-                {/* <Form.Group as={Col} controlId="user-password-edit">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" defaultValue={props.userpassword} {...register("user-password-edit")} />
-                </Form.Group> */}
+                <Form.Group as={Col} controlId="user-status-edit">
+                    <Form.Label>Status</Form.Label>
+                    <Form.Control size="sm" as="select" defaultValue={props.status} {...register("user-status-edit")}>
+                        <option value=''>Select Supplier</option>
+                        {userStatus.map((data,index) => (
+                                <option key={index} value={data.status}>{data.status}</option>
+                        ))}
+                    </Form.Control>
+                </Form.Group>
             </Form.Row>
             <Form.Row>
                 <Form.Group as={Col} controlId="role-edit">
@@ -264,9 +286,9 @@ function UserProfile() {
                         <td> 
                             <Button variant="outline-info" size="sm" onClick={() => showModalUserData(index)}>
                             <FontAwesomeIcon icon={faEye} className="icon-space"/>View</Button>
-                            <Button variant="outline-danger" size="sm" onClick={() => removeUserConfirmation(data.id)}>
+                            {/* <Button variant="outline-danger" size="sm" onClick={() => removeUserConfirmation(data.id)}>
                                 <FontAwesomeIcon icon={faTrashAlt}  className="icon-space" />Delete
-                            </Button>
+                            </Button> */}
                         </td>
                         </tr>
                    ))}

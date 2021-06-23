@@ -1,13 +1,13 @@
 <nav class="navbar header-navbar pcoded-header">
     <div class="navbar-wrapper">
 
-        <div class="navbar-logo">
+        <div class="navbar-logo" style="padding-left:0px">
             <a class="mobile-menu" id="mobile-collapse" href="#!">
                 <i class="feather icon-menu"></i>
             </a>
             <a href="/">
-                <span >ConSys</span>
-                {{-- <img class="img-fluid" src="files\assets\images\logo.png" alt="Theme-Logo"> --}}
+             <img class="img-fluid" src="{{ asset('files/assets/images/deka_logo.png') }}" alt="Theme-Logo" style="width:50px">
+                <span style="padding-left:2rem">WISC</span>
             </a>
             <a class="mobile-options">
                 <i class="feather icon-more-horizontal"></i>

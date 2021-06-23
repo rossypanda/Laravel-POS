@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>CONSYS </title>
+    <title>WISC</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -105,7 +105,7 @@
     <script src="{{ asset('files\assets\pages\widget\amchart\serial.js') }}" defer></script>
     <script src="{{ asset('files\assets\pages\widget\amchart\light.js') }}" defer></script>
     <script src="{{ asset('files\assets\js\jquery.mCustomScrollbar.concat.min.js') }}" defer></script>
-    <script src="{{ asset('files\assets\js\SmoothScroll.js') }}" defer></script>
+    {{-- <script src="{{ asset('files\assets\js\SmoothScroll.js') }}" defer></script> --}}
     <script src="{{ asset('files\assets\js\pcoded.min.js') }}" defer></script>
     <script src="{{ asset('files\assets\js\vartical-layout.min.js') }}" defer></script>
     <script src="{{ asset('files\assets\pages\dashboard\custom-dashboard.js') }}" defer></script>
