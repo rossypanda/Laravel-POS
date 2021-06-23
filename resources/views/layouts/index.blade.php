@@ -112,6 +112,8 @@
     <script src="{{ asset('files\assets\js\script.min.js') }}" defer></script>
     <script src="{{asset('js/app.js')}}" ></script>
 
+
+@yield('scripts')
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}

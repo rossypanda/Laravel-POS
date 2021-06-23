@@ -19,3 +19,11 @@
        
     </div>
 @endsection
+@section('scripts')
+<script>
+ $(function() {
+    $('#master-data').addClass('pcoded-trigger')
+    $('#po-number-menu').addClass('active')
+});
+</script>
+@endsection

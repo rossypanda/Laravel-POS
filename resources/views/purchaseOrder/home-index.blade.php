@@ -21,3 +21,12 @@
 <div id="purchase-order"></div>
                    
 @endsection
+
+@section('scripts')
+<script>
+ $(function() {
+    $('#transaction').addClass('pcoded-trigger')
+    $('#po-menu').addClass('active')
+});
+</script>
+@endsection
