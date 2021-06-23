@@ -151,7 +151,9 @@ foreach($po_detail as $detail){
                     <td style={{$detail['status'] != 0 ? 'color:red' : 'color:black'}}>{{$detail['brand']}}</td>
                     <td style={{$detail['status'] != 0 ? 'color:red' : 'color:black'}}>{{$detail['model']}}</td>
                     <td style={{$detail['status'] != 0 ? 'color:red' : 'color:black'}}>{{$detail['per_unit']}}</td>
-                    <td style={{$detail['status'] != 0 ? 'color:red' : 'color:black'}}>{{$detail['quantity'] * $detail['per_unit']}}</td>
+                    @if($detail['status'] == 0)
+                        <td style={{$detail['status'] != 0 ? 'color:red' : 'color:black'}}>{{$detail['quantity'] * $detail['per_unit']}}</td>
+                    @endif
                 </tr>
                 @endforeach
                 <tr>
