@@ -21,3 +21,12 @@
 <div id="supplier"></div>
                    
 @endsection
+
+@section('scripts')
+<script>
+ $(function() {
+    $('#master-data').addClass('pcoded-trigger')
+    $('#supplier-menu').addClass('active')
+});
+</script>
+@endsection

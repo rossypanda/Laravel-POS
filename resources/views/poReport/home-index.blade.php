@@ -111,3 +111,12 @@
         </div>
     </div>
 @endsection
+
+@section('scripts')
+<script>
+ $(function() {
+    $('#report').addClass('pcoded-trigger')
+    $('#po-report-menu').addClass('active')
+});
+</script>
+@endsection

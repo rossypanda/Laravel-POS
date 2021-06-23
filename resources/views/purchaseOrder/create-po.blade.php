@@ -10,7 +10,7 @@
                 </a>
             </li>
             <li class="breadcrumb-item">
-                <a href="#!">Purchase Order</a>
+                <a href="#!">Create Purchase Order</a>
             </li>
         </ul>
     </div>
@@ -20,4 +20,13 @@
    
 <div id="create-po"></div>
                    
+@endsection
+
+@section('scripts')
+<script>
+ $(function() {
+    $('#transaction').addClass('pcoded-trigger')
+    $('#create-po-menu').addClass('active')
+});
+</script>
 @endsection
