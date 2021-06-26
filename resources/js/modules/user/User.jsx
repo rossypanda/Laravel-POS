@@ -95,7 +95,7 @@ function MyVerticallyCenteredModal(props) {
                     <Form.Control size="sm" as="select" defaultValue={props.status} {...register("user-status-edit")}>
                         <option value=''>Select Supplier</option>
                         {userStatus.map((data,index) => (
-                                <option key={index} value={data.status}>{data.status}</option>
+                                <option key={index} value={data.status_id}>{data.status_name}</option>
                         ))}
                     </Form.Control>
                 </Form.Group>

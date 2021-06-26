@@ -16823,8 +16823,8 @@ function MyVerticallyCenteredModal(props) {
                 children: "Select Supplier"
               }), userStatus.map(function (data, index) {
                 return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
-                  value: data.status,
-                  children: data.status
+                  value: data.status_id,
+                  children: data.status_name
                 }, index);
               })]
             }))]

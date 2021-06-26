@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Role;
+use App\Models\UserStatus;
 
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -144,7 +145,7 @@ class UserController extends Controller
   
         return response()->json(
             array(
-                'status' =>  User::all(),
+                'status' =>  UserStatus::all(),
             )
         );
       
