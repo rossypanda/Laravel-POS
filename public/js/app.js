@@ -16613,15 +16613,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Modal.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Form.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Col.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Button.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Table.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Card.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Alert.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Modal.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Form.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Col.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Button.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Table.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Card.js");
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
 /* harmony import */ var react_hook_form__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-hook-form */ "./node_modules/react-hook-form/dist/index.esm.js");
 /* harmony import */ var _helpers_BaseUrl__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../helpers/BaseUrl */ "./resources/js/helpers/BaseUrl.jsx");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
@@ -16667,247 +16668,261 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-function MyVerticallyCenteredModal(props) {
+function UserProfile() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      modalShow = _useState2[0],
+      setModalShow = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(true),
+      _useState4 = _slicedToArray(_useState3, 2),
+      hideAddUser = _useState4[0],
+      setHideAddUser = _useState4[1];
+
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
+      _useState6 = _slicedToArray(_useState5, 2),
+      tableData = _useState6[0],
+      setTableData = _useState6[1];
+
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
+      _useState8 = _slicedToArray(_useState7, 2),
+      hideUserTable = _useState8[0],
+      setHideAddUserTable = _useState8[1];
+
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null),
+      _useState10 = _slicedToArray(_useState9, 2),
+      customAlert = _useState10[0],
+      setCustomAlert = _useState10[1];
+
   var _useForm = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_5__.useForm)(),
       register = _useForm.register,
       handleSubmit = _useForm.handleSubmit,
       watch = _useForm.watch,
       errors = _useForm.formState.errors;
 
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
-      _useState2 = _slicedToArray(_useState, 2),
-      role = _useState2[0],
-      setRole = _useState2[1];
-
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
-      _useState4 = _slicedToArray(_useState3, 2),
-      userStatus = _useState4[0],
-      setUserStatus = _useState4[1];
-
-  var updateUserData = function updateUserData(data) {
-    axios__WEBPACK_IMPORTED_MODULE_7___default().patch("/user/1}", {
-      data: data
-    }).then(alert('Updated'));
-  };
-
-  var fetchRoleOption = /*#__PURE__*/function () {
-    var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee() {
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              _context.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_7___default().get('/fetch/role_option', {}).then(function (response) {
-                console.log(response.data);
-                setRole(response.data.role);
-              })["catch"](function (err) {
-                console.log(err);
-              });
-
-            case 2:
-            case "end":
-              return _context.stop();
-          }
-        }
-      }, _callee);
-    }));
-
-    return function fetchRoleOption() {
-      return _ref.apply(this, arguments);
-    };
-  }();
-
-  var fetchUserStatus = /*#__PURE__*/function () {
-    var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee2() {
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee2$(_context2) {
-        while (1) {
-          switch (_context2.prev = _context2.next) {
-            case 0:
-              _context2.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_7___default().get('/fetch/user_status', {}).then(function (response) {
-                console.log(response.data);
-                setUserStatus(response.data.status);
-              })["catch"](function (err) {
-                console.log(err);
-              });
-
-            case 2:
-            case "end":
-              return _context2.stop();
-          }
-        }
-      }, _callee2);
-    }));
-
-    return function fetchUserStatus() {
-      return _ref2.apply(this, arguments);
-    };
-  }();
-
-  (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
-    fetchRoleOption();
-    fetchUserStatus();
-  }, []); // const updateUserData = data => console.log(data);
-
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, _objectSpread(_objectSpread({}, props), {}, {
-    size: "lg",
-    "aria-labelledby": "contained-modal-title-vcenter",
-    centered: true,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Header, {
-      closeButton: true,
-      className: "modal-color",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Title, {
-        id: "contained-modal-title-vcenter",
-        children: props.title
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Body, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-            as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
-            controlId: "user-id",
-            hidden: true,
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
-              children: "User"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
-              type: "text",
-              placeholder: "Enter User",
-              value: props.userid
-            }, register("user-id")))]
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-            as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
-            controlId: "user-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
-              children: "User's Complete Name"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
-              type: "text",
-              placeholder: "Enter User",
-              defaultValue: props.user
-            }, register("user-edit")))]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-            as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
-            controlId: "user-email-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
-              children: "Email"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
-              type: "text",
-              placeholder: "Enter Email",
-              defaultValue: props.useremail
-            }, register("user-email-edit")))]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-            as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
-            controlId: "username-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
-              children: "Username"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread({
-              type: "text",
-              placeholder: "Username",
-              defaultValue: props.username
-            }, register("username-edit")))]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-            as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
-            controlId: "user-status-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
-              children: "Status"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
-              size: "sm",
-              as: "select",
-              defaultValue: props.status
-            }, register("user-status-edit")), {}, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
-                value: "",
-                children: "Select Supplier"
-              }), userStatus.map(function (data, index) {
-                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
-                  value: data.status_id,
-                  children: data.status_name
-                }, index);
-              })]
-            }))]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-            as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
-            controlId: "role-edit",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
-              children: "Role"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
-              size: "sm",
-              as: "select",
-              multiple: true,
-              defaultValue: props.description
-            }, register("role-edit")), {}, {
-              children: role.map(function (data, index) {
-                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
-                  value: data.id,
-                  children: data.name
-                }, index);
-              })
-            }))]
-          })
-        })]
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default.Footer, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
-        variant: "success",
-        size: "sm",
-        onClick: handleSubmit(updateUserData),
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
-          icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faCheck,
-          className: "icon-space"
-        }), "Save Changes"]
-      })
-    })]
-  }));
-}
-
-function UserProfile() {
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
-      _useState6 = _slicedToArray(_useState5, 2),
-      modalShow = _useState6[0],
-      setModalShow = _useState6[1];
-
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(true),
-      _useState8 = _slicedToArray(_useState7, 2),
-      hideAddUser = _useState8[0],
-      setHideAddUser = _useState8[1];
-
-  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
-      _useState10 = _slicedToArray(_useState9, 2),
-      tableData = _useState10[0],
-      setTableData = _useState10[1];
-
-  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
       _useState12 = _slicedToArray(_useState11, 2),
-      hideUserTable = _useState12[0],
-      setHideAddUserTable = _useState12[1];
+      role = _useState12[0],
+      setRole = _useState12[1]; // const [roleUser,getUserRoleData] = useState([]);
 
-  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null),
+
+  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(''),
       _useState14 = _slicedToArray(_useState13, 2),
-      customAlert = _useState14[0],
-      setCustomAlert = _useState14[1];
+      filter = _useState14[0],
+      setFilter = _useState14[1];
 
-  var _useForm2 = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_5__.useForm)(),
-      register = _useForm2.register,
-      handleSubmit = _useForm2.handleSubmit,
-      watch = _useForm2.watch,
-      errors = _useForm2.formState.errors;
-
-  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
-      _useState16 = _slicedToArray(_useState15, 2),
-      role = _useState16[0],
-      setRole = _useState16[1];
-
-  var test;
   var buttonStyle = {
     display: "flex",
-    justifyContent: "flex-end",
+    justifyContent: "space-between",
     marginBottom: "1rem"
   };
+
+  function MyVerticallyCenteredModal(props) {
+    var _useForm2 = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_5__.useForm)(),
+        register = _useForm2.register,
+        handleSubmit = _useForm2.handleSubmit,
+        watch = _useForm2.watch,
+        errors = _useForm2.formState.errors;
+
+    var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
+        _useState16 = _slicedToArray(_useState15, 2),
+        role = _useState16[0],
+        setRole = _useState16[1];
+
+    var _useState17 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
+        _useState18 = _slicedToArray(_useState17, 2),
+        userStatus = _useState18[0],
+        setUserStatus = _useState18[1];
+
+    var _useState19 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null),
+        _useState20 = _slicedToArray(_useState19, 2),
+        alert = _useState20[0],
+        setAlert = _useState20[1];
+
+    var updateUserData = function updateUserData(data) {
+      axios__WEBPACK_IMPORTED_MODULE_7___default().patch("/user/1}", {
+        data: data
+      }).then(function () {
+        setAlert( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
+          variant: "success",
+          children: "Data Updated"
+        }));
+        fetchUser();
+        console.log('refetch');
+      });
+    };
+
+    var fetchRoleOption = /*#__PURE__*/function () {
+      var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return axios__WEBPACK_IMPORTED_MODULE_7___default().get('/fetch/role_option', {}).then(function (response) {
+                  console.log(response.data);
+                  setRole(response.data.role);
+                })["catch"](function (err) {
+                  console.log(err);
+                });
+
+              case 2:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+
+      return function fetchRoleOption() {
+        return _ref.apply(this, arguments);
+      };
+    }();
+
+    var fetchUserStatus = /*#__PURE__*/function () {
+      var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee2() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _context2.next = 2;
+                return axios__WEBPACK_IMPORTED_MODULE_7___default().get('/fetch/user_status', {}).then(function (response) {
+                  console.log(response.data);
+                  setUserStatus(response.data.status);
+                })["catch"](function (err) {
+                  console.log(err);
+                });
+
+              case 2:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }));
+
+      return function fetchUserStatus() {
+        return _ref2.apply(this, arguments);
+      };
+    }();
+
+    (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
+      fetchRoleOption();
+      fetchUserStatus();
+    }, []); // const updateUserData = data => console.log(data);
+
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, _objectSpread(_objectSpread({}, props), {}, {
+      size: "lg",
+      "aria-labelledby": "contained-modal-title-vcenter",
+      centered: true,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Header, {
+        closeButton: true,
+        className: "modal-color",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Title, {
+          id: "contained-modal-title-vcenter",
+          children: props.title
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Body, {
+        children: [alert, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+              as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
+              controlId: "user-id",
+              hidden: true,
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
+                children: "User"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
+                type: "text",
+                placeholder: "Enter User",
+                value: props.userid
+              }, register("user-id")))]
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+              as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
+              controlId: "user-edit",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
+                children: "User's Complete Name"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
+                type: "text",
+                placeholder: "Enter User",
+                defaultValue: props.user
+              }, register("user-edit")))]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+              as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
+              controlId: "user-email-edit",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
+                children: "Email"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
+                type: "text",
+                placeholder: "Enter Email",
+                defaultValue: props.useremail
+              }, register("user-email-edit")))]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+              as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
+              controlId: "username-edit",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
+                children: "Username"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread({
+                type: "text",
+                placeholder: "Username",
+                defaultValue: props.username
+              }, register("username-edit")))]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+              as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
+              controlId: "user-status-edit",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
+                children: "Status"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread(_objectSpread({
+                size: "sm",
+                as: "select",
+                defaultValue: props.status
+              }, register("user-status-edit")), {}, {
+                children: userStatus.map(function (data, index) {
+                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                    value: data.status_id,
+                    children: data.status_name
+                  }, index);
+                })
+              }))]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+              as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
+              controlId: "role-edit",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
+                children: "Role"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread(_objectSpread({
+                size: "sm",
+                as: "select",
+                multiple: true,
+                defaultValue: props.description
+              }, register("role-edit")), {}, {
+                children: role.map(function (data, index) {
+                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("option", {
+                    value: data.id,
+                    children: data.name
+                  }, index);
+                })
+              }))]
+            })
+          })]
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Footer, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default, {
+          variant: "success",
+          size: "sm",
+          onClick: handleSubmit(updateUserData),
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+            icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_14__.faCheck,
+            className: "icon-space"
+          }), "Save Changes"]
+        })
+      })]
+    }));
+  }
 
   var fetchUser = /*#__PURE__*/function () {
     var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee3() {
@@ -16962,11 +16977,21 @@ function UserProfile() {
     return function fetchRoleOption() {
       return _ref4.apply(this, arguments);
     };
-  }();
+  }(); // const getUserRole = (id) => {
+  //     axios.get(`/userRoleData/${id}`, { data: id })
+  //     .then((response) => {
+  //         console.log(response.data);
+  //         getUserRoleData(response.data.role);
+  //     })
+  //     .catch((err) => {
+  //         console.log(err);
+  //     });
+  // }
+
 
   (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
     fetchUser();
-    fetchRoleOption();
+    fetchRoleOption(); // getUserRole();
   }, []);
 
   var hideAlert = function hideAlert() {
@@ -17037,19 +17062,44 @@ function UserProfile() {
       username: userInfo.username,
       useremail: userInfo.email,
       userpassword: userInfo.password,
+      userstatus: userInfo.status,
       onHide: function onHide() {
         return setModalShow(null);
       }
     }));
   };
 
+  var search = function search(rows) {
+    var columns = rows[0] && Object.keys(rows[0]);
+    return rows.filter(function (row) {
+      return columns.some(function (column) {
+        return (row[column] ? row[column] : '').toString().toLowerCase().indexOf(filter.toLowerCase()) > -1;
+      });
+    });
+  };
+
+  var User_Status = {
+    '1': 'Active',
+    '2': 'Resign'
+  };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-    children: [customAlert, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
+    children: [customAlert, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default, {
       fluid: true,
       hidden: hideUserTable,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
         style: buttonStyle,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, {
+          type: "text",
+          placeholder: "Search",
+          style: {
+            width: "15%",
+            borderRadius: "0.5rem"
+          },
+          value: filter,
+          onChange: function onChange(e) {
+            return setFilter(e.target.value);
+          }
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default, {
           variant: "success",
           size: "sm",
           style: {
@@ -17059,11 +17109,11 @@ function UserProfile() {
             return hideTableShowAddUser(true);
           },
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
-            icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faPlusSquare,
+            icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_14__.faPlusSquare,
             className: "icon-space"
           }), "Add User"]
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default, {
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__.default, {
         striped: true,
         bordered: true,
         hover: true,
@@ -17079,11 +17129,13 @@ function UserProfile() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
               children: "Role"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
+              children: "Status"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", {
               children: "Actions"
             })]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("tbody", {
-          children: tableData.map(function (data, index) {
+          children: search(tableData).map(function (data, index) {
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
                 children: data.id
@@ -17092,16 +17144,18 @@ function UserProfile() {
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
                 children: data.email
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
-                children: data.email
+                children: data.id
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+                children: User_Status[data.status]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default, {
                   variant: "outline-info",
                   size: "sm",
                   onClick: function onClick() {
                     return showModalUserData(index);
                   },
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
-                    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faEye,
+                    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_14__.faEye,
                     className: "icon-space"
                   }), "View"]
                 })
@@ -17110,93 +17164,93 @@ function UserProfile() {
           })
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_14__.default, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_15__.default, {
       fluid: true,
       hidden: hideAddUser,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__.default, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_17__.default, {
         className: "border-wrapper",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_16__.default.Body, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_17__.default.Body, {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("h4", {
             className: "mb-4",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
-              icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faUserTag,
+              icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_14__.faUserTag,
               className: "icon-space"
             }), "Add User"]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default, {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                 controlId: "user",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
                   children: "User's Complete Name"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread(_objectSpread({
                   type: "text",
                   placeholder: "Enter User"
                 }, register("user", {
                   required: true
                 })), {}, {
                   isInvalid: errors.user
-                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
+                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control.Feedback, {
                   type: "invalid",
                   children: "User's name is required"
                 })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                 controlId: "user",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
                   children: "Username"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread(_objectSpread({
                   type: "text",
                   placeholder: "Enter Username"
                 }, register("username", {
                   required: true
                 })), {}, {
                   isInvalid: errors.username
-                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
+                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control.Feedback, {
                   type: "invalid",
                   children: "User's name is required"
                 })]
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Row, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Row, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                 controlId: "user-email",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
                   children: "Email"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread(_objectSpread({
                   type: "email",
                   placeholder: "Enter Email"
                 }, register("userEmail", {
                   required: true
                 })), {}, {
                   isInvalid: errors.userEmail
-                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
+                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control.Feedback, {
                   type: "invalid",
                   children: "Email is required"
                 })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+                as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
                 controlId: "user-password",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
                   children: "Password"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread(_objectSpread({
                   type: "password",
                   placeholder: "Password"
                 }, register("password", {
                   required: true
                 })), {}, {
                   isInvalid: errors.password
-                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
+                })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control.Feedback, {
                   type: "invalid",
                   children: "User's name is required"
                 })]
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Group, {
-              as: react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default,
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Group, {
+              as: react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default,
               controlId: "user-role",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Label, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Label, {
                 children: "Role"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control, _objectSpread(_objectSpread({
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control, _objectSpread(_objectSpread({
                 size: "sm",
                 as: "select",
                 multiple: true
@@ -17210,14 +17264,14 @@ function UserProfile() {
                     children: data.name
                   }, index);
                 })
-              })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__.default.Control.Feedback, {
+              })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__.default.Control.Feedback, {
                 type: "invalid",
                 children: "Role is required"
               })]
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
             style: buttonStyle,
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default, {
               variant: "success",
               size: "sm",
               style: {
@@ -17225,10 +17279,10 @@ function UserProfile() {
               },
               onClick: handleSubmit(onSubmit),
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
-                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faPlusCircle,
+                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_14__.faPlusCircle,
                 className: "icon-space"
               }), "Add"]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_12__.default, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_13__.default, {
               variant: "danger",
               size: "sm",
               style: {
@@ -17238,7 +17292,7 @@ function UserProfile() {
                 return hideTableShowAddUser(false);
               },
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
-                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_13__.faBan,
+                icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_14__.faBan,
                 className: "icon-space"
               }), "Cancel"]
             })]
