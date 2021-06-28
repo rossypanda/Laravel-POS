@@ -15,7 +15,8 @@
     <link href="{{ asset('files\assets\icon\feather\css\feather.css') }}" rel="stylesheet"> 
     <link href="{{ asset('files\assets\icon\icofont\css\icofont.css') }}" rel="stylesheet"> 
     <link href="{{ asset('files\assets\css\style.css') }}" rel="stylesheet"> 
-    <link href="{{ asset('files\assets\css\jquery.mCustomScrollbar.css') }}" rel="stylesheet"> 
+    <link href="{{ asset('files\bower_components\select2\css\select2.min.css') }}" rel="stylesheet"> 
+     <link href="{{ asset('files\assets\css\jquery.mCustomScrollbar.css') }}" rel="stylesheet"> 
 
 </head>
 
@@ -110,6 +111,8 @@
     <script src="{{ asset('files\assets\js\vartical-layout.min.js') }}" defer></script>
     <script src="{{ asset('files\assets\pages\dashboard\custom-dashboard.js') }}" defer></script>
     <script src="{{ asset('files\assets\js\script.min.js') }}" defer></script>
+    <script src="{{ asset('files\assets\pages\advance-elements\select2-custom.js') }}" defer></script>
+    <script src="{{ asset('files\bower_components\select2\js\select2.full.min.js') }}" defer></script>
     <script src="{{asset('js/app.js')}}" ></script>
 
 

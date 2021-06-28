@@ -53,13 +53,13 @@ class PurchaseOrderController extends Controller
         $formData['items'];
         $poNumber = PurchaseOrderHelper::checkAvailablePOInvoice($formData['payment_type']);
         if($poNumber){
-            DB::transaction(function () use ($poNumber,$formData) {
+            DB::transaction(function () use ($poNumber,$formData,$request) {
                 //Insert and return PO header id
                 $po_header_id = PurchaseOrder::create([
                     'po_reference' => PurchaseOrderHelper::generatePOReference($poNumber['po_number']),
                     'po_number' => $poNumber['po_number'],
                     'date' => date('Y-m-d'),
-                    'supplier_id' => $formData['supplier'],
+                    'supplier_id' => $request->supplier,
                     'supplier_address' => $formData['address'],
                     'payment_type' => $formData['payment_type'],
                     'project_name' => $formData['project_name'],
@@ -151,11 +151,17 @@ class PurchaseOrderController extends Controller
     }
 
     public function fetchPurchaseOrderDropdownOptions(){
-  
+
+
+        $supplier = Supplier::all();
+        $supplier_option = [];
+        foreach($supplier as $data){
+            $supplier_option[] = ['value' => $data->supplier_id, 'label' => $data->supplier];
+        }
         return response()->json(
             array(
                 'user' =>  User::all(),
-                'supplier' =>  Supplier::all(),
+                'supplier' => $supplier_option,
                 'supplier_address' =>  Supplier::all()->pluck('address','supplier_id')
             )
         );
