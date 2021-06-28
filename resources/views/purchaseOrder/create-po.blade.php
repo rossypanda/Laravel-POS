@@ -27,6 +27,16 @@
  $(function() {
     $('#transaction').addClass('pcoded-trigger')
     $('#create-po-menu').addClass('active')
+
+    $('.js-example-basic-single').on('select2:select', function (e) {
+            var supplier = $('#supplier').val();
+           $('#supplier_address').val(window.supplierAddress[supplier]);
+    });
+
+     $('#create').on('click', function (e) {
+            var supplier = $('#supplier').val();
+           $('#supplier_address').val(window.supplierAddress[supplier]);
+    });
 });
 </script>
 @endsection

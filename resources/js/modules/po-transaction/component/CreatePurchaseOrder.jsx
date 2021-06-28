@@ -8,6 +8,7 @@ import { useForm,useFieldArray,useWatch} from "react-hook-form";
 import Items from './Items';
 import Terms from './Terms';
 import SweetAlert from 'react-bootstrap-sweetalert';
+import Select from 'react-select';
 
 
 
@@ -17,6 +18,7 @@ function CreatePurchaseOrder() {
     const watchPaymentType = watch("payment_type", 'C');
     const [supplier,setSupplier] = useState([]);
     const [users,setUsers] = useState([]);
+    const [supplierId,setSupplierId] = useState(null);
     const { fields: itemFields, append:appendItem, remove:removeItem} = useFieldArray({
         control, // control props comes from useForm (optional: if you are using FormContext)
         name: "items", // unique name for your Field Array
@@ -59,7 +61,8 @@ function CreatePurchaseOrder() {
     const onSubmit = (data,e) => {
         axios
         .post('/purchaseOrder', {
-           data
+           data:data,
+           supplier : supplierId
         })
         .then((response) => {
             console.log(response.data);
@@ -126,6 +129,7 @@ function CreatePurchaseOrder() {
     }
 
     const handleChange = (supplier_id) => {
+        setSupplierId(supplier_id);
        setValue("address",window.supplierAddress[supplier_id]);
     }
     
@@ -142,13 +146,10 @@ function CreatePurchaseOrder() {
                             <Form.Row>
                                 <Form.Group as={Col} controlId="supplier">
                                     <Form.Label>Supplier*</Form.Label>
-                                    <Form.Control size="sm" as="select"  {...register("supplier",{required:true})} isInvalid={errors.payment_type} onChange={(e) =>handleChange(e.target.value)}>
-                                        <option value=''>Select Supplier</option>
-                                        {supplier.map((data,index) => (
-                                             <option key={index} value={data.supplier_id}>{data.supplier}</option>
-                                        ))}
-                                    </Form.Control>
-                                    <Form.Control.Feedback type="invalid">Supplier is required</Form.Control.Feedback>
+                                    <Select
+                                        onChange={(e) => handleChange(e.value)}
+                                        options={supplier}
+                                    />
                                 </Form.Group>
                                 <Form.Group as={Col} controlId="payment_type">
                                     <Form.Label>Payment Type*</Form.Label>
@@ -164,7 +165,7 @@ function CreatePurchaseOrder() {
                             
                             <Form.Group controlId="supplier_address">
                                 <Form.Label>Address*</Form.Label>
-                                <Form.Control placeholder="Supplier Address"  {...register("address",{required:true})} isInvalid={errors.address}/>
+                                <Form.Control placeholder="Supplier Address"  {...register("address",{required:true})} />
                                 <Form.Control.Feedback type="invalid">Address is required</Form.Control.Feedback>
                             </Form.Group>
                             <Button variant="info" size="sm" style={{marginRight:"0.5rem"}} onClick={() => appendItem({})}>
@@ -284,7 +285,7 @@ function CreatePurchaseOrder() {
                             
                         </div>
                        
-                        <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} onClick={handleSubmit(onSubmit)}>
+                        <Button id="create" variant="success" size="sm" style={{marginRight:"0.5rem"}} onClick={handleSubmit(onSubmit)}>
                             <FontAwesomeIcon icon={faPlusSquare} className="icon-space" />
                                 Create Purchase Order
                         </Button>

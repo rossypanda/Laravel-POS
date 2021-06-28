@@ -1,6 +1,6 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState,useEffect,useContext} from 'react';
 import ReactDOM from 'react-dom';
-import {Button,Container,Row,Table,Modal,ModalTitle,ModalDialog,ModalBody,ModalDialogProps,ModalFooter,Card,InputGroup,FormControl,InputGroupProps,Col,Form} from 'react-bootstrap';
+import {Button,Container,Row,Table,Modal,ModalTitle,ModalDialog,ModalBody,ModalDialogProps,ModalFooter,Card,InputGroup,FormControl,InputGroupProps,Col,Form,Alert} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusSquare,faTrashAlt,faEye,faCheck,faUserTag,faPlusCircle,faBan} from '@fortawesome/free-solid-svg-icons';
 import { faLastfmSquare } from '@fortawesome/free-brands-svg-icons';
@@ -10,118 +10,7 @@ import axios from 'axios';
 import SweetAlert from 'react-bootstrap-sweetalert';
 import Select from 'react-select';
 
-function MyVerticallyCenteredModal(props) {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const [role,setRole] = useState([]);
-    const [userStatus,setUserStatus] = useState([]);
-    const updateUserData = (data) => {
-        axios.patch(`/user/1}`,{data}).then(
-            alert('Updated')
-        );
-    }
 
-    const fetchRoleOption =  async () => {
-        await axios
-         .get('/fetch/role_option', {
-     
-         })
-         .then((response) => {
-            console.log(response.data);
-            setRole(response.data.role);
-           
-         })
-         .catch((err) => {
-             console.log(err);
-         });
-     }
-
-     const fetchUserStatus =  async () => {
-        await axios
-         .get('/fetch/user_status', {
-     
-         })
-         .then((response) => {
-            console.log(response.data);
-            setUserStatus(response.data.status);
-           
-         })
-         .catch((err) => {
-             console.log(err);
-         });
-     }
-
-    useEffect(() => {
-        fetchRoleOption();
-        fetchUserStatus();
-    },[]);
-    // const updateUserData = data => console.log(data);
-    return (
-      <Modal
-        {...props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
-        <Modal.Header closeButton className="modal-color">
-          <Modal.Title id="contained-modal-title-vcenter">
-            {props.title}
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-        <Form>
-            <Form.Row>
-                <Form.Group as={Col} controlId="user-id" hidden>
-                    <Form.Label>User</Form.Label>
-                    <Form.Control type="text" placeholder="Enter User" value={props.userid} {...register("user-id")} />
-                </Form.Group>
-            </Form.Row>
-            <Form.Row>
-                <Form.Group as={Col} controlId="user-edit">
-                    <Form.Label>User's Complete Name</Form.Label>
-                    <Form.Control type="text" placeholder="Enter User" defaultValue={props.user} {...register("user-edit")} />
-                </Form.Group>
-                <Form.Group as={Col} controlId="user-email-edit">
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Email" defaultValue={props.useremail} {...register("user-email-edit")} />
-                </Form.Group>
-            </Form.Row>
-            <Form.Row>
-                <Form.Group as={Col} controlId="username-edit">
-                    <Form.Label>Username</Form.Label>
-                    <Form.Control type="text" placeholder="Username" defaultValue={props.username} {...register("username-edit")} />
-                </Form.Group>
-                <Form.Group as={Col} controlId="user-status-edit">
-                    <Form.Label>Status</Form.Label>
-                    <Form.Control size="sm" as="select" defaultValue={props.status} {...register("user-status-edit")}>
-                        <option value=''>Select Supplier</option>
-                        {userStatus.map((data,index) => (
-                                <option key={index} value={data.status}>{data.status}</option>
-                        ))}
-                    </Form.Control>
-                </Form.Group>
-            </Form.Row>
-            <Form.Row>
-                <Form.Group as={Col} controlId="role-edit">
-                    <Form.Label>Role</Form.Label>
-                    <Form.Control size="sm"  as="select" multiple defaultValue={props.description} {...register("role-edit")}>
-                        {/* <option value=''>Select Role</option> */}
-                        {role.map((data,index) => (
-                            <option key={index} value={data.id}>{data.name}</option>
-                        ))}
-                    </Form.Control>
-                </Form.Group>
-            </Form.Row>
-        </Form>
-        </Modal.Body>
-        <Modal.Footer>
-         
-          <Button variant="success" size="sm" onClick={handleSubmit(updateUserData)}>
-            <FontAwesomeIcon icon={faCheck} className="icon-space" />Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    );
-}
 
 
 function UserProfile() {
@@ -132,13 +21,136 @@ function UserProfile() {
     const [customAlert, setCustomAlert] = useState(null);
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [role,setRole] = useState([]);
-   
-    let test;
+    // const [roleUser,getUserRoleData] = useState([]);
+    const [filter,setFilter] = useState('');
+    
     const buttonStyle ={
         display:"flex",
-        justifyContent:"flex-end",
+        justifyContent:"space-between",
         marginBottom:"1rem"
     };
+
+    function MyVerticallyCenteredModal(props) {
+        const { register, handleSubmit, watch, formState: { errors } } = useForm();
+        const [role,setRole] = useState([]);
+        const [userStatus,setUserStatus] = useState([]);
+        const [alert,setAlert] = useState(null); 
+        
+        const updateUserData = (data) => {
+            axios.patch(`/user/1}`,{data}).then(() => {
+                setAlert(  <Alert  variant="success">
+                Data Updated
+               </Alert>)
+               fetchUser();
+               console.log('refetch');
+               
+            });
+        }
+    
+        const fetchRoleOption =  async () => {
+            await axios
+             .get('/fetch/role_option', {
+         
+             })
+             .then((response) => {
+                console.log(response.data);
+                setRole(response.data.role);
+               
+             })
+             .catch((err) => {
+                 console.log(err);
+             });
+         }
+    
+         const fetchUserStatus =  async () => {
+            await axios
+             .get('/fetch/user_status', {
+         
+             })
+             .then((response) => {
+                console.log(response.data);
+                setUserStatus(response.data.status);
+               
+             })
+             .catch((err) => {
+                 console.log(err);
+             });
+         }
+    
+        useEffect(() => {
+            fetchRoleOption();
+            fetchUserStatus();
+        },[]);
+        // const updateUserData = data => console.log(data);
+        return (
+          <Modal
+            {...props}
+            size="lg"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+          >
+            <Modal.Header closeButton className="modal-color">
+              <Modal.Title id="contained-modal-title-vcenter">
+                {props.title}
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+    
+            {alert}
+            <Form>
+                <Form.Row>
+                    <Form.Group as={Col} controlId="user-id" hidden>
+                        <Form.Label>User</Form.Label>
+                        <Form.Control type="text" placeholder="Enter User" value={props.userid} {...register("user-id")} />
+                    </Form.Group>
+                </Form.Row>
+                <Form.Row>
+                    <Form.Group as={Col} controlId="user-edit">
+                        <Form.Label>User's Complete Name</Form.Label>
+                        <Form.Control type="text" placeholder="Enter User" defaultValue={props.user} {...register("user-edit")} />
+                    </Form.Group>
+                    <Form.Group as={Col} controlId="user-email-edit">
+                        <Form.Label>Email</Form.Label>
+                        <Form.Control type="text" placeholder="Enter Email" defaultValue={props.useremail} {...register("user-email-edit")} />
+                    </Form.Group>
+                </Form.Row>
+                <Form.Row>
+                    <Form.Group as={Col} controlId="username-edit">
+                        <Form.Label>Username</Form.Label>
+                        <Form.Control type="text" placeholder="Username" defaultValue={props.username} {...register("username-edit")} />
+                    </Form.Group>
+                    <Form.Group as={Col} controlId="user-status-edit">
+                        <Form.Label>Status</Form.Label>
+                        <Form.Control size="sm" as="select" defaultValue={props.status} {...register("user-status-edit")}>
+                            {/* <option value=''>Select Supplier</option> */}
+                            {userStatus.map((data,index) => (
+                                <option key={index} value={data.status_id}>{data.status_name}</option>
+                            ))}
+                        </Form.Control>
+                    </Form.Group>
+                </Form.Row>
+                <Form.Row>
+                    <Form.Group as={Col} controlId="role-edit">
+                        <Form.Label>Role</Form.Label>
+                        <Form.Control size="sm"  as="select" multiple defaultValue={props.description} {...register("role-edit")}>
+                            {/* <option value=''>Select Role</option> */}
+                            {role.map((data,index) => (
+                                <option key={index} value={data.id}>{data.name}</option>
+                            ))}
+                        </Form.Control>
+                    </Form.Group>
+                </Form.Row>
+            </Form>
+            </Modal.Body>
+            <Modal.Footer>
+             
+              <Button variant="success" size="sm" onClick={handleSubmit(updateUserData)}>
+                <FontAwesomeIcon icon={faCheck} className="icon-space" />Save Changes
+              </Button>
+            </Modal.Footer>
+          </Modal>
+        );
+    }
    
     const fetchUser =  async () => {
        await axios
@@ -169,10 +181,22 @@ function UserProfile() {
              console.log(err);
          });
      }
+     
+    // const getUserRole = (id) => {
+    //     axios.get(`/userRoleData/${id}`, { data: id })
+    //     .then((response) => {
+    //         console.log(response.data);
+    //         getUserRoleData(response.data.role);
+    //     })
+    //     .catch((err) => {
+    //         console.log(err);
+    //     });
+    // }
 
     useEffect(() => {
         fetchUser();
         fetchRoleOption();
+        // getUserRole();
     },[]);
     
     const hideAlert = () => {
@@ -249,18 +273,31 @@ function UserProfile() {
                 username={userInfo.username}
                 useremail={userInfo.email}
                 userpassword={userInfo.password}
+                userstatus={userInfo.status}
                 onHide={() => setModalShow(null)}
             />
         );
     }
+
+    const search = (rows) => {
+        const columns = rows[0] && Object.keys(rows[0]);
+        return rows.filter((row) => 
+                 columns.some(
+                     (column) =>
+                     (row[column] ? row[column] : '').toString().toLowerCase().indexOf(filter.toLowerCase()) > -1
+                 )
+            
+        );
+     }
     
-    
+     const User_Status = {'1' :'Active','2':'Resign'};
     return (
         
         <div>
             {customAlert}
             <Container fluid hidden={hideUserTable}>
                 <div style={buttonStyle}>
+                <Form.Control type="text" placeholder="Search" style={{width:"15%",borderRadius:"0.5rem"}} value={filter} onChange={(e) => setFilter(e.target.value)} />
                     <Button variant="success" size="sm" style={{marginRight:"0.5rem"}} onClick={() =>hideTableShowAddUser(true)}>
                         <FontAwesomeIcon icon={faPlusSquare} className="icon-space" />
                         Add User   
@@ -273,16 +310,18 @@ function UserProfile() {
                         <th>User</th>
                         <th>Email</th>
                         <th>Role</th>
+                        <th>Status</th>
                         <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                    {tableData.map((data,index) => (
+                    {search(tableData).map((data,index) => (
                         <tr>
                         <td>{data.id}</td>
                         <td>{data.name}</td>
                         <td>{data.email}</td>
-                        <td>{data.email}</td>
+                        <td>{data.id}</td> 
+                        <td>{User_Status[data.status]}</td>
                         <td> 
                             <Button variant="outline-info" size="sm" onClick={() => showModalUserData(index)}>
                             <FontAwesomeIcon icon={faEye} className="icon-space"/>View</Button>

@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Role;
-
+use App\Models\UserStatus;
+use App\Helpers\UserHelper;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -110,6 +111,7 @@ class UserController extends Controller
         $user->name = $field_data['user-edit'];
         $user->email = $field_data['user-email-edit'];
         $user->username = $field_data['username-edit'];
+        $user->status = $field_data['user-status-edit'];
         // $user->password = Hash::make($field_data['user-password-edit']);
 
         $user->save();
@@ -144,15 +146,37 @@ class UserController extends Controller
   
         return response()->json(
             array(
-                'status' =>  User::all(),
+                'status' =>  UserStatus::all()
             )
         );
       
    
     }
 
+    // public function fetchUserRoleData(){
+    //     return response(([
+    //         'role' => UserHelper::getUserRoles('F')
+    //     ]));
+   
+    // }
+
     public function fetchUserData()
     {
          return User::all()->toJson();
+
+        // $user = User::all();
+
+        // return response()->json(
+        //     array(
+                // 'user' =>  User::all(),
+            //     'id' =>  $user->pluck('id'),
+            //     'user' => $user->pluck('name'),
+            //     'username' => $user->pluck('username'),
+            //     'email' => $user->pluck('email'),
+            //     'status' => $user->pluck('status'),
+            // )
+        // );
     }
+
+
 }
